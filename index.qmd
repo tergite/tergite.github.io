@@ -1,0 +1,34 @@
+---
+title: "tergite"
+description: "the software stack for the Swedish quantum computer"
+repo-actions: false
+code-annotations: hover
+twitter-card:
+  image: logo-light.svg
+format:
+  html:
+    toc: false
+
+about:
+  id: about
+  template: jolla
+  image: logo.svg
+  links:
+    - icon: info-circle
+      href: why.qmd
+    - icon: download
+      href: install.qmd
+    - icon: book
+      href: tutorials/getting_started.qmd
+    - icon: github
+      text: GitHub
+      href: https://github.com/tergite
+---
+
+::: {#about}
+:::
+
+{{< pagebreak >}}
+
+
+### The software stack for the Swedish Quantum Computer.

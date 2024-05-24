@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "tutorials/getting_started.html",
+    "href": "tutorials/getting_started.html",
+    "title": "tergite",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Getting Started"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "tergite",
+    "section": "",
+    "text": "Why tergite?\n  \n  \n    \n     install.html\n  \n  \n    \n     getting_started.html\n  \n  \n    \n     GitHub\n  \n\n\n\n\n\nThe software stack for the Swedish Quantum Computer.\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contributing/guidelines.html",
+    "href": "contributing/guidelines.html",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This project is currently not accepting pull requests from the general public yet.\nIt is currently being developed by the core developers only.\nWe love your input! We want to make contributing to this project as easy and transparent as possible, whether it’s:\n\nReporting a bug\nDiscussing the current state of the code\nSubmitting a fix\nProposing new features\nBecoming a maintainer\n\n\n\nChalmers Next Labs AB (CNL) has taken on the responsibility of managing the collaborative development of this project on behalf of all contributors.\n\n\n\nTergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.\n\n\n\nSince the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.\n\n\n\nPull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!\n\n\n\n\nIn short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.\n\n\n\nThis is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.\n\n\n\nBy contributing, you agree that your contributions will be licensed under its Apache 2.0 License.\n\n\n\nBefore you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”\n\n\n\nThis document was adapted from a gist by Brian A. Danielak which was originally adapted from the open-source contribution guidelines for Facebook’s Draft",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#government-model",
+    "href": "contributing/guidelines.html#government-model",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Chalmers Next Labs AB (CNL) has taken on the responsibility of managing the collaborative development of this project on behalf of all contributors.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#version-control",
+    "href": "contributing/guidelines.html#version-control",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Tergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#contacting-the-tergite-developers",
+    "href": "contributing/guidelines.html#contacting-the-tergite-developers",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Since the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
+    "href": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Pull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
+    "href": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "In short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
+    "href": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#license",
+    "href": "contributing/guidelines.html#license",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "By contributing, you agree that your contributions will be licensed under its Apache 2.0 License.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#contributor-licensing-agreement",
+    "href": "contributing/guidelines.html#contributor-licensing-agreement",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#references",
+    "href": "contributing/guidelines.html#references",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This document was adapted from a gist by Brian A. Danielak which was originally adapted from the open-source contribution guidelines for Facebook’s Draft",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "why.html",
+    "href": "why.html",
+    "title": "Why tergite?",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Why tergite?"
+    ]
+  },
+  {
+    "objectID": "release_notes.html",
+    "href": "release_notes.html",
+    "title": "Release notes",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "install.html",
+    "href": "install.html",
+    "title": "tergite",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "install.html"
+    ]
+  }
+]

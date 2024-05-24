@@ -1,0 +1,94 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - contributing/ccla.pdf
+    - contributing/icla.pdf
+
+highlight-style: ayu
+code-annotations: hover
+
+execute:
+  warning: false
+  error: false
+  cache: true
+
+website:
+  title: "tergite"
+  site-url: https://tergite.github.io
+  description: "the software stack for the Swedish quantum computer"
+  favicon: logo-light.svg
+
+  # nav
+  navbar:
+    logo: logo-light.svg
+    tools:
+      - icon: github
+        menu:
+          - text: Source code
+            url: https://github.com/tergite
+
+    left:
+      - sidebar:getting-started
+      - sidebar:concepts
+      - sidebar:how-to
+    right:
+      - release_notes.qmd
+      - sidebar:contribute
+
+  # options
+  reader-mode: false
+  back-to-top-navigation: true
+  repo-url: https://github.com/tergite
+
+  # footer
+  page-footer:
+    border: false
+    left: ""
+    right:
+      - icon: github
+        href: https://github.com/tergite
+
+  sidebar:
+    - id: ""
+    - id: getting-started
+      title: "Getting started"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - install.qmd
+        - auto: tutorials/*.qmd
+    - id: concepts
+      title: "Concepts"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - why.qmd
+        - auto: concepts/*.qmd
+    - id: how-to
+      title: "How-to"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: "how-to/configure"
+        - auto: "how-to/input-output"
+        - auto: "how-to/analytics"
+        - auto: "how-to/visualization"
+        - auto: "how-to/extending"
+    - id: contribute
+      title: "Contribute"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: contributing
+    - id: presentations
+      title: "Presentations"
+      style: "docked"
+      collapse-level: 2
+      contents: presentations
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true

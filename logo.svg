@@ -1,0 +1,20 @@
+<svg width="206" height="206" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="103" cy="103" r="96.5" stroke="black" stroke-width="13"/>
+<circle cx="103" cy="102" r="79.5" stroke="black" stroke-width="7"/>
+<circle cx="101" cy="101" r="66.5" stroke="black" stroke-width="3"/>
+<ellipse cx="69.5" cy="67" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="69.5" cy="101" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="69.5" cy="135" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="103.5" cy="67" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="103.5" cy="101" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="103.5" cy="135" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="135.5" cy="67" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="135.5" cy="101" rx="5.5" ry="6" fill="black"/>
+<ellipse cx="135.5" cy="135" rx="5.5" ry="6" fill="black"/>
+<line x1="70" y1="66.5" x2="131" y2="66.5" stroke="black"/>
+<line x1="136.5" y1="67" x2="136.5" y2="135" stroke="black"/>
+<line x1="70.5" y1="67" x2="70.5" y2="141" stroke="black"/>
+<line x1="103.5" y1="64" x2="103.5" y2="138" stroke="black"/>
+<line x1="75" y1="100.5" x2="136" y2="100.5" stroke="black"/>
+<line x1="75" y1="134.5" x2="131" y2="134.5" stroke="black"/>
+</svg>
