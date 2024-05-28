@@ -25,7 +25,7 @@ If you are reading this on GitHub, then you are looking at a mirror.
 ## Contacting the Tergite Developers
 
 Since the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports 
-are looked. Please get in touch via email <quantum.nextlabs@chalmers.se> instead. 
+are looked at. Please get in touch via email <quantum.nextlabs@chalmers.se> instead. 
 
 Take note that the maintainers may not answer every email.
 
