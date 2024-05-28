@@ -1,20 +1,22 @@
 <svg width="206" height="206" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="103" cy="103" r="96.5" stroke="black" stroke-width="13"/>
 <circle cx="103" cy="102" r="79.5" stroke="black" stroke-width="7"/>
-<circle cx="101" cy="101" r="66.5" stroke="black" stroke-width="3"/>
-<ellipse cx="69.5" cy="67" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="69.5" cy="101" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="69.5" cy="135" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="103.5" cy="67" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="103.5" cy="101" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="103.5" cy="135" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="135.5" cy="67" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="135.5" cy="101" rx="5.5" ry="6" fill="black"/>
-<ellipse cx="135.5" cy="135" rx="5.5" ry="6" fill="black"/>
-<line x1="70" y1="66.5" x2="131" y2="66.5" stroke="black"/>
-<line x1="136.5" y1="67" x2="136.5" y2="135" stroke="black"/>
-<line x1="70.5" y1="67" x2="70.5" y2="141" stroke="black"/>
-<line x1="103.5" y1="64" x2="103.5" y2="138" stroke="black"/>
-<line x1="75" y1="100.5" x2="136" y2="100.5" stroke="black"/>
-<line x1="75" y1="134.5" x2="131" y2="134.5" stroke="black"/>
+<circle cx="103" cy="101" r="66.5" stroke="black" stroke-width="3"/>
+<line x1="103.498" y1="167.127" x2="103.498" y2="157.127" stroke="black" stroke-width="9"/>
+<line x1="102.475" y1="34.4034" x2="102.804" y2="47.3993" stroke="black" stroke-width="7"/>
+<line x1="117.742" y1="42.4886" x2="117.742" y2="63.5124" stroke="black" stroke-width="7"/>
+<line x1="88.008" y1="42.492" x2="88.008" y2="63.5158" stroke="black" stroke-width="7"/>
+<line x1="118.516" y1="44.992" x2="86.5002" y2="44.992" stroke="black" stroke-width="6"/>
+<line x1="53.5" y1="95.2334" x2="98.5" y2="95.2334" stroke="black" stroke-width="4"/>
+<line x1="53.5" y1="107.233" x2="98.5" y2="107.233" stroke="black" stroke-width="4"/>
+<line x1="55" y1="94.2167" x2="55" y2="109.25" stroke="black" stroke-width="4"/>
+<line x1="108.75" y1="51.5" x2="108.75" y2="96.5" stroke="black" stroke-width="4"/>
+<line x1="96.75" y1="51.5" x2="96.75" y2="96.5" stroke="black" stroke-width="4"/>
+<line x1="109.767" y1="53" x2="94.7334" y2="53" stroke="black" stroke-width="4"/>
+<line x1="96.5167" y1="150.233" x2="96.5167" y2="105.233" stroke="black" stroke-width="4"/>
+<line x1="108.517" y1="150.233" x2="108.517" y2="105.233" stroke="black" stroke-width="4"/>
+<line x1="95.5" y1="148.733" x2="110.533" y2="148.733" stroke="black" stroke-width="4"/>
+<line x1="152.5" y1="107.25" x2="107.5" y2="107.25" stroke="black" stroke-width="4"/>
+<line x1="152.5" y1="95.2501" x2="107.5" y2="95.2501" stroke="black" stroke-width="4"/>
+<line x1="151" y1="108.267" x2="151" y2="93.2334" stroke="black" stroke-width="4"/>
 </svg>
