@@ -14,8 +14,7 @@ We love your input! We want to make contributing to this project as easy and tra
 
 ## Government Model
 
-[Chalmers Next Labs AB (CNL)](https://chalmersnextlabs.se) has taken on the responsibility of managing the 
-collaborative development of this project on behalf of all contributors.
+[Chalmers Next Labs AB (CNL)](https://chalmersnextlabs.se) manages and maintains this project on behalf of all contributors.
 
 ## Version Control
 

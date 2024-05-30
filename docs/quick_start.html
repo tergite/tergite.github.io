@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="the software stack for the Swedish quantum computer">
+
+<title>Tergite - Quick Start</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./logo-light.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/logo.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Tergite</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="./quick_start.html">
+ <span class="dropdown-text">Quick Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/getting_started.html">
+ <span class="dropdown-text">Getting Started</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./release_notes.html"> 
+<span class="menu-text">Release notes</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contribute" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Contribute</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-contribute">    
+        <li class="dropdown-header">Contributing</li>
+        <li>
+    <a class="dropdown-item" href="./contributing/guidelines.html">
+ <span class="dropdown-text">Contributing to tergite</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/tergite">
+            Source code
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quick_start.html">Quick Start</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./quick_start.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Quick Start</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/getting_started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting Started</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quick Start</h1>
+</div>
+
+<div>
+  <div class="description">
+    the software stack for the Swedish quantum computer
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="prerequisites" class="level5">
+<h5 class="anchored" data-anchor-id="prerequisites">Prerequisites</h5>
+<ul>
+<li><a href="https://www.docker.com/products/docker-desktop/">docker +v23.0.5</a></li>
+<li><a href="https://docs.docker.com/compose/">docker compose</a></li>
+<li><a href="https://github.com/Qiskit/qiskit">Qiskit</a></li>
+<li><a href="https://www.python.org/">Python 3.9</a></li>
+<li><a href="https://redis.io/">Redis</a></li>
+<li><a href="https://www.mongodb.com/">MongoDb</a></li>
+</ul>
+</section>
+<section id="setup-the-backend" class="level5">
+<h5 class="anchored" data-anchor-id="setup-the-backend">Setup the Backend</h5>
+<ul>
+<li>Ensure you have <a href="https://docs.anaconda.com/free/miniconda/index.html">conda</a> installed. (<em>You could simply have python +3.9 installed instead.</em>)</li>
+<li>Ensure you have the <a href="https://redis.io/">Redis</a> server running. <strong>You may have to install it first :).</strong></li>
+<li>Clone the repo</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:tergite/tergite-backend.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Create conda environment</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> bcc <span class="at">-y</span> python=3.9</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate bcc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Install dependencies</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tergite-backend</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Copy the <code>dot-env-template.txt</code> file to <code>.env</code> and update the environment variables there appropriately.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> dot-env-template.txt .env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Make sure that the <code>DEFAULT_PREFIX=loke</code> as this gives the running backend the name of “loke” which will be used later</em>.</p>
+<ul>
+<li>Copy the dummy hardware config file <code>dummy-executor-config.yml</code> into the <code>executor-config.yml</code> file.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> app/tests/fixtures/dummy-executor-config.yml executor-config.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note: For a more custom hardware configuration, you might have to copy the example hardware config file <code>executor-config.example.yml</code> into the <code>executor-config.yml</code> file and update the variables there in.</em></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> executor-config.example.yml executor-config.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Run start script</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./start_bcc.sh</span> <span class="at">--device</span> configs/device_default.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Open your browser at <a href="http://localhost:8000/docs">http://localhost:8000/docs</a> to see the interactive API docs</li>
+</ul>
+</section>
+<section id="setup-the-frontend" class="level5">
+<h5 class="anchored" data-anchor-id="setup-the-frontend">Setup the Frontend</h5>
+<ul>
+<li><p>Ensure you have <a href="https://docs.docker.com/engine/install/">docker</a> installed.</p></li>
+<li><p>Clone the repo</p></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:tergite/tergite-frontend.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Copy the <code>mss-config.example.toml</code> to <code>mss-config.toml</code> and update the configuration there.</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tergite-frontend</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> mss-config.example.toml mss-config.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Ensure only the following <code>[[backends]]</code> exists in mss-config.toml with:</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[backends]]</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"loke"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># host.docker.internal resolves to the host's 127.0.0.1</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">url</span> <span class="op">=</span> <span class="st">"http://host.docker.internal:8000"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Ensure also that both ‘auth’ and ‘puhuri’ are disabled, and environment is set to ‘development’ in mss-config.toml</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[general]</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">environment</span> <span class="op">=</span> <span class="st">"development"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[auth]</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">[puhuri]</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Create a mongo database, say “testing”, probably using <a href="https://www.mongodb.com/products/tools/compass">mongo compass</a>.</p></li>
+<li><p>Insert the following document in the “backends” collection in the “testing” database in your mongo database.</p></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_id"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"$oid"</span><span class="fu">:</span> <span class="st">"664756593b639968c2d3df24"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"loke"</span><span class="fu">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"characterized"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"open_pulse"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"timelog"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"REGISTERED"</span><span class="fu">:</span> <span class="st">"2023-11-15T16:36:17.474815"</span><span class="fu">,</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"LAST_UPDATED"</span><span class="fu">:</span> <span class="st">"2023-11-15T15:41:51.528Z"</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"version"</span><span class="fu">:</span> <span class="st">"2024.04.0"</span><span class="fu">,</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"num_qubits"</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"num_couplers"</span><span class="fu">:</span> <span class="dv">8</span><span class="fu">,</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"num_resonators"</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"dt"</span><span class="fu">:</span> <span class="dv">1e-9</span><span class="fu">,</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"dtm"</span><span class="fu">:</span> <span class="dv">1e-9</span><span class="fu">,</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"meas_map"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span><span class="ot">,</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span><span class="ot">,</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span><span class="ot">,</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>      <span class="dv">3</span><span class="ot">,</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>      <span class="dv">4</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"coupling_map"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span><span class="ot">,</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span><span class="ot">,</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>      <span class="dv">0</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span><span class="ot">,</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span><span class="ot">,</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span><span class="ot">,</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>      <span class="dv">3</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>      <span class="dv">3</span><span class="ot">,</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span><span class="ot">,</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>      <span class="dv">4</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>    <span class="ot">],</span></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>      <span class="dv">4</span><span class="ot">,</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"device_properties"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"qubit"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fl">4511480043.556283</span><span class="fu">,</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">17555712637424228</span><span class="fu">,</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_duration"</span><span class="fu">:</span> <span class="fl">5.6e-8</span><span class="fu">,</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_sigma"</span><span class="fu">:</span> <span class="dv">7e-9</span><span class="fu">,</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Gaussian"</span><span class="fu">,</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t1_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000034</span><span class="fu">,</span></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t2_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000033</span><span class="fu">,</span></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">0</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fl">4677112343.360253</span><span class="fu">,</span></span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">17535338530538067</span><span class="fu">,</span></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_duration"</span><span class="fu">:</span> <span class="fl">5.6e-8</span><span class="fu">,</span></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_sigma"</span><span class="fu">:</span> <span class="dv">7e-9</span><span class="fu">,</span></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Gaussian"</span><span class="fu">,</span></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t1_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000034</span><span class="fu">,</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t2_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000033</span><span class="fu">,</span></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1</span></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fl">5770226599.80365</span><span class="fu">,</span></span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">17873594718151276</span><span class="fu">,</span></span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_duration"</span><span class="fu">:</span> <span class="fl">5.6e-8</span><span class="fu">,</span></span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_sigma"</span><span class="fu">:</span> <span class="dv">7e-9</span><span class="fu">,</span></span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Gaussian"</span><span class="fu">,</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t1_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000034</span><span class="fu">,</span></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t2_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000033</span><span class="fu">,</span></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">2</span></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fl">6856217811.995201</span><span class="fu">,</span></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">17326197853513559</span><span class="fu">,</span></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_duration"</span><span class="fu">:</span> <span class="fl">5.6e-8</span><span class="fu">,</span></span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_sigma"</span><span class="fu">:</span> <span class="dv">7e-9</span><span class="fu">,</span></span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Gaussian"</span><span class="fu">,</span></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t1_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000034</span><span class="fu">,</span></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t2_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000033</span><span class="fu">,</span></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">3</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fl">6701096836.557067</span><span class="fu">,</span></span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">16948867103728774</span><span class="fu">,</span></span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pi_pulse_duration"</span><span class="fu">:</span> <span class="fl">5.6e-8</span><span class="fu">,</span></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_sigma"</span><span class="fu">:</span> <span class="dv">7e-9</span><span class="fu">,</span></span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Gaussian"</span><span class="fu">,</span></span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t1_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000034</span><span class="fu">,</span></span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"t2_decoherence"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000033</span><span class="fu">,</span></span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">4</span></span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"readout_resonator"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_delay"</span><span class="fu">:</span> <span class="dv">5e-8</span><span class="fu">,</span></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_integration_time"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000001</span><span class="fu">,</span></span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"$numberLong"</span><span class="fu">:</span> <span class="st">"7260080000"</span></span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_delay"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_duration"</span><span class="fu">:</span> <span class="dv">9e-7</span><span class="fu">,</span></span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Square"</span><span class="fu">,</span></span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">1266499392606423</span><span class="fu">,</span></span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"lda_parameters"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"twoState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">985</span><span class="fu">,</span></span>
+<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-98953.87504155144</span><span class="ot">,</span></span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-114154.48696231026</span></span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-38.4344477840827</span></span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a>          <span class="fu">},</span></span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"threeState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">9580015923566879</span><span class="fu">,</span></span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a>                <span class="fl">67556.81859745766</span><span class="ot">,</span></span>
+<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a>                <span class="fl">71505.66931668088</span></span>
+<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-14142.401380443791</span><span class="ot">,</span></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-68814.26719610114</span></span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-104325.0336269802</span><span class="ot">,</span></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-5256.644766757276</span></span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a>              <span class="fl">18.888335231525723</span><span class="ot">,</span></span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-21.898486762901555</span><span class="ot">,</span></span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-33.556356307556854</span></span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">0</span></span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_delay"</span><span class="fu">:</span> <span class="dv">5e-8</span><span class="fu">,</span></span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_integration_time"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000001</span><span class="fu">,</span></span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"$numberLong"</span><span class="fu">:</span> <span class="st">"7380000000"</span></span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_delay"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_duration"</span><span class="fu">:</span> <span class="dv">9e-7</span><span class="fu">,</span></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Square"</span><span class="fu">,</span></span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">12660078572926436</span><span class="fu">,</span></span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"lda_parameters"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"twoState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">987</span><span class="fu">,</span></span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-107941.00358803963</span><span class="ot">,</span></span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-124239.32054386326</span></span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-42.05181160328822</span></span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a>          <span class="fu">},</span></span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"threeState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">9589968152866242</span><span class="fu">,</span></span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a>                <span class="fl">74144.78052369223</span><span class="ot">,</span></span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a>                <span class="fl">80219.75345675235</span></span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-20263.355831418605</span><span class="ot">,</span></span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-73050.73707640498</span></span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-105237.1576020969</span><span class="ot">,</span></span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-14001.985117865986</span></span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>              <span class="fl">21.107115767442064</span><span class="ot">,</span></span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-24.401897244641916</span><span class="ot">,</span></span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-36.12273520392597</span></span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">1</span></span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_delay"</span><span class="fu">:</span> <span class="dv">5e-8</span><span class="fu">,</span></span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_integration_time"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000001</span><span class="fu">,</span></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"$numberLong"</span><span class="fu">:</span> <span class="st">"7502000000"</span></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_delay"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_duration"</span><span class="fu">:</span> <span class="dv">9e-7</span><span class="fu">,</span></span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Square"</span><span class="fu">,</span></span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.08245560237524203</span><span class="fu">,</span></span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"lda_parameters"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"twoState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">9905</span><span class="fu">,</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-191087.42493249022</span><span class="ot">,</span></span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-20803.06874845618</span></span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-22.684588212281916</span></span>
+<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a>          <span class="fu">},</span></span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"threeState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">9301353503184714</span><span class="fu">,</span></span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a>                <span class="fl">117698.79312336461</span><span class="ot">,</span></span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a>                <span class="fl">1323.6059974854222</span></span>
+<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-73571.40229985592</span><span class="ot">,</span></span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-28205.57304588287</span></span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-86186.31020216543</span><span class="ot">,</span></span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a>                <span class="fl">52503.84189140131</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a>              <span class="fl">8.616211460736217</span><span class="ot">,</span></span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-14.506319082756788</span><span class="ot">,</span></span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-15.607187419129968</span></span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">2</span></span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_delay"</span><span class="fu">:</span> <span class="dv">5e-8</span><span class="fu">,</span></span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_integration_time"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000001</span><span class="fu">,</span></span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"$numberLong"</span><span class="fu">:</span> <span class="st">"7712000000"</span></span>
+<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_delay"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_duration"</span><span class="fu">:</span> <span class="dv">9e-7</span><span class="fu">,</span></span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Square"</span><span class="fu">,</span></span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.04188729430238</span><span class="fu">,</span></span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"lda_parameters"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"twoState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">8735</span><span class="fu">,</span></span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-29474.17108465108</span><span class="ot">,</span></span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>                <span class="fl">78360.1067777809</span></span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-1.933795064413808</span></span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a>          <span class="fu">},</span></span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"threeState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">7563694267515924</span><span class="fu">,</span></span>
+<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a>                <span class="fl">9107.496591845296</span><span class="ot">,</span></span>
+<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-51304.48625833322</span></span>
+<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-21037.874286196384</span><span class="ot">,</span></span>
+<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a>                <span class="fl">28857.813926275605</span></span>
+<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>                <span class="fl">23301.518934279466</span><span class="ot">,</span></span>
+<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a>                <span class="fl">43841.15689855003</span></span>
+<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a>              <span class="dv">-0</span><span class="er">.</span><span class="dv">42091088440579094</span><span class="ot">,</span></span>
+<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-2.3990628805824983</span><span class="ot">,</span></span>
+<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-3.202495936672423</span></span>
+<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">3</span></span>
+<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_delay"</span><span class="fu">:</span> <span class="dv">5e-8</span><span class="fu">,</span></span>
+<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"acq_integration_time"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.000001</span><span class="fu">,</span></span>
+<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"frequency"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"$numberLong"</span><span class="fu">:</span> <span class="st">"7871000000"</span></span>
+<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_delay"</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_duration"</span><span class="fu">:</span> <span class="dv">9e-7</span><span class="fu">,</span></span>
+<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_type"</span><span class="fu">:</span> <span class="st">"Square"</span><span class="fu">,</span></span>
+<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"pulse_amplitude"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.05844291534543274</span><span class="fu">,</span></span>
+<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"lda_parameters"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"twoState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-319"><a href="#cb12-319" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">96375</span><span class="fu">,</span></span>
+<span id="cb12-320"><a href="#cb12-320" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-321"><a href="#cb12-321" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-322"><a href="#cb12-322" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-106998.96952984166</span><span class="ot">,</span></span>
+<span id="cb12-323"><a href="#cb12-323" aria-hidden="true" tabindex="-1"></a>                <span class="fl">66774.10489889105</span></span>
+<span id="cb12-324"><a href="#cb12-324" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-325"><a href="#cb12-325" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-326"><a href="#cb12-326" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-6.6282190356967075</span></span>
+<span id="cb12-328"><a href="#cb12-328" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-329"><a href="#cb12-329" aria-hidden="true" tabindex="-1"></a>          <span class="fu">},</span></span>
+<span id="cb12-330"><a href="#cb12-330" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"threeState"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-331"><a href="#cb12-331" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">8578821656050956</span><span class="fu">,</span></span>
+<span id="cb12-332"><a href="#cb12-332" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"coef"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-333"><a href="#cb12-333" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a>                <span class="fl">60709.720254705426</span><span class="ot">,</span></span>
+<span id="cb12-335"><a href="#cb12-335" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-51675.5747833689</span></span>
+<span id="cb12-336"><a href="#cb12-336" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-337"><a href="#cb12-337" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-338"><a href="#cb12-338" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-49881.622682824636</span><span class="ot">,</span></span>
+<span id="cb12-339"><a href="#cb12-339" aria-hidden="true" tabindex="-1"></a>                <span class="fl">16479.42339459183</span></span>
+<span id="cb12-340"><a href="#cb12-340" aria-hidden="true" tabindex="-1"></a>              <span class="ot">],</span></span>
+<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span></span>
+<span id="cb12-342"><a href="#cb12-342" aria-hidden="true" tabindex="-1"></a>                <span class="fl">-21148.62807007965</span><span class="ot">,</span></span>
+<span id="cb12-343"><a href="#cb12-343" aria-hidden="true" tabindex="-1"></a>                <span class="fl">68742.48318120521</span></span>
+<span id="cb12-344"><a href="#cb12-344" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb12-345"><a href="#cb12-345" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-346"><a href="#cb12-346" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"intercept"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-347"><a href="#cb12-347" aria-hidden="true" tabindex="-1"></a>              <span class="fl">1.4575641967873554</span><span class="ot">,</span></span>
+<span id="cb12-348"><a href="#cb12-348" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-5.385810943207904</span><span class="ot">,</span></span>
+<span id="cb12-349"><a href="#cb12-349" aria-hidden="true" tabindex="-1"></a>              <span class="fl">-6.329888946815834</span></span>
+<span id="cb12-350"><a href="#cb12-350" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb12-351"><a href="#cb12-351" aria-hidden="true" tabindex="-1"></a>          <span class="fu">}</span></span>
+<span id="cb12-352"><a href="#cb12-352" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb12-353"><a href="#cb12-353" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="dv">4</span></span>
+<span id="cb12-354"><a href="#cb12-354" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb12-355"><a href="#cb12-355" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-356"><a href="#cb12-356" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"coupler"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-357"><a href="#cb12-357" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{}</span></span>
+<span id="cb12-358"><a href="#cb12-358" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb12-359"><a href="#cb12-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-360"><a href="#cb12-360" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"discriminators"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-361"><a href="#cb12-361" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"lda"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-362"><a href="#cb12-362" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"q0"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-363"><a href="#cb12-363" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">985</span><span class="fu">,</span></span>
+<span id="cb12-364"><a href="#cb12-364" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"intercept"</span><span class="fu">:</span> <span class="fl">-38.4344477840827</span><span class="fu">,</span></span>
+<span id="cb12-365"><a href="#cb12-365" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_0"</span><span class="fu">:</span> <span class="fl">-98953.87504155144</span><span class="fu">,</span></span>
+<span id="cb12-366"><a href="#cb12-366" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_1"</span><span class="fu">:</span> <span class="fl">-114154.48696231026</span></span>
+<span id="cb12-367"><a href="#cb12-367" aria-hidden="true" tabindex="-1"></a>      <span class="fu">},</span></span>
+<span id="cb12-368"><a href="#cb12-368" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"q1"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-369"><a href="#cb12-369" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">987</span><span class="fu">,</span></span>
+<span id="cb12-370"><a href="#cb12-370" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"intercept"</span><span class="fu">:</span> <span class="fl">-42.05181160328822</span><span class="fu">,</span></span>
+<span id="cb12-371"><a href="#cb12-371" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_0"</span><span class="fu">:</span> <span class="fl">-107941.00358803963</span><span class="fu">,</span></span>
+<span id="cb12-372"><a href="#cb12-372" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_1"</span><span class="fu">:</span> <span class="fl">-124239.32054386326</span></span>
+<span id="cb12-373"><a href="#cb12-373" aria-hidden="true" tabindex="-1"></a>      <span class="fu">},</span></span>
+<span id="cb12-374"><a href="#cb12-374" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"q2"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">9905</span><span class="fu">,</span></span>
+<span id="cb12-376"><a href="#cb12-376" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"intercept"</span><span class="fu">:</span> <span class="fl">-22.684588212281916</span><span class="fu">,</span></span>
+<span id="cb12-377"><a href="#cb12-377" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_0"</span><span class="fu">:</span> <span class="fl">-191087.42493249022</span><span class="fu">,</span></span>
+<span id="cb12-378"><a href="#cb12-378" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_1"</span><span class="fu">:</span> <span class="fl">-20803.06874845618</span></span>
+<span id="cb12-379"><a href="#cb12-379" aria-hidden="true" tabindex="-1"></a>      <span class="fu">},</span></span>
+<span id="cb12-380"><a href="#cb12-380" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"q3"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-381"><a href="#cb12-381" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">8735</span><span class="fu">,</span></span>
+<span id="cb12-382"><a href="#cb12-382" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"intercept"</span><span class="fu">:</span> <span class="fl">-1.933795064413808</span><span class="fu">,</span></span>
+<span id="cb12-383"><a href="#cb12-383" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_0"</span><span class="fu">:</span> <span class="fl">-29474.17108465108</span><span class="fu">,</span></span>
+<span id="cb12-384"><a href="#cb12-384" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_1"</span><span class="fu">:</span> <span class="fl">78360.1067777809</span></span>
+<span id="cb12-385"><a href="#cb12-385" aria-hidden="true" tabindex="-1"></a>      <span class="fu">},</span></span>
+<span id="cb12-386"><a href="#cb12-386" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"q4"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-387"><a href="#cb12-387" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"score"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">96375</span><span class="fu">,</span></span>
+<span id="cb12-388"><a href="#cb12-388" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"intercept"</span><span class="fu">:</span> <span class="fl">-6.6282190356967075</span><span class="fu">,</span></span>
+<span id="cb12-389"><a href="#cb12-389" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_0"</span><span class="fu">:</span> <span class="fl">-106998.96952984166</span><span class="fu">,</span></span>
+<span id="cb12-390"><a href="#cb12-390" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"coef_1"</span><span class="fu">:</span> <span class="fl">66774.10489889105</span></span>
+<span id="cb12-391"><a href="#cb12-391" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb12-392"><a href="#cb12-392" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb12-393"><a href="#cb12-393" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-394"><a href="#cb12-394" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"qubit_ids"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb12-395"><a href="#cb12-395" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q0"</span><span class="ot">,</span></span>
+<span id="cb12-396"><a href="#cb12-396" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q1"</span><span class="ot">,</span></span>
+<span id="cb12-397"><a href="#cb12-397" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q2"</span><span class="ot">,</span></span>
+<span id="cb12-398"><a href="#cb12-398" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q3"</span><span class="ot">,</span></span>
+<span id="cb12-399"><a href="#cb12-399" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q4"</span></span>
+<span id="cb12-400"><a href="#cb12-400" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb12-401"><a href="#cb12-401" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Backend for the simulator supporting qiskit-connector parsing for the release 2024.3"</span></span>
+<span id="cb12-402"><a href="#cb12-402" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Update your database configuration in the <code>mss-config.toml</code> file to:</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[database]</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># assuming the database name is "testing"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"testing"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># assuming that mongodb is running on your local machine</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># host.docker.internal resolves to the host's 127.0.0.1 when running on docker</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="dt">url</span> <span class="op">=</span> <span class="st">"http://host.docker.internal:27017"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Create a <code>.env</code> file basing on the <code>.env.example</code> file. Update the variables therein appropriately.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> .env.example .env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>To rebuild and run the services, use the <code>fresh-docker-compose.yml</code>.</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose <span class="at">-f</span> fresh-docker-compose.yml up <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note: If you ever want the images rebuilt after this initial run, you have to change the app version numbers in the .env file and rerun the above command</em></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="va">MSS_VERSION</span><span class="op">=</span>v0.0.2 <span class="co"># originally v0.0.1</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="va">WEBGUI_VERSION</span><span class="op">=</span>v0.0.2 <span class="co"># originally v0.0.1</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="va">LANDING_PAGE_VERSION</span><span class="op">=</span>v0.0.2 <span class="co"># originally v0.0.1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Open your browser at</p>
+<ul>
+<li><a href="http://localhost:8030">http://localhost:8030</a> to see the landing page</li>
+<li><a href="http://localhost:8002">http://localhost:8002</a> to see the MSS service</li>
+<li><a href="http://localhost:3000">http://localhost:3000</a> to see the webGUI application</li>
+</ul></li>
+<li><p>To stop the services, run:</p></li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose <span class="at">-f</span> fresh-docker-compose.yml stop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>To remove stop the services and remove their containers also, run:</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose <span class="at">-f</span> fresh-docker-compose.yml down</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>To view logs of the docker containers to catch some errors, use:</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see more at https://docs.docker.com/reference/cli/docker/compose/logs/</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose logs <span class="at">-f</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-an-experiment" class="level5">
+<h5 class="anchored" data-anchor-id="run-an-experiment">Run an Experiment</h5>
+<ul>
+<li>Create conda environment</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> terg <span class="at">-y</span> python=3.9</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate terg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Install <a href="https://github.com/Qiskit/qiskit">qiskit</a> and <a href="https://github.com/tergite/tergite">tergite SDK</a></li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install qiskit</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-i</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Create a python script <code>main.py</code> and add the code below. <strong>Update the variables there in</strong>.</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.py</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""A sample script doing a very simple quantum operation"""</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.circuit <span class="im">as</span> circuit</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.compiler <span class="im">as</span> compiler</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers <span class="im">import</span> Job, Tergite</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers.provider_account <span class="im">import</span> ProviderAccount</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the Tergite API URL</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    API_URL <span class="op">=</span> <span class="st">"http://localhost:8002"</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># API token for connecting to tergite</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    API_TOKEN <span class="op">=</span> <span class="st">"&lt;your Tergite API key &gt;"</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The name of the Quantum Computer to use from the available quantum computers</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    BACKEND_NAME <span class="op">=</span> <span class="st">"loke"</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the name of this service. For your own bookkeeping.</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    SERVICE_NAME <span class="op">=</span> <span class="st">"local"</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the timeout in seconds for how long to keep checking for results</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    POLL_TIMEOUT <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create the Qiskit circuit</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">1</span>)</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>    qc.x(<span class="dv">0</span>)</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    qc.measure_all()</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create a provider</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider account creation can be skipped in case you already saved</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># your provider account to the `~/.qiskit/tergiterc` file.</span></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># See below how that is done.</span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    account <span class="op">=</span> ProviderAccount(service_name<span class="op">=</span>SERVICE_NAME, url<span class="op">=</span>API_URL, token<span class="op">=</span>API_TOKEN)</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>    provider <span class="op">=</span> Tergite.use_provider_account(account)</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`</span></span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.use_provider_account(account, save=True)</span></span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the tergite backend in case you skipped provider account creation</span></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.get_provider(service_name=SERVICE_NAME)</span></span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>    backend <span class="op">=</span> provider.get_backend(BACKEND_NAME)</span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>    backend.set_options(shots<span class="op">=</span><span class="dv">1024</span>)</span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compile the circuit</span></span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>    tc <span class="op">=</span> compiler.transpile(qc, backend<span class="op">=</span>backend)</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># run the circuit</span></span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a>    job: Job <span class="op">=</span> backend.run(tc, meas_level<span class="op">=</span><span class="dv">2</span>, meas_return<span class="op">=</span><span class="st">"single"</span>)</span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># view the results</span></span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a>    elapsed_time <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> result <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> elapsed_time <span class="op">&gt;</span> POLL_TIMEOUT:</span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">TimeoutError</span>(</span>
+<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"result polling timeout </span><span class="sc">{</span>POLL_TIMEOUT<span class="sc">}</span><span class="ss"> seconds exceeded"</span></span>
+<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>        time.sleep(<span class="dv">1</span>)</span>
+<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>        elapsed_time <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> job.result()</span>
+<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(result.get_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Run the above script with</li>
+</ul>
+<div class="sourceCode" id="cb23"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>It should return something like (because we are using the dummy cluster from quantify scheduler):</li>
+</ul>
+<div class="sourceCode" id="cb24"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="ex">0:</span> 1024<span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tergite\.github\.io");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tergite">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

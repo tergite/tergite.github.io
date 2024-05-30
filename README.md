@@ -12,13 +12,13 @@ This is the tergite documentation website
 
 - Clone the repo
 
-```shell
+```zsh
 git clone git@github.com:tergite/tergite.github.io.git
 ```
 
 - Preview it
 
-```shell
+```zsh
 cd tergite.github.io
 quarto preview
 ```

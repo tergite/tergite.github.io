@@ -1,10 +1,10 @@
 ---
-title: "tergite"
+title: "Tergite"
 description: "the software stack for the Swedish quantum computer"
 repo-actions: false
 code-annotations: hover
 twitter-card:
-  image: logo-light.svg
+  image: assets/logo-light.svg
 format:
   html:
     toc: false
@@ -12,14 +12,14 @@ format:
 about:
   id: about
   template: jolla
-  image: logo.svg
+  image: assets/logo.svg
   links:
     - icon: info-circle
       href: why.qmd
     - icon: download
-      href: install.qmd
-    - icon: book
-      href: tutorials/getting_started.qmd
+      href: quick_start.qmd
+    # - icon: book
+    #   href: tutorials/getting_started.qmd
     - icon: github
       text: GitHub
       href: https://github.com/tergite
@@ -31,10 +31,12 @@ about:
 {{< pagebreak >}}
 
 
-### The software stack for the Swedish Quantum Computer.
-
 #### Developmment
 
 This project is developed by a core group of collaborators.
 Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.
+
+#### Structure
+
+![Tergite Overview](./assets/tergite-overview.svg)
 
