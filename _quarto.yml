@@ -17,7 +17,7 @@ website:
   title: "Tergite"
   site-url: https://tergite.github.io
   description: "the software stack for the Swedish quantum computer"
-  favicon: logo-light.svg
+  favicon: assets/logo-light.svg
 
   # nav
   navbar:
@@ -29,7 +29,7 @@ website:
             url: https://github.com/tergite
 
     left:
-      - sidebar:getting-started
+      - sidebar:guides-list
 
     right:
       - release_notes.qmd
@@ -50,8 +50,8 @@ website:
 
   sidebar:
     - id: ""
-    - id: getting-started
-      title: "Getting started"
+    - id: guides-list
+      title: "Guides"
       style: "docked"
       collapse-level: 2
       contents:
