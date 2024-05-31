@@ -74,7 +74,7 @@ We are grateful for the wonderful contributions from:
 - [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
 
 ::: {layout-ncol=2}
-![](./assets/cnl-logo.svg){height=88}
+![](./assets/cnl-logo.svg){height=100}
 
 ![](./assets/cth-logo-emblem.svg){height=100}
 :::
