@@ -30,7 +30,7 @@ about:
 
 ## Structure
 
-![](./assets/tergite-overview.svg){height=700}
+![](./assets/tergite-overview.svg){width=100%}
   
     
 ### Components
