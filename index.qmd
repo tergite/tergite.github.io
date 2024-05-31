@@ -28,13 +28,70 @@ about:
 
 {{< pagebreak >}}
 
+## Structure
 
-#### Developmment
+![](./assets/tergite-overview.svg){height=700}
+  
+    
+### Components
+
+The tergite stack is composed of three components
+
+[tergite-backend](https://github.com/tergite/tergite-backend)
+: The operating system of the quantum computer. It communicates with the world via a RESTful API.  
+
+[tergite-frontend](https://github.com/tergite/tergite-frontend)
+: The server that gives remote access to any [tergite-backend instance](https://github.com/tergite/tergite-backend). It communicates with the world via a RESTful API.  
+
+[tergite SDK (or just _tergite_)](https://github.com/tergite/tergite)
+: The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.
+
+
+### Accessories
+
+The tergite stack has a number of accessory softwares that are currently not initmately woven into the
+stack but mught be in future
+
+[tergite-autocalibration](https://github.com/tergite/tergite-autocalibration)
+: The Python commandline application (CLI) that is used to automatically tune the quantum computer.  
+
+### Language of Communication
+
+We use [OpenPulse](https://arxiv.org/abs/1809.03452) to communicate pass quantum computer instructions from 
+the SDK to the backend part of the tergite stack.
+
+
+## Developmment
 
 This project is developed by a core group of collaborators.
-Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.
+[Chalmers Next Labs AB (CNL)](https://chalmersnextlabs.se/) takes on the role of managing and maintaining this project.
 
-#### Structure
+### Contributors
 
-![Tergite Overview](./assets/tergite-overview.svg)
+We are grateful for the wonderful contributions from:
+
+- [Chalmers Next Labs AB - Quantum Division](https://chalmersnextlabs.se/)
+- [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
+
+::: {layout-ncol=2}
+![](./assets/cnl-logo.svg){height=300}
+
+![](./assets/cth-logo-emblem.svg){height=300}
+:::
+
+### Sponsors
+
+- [Knut and Alice Wallenburg Foundation](https://kaw.wallenberg.org/en) under the [Wallenberg Center for Quantum Technology (WAQCT)](https://www.chalmers.se/en/centres/wacqt/) project at [Chalmers University of Technology](https://www.chalmers.se)
+- [Nordic e-Infrastructure Collaboration (NeIC)](https://neic.no) and [NordForsk](https://www.nordforsk.org/sv) under the [NordIQuEst](https://neic.no/nordiquest/) project
+- [European Union's Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en) under the [OpenSuperQ](https://cordis.europa.eu/project/id/820363) project
+- [European Union's Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en) under the [OpenSuperQPlus](https://opensuperqplus.eu/) project  
+
+::: {layout-ncol=3}
+![](./assets/kaw.svg){height=300}
+
+![](./assets/neic-logo.svg){height=300}
+
+![](./assets/eu-logo.svg){height=300}
+:::
+
 

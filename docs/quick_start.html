@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="the software stack for the Swedish quantum computer">
 
 <title>Tergite - Quick Start</title>
 <style>
@@ -211,7 +210,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#setup-the-backend" id="toc-setup-the-backend" class="nav-link" data-scroll-target="#setup-the-backend">Setup the Backend</a></li>
+  <li><a href="#setup-the-frontend" id="toc-setup-the-frontend" class="nav-link" data-scroll-target="#setup-the-frontend">Setup the Frontend</a></li>
+  <li><a href="#run-an-experiment" id="toc-run-an-experiment" class="nav-link" data-scroll-target="#run-an-experiment">Run an Experiment</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -221,11 +229,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="title">Quick Start</h1>
 </div>
 
-<div>
-  <div class="description">
-    the software stack for the Swedish quantum computer
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -240,19 +243,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="prerequisites" class="level5">
-<h5 class="anchored" data-anchor-id="prerequisites">Prerequisites</h5>
+<p>Let’s attempt to setup the tergite stack to run on a dummy cluster on your local machine.</p>
+<p>We will not need an actual quantum computer. Take note, however, that the dummy cluster only returns 0 in its results.</p>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
 <li><a href="https://www.docker.com/products/docker-desktop/">docker +v23.0.5</a></li>
-<li><a href="https://docs.docker.com/compose/">docker compose</a></li>
-<li><a href="https://github.com/Qiskit/qiskit">Qiskit</a></li>
-<li><a href="https://www.python.org/">Python 3.9</a></li>
+<li><a href="https://docs.anaconda.com/free/miniconda/index.html">conda</a></li>
 <li><a href="https://redis.io/">Redis</a></li>
 <li><a href="https://www.mongodb.com/">MongoDb</a></li>
 </ul>
 </section>
-<section id="setup-the-backend" class="level5">
-<h5 class="anchored" data-anchor-id="setup-the-backend">Setup the Backend</h5>
+<section id="setup-the-backend" class="level2">
+<h2 class="anchored" data-anchor-id="setup-the-backend">Setup the Backend</h2>
 <ul>
 <li>Ensure you have <a href="https://docs.anaconda.com/free/miniconda/index.html">conda</a> installed. (<em>You could simply have python +3.9 installed instead.</em>)</li>
 <li>Ensure you have the <a href="https://redis.io/">Redis</a> server running. <strong>You may have to install it first :).</strong></li>
@@ -288,8 +291,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Open your browser at <a href="http://localhost:8000/docs">http://localhost:8000/docs</a> to see the interactive API docs</li>
 </ul>
 </section>
-<section id="setup-the-frontend" class="level5">
-<h5 class="anchored" data-anchor-id="setup-the-frontend">Setup the Frontend</h5>
+<section id="setup-the-frontend" class="level2">
+<h2 class="anchored" data-anchor-id="setup-the-frontend">Setup the Frontend</h2>
 <ul>
 <li><p>Ensure you have <a href="https://docs.docker.com/engine/install/">docker</a> installed.</p></li>
 <li><p>Clone the repo</p></li>
@@ -766,8 +769,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb19"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see more at https://docs.docker.com/reference/cli/docker/compose/logs/</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose logs <span class="at">-f</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="run-an-experiment" class="level5">
-<h5 class="anchored" data-anchor-id="run-an-experiment">Run an Experiment</h5>
+<section id="run-an-experiment" class="level2">
+<h2 class="anchored" data-anchor-id="run-an-experiment">Run an Experiment</h2>
 <ul>
 <li>Create conda environment</li>
 </ul>

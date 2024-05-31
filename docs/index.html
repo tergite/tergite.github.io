@@ -191,21 +191,94 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <div style="page-break-after: always;"></div>
-<section id="developmment" class="level4">
-<h4 data-anchor-id="developmment">Developmment</h4>
-<p>This project is developed by a core group of collaborators. Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.</p>
+<section id="structure" class="level2">
+<h2 data-anchor-id="structure">Structure</h2>
+<p><img src="./assets/tergite-overview.svg" height="700"></p>
+<section id="components" class="level3">
+<h3 data-anchor-id="components">Components</h3>
+<p>The tergite stack is composed of three components</p>
+<dl>
+<dt><a href="https://github.com/tergite/tergite-backend">tergite-backend</a></dt>
+<dd>
+The operating system of the quantum computer. It communicates with the world via a RESTful API.
+</dd>
+<dt><a href="https://github.com/tergite/tergite-frontend">tergite-frontend</a></dt>
+<dd>
+The server that gives remote access to any <a href="https://github.com/tergite/tergite-backend">tergite-backend instance</a>. It communicates with the world via a RESTful API.
+</dd>
+<dt><a href="https://github.com/tergite/tergite">tergite SDK (or just <em>tergite</em>)</a></dt>
+<dd>
+The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.
+</dd>
+</dl>
 </section>
-<section id="structure" class="level4">
-<h4 data-anchor-id="structure">Structure</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/tergite-overview.svg" class="img-fluid figure-img"></p>
-<figcaption>Tergite Overview</figcaption>
-</figure>
+<section id="accessories" class="level3">
+<h3 data-anchor-id="accessories">Accessories</h3>
+<p>The tergite stack has a number of accessory softwares that are currently not initmately woven into the stack but mught be in future</p>
+<dl>
+<dt><a href="https://github.com/tergite/tergite-autocalibration">tergite-autocalibration</a></dt>
+<dd>
+The Python commandline application (CLI) that is used to automatically tune the quantum computer.
+</dd>
+</dl>
+</section>
+<section id="language-of-communication" class="level3">
+<h3 data-anchor-id="language-of-communication">Language of Communication</h3>
+<p>We use <a href="https://arxiv.org/abs/1809.03452">OpenPulse</a> to communicate pass quantum computer instructions from the SDK to the backend part of the tergite stack.</p>
+</section>
+</section>
+<section id="developmment" class="level2">
+<h2 data-anchor-id="developmment">Developmment</h2>
+<p>This project is developed by a core group of collaborators. <a href="https://chalmersnextlabs.se/">Chalmers Next Labs AB (CNL)</a> takes on the role of managing and maintaining this project.</p>
+<section id="contributors" class="level3">
+<h3 data-anchor-id="contributors">Contributors</h3>
+<p>We are grateful for the wonderful contributions from:</p>
+<ul>
+<li><a href="https://chalmersnextlabs.se/">Chalmers Next Labs AB - Quantum Division</a></li>
+<li><a href="https://www.chalmers.se/en/departments/mc2/">Chalmers University of Technology - Microtechnology and Nanoscience department</a></li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="./assets/cnl-logo.svg" height="300"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="./assets/cth-logo-emblem.svg" height="300"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="sponsors" class="level3">
+<h3 data-anchor-id="sponsors">Sponsors</h3>
+<ul>
+<li><a href="https://kaw.wallenberg.org/en">Knut and Alice Wallenburg Foundation</a> under the <a href="https://www.chalmers.se/en/centres/wacqt/">Wallenberg Center for Quantum Technology (WAQCT)</a> project at <a href="https://www.chalmers.se">Chalmers University of Technology</a></li>
+<li><a href="https://neic.no">Nordic e-Infrastructure Collaboration (NeIC)</a> and <a href="https://www.nordforsk.org/sv">NordForsk</a> under the <a href="https://neic.no/nordiquest/">NordIQuEst</a> project</li>
+<li><a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en">European Union’s Horizon Europe</a> under the <a href="https://cordis.europa.eu/project/id/820363">OpenSuperQ</a> project</li>
+<li><a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en">European Union’s Horizon Europe</a> under the <a href="https://opensuperqplus.eu/">OpenSuperQPlus</a> project</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="./assets/kaw.svg" height="300"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="./assets/neic-logo.svg" height="300"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="./assets/eu-logo.svg" height="300"></p>
+</div>
+</div>
 </div>
 
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
