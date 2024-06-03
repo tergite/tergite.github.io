@@ -17,11 +17,11 @@ website:
   title: "Tergite"
   site-url: https://tergite.github.io
   description: "the software stack for the Swedish quantum computer"
-  favicon: assets/img/logo.svg
+  favicon: assets/img/shared/logo.svg
 
   # nav
   navbar:
-    logo: assets/img/logo.svg
+    logo: assets/img/shared/logo.svg
     tools:
       - icon: github
         menu:

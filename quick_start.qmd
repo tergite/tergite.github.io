@@ -17,6 +17,7 @@ You may have to install these software if you don't have them already installed.
 - [Redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/)
 - [MongoDb](https://www.mongodb.com/docs/manual/administration/install-community/)
 - [Visual Studio Code](https://code.visualstudio.com/download)
+- [Mongo compass](https://www.mongodb.com/docs/compass/current/install/)
 
 ## Setup the Backend
 
@@ -173,47 +174,115 @@ clusters:
 
 ## Setup the Frontend
 
-- Ensure you have [docker](https://docs.docker.com/engine/install/) installed.
+- Ensure you have [docker](https://docs.docker.com/engine/install/) is running.
 
-- Clone the repo
+- Open another terminal
 
-```zsh
-git clone git@github.com:tergite/tergite-frontend.git
-```
-
-- Copy the `mss-config.example.toml` to `mss-config.toml` and update the configuration there.
+- Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
 
 ```zsh
-cd tergite-frontend
-cp mss-config.example.toml mss-config.toml
+git clone https://github.com/tergite/tergite-frontend.git
 ```
 
-- Ensure only the following `[[backends]]` exists in mss-config.toml with:
+- Create an `mss-config.toml` file with visual studio code (or any other text editor).
+
+```zsh
+code mss-config.toml
+```
+
+- Update the `mss-config.toml` with the following content
 
 ```toml
+# mss-config.toml
+
+# general configurations
+[general]
+# the port on which MSS is running
+mss_port = 8002
+# the port on which the websocket is running
+ws_port = 6532
+# environment reflect which environment the app is to run in.
+environment = "development"
+# the host the uvicorn runs on.
+# During testing auth on 127.0.0.1, set this to "127.0.0.1". default: "0.0.0.0"
+mss_host = "127.0.0.1"
+
+[database]
+# configurations for the database
+name = "testing"
+# database URI
+# host.docker.internal resolves to the host's 127.0.0.1
+# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732
+url = "mongodb://host.docker.internal:27017"
+
 [[backends]]
 name = "loke"
+# the URL where this backend is running
 # host.docker.internal resolves to the host's 127.0.0.1
 # see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732
 url = "http://host.docker.internal:8000"
-```
-
-- Ensure also that both 'auth' and 'puhuri' are disabled, and environment is set to 'development' in mss-config.toml
-
-```toml
-[general]
-environment = "development"
 
 [auth]
+# turn auth OFF or ON, default=true
 is_enabled = false
 
+# Puhuri synchronization
+# Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's
 [puhuri]
+# turn puhuri synchronization OFF or ON, default=true
 is_enabled = false
 ```
 
-- Create a mongo database, say "testing", probably using [mongo compass](https://www.mongodb.com/products/tools/compass).
+- Create a `.env` file with visual studio code (or any other text editor).
 
-- Insert the following document in the "backends" collection in the "testing" database in your mongo database.
+```zsh
+code .env
+```
+
+- Update the `.env` with the following content
+
+```zsh
+# .env
+
+# required
+ENVIRONMENT="development"
+WEBGUI_ENDPOINT="http://127.0.0.1:3000"
+LANDING_ENDPOINT="http://127.0.0.1:8030"
+MSS_ENDPOINT="http://127.0.0.1:8002"
+GRAFANA_LOKI_URL=http://127.0.0.1:3100/loki/api/v1/push
+LOKI_LOGGER_ID=some-generic-id
+
+# docker LOGGING_DRIVER can be journald, json-file, local etc. 
+LOGGING_DRIVER=json-file
+# image versions:
+# Note: If you ever want the images to be rebuilt, 
+# you have to change the app version numbers here 
+# before running "docker compose up"
+MSS_VERSION=v0.0.1
+WEBGUI_VERSION=v0.0.1
+LANDING_PAGE_VERSION=v0.0.1
+PROMTAIL_VERSION=2.8.3
+```
+
+- Open the Mongo compass application and connect to the default local mongo database
+
+::: {layout-ncol=1}
+![](./assets/img/quick_start/mongo-compass-new-connection.png)
+:::
+
+- Create a new mongo database called "testing" that contains a "backends" collection.
+
+::: {layout-ncol=1}
+![](./assets/img/quick_start/mongo-compass-new-database-collection.png)
+:::
+
+- Click on "ADD DATA" then "Insert document" in your "backends" collection in your mongo compass
+
+::: {layout-ncol=1}
+![](./assets/img/quick_start/mongo-compass-add-new-backend.png)
+:::
+
+- Copy and paste the following document into the window that opens, replacing everything that was already there.
 
 ```JSON
 {
@@ -620,36 +689,17 @@ is_enabled = false
 }
 ```
 
-- Update your database configuration in the `mss-config.toml` file to:
+- Click "Insert" to insert the document into the "backends" collection.
 
-```toml
-[database]
-# assuming the database name is "testing"
-name = "testing"
-# assuming that mongodb is running on your local machine
-# host.docker.internal resolves to the host's 127.0.0.1 when running on docker
-url = "http://host.docker.internal:27017"
-```
+::: {layout-ncol=1}
+![](./assets/img/quick_start/mongo-compass-insert-copied-backend.png)
+:::
 
-- Create a `.env` file basing on the `.env.example` file.
-  Update the variables therein appropriately.
 
-```zsh
-cp .env.example .env
-```
-
-- To rebuild and run the services, use the `fresh-docker-compose.yml`.
+- To Run the services, use the `fresh-docker-compose.yml`.
 
 ```zsh
 docker compose -f fresh-docker-compose.yml up -d
-```  
-
-_Note: If you ever want the images rebuilt after this initial run, you have to change the app version numbers in the .env file and rerun the above command_  
-
-```zsh
-MSS_VERSION=v0.0.2 # originally v0.0.1
-WEBGUI_VERSION=v0.0.2 # originally v0.0.1
-LANDING_PAGE_VERSION=v0.0.2 # originally v0.0.1
 ```
 
 - Open your browser at
@@ -674,20 +724,30 @@ docker compose -f fresh-docker-compose.yml down
 - To view logs of the docker containers to catch some errors, use:
 
 ```zsh
-# see more at https://docs.docker.com/reference/cli/docker/compose/logs/
-docker compose logs -f
+docker compose -f fresh-docker-compose.yml logs -f
 ```
+
+_see more at https://docs.docker.com/reference/cli/docker/compose/logs/_
 
 ## Run an Experiment
 
-- Create conda environment
+- Open another terminal
+
+- Create a new folder "tergite-test" and enter it
+
+```zsh
+mkdir tergite-test
+cd tergite-test
+```
+
+- Create conda environment and activate it
 
 ```zsh
 conda create -n terg -y python=3.9
 conda activate terg
 ```
 
-- Install [qiskit](https://github.com/Qiskit/qiskit) and [tergite SDK](https://github.com/tergite/tergite)
+- Install [qiskit](https://github.com/Qiskit/qiskit) and [tergite SDK](https://github.com/tergite/tergite) by running the command below:
 
 
 ```zsh
@@ -695,7 +755,13 @@ pip install qiskit
 pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple tergite
 ```
 
-- Create a python script `main.py` and add the code below. **Update the variables there in**.
+- Create a file `main.py` with visual studio code (or any other text editor).
+
+```zsh
+code main.py
+```
+
+- Update the `main.py` file with the following content:
 
 ```python
 # main.py
@@ -711,8 +777,6 @@ from tergite.qiskit.providers.provider_account import ProviderAccount
 if __name__ == "__main__":
     # the Tergite API URL
     API_URL = "http://localhost:8002"
-    # API token for connecting to tergite
-    API_TOKEN = "<your Tergite API key >"
     # The name of the Quantum Computer to use from the available quantum computers
     BACKEND_NAME = "loke"
     # the name of this service. For your own bookkeeping.
@@ -730,7 +794,7 @@ if __name__ == "__main__":
     # provider account creation can be skipped in case you already saved
     # your provider account to the `~/.qiskit/tergiterc` file.
     # See below how that is done.
-    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)
+    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL)
     provider = Tergite.use_provider_account(account)
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
     # provider = Tergite.use_provider_account(account, save=True)
@@ -768,8 +832,10 @@ if __name__ == "__main__":
 python main.py
 ```
 
-- It should return something like (because we are using the dummy cluster from quantify scheduler):
+- It should return something like:
 
 ```zsh
 {0: 1024}
 ```
+
+_Note: We get only 0's because we are using the [dummy cluster](https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/api_reference/cluster.html#qblox_instruments.Cluster) from quantify scheduler_
