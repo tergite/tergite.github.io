@@ -10,7 +10,7 @@ format:
 about:
   id: about
   template: jolla
-  image: assets/img/logo.svg
+  image: assets/img/shared/logo.svg
   links:
     - icon: info-circle
       href: why.qmd
@@ -28,7 +28,7 @@ about:
 
 ## Structure
 
-![](./assets/img/tergite-overview.svg){width=100%}
+![](./assets/img/index/tergite-overview.svg){width=100%}
   
     
 ### Components
@@ -72,11 +72,11 @@ We are grateful for the wonderful contributions from:
 - [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
 
 ::: {layout-ncol=2}
-![](./assets/img/cnl-logo.svg){.light height=100}
-![](./assets/img/cnl-logo-light.svg){.dark height=100}
+![](./assets/img/index/cnl-logo.svg){.light height=100}
+![](./assets/img/index/cnl-logo-light.svg){.dark height=100}
 
-![](./assets/img/cth-logo-emblem.svg){.light height=100}
-![](./assets/img/cth-logo-emblem-light.svg){.dark height=100}
+![](./assets/img/index/cth-logo-emblem.svg){.light height=100}
+![](./assets/img/index/cth-logo-emblem-light.svg){.dark height=100}
 :::
 
 ### Sponsors
@@ -87,14 +87,14 @@ We are grateful for the wonderful contributions from:
 - [European Union's Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en) under the [OpenSuperQPlus](https://opensuperqplus.eu/) project  
 
 ::: {layout-ncol=3}
-![](./assets/img/kaw.svg){.light height=300}
-![](./assets/img/kaw-light.svg){.dark height=300}
+![](./assets/img/index/kaw.svg){.light height=300}
+![](./assets/img/index/kaw-light.svg){.dark height=300}
 
-![](./assets/img/neic-logo.svg){.light height=300}
-![](./assets/img/neic-logo-light.svg){.dark height=300}
+![](./assets/img/index/neic-logo.svg){.light height=300}
+![](./assets/img/index/neic-logo-light.svg){.dark height=300}
 
-![](./assets/img/eu-logo.svg){.light height=300}
-![](./assets/img/eu-logo-light.svg){.dark height=300}
+![](./assets/img/index/eu-logo.svg){.light height=300}
+![](./assets/img/index/eu-logo-light.svg){.dark height=300}
 :::
 
 
