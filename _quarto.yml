@@ -21,7 +21,7 @@ website:
 
   # nav
   navbar:
-    logo: assets/img/logo-light.svg
+    logo: assets/img/logo.svg
     tools:
       - icon: github
         menu:
@@ -67,8 +67,13 @@ website:
 format:
   html:
     theme:
-      light: [simplex, assets/styles/light-theme.scss]
-      dark: [simplex, assets/styles/dark-theme.scss]
+      light: [simplex, assets/styles/shared-theme.scss]
+      dark:
+        [
+          simplex,
+          assets/styles/shared-theme.scss,
+          assets/styles/dark-theme.scss,
+        ]
     css: styles.css
     toc: true
     highlight-style: github
