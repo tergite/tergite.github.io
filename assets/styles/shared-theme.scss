@@ -1,6 +1,19 @@
 /*-- scss:defaults --*/
+
 $primary: #003050;
 $navbar-fg: #fff;
 $link-color: #1a7b6d;
 $success: #1a7b6d;
 $navbar-hl: #1a7b6d;
+
+.quarto-dark {
+  .light {
+    display: none;
+  }
+}
+
+.quarto-light {
+  .dark {
+    display: none;
+  }
+}

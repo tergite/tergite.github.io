@@ -1,6 +1,5 @@
 <svg width="206" height="206" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="205" height="205" stroke="black"/>
-<circle cx="103" cy="103" r="96.5" stroke="black" stroke-width="13"/>
+<circle cx="103" cy="103" r="96.5" fill="white" stroke="black" stroke-width="13"/>
 <circle cx="103" cy="102" r="79.5" stroke="black" stroke-width="7"/>
 <circle cx="103" cy="101" r="66.5" stroke="black" stroke-width="3"/>
 <path d="M103 166V156" stroke="black" stroke-width="9"/>
@@ -20,4 +19,6 @@
 <line x1="118.5" y1="43.008" x2="118.5" y2="64.0318" stroke="black" stroke-width="7"/>
 <line x1="87.5" y1="43.008" x2="87.5" y2="64.0318" stroke="black" stroke-width="7"/>
 <line x1="119.516" y1="46" x2="87.5002" y2="46" stroke="black" stroke-width="6"/>
+<rect x="97" y="150" width="95" height="12" transform="rotate(-90 97 150)" fill="black"/>
+<rect x="54" y="97" width="95" height="12" fill="black"/>
 </svg>

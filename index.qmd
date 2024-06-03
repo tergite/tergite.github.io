@@ -3,8 +3,6 @@ title: "Tergite"
 description: "the software stack for the Swedish quantum computer"
 repo-actions: false
 code-annotations: hover
-twitter-card:
-  image: assets/img/logo-light.svg
 format:
   html:
     toc: false
@@ -74,9 +72,11 @@ We are grateful for the wonderful contributions from:
 - [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
 
 ::: {layout-ncol=2}
-![](./assets/img/cnl-logo.svg){height=100}
+![](./assets/img/cnl-logo.svg){.light height=100}
+![](./assets/img/cnl-logo-light.svg){.dark height=100}
 
-![](./assets/img/cth-logo-emblem.svg){height=100}
+![](./assets/img/cth-logo-emblem.svg){.light height=100}
+![](./assets/img/cth-logo-emblem-light.svg){.dark height=100}
 :::
 
 ### Sponsors
@@ -87,11 +87,14 @@ We are grateful for the wonderful contributions from:
 - [European Union's Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en) under the [OpenSuperQPlus](https://opensuperqplus.eu/) project  
 
 ::: {layout-ncol=3}
-![](./assets/img/kaw.svg){height=300}
+![](./assets/img/kaw.svg){.light height=300}
+![](./assets/img/kaw-light.svg){.dark height=300}
 
-![](./assets/img/neic-logo.svg){height=300}
+![](./assets/img/neic-logo.svg){.light height=300}
+![](./assets/img/neic-logo-light.svg){.dark height=300}
 
-![](./assets/img/eu-logo.svg){height=300}
+![](./assets/img/eu-logo.svg){.light height=300}
+![](./assets/img/eu-logo-light.svg){.dark height=300}
 :::
 
 
