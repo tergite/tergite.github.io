@@ -4,7 +4,7 @@ description: "the software stack for the Swedish quantum computer"
 repo-actions: false
 code-annotations: hover
 twitter-card:
-  image: assets/logo-light.svg
+  image: assets/img/logo-light.svg
 format:
   html:
     toc: false
@@ -12,7 +12,7 @@ format:
 about:
   id: about
   template: jolla
-  image: assets/logo.svg
+  image: assets/img/logo.svg
   links:
     - icon: info-circle
       href: why.qmd
@@ -30,7 +30,7 @@ about:
 
 ## Structure
 
-![](./assets/tergite-overview.svg){width=100%}
+![](./assets/img/tergite-overview.svg){width=100%}
   
     
 ### Components
@@ -74,9 +74,9 @@ We are grateful for the wonderful contributions from:
 - [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
 
 ::: {layout-ncol=2}
-![](./assets/cnl-logo.svg){height=100}
+![](./assets/img/cnl-logo.svg){height=100}
 
-![](./assets/cth-logo-emblem.svg){height=100}
+![](./assets/img/cth-logo-emblem.svg){height=100}
 :::
 
 ### Sponsors
@@ -87,11 +87,11 @@ We are grateful for the wonderful contributions from:
 - [European Union's Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en) under the [OpenSuperQPlus](https://opensuperqplus.eu/) project  
 
 ::: {layout-ncol=3}
-![](./assets/kaw.svg){height=300}
+![](./assets/img/kaw.svg){height=300}
 
-![](./assets/neic-logo.svg){height=300}
+![](./assets/img/neic-logo.svg){height=300}
 
-![](./assets/eu-logo.svg){height=300}
+![](./assets/img/eu-logo.svg){height=300}
 :::
 
 
