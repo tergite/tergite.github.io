@@ -17,7 +17,7 @@ website:
   title: "Tergite"
   site-url: https://tergite.github.io
   description: "the software stack for the Swedish quantum computer"
-  favicon: assets/logo-light.svg
+  favicon: assets/logo.svg
 
   # nav
   navbar:
