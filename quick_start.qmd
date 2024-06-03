@@ -10,8 +10,10 @@ Take note, however, that the dummy cluster only returns 0 in its results.
 
 ## Prerequisites
 
-- [docker +v23.0.5](https://www.docker.com/products/docker-desktop/)
-- [conda](https://docs.anaconda.com/free/miniconda/index.html)
+You may have to install these software if you don't have them already installed.
+
+- [Docker +v23.0.5](https://www.docker.com/products/docker-desktop/)
+- [Conda](https://docs.anaconda.com/free/miniconda/index.html)
 - [Redis](https://redis.io/)
 - [MongoDb](https://www.mongodb.com/)
 
@@ -19,7 +21,7 @@ Take note, however, that the dummy cluster only returns 0 in its results.
 
 - Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
  (_You could simply have python +3.9 installed instead._)
-- Ensure you have the [Redis](https://redis.io/) server running. **You may have to install it first :).**
+- Ensure you have the [Redis](https://redis.io/) server running.
 - Clone the repo
 
 ```zsh

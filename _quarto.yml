@@ -17,11 +17,11 @@ website:
   title: "Tergite"
   site-url: https://tergite.github.io
   description: "the software stack for the Swedish quantum computer"
-  favicon: assets/logo.svg
+  favicon: assets/img/logo.svg
 
   # nav
   navbar:
-    logo: assets/logo.svg
+    logo: assets/img/logo-light.svg
     tools:
       - icon: github
         menu:
@@ -66,8 +66,12 @@ website:
 
 format:
   html:
-    theme: simplex
+    theme:
+      light: [simplex, assets/styles/light-theme.scss]
+      dark: [simplex, assets/styles/dark-theme.scss]
     css: styles.css
     toc: true
     highlight-style: github
     code-copy: true
+    link-external-icon: true
+    link-external-newwindow: true
