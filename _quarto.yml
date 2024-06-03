@@ -76,7 +76,7 @@ format:
         ]
     css: styles.css
     toc: true
-    highlight-style: github
+    highlight-style: nord
     code-copy: true
     link-external-icon: true
     link-external-newwindow: true
