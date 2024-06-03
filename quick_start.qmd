@@ -44,30 +44,123 @@ cd tergite-backend
 pip install -r requirements.txt
 ```
 
-- Copy the `dot-env-template.txt` file to `.env`
-
-```zsh
-cp dot-env-template.txt .env
-```
-
-- Open the `.env` file in visual studio code (or any other text editor) and update the variables in it.
+- Create an `.env` file with visual studio code (or any other text editor).
 
 ```zsh
 code .env
 ```
 
-_Make sure that the `DEFAULT_PREFIX=loke` as this gives the running backend the name of "loke" which will be used later_.  
-
-- Copy the dummy hardware config file `dummy-executor-config.yml` into the `executor-config.yml` file.
+- Update `.env` file to have the following content
 
 ```zsh
-cp app/tests/fixtures/dummy-executor-config.yml executor-config.yml
+# .env
+APP_SETTINGS=development
+IS_AUTH_ENABLED=False
+
+DEFAULT_PREFIX=loke
+STORAGE_ROOT=/tmp
+LOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool
+LOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool
+JOB_UPLOAD_POOL_DIRNAME=job_upload_pool
+JOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool
+JOB_EXECUTION_POOL_DIRNAME=job_execution_pool
+
+# Main Service Server
+MSS_MACHINE_ROOT_URL=http://localhost:8002
+MSS_PORT=8002
+
+# Backend Control computer
+BCC_MACHINE_ROOT_URL=http://localhost:8000
+BCC_PORT=8000
+
+EXECUTOR_CONFIG_FILE=executor-config.yml
+``` 
+
+- Create an `executor-config.yml` file with visual studio code (or any other text editor).
+
+```zsh
+code executor-config.yml
 ```
 
-_Note: For a more custom hardware configuration, you might have to copy the example hardware config file `executor-config.example.yml` into the `executor-config.yml` file and update the variables there in._
+- Update the `executor-config.yml` with the following content
 
-```zsh
-cp executor-config.example.yml executor-config.yml
+```yml
+# executor-config.yml
+general:
+  data_directory: data
+
+clusters:
+  - name: clusterA
+    instrument_type: Cluster
+    is_dummy: true
+    ref: internal
+    instrument_address: "192.0.2.141"
+
+    modules:
+      - name: "clusterA_module7"
+        instrument_type: "QCM_RF"
+
+        complex_outputs:
+          - name: "complex_output_0"
+            lo_freq: 4458000000
+            dc_mixer_offset_I: 0
+            dc_mixer_offset_Q: 0
+            portclock_configs:
+            - port: "drive0"
+              clock: "d0"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
+
+      - name: "clusterA_module8"
+        instrument_type: "QCM_RF"
+
+        complex_outputs:
+          - name: "complex_output_0"
+            lo_freq: 5110000000
+            dc_mixer_offset_I: 0
+            dc_mixer_offset_Q: 0
+            portclock_configs:
+            - port: "drive1"
+              clock: "d1"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
+
+      - name: "clusterA_module9"
+        instrument_type: "QCM_RF"
+
+        complex_outputs:
+          - name: "complex_output_0"
+            lo_freq: 4445000000
+            dc_mixer_offset_I: 0
+            dc_mixer_offset_Q: 0
+            portclock_configs:
+            - port: "drive2"
+              clock: "d2"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
+
+
+      - name: "clusterA_module17"
+        instrument_type: "QRM_RF"
+
+        complex_outputs:
+          - name: "complex_output_0"
+            lo_freq: 6838000000
+            dc_mixer_offset_I: 0
+            dc_mixer_offset_Q: 0
+            portclock_configs:
+            - port: "readout0"
+              clock: "m0"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
+            - port: "readout1"
+              clock: "m1"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
+            - port: "readout2"
+              clock: "m2"
+              mixer_amp_ratio: 1
+              mixer_phase_error_deg: 0
 ```
 
 - Run start script
