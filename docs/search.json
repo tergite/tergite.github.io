@@ -31,7 +31,7 @@
     "href": "quick_start.html#prerequisites",
     "title": "Quick Start",
     "section": "Prerequisites",
-    "text": "Prerequisites\nYou may have to install these software if you don’t have them already installed.\n\nDocker +v23.0.5\nConda\nRedis\nMongoDb",
+    "text": "Prerequisites\nYou may have to install these software if you don’t have them already installed.\n\nDocker +v23.0.5\nConda\nRedis\nMongoDb\nVisual Studio Code",
     "crumbs": [
       "Quick Start"
     ]
@@ -41,7 +41,7 @@
     "href": "quick_start.html#setup-the-backend",
     "title": "Quick Start",
     "section": "Setup the Backend",
-    "text": "Setup the Backend\n\nEnsure you have conda installed. (You could simply have python +3.9 installed instead.)\nEnsure you have the Redis server running.\nClone the repo\n\ngit clone git@github.com:tergite/tergite-backend.git\n\nCreate conda environment\n\nconda create -n bcc -y python=3.9\nconda activate bcc\n\nInstall dependencies\n\ncd tergite-backend\npip install -r requirements.txt\n\nCopy the dot-env-template.txt file to .env and update the environment variables there appropriately.\n\ncp dot-env-template.txt .env\nMake sure that the DEFAULT_PREFIX=loke as this gives the running backend the name of “loke” which will be used later.\n\nCopy the dummy hardware config file dummy-executor-config.yml into the executor-config.yml file.\n\ncp app/tests/fixtures/dummy-executor-config.yml executor-config.yml\nNote: For a more custom hardware configuration, you might have to copy the example hardware config file executor-config.example.yml into the executor-config.yml file and update the variables there in.\ncp executor-config.example.yml executor-config.yml\n\nRun start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
+    "text": "Setup the Backend\n\nEnsure you have conda installed. (You could simply have python +3.9 installed instead.)\nEnsure you have the Redis server running.\nOpen terminal.\nClone the tergite-backend repo\n\ngit clone https://github.com/tergite/tergite-backend.git\n\nCreate conda environment\n\nconda create -n bcc -y python=3.9\nconda activate bcc\n\nInstall dependencies\n\ncd tergite-backend\npip install -r requirements.txt\n\nCopy the dot-env-template.txt file to .env\n\ncp dot-env-template.txt .env\n\nOpen the .env file in visual studio code (or any other text editor) and update the variables in it.\n\ncode .env\nMake sure that the DEFAULT_PREFIX=loke as this gives the running backend the name of “loke” which will be used later.\n\nCopy the dummy hardware config file dummy-executor-config.yml into the executor-config.yml file.\n\ncp app/tests/fixtures/dummy-executor-config.yml executor-config.yml\nNote: For a more custom hardware configuration, you might have to copy the example hardware config file executor-config.example.yml into the executor-config.yml file and update the variables there in.\ncp executor-config.example.yml executor-config.yml\n\nRun start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
     "crumbs": [
       "Quick Start"
     ]

@@ -14,18 +14,20 @@ You may have to install these software if you don't have them already installed.
 
 - [Docker +v23.0.5](https://www.docker.com/products/docker-desktop/)
 - [Conda](https://docs.anaconda.com/free/miniconda/index.html)
-- [Redis](https://redis.io/)
-- [MongoDb](https://www.mongodb.com/)
+- [Redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/)
+- [MongoDb](https://www.mongodb.com/docs/manual/administration/install-community/)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Setup the Backend
 
 - Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
  (_You could simply have python +3.9 installed instead._)
-- Ensure you have the [Redis](https://redis.io/) server running.
-- Clone the repo
+- Ensure you have the [Redis](https://redis.io/) server running. 
+- Open terminal. 
+- Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
 
 ```zsh
-git clone git@github.com:tergite/tergite-backend.git
+git clone https://github.com/tergite/tergite-backend.git
 ```
 
 - Create conda environment
@@ -42,11 +44,16 @@ cd tergite-backend
 pip install -r requirements.txt
 ```
 
-- Copy the `dot-env-template.txt` file to `.env` and 
-  update the environment variables there appropriately.
+- Copy the `dot-env-template.txt` file to `.env`
 
 ```zsh
 cp dot-env-template.txt .env
+```
+
+- Open the `.env` file in visual studio code (or any other text editor) and update the variables in it.
+
+```zsh
+code .env
 ```
 
 _Make sure that the `DEFAULT_PREFIX=loke` as this gives the running backend the name of "loke" which will be used later_.  
