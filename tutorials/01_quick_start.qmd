@@ -24,6 +24,11 @@ You may have to install these software if you don't have them already installed.
 - Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
  (_You could simply have python +3.9 installed instead._)
 - Ensure you have the [Redis](https://redis.io/) server running. 
+
+```zsh
+redis-server
+```
+
 - Open terminal. 
 - Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
 
@@ -170,18 +175,28 @@ clusters:
 ./start_bcc.sh --device configs/device_default.toml
 ```
 
-- Open your browser at [http://localhost:8000/docs](http://localhost:8000/docs) to see the interactive API docs
+- Open your browser at [http://localhost:8000/docs](http://localhost:8000/docs){.external target="_blank"} to see the interactive API docs
 
 ## Setup the Frontend
 
 - Ensure you have [docker](https://docs.docker.com/engine/install/) is running.
 
+```zsh
+docker --help
+```
+
 - Open another terminal
 
-- Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
+- Clone the [tergite-frontend](https://github.com/tergite/tergite-frontend) repo
 
 ```zsh
 git clone https://github.com/tergite/tergite-frontend.git
+```
+
+- Enter the tergite-frontend folder
+
+```zsh
+cd tergite-frontend
 ```
 
 - Create an `mss-config.toml` file with visual studio code (or any other text editor).
@@ -704,10 +719,15 @@ docker compose -f fresh-docker-compose.yml up -d
 
 - Open your browser at
 
-  - [http://localhost:8030](http://localhost:8030) to see the landing page
-  - [http://localhost:8002](http://localhost:8002) to see the MSS service
-  - [http://localhost:3000](http://localhost:3000) to see the webGUI application
+  - [http://localhost:8030](http://localhost:8030){.external target="_blank"} to see the landing page
+  - [http://localhost:8002](http://localhost:8002){.external target="_blank"} to see the MSS service
+  - [http://localhost:3000](http://localhost:3000){.external target="_blank"} to see the webGUI application
 
+- To view the status of the services, run:
+
+```zsh
+docker compose -f fresh-docker-compose.yml ps
+```
 
 - To stop the services, run:
 
@@ -728,6 +748,12 @@ docker compose -f fresh-docker-compose.yml logs -f
 ```
 
 _see more at https://docs.docker.com/reference/cli/docker/compose/logs/_
+
+- Ensure that the services are running. If they are not, restart them.
+
+```zsh
+docker compose -f fresh-docker-compose.yml up -d
+```
 
 ## Run an Experiment
 
@@ -826,7 +852,7 @@ if __name__ == "__main__":
     print(result.get_counts())
 ```
 
-- Run the above script with
+- Execute the above script by running the commnad below.
 
 ```zsh
 python main.py
