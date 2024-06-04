@@ -242,20 +242,6 @@
     ]
   },
   {
-    "objectID": "release_notes.html",
-    "href": "release_notes.html",
-    "title": "Release notes",
-    "section": "",
-    "text": "TODO\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "why.html",
-    "href": "why.html",
-    "title": "Why tergite?",
-    "section": "",
-    "text": "TODO\n\n\n\n Back to top"
-  },
-  {
     "objectID": "contributing/guidelines.html",
     "href": "contributing/guidelines.html",
     "title": "Contributing to tergite",
@@ -364,6 +350,101 @@
       "Contributing",
       "Contributing to tergite"
     ]
+  },
+  {
+    "objectID": "release_notes/tergite-sdk.html",
+    "href": "release_notes/tergite-sdk.html",
+    "title": "Tergite SDK",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite SDK"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-sdk.html#section",
+    "href": "release_notes/tergite-sdk.html#section",
+    "title": "Tergite SDK",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite SDK"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-autocalibration.html",
+    "href": "release_notes/tergite-autocalibration.html",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Autocalibration"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-autocalibration.html#section",
+    "href": "release_notes/tergite-autocalibration.html#section",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Autocalibration"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html",
+    "href": "release_notes/tergite-backend.html",
+    "title": "Tergite Backend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html#section",
+    "href": "release_notes/tergite-backend.html#section",
+    "title": "Tergite Backend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html",
+    "href": "release_notes/tergite-frontend.html",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html#section",
+    "href": "release_notes/tergite-frontend.html#section",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
+    "objectID": "why.html",
+    "href": "why.html",
+    "title": "Why tergite?",
+    "section": "",
+    "text": "TODO\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",

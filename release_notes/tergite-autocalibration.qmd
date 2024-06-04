@@ -1,0 +1,16 @@
+---
+title: "Tergite Autocalibration"
+---
+
+## [2024.04.0] - 2024-05-29
+
+Initial Public Release
+
+### Added
+- All research-related features regarding the calibration of a CZ gate
+- Updater to push calibration values as a backend to MSS/database
+
+### Changed
+- Improved command line interface
+- Renamed from tergite-acl to tergite-autocalibration
+- Updated the contribution guidelines and government model statements

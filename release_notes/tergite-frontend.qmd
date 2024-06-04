@@ -1,0 +1,11 @@
+---
+title: "Tergite Frontend"
+---
+
+## [2024.04.1] - 2024-05-28
+
+Initial Public Release
+
+### Changed
+
+- Updated the contribution guidelines and government model statements
