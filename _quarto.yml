@@ -27,7 +27,7 @@ website:
       - icon: github
         menu:
           - text: Source code
-            url: https://github.com/tergite
+            url: https://github.com/tergite/tergite.github.io
 
     left:
       - sidebar:guides-list
@@ -40,7 +40,7 @@ website:
   # options
   reader-mode: false
   back-to-top-navigation: true
-  repo-url: https://github.com/tergite
+  repo-url: https://github.com/tergite/tergite.github.io
 
   # footer
   page-footer:
@@ -48,7 +48,7 @@ website:
     left: ""
     right:
       - icon: github
-        href: https://github.com/tergite
+        href: https://github.com/tergite/tergite.github.io
 
   sidebar:
     - id: ""
