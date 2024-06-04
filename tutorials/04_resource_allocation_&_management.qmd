@@ -1,5 +1,0 @@
----
-title: "Resource Allocation & Management"
----
-
-TODO

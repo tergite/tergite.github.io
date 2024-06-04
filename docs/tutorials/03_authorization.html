@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite - Configuration</title>
+<title>Tergite - Authorization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,12 +112,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Authentication</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/03_configuration.html">
+    <a class="dropdown-item" href="../tutorials/03_authorization.html">
+ <span class="dropdown-text">Authorization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/04_configuration.html">
  <span class="dropdown-text">Configuration</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/04_resource_allocation_&amp;_management.html">
- <span class="dropdown-text">Resource Allocation &amp; Management</span></a>
+    <a class="dropdown-item" href="../tutorials/05_resource_management.html">
+ <span class="dropdown-text">Resource Management with Puhuri</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/06_puhuri_tergite_flows.html">
+ <span class="dropdown-text">Puhuri-Tergite playground</span></a>
   </li>  
     </ul>
   </li>
@@ -198,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/03_configuration.html">Configuration</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/03_authorization.html">Authorization</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -233,14 +244,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/03_configuration.html" class="sidebar-item-text sidebar-link active">
+  <a href="../tutorials/03_authorization.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Authorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/04_configuration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/04_resource_allocation_&amp;_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resource Allocation &amp; Management</span></a>
+  <a href="../tutorials/05_resource_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resource Management with Puhuri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/06_puhuri_tergite_flows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puhuri-Tergite playground</span></a>
   </div>
 </li>
       </ul>
@@ -251,14 +274,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-authorization-works" id="toc-how-authorization-works" class="nav-link active" data-scroll-target="#how-authorization-works">How Authorization Works</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/03_configuration.html">Configuration</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/03_authorization.html">Authorization</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Configuration</h1>
+<h1 class="title">Authorization</h1>
 </div>
 
 
@@ -275,9 +304,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<p>This is how the Main Service Server (MSS) in <a href="https://github.com/tergite/tergite-frontend">tergite-frontend</a> controls the user access to the quantum computer resource.</p>
+<ul>
+<li>We control access to MSS, and its BCCs using two ways
+<ul>
+<li><code>roles</code> control basic access to auth-related endpoints e.g.&nbsp;project creation, token management etc.</li>
+<li><code>projects</code> control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.</li>
+</ul></li>
+<li>QPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.</li>
+<li>QPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.</li>
+<li>A job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.</li>
+</ul>
+<section id="how-authorization-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-authorization-works">How Authorization Works</h3>
+<p>Here is an interaction diagram of auth showcasing authentication via <a href="https://ds.myaccessid.org/">MyAccessID</a>.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/tutorials/authorization/auth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Interaction diagram of auth showcasing MyAccessID"><img src="../assets/img/tutorials/authorization/auth.png" class="img-fluid figure-img" alt="Interaction diagram of auth showcasing MyAccessID"></a></p>
+<figcaption>Interaction diagram of auth showcasing MyAccessID</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Interaction diagram of auth showcasing MyAccessID</span>
+</div>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -900,6 +961,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

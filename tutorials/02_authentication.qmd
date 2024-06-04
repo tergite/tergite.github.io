@@ -2,4 +2,119 @@
 title: "Authentication"
 ---
 
-TODO
+This is how the Main Service Server (MSS) in [tergite-frontend](https://github.com/tergite/tergite-frontend) 
+authenticates its users.
+
+- It uses [Oauth2](https://oauth.net/2/), a standard similar to HTTP in the sense that for any system,
+  also called an **Oauth2 client**, to allow its users to authenticate with another system,
+  called an **Oauth2 provider**, all that is needed are two strings:
+  - `CLIENT_ID`
+  - `CLIENT_SECRET`
+- The two strings are unique to this system, but are given by the Oauth2 provider
+- Common Oauth2 providers include Google, Github, Microsoft, Chalmers (which uses Microsoft)
+- Organizations which have a sort of ActiveDirectory can automatically be Oauth2 providers.
+- We also use [OpenID Connect]() which is a flavour of Oauth2 that requires a third string, a  
+  `OPENID_CONFIGURATION_ENDPOINT`, from where to get the configuration of the openID provider.
+
+## Add a New Oauth2 Provider
+
+### Update tergite-mss app in tergite-frontend
+
+- Let's say we want some 'Ericsson' users to have access to MSS.
+- Copy the `mss-config.example.toml` to `mss-config.toml` in the tergite-frontend folder, and update the configs therein.  
+  Note: You could also create a new toml file based on `mss-config.example.toml`  
+  and set the `MSS_CONFIG_FILE` environment variable to point to that file.
+- Add the new client:
+
+```toml
+[[auth.clients]]
+# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/ericsson/...
+name = "ericsson"
+client_id = "some-openid-client-id"
+client_secret = "some-openid-client-secret"
+# the URL to redirect to after user authenticates with the system.
+# It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback
+redirect_url = "http://127.0.0.1:8002/auth/app/ericsson/callback"
+client_type = "openid"
+email_regex = ".*"
+# Roles that are automatically given to users who authenticate through Ericsson
+# roles can be: "admin", "user", "researcher", "partner". Default is "user".
+roles = ["partner", "user"]
+# openid_configuration_endpoint is necessary if Ericsson uses OpenID Connect, otherwise ignore.
+openid_configuration_endpoint = "https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration"
+```
+
+### Update tergite-landing-page app in tergite-frontend
+
+- Add the logo for the new provider in the [`tergite-frontend/apps/tergite-landing-page/public/img`](https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-landing-page/public/img) folder.
+- Open the [`tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts`](../src/app/api/config/route.ts) file and update its `OAUTH2_LOGOS` list to include your new provider's logo.
+
+```typescript
+const OAUTH2_LOGOS: { [key: string]: string } = {
+	github: '/img/github-black.png',
+	chalmers: '/img/chalmers-logo.svg',
+	ericsson: '/img/ericsson-logo.svg',
+};
+```
+
+- Start the frontend application.
+  _Instructions are on the [tergite-frontend/README.md](https://github.com/tergite/tergite-frontend/blob/main/README.md)_
+
+```zsh
+docker compose -f fresh-docker-compose.yml up -d
+```
+
+  **Note: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.**
+
+## FAQs
+
+### - How do we bypass authentication in development?
+
+We use feature flag `auth.is_enabled` property in the `mss-config.toml` file, setting it to `false`
+
+```toml
+is_enabled = false
+```
+
+**Note: `/auth` endpoints will still require authentication because they depend on the current user**
+
+### - How do we ensure that in production, authentication is always turned on?
+
+On startup, we raise a ValueError when `auth.is_enabled = false` in the `mss-config.toml` file yet  
+config variable `environment = production` and log it.
+
+### - How do we allow other qal9000 services (e.g. tergite-backend or calibration workers) to access MSS, without user intervention?
+
+Use app tokens created by any user who had the 'system' role.
+The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped.
+Since they won't be used to run jobs, their project QPU seconds are expected not to run out.
+
+If you are in development mode, you can just switch of authentication altogether.
+
+### How do I log in?
+
+- You need to run the [tergite-frontend](https://github.com/tergite/tergite-frontend).
+- **Make sure that your `mss-config.toml` files have all variables filled appropriately**.
+- The landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.
+
+### How does the backend get authenticated?
+
+- A client (say [tergite](https://github.com/tergite/tergite)) sends a `POST`
+  request is sent to `/jobs` on MSS (this app) with an `app_token` in its `Authorization` header
+- A new job entry is created in the database, together with a new unique `job_id`.
+- MSS notifies tergite-backend of the `job_id` and its associated `app_token` by sending a `POST` request to `/auth` endpoint
+  of [tergite-backend](https://github.com/tergite/tergite-backend).
+- In the response to the client, MSS returns the `/jobs` url for the given tergite-backend instance
+- The client then sends its experiment data to the tergite-backend `/jobs` url, with the same `app_token` in
+  its `Authorization` header and the same `job_id` in the experiment data.
+- tergite-backend checks if the `job_id` and the `app_token` are first of all associated, and if no other experiment data has
+  been sent already with the same `job_id`-`app_token` pair. This is to ensure no user attempts to fool the system
+  by using the same `job_id` for multiple experiments, which is theoretically possible.
+- If tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401
+  or a 403 HTTP error is thrown.
+- The same `job_id`-`app_token` pair is used to download raw logfiles from tergite-backend at `/logfiles/{job_id}` endpoint.
+  This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.
+- This is the same behaviour when reading the job results at `jobs/{job_id}/result`
+  or the job status at `jobs/{job_id}/status` or the entire job entry at `jobs/{job_id}` in tergite-backend.
+- This is also the same behaviour when attempting to delete the job at `/jobs/{job_id}` or to cancel it at
+  `/jobs/{job_id}/cancel` in tergite-backend.
