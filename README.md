@@ -27,7 +27,7 @@ quarto preview
 
 ## License
 
-[Apache 2.0 License](./LICENSE)
+[Apache 2.0 License](./LICENSE.qmd)
 
 ## Acknowledgements
 

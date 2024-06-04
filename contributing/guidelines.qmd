@@ -44,7 +44,7 @@ requests:
 ## Any contributions you make will be under the Apache 2.0 Software Licenses
 
 In short, when you submit code changes, your submissions are understood to be under the
-same [Apache 2.0 License](../LICENSE){.external target="_blank"} that covers the project. Feel free to contact the maintainers if that's a concern.
+same [Apache 2.0 License](../LICENSE.qmd){.external target="_blank"} that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Write bug reports with detail, background, and sample code
 

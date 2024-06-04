@@ -1,288 +1,400 @@
 [
   {
-    "objectID": "tutorials/03_authorization.html",
-    "href": "tutorials/03_authorization.html",
-    "title": "Authorization",
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "Tergite",
     "section": "",
-    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its BCCs using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
-    "crumbs": [
-      "Tutorials",
-      "Authorization"
-    ]
+    "text": "Apache License\n                       Version 2.0, January 2004\n                    http://www.apache.org/licenses/\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\nDefinitions.\n“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.\n“Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.\n“Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.\n“You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.\n“Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.\n“Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.\n“Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).\n“Derivative Works” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.\n“Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”\n“Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.\nGrant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.\nGrant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.\nRedistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:\n\nYou must give any other recipients of the Work or Derivative Works a copy of this License; and\nYou must cause any modified files to carry prominent notices stating that You changed the files; and\nYou must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and\nIf the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.\n\nYou may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.\nSubmission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.\nTrademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.\nDisclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.\nLimitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\nAccepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\nAPPENDIX: How to apply the Apache License to your work.\n  To apply the Apache License to your work, attach the following\n  boilerplate notice, with the fields enclosed by brackets \"[]\"\n  replaced with your own identifying information. (Don't include\n  the brackets!)  The text should be enclosed in the appropriate\n  comment syntax for the file format. We also recommend that a\n  file or class name and description of purpose be included on the\n  same \"printed page\" as the copyright notice for easier\n  identification within third-party archives.\nCopyright [yyyy] [name of copyright owner]\nLicensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n   http://www.apache.org/licenses/LICENSE-2.0\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n\n\n\n Back to top"
   },
   {
-    "objectID": "tutorials/05_resource_management.html",
-    "href": "tutorials/05_resource_management.html",
-    "title": "Resource Management with Puhuri",
+    "objectID": "tutorials/02_authentication.html",
+    "href": "tutorials/02_authentication.html",
+    "title": "Authentication",
     "section": "",
-    "text": "Puhuri is an HPC resource management platform that could also be used to manage Quantumm Computer systems.\nWe need to synchronize MSS’s resource management with that in Puhuri\nThe Puhuri Entity Layout",
+    "text": "This is how the Main Service Server (MSS) in tergite-frontend authenticates its users.",
     "crumbs": [
       "Tutorials",
-      "Resource Management with Puhuri"
+      "Authentication"
     ]
   },
   {
-    "objectID": "tutorials/05_resource_management.html#flows",
-    "href": "tutorials/05_resource_management.html#flows",
-    "title": "Resource Management with Puhuri",
-    "section": "Flows",
-    "text": "Flows\nMore information about flows can be found in the puhuri tergite flows tutorial\n\n\n\n\n\n\n\n\n\nSelecting resource to report on",
+    "objectID": "tutorials/02_authentication.html#add-a-new-oauth2-provider",
+    "href": "tutorials/02_authentication.html#add-a-new-oauth2-provider",
+    "title": "Authentication",
+    "section": "Add a New Oauth2 Provider",
+    "text": "Add a New Oauth2 Provider\n\nUpdate tergite-mss app in tergite-frontend\n\nLet’s say we want some ‘Company B’ users to have access to MSS.\nCopy the mss-config.example.toml to mss-config.toml in the tergite-frontend folder, and update the configs therein.\nNote: You could also create a new toml file based on mss-config.example.toml\nand set the MSS_CONFIG_FILE environment variable to point to that file.\nAdd the new client:\n\n[[auth.clients]]\n# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/company-b/...\nname = \"company-b\"\nclient_id = \"some-openid-client-id\"\nclient_secret = \"some-openid-client-secret\"\n# the URL to redirect to after user authenticates with the system.\n# It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback\nredirect_url = \"http://127.0.0.1:8002/auth/app/company-b/callback\"\nclient_type = \"openid\"\nemail_regex = \".*\"\n# Roles that are automatically given to users who authenticate through Company B\n# roles can be: \"admin\", \"user\", \"researcher\", \"partner\". Default is \"user\".\nroles = [\"partner\", \"user\"]\n# openid_configuration_endpoint is necessary if Company B uses OpenID Connect, otherwise ignore.\nopenid_configuration_endpoint = \"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration\"\n\n\nUpdate tergite-landing-page app in tergite-frontend\n\nAdd the logo for the new provider in the tergite-frontend/apps/tergite-landing-page/public/img folder.\nOpen the tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts file and update its OAUTH2_LOGOS list to include your new provider’s logo.\n\nconst OAUTH2_LOGOS: { [key: string]: string } = {\n    github: '/img/github-black.png',\n    chalmers: '/img/chalmers-logo.svg',\n    company-b: '/img/company-b-logo.svg',\n};\n\nStart the frontend application. Instructions are on the tergite-frontend/README.md\n\ndocker compose -f fresh-docker-compose.yml up -d\nNote: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.",
     "crumbs": [
       "Tutorials",
-      "Resource Management with Puhuri"
+      "Authentication"
     ]
   },
   {
-    "objectID": "tutorials/05_resource_management.html#assumptions",
-    "href": "tutorials/05_resource_management.html#assumptions",
-    "title": "Resource Management with Puhuri",
-    "section": "Assumptions",
-    "text": "Assumptions\n\nWhen creating components in the puhuri UI, the ‘measurement unit’s set on the component are of the following possible values: ’second’, ‘hour’, ‘minute’, ‘day’, ‘week’, ‘half_month’, and ‘month’.",
+    "objectID": "tutorials/02_authentication.html#faqs",
+    "href": "tutorials/02_authentication.html#faqs",
+    "title": "Authentication",
+    "section": "FAQs",
+    "text": "FAQs\n\n- How do we bypass authentication in development?\nWe use feature flag auth.is_enabled property in the mss-config.toml file, setting it to false\nis_enabled = false\nNote: /auth endpoints will still require authentication because they depend on the current user\n\n\n- How do we ensure that in production, authentication is always turned on?\nOn startup, we raise a ValueError when auth.is_enabled = false in the mss-config.toml file yet\nconfig variable environment = production and log it.\n\n\n- How do we allow other qal9000 services (e.g. tergite-backend or calibration workers) to access MSS, without user intervention?\nUse app tokens created by any user who had the ‘system’ role. The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped. Since they won’t be used to run jobs, their project QPU seconds are expected not to run out.\nIf you are in development mode, you can just switch of authentication altogether.\n\n\nHow do I log in?\n\nYou need to run the tergite-frontend.\nMake sure that your mss-config.toml files have all variables filled appropriately.\nThe landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.\n\n\n\nHow does the backend get authenticated?\n\nA client (say tergite) sends a POST request is sent to /jobs on MSS (this app) with an app_token in its Authorization header\nA new job entry is created in the database, together with a new unique job_id.\nMSS notifies tergite-backend of the job_id and its associated app_token by sending a POST request to /auth endpoint of tergite-backend.\nIn the response to the client, MSS returns the /jobs url for the given tergite-backend instance\nThe client then sends its experiment data to the tergite-backend /jobs url, with the same app_token in its Authorization header and the same job_id in the experiment data.\ntergite-backend checks if the job_id and the app_token are first of all associated, and if no other experiment data has been sent already with the same job_id-app_token pair. This is to ensure no user attempts to fool the system by using the same job_id for multiple experiments, which is theoretically possible.\nIf tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401 or a 403 HTTP error is thrown.\nThe same job_id-app_token pair is used to download raw logfiles from tergite-backend at /logfiles/{job_id} endpoint. This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.\nThis is the same behaviour when reading the job results at jobs/{job_id}/result or the job status at jobs/{job_id}/status or the entire job entry at jobs/{job_id} in tergite-backend.\nThis is also the same behaviour when attempting to delete the job at /jobs/{job_id} or to cancel it at /jobs/{job_id}/cancel in tergite-backend.",
     "crumbs": [
       "Tutorials",
-      "Resource Management with Puhuri"
+      "Authentication"
     ]
   },
   {
-    "objectID": "tutorials/05_resource_management.html#how-to-start-the-puhuri-sync",
-    "href": "tutorials/05_resource_management.html#how-to-start-the-puhuri-sync",
-    "title": "Resource Management with Puhuri",
-    "section": "How to Start the Puhuri Sync",
-    "text": "How to Start the Puhuri Sync\n\nEnsure that the is_enabled = true in the [puhuri] table in your mss-config.toml file\nEnsure all other variables in the [puhuri] table in your mss-config.toml file are appropriately set e.g.\n\n[puhuri]\n# the URI to the Puhuri WALDUR server instance\n# Please contact the Puhuri team to get this.\nwaldur_api_uri = \"&lt;the URI to the Puhuri Waldur server&gt;\"\n# The access token to be used in the Waldur client [https://docs.waldur.com/user-guide/] to connect to Puhuri\n# Please contact the Puhuri team on how to get this from the UI\nwaldur_client_token = \"&lt;API token for a puhuri user who has 'service provider manager' role for our offering on puhuri&gt;\"\n# The unique ID for the service provider associated with this app in the Waldur Puhuri server\n# Please contact the Puhuri team on how to get this from the UI\nprovider_uuid = \"&lt;the unique ID for the service provider associated with this app in Puhuri&gt;\"\n# the interval in seconds at which puhuri is polled. default is 900 (15 minutes)\npoll_interval = \"&lt;some value&gt;\"\n\nIf you wish to start only the puhuri synchronization script without the REST API, run in your virtual environment:\n\npython -m api.scripts.puhuri_sync --ignore-if-disabled\n\nIn order to run both the REST API and this puhuri synchronization script, run in your virtual environment:\n\npython -m api.scripts.puhuri_sync --ignore-if-disabled & \\\n  uvicorn --host 0.0.0.0 --port 8000 api.rest:app  --proxy-headers\n\n\n\nPuhuri Layout\nSelecting resource to report on",
-    "crumbs": [
-      "Tutorials",
-      "Resource Management with Puhuri"
-    ]
-  },
-  {
-    "objectID": "tutorials/04_configuration.html",
-    "href": "tutorials/04_configuration.html",
-    "title": "Configuration",
+    "objectID": "tutorials/06_puhuri_tergite_flows.html",
+    "href": "tutorials/06_puhuri_tergite_flows.html",
+    "title": "Puhuri-Tergite playground",
     "section": "",
-    "text": "TODO\n\n\n\n Back to top",
+    "text": "This is just a playgorund as we try to connect Tergite to Puhuri",
     "crumbs": [
       "Tutorials",
-      "Configuration"
+      "Puhuri-Tergite playground"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html",
-    "href": "examples/03_equal_superposition.html",
-    "title": "Equal Superposition",
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#global-variables",
+    "href": "tutorials/06_puhuri_tergite_flows.html#global-variables",
+    "title": "Puhuri-Tergite playground",
+    "section": "GLOBAL VARIABLES",
+    "text": "GLOBAL VARIABLES\nThe following gloabl variables should be set to the right values.\nimport asyncio\nimport enum\nimport pprint\n\nimport pydantic\n\nfrom datetime import datetime, timezone\nfrom typing import Any, Dict, Optional, Tuple, List\n\nfrom motor import motor_asyncio\nfrom pymongo import UpdateOne\nfrom waldur_client import WaldurClient, ComponentUsage\n\n# The User-set variables\nWALDUR_URI = \"https://access.nordiquest.net/api/\"\nWALDUR_TOKEN = \"&lt;API key of your user, click on the user in the navbar&gt;\"\nPROVIDER_UUID = \"&lt;Unique ID of the Service provider for QAL900, visit the service provider detail page and get the uuid in the URL box&gt;\"\n# this requires one to install mongodb. Or you can set it to \"\" or None and it will be ignored\nMONGODB_URI = \"mongodb://localhost:27017\"\n\n\n# Puhuri Waldur client\nCLIENT = WaldurClient(WALDUR_URI, WALDUR_TOKEN)\nDB_CLIENT: Optional[motor_asyncio.AsyncIOMotorClient] = None\nif MONGODB_URI:\n    DB_CLIENT = motor_asyncio.AsyncIOMotorClient(MONGODB_URI)\n    DB_NAME = \"your-database\"\n    PROJECTS_COLLECTION = \"projects\"\n\n# Exceptions\n\nclass BaseQal9000Exception(Exception):\n    def __init__(self, message: str = \"\"):\n        self._message = message\n\n    def __repr__(self):\n        return f\"{self.__class__.__name__}: {self._message}\"\n\n    def __str__(self):\n        return self._message if self._message else self.__class__.__name__\n\nclass ResourceNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no resources are found\"\"\"\n\nclass ComponentNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no component is found\"\"\"\n\nclass PlanPeriodNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no plan period is found\"\"\"\n\nPuhuri Entity Layout\n\n\n\nPuhuri-qal9000-entity-layout",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#database-schemas",
+    "href": "tutorials/06_puhuri_tergite_flows.html#database-schemas",
+    "title": "Puhuri-Tergite playground",
+    "section": "Database Schemas",
+    "text": "Database Schemas\nThere are a few database schemas we may need. We are using mongodb here, but any kind of storage can be used/\nclass ProjectSource(str, enum.Enum):\n    PUHURI = 'puhuri'\n    INTERNAL = 'internal'\n\nclass Project(pydantic.BaseModel):\n    # ...\n    ext_id: str  # the project_uuid in this case\n    source: ProjectSource\n    user_emails: List[str] = []\n    qpu_seconds: int = 0\n    is_active: bool = True\n    resource_ids: List[str] = []",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#operations",
+    "href": "tutorials/06_puhuri_tergite_flows.html#operations",
+    "title": "Puhuri-Tergite playground",
+    "section": "Operations",
+    "text": "Operations\nThere are some important operations we need to pull off. They include:\n\nReport usage on a per-project basis for projects that have Tergite offerings\nRetrieve latest approved resource allocations that have Tergite offerings from puhuri\nRetrieve latest users added to given projects that have Tergite offerings from puhuri\n\n\nProject-based Usage Report Submission\nThe flow of logic is as shown below\n\n\n\nPuhuri-qal9000-report-usage\n\n\n\nRetrieving Resources of a Given Project\nWe should be able to retrieve all resources attached to a project by running the cell below.\nNote that we need to first approve all pending orders for this provider. This ensures that all resources that we will query later have ‘plan periods’. (We should have updated our projects lists first)\nOnly resources with approved orders have plan periods.\nResources associated with approved orders have state “OK”. This is something we will filter for later.\n# Set the UUID of the project whose resources you wish to inspect\nPROJECT_UUID = \"\"\n\n_resource_filter = {\"provider_uuid\": PROVIDER_UUID, \"state\": \"OK\"}\nif PROJECT_UUID:\n    _resource_filter[\"project_uuid\"] = PROJECT_UUID\n\n# If you don't set the PROJECT_UUID, all resources that have offerings from\n# your given service provider will appear here\n_RESOURCES = CLIENT.filter_marketplace_resources(_resource_filter)\n_RESOURCES\nLet us check if there are any resources and exit with an error if none are found\nif len(_RESOURCES) == 0:\n    raise ResourceNotFoundError(f\"no resource found for provider and project\")\n\n\nSeparate Limit-based From Usage-based Resources\nSince Tergite keeps track of only the project uuid, and yet a project can have multiple resources, we need to determine the resource against which our usage report is to be made.\nCurrently, we think we should consume limit-based resources first before we move on to the usage-based resources.\nLimit-based resources are those that are prepaid i.e. can only be used after a given amount of QPU minutes has been purchased.\nOn the other hand, usage-based resources are billed, say at the end of the month.\nWe therefore need to separate limit-based resources of a project from usage-based resources and only report usage on the usage-based resources if there is no limit-based resource.\nQuestion: What should we do if all limit-based resources are depleted yet there are some usage-based resources? (Probably report on the usage-based resources)\n_USAGE_BASED_RESOURCES = []\n_LIMIT_BASED_RESOURCES = []\n\nfor resource in _RESOURCES:\n    # usage-based resources have an empty {} as their limits\n    if len(resource[\"limits\"]) == 0:\n        _USAGE_BASED_RESOURCES.append(resource)\n    else:\n        _LIMIT_BASED_RESOURCES.append(resource)\n\nprint(\"USAGE BASED RESOURCES\")\npprint.pprint(_USAGE_BASED_RESOURCES)\n\nprint(\"LIMIT BASED RESOURCES\")\npprint.pprint(_LIMIT_BASED_RESOURCES)\n\n\nSelecting the Right Resource to Report Usage Against\nWe are going to look through the different resources and select the right resource to report usage against.\n# the QPU seconds to be reported against the selected resource\n_QPU_SECONDS_USED = 80\n\n# the resource whose usage is to be updated\n_SELECTED_RESOURCE: Optional[Dict[str, Any]] = None\n\n# the accounting component to use when send resource usage.\n# Note: project -&gt; many resources -&gt; each with an (accounting) plan -&gt; each with multiple (accounting) components\n_SELECTED_COMPONENT: Optional[Dict[str, Any]] = None\n\n# the limit-based resources have a dictionary of \"limits\" with keys as the \"internal names\" or \"types\" of the components\n# and the values as the maximum amount for that component. This amount is in units of that component\n# e.g. 10 for one component, might mean 10 days, while for another it might mean 10 minutes depending\n# on the 'measurement_unit' of that component.\n# We will select the component whose limit (in seconds) &gt;= the usage\n_SELECTED_COMPONENT_TYPE: Optional[str] = None\nNOTE: We are making a big assumption that when creating components in the puhuri UI, the ‘measurement unit’s set on the component are of the following possible values: ’second’, ‘hour’, ‘minute’, ‘day’, ‘week’, ‘half_month’, and ‘month’.\nWe attempt to get the first limit-based resource that has a limit value (in seconds) greater or equal to the _QPU_SECONDS_USED to be reported. This is only polite to the customer so that we don’t run one resource to below zero while the others are one way above zero.\ndef get_accounting_component(\n        offering_uuid: str, \n        component_type: str, \n        cache: Optional[Dict[Tuple[str, str], Dict[str, Any]]] = None,\n        ) -&gt; Dict[str, Any]:\n    \"\"\"Gets the accounting component given the component type and the offering_uuid\n    \n    If the caches are provided, it attempts to extract the component \n    from the cache if the cache is provided\n\n    Args:\n        offering_uuid: the UUID string of the offering the component belongs to\n        component_type: the type of the component\n        cache: the dictionary cache that holds components, \n            accessible by (offering_uuid, component_type) tuple\n\n    Returns:\n        the component\n    \"\"\"\n    _cache = cache if isinstance(cache, dict) else {}\n    component = _cache.get((offering_uuid, component_type))\n\n    if component is None:\n        offering = CLIENT.get_marketplace_provider_offering(offering_uuid)\n        _cache.update({(offering_uuid, v[\"type\"]): v for v in offering[\"components\"]})\n        component = _cache[(offering_uuid, component_type)]\n\n    return component\n    \n\n# A map to help convert limits and amounts to-and-fro seconds given a particular accounting component\n_COMPONENT_UNIT_SECONDS_MAP: Dict[str, int] = {\n    \"month\": 30 * 24 * 3_600,\n    \"half_month\": 15 * 24 * 3_600,\n    \"week\": 7 * 24 * 3_600,\n    \"day\": 24 * 3_600,\n    \"hour\": 3_600,\n    \"minute\": 60,\n    \"second\": 1,\n}\n\n_COMPONENTS_CACHE: Dict[Tuple[str, str], Dict[str, Any]] = {}\n\nfor resource in _LIMIT_BASED_RESOURCES:\n    offering_uuid = resource[\"offering_uuid\"]\n\n    for comp_type, comp_amount in resource[\"limits\"].items():\n        component = get_accounting_component(\n            offering_uuid=offering_uuid, component_type=comp_type, cache=_COMPONENTS_CACHE)\n\n        unit_value = _COMPONENT_UNIT_SECONDS_MAP[component[\"measured_unit\"]]\n        limit_in_seconds = comp_amount * unit_value\n\n        # select resource which has at least one limit (or purchased QPU seconds) \n        # greater or equal to the seconds to be reported.\n        if limit_in_seconds &gt;= _QPU_SECONDS_USED:\n            _SELECTED_RESOURCE = resource\n            _SELECTED_COMPONENT = component\n            _SELECTED_COMPONENT_TYPE = comp_type\n            break\n\n    # get out of loop once we have a selected resource\n    if _SELECTED_RESOURCE is not None:\n        break\n\nprint(\"_SELECTED_RESOURCE\")\npprint.pprint(_SELECTED_RESOURCE)\n\nprint(\"_SELECTED_COMPONENT_TYPE\")\npprint.pprint(_SELECTED_COMPONENT_TYPE)\n\nprint(\"_SELECTED_COMPONENT\")\npprint.pprint(_SELECTED_COMPONENT)\nIf no limit-based resource has enough QPU minutes, we select the first usage-based resource. If no usage-based resource exists, we select the first limit-based resource.\nOf course if there are no resources at all, we should have not reached this far! We should have exited, with an error already.\nif _SELECTED_RESOURCE is None:\n    try:\n        _SELECTED_RESOURCE = _USAGE_BASED_RESOURCES[0]\n    except IndexError:\n        _SELECTED_RESOURCE = _LIMIT_BASED_RESOURCES[0]\n\n_SELECTED_RESOURCE\n\n\nGetting the Right Component Type\nWe need to get the corresponding accounting component type to use to report usage. If we got a limit-based resource, we should have already set the _SELECTED_COMPONENT_TYPE basing on the key in the limits dict that had an amount greater or equal to the QPU minutes we are going to report.\nRemember that limits is a dict containing the component types and their corresponding limits\nIf _SELECTED_COMPONENT_TYPE is not yet set, we need to obtain the first component type in the offering associated with the selected resource.\nLet us first get the offering that is associcated with the selected resource\n# This should not be necessary if you already have _SELECTED_COMPONENT_TYPE set\nif _SELECTED_COMPONENT_TYPE is None:\n    _SELECTED_OFFERING = CLIENT.get_marketplace_provider_offering(_SELECTED_RESOURCE[\"offering_uuid\"])\n\n    _SELECTED_OFFERING\nIf offering has no components, we raise an exception and exit\n# This should not be necessary if you already have _SELECTED_COMPONENT_TYPE set\nif _SELECTED_COMPONENT_TYPE is None:\n    _components = _SELECTED_OFFERING[\"components\"]\n    if len(_components) == 0:\n        raise ComponentNotFoundError(\"no components found for the selected offering\")\n    \n    _SELECTED_COMPONENT = _components[0]\n    _SELECTED_COMPONENT_TYPE = _SELECTED_COMPONENT[\"type\"]\n\n\nGenerate a Usage Report\nWe now need to generate the usage report to send over to puhuri\nLet us create a function to convert the QPU seconds into the component unit e.g “hour”, “month” e.t.c\ndef to_measured_unit(qpu_seconds: float, measured_unit: str) -&gt; float:\n    \"\"\"Converts the qpu seconds into the given measured unit of the component\n     \n    measured_unit e.g. hour, day etc\n    \n    Args:\n        qpu_seconds: the QPU seconds to convert\n        measured_unit: the 'measured_unit' of the accounting component\n\n    Returns:\n        the QPU time in 'measured_unit's\n    \"\"\"\n    # round up to two decimal places\n    return round(qpu_seconds / _COMPONENT_UNIT_SECONDS_MAP[measured_unit], 2)\nAnd then the usage report.\n\nGet the Plan Period for the Selected Resource\nIn order to send the usage report, one must sent the plan preiod UUID for the given resource. Note that only resources whose orders have been approved (or ar in state ‘OK’), have associated planned periods.\nLet’s retrieve the plan periods for the selected resource\n_PLAN_PERIODS = CLIENT.marketplace_resource_get_plan_periods(resource_uuid=_SELECTED_RESOURCE[\"uuid\"])\n\n_PLAN_PERIODS\nWe now need to get the plan period for the current month. We may not be sure whether there is only one plan period for this month or not so we will get the last one in the list for this month.\nLet’s first create some datetime utility functions\ndef to_datetime(timestamp: str) -&gt; datetime:\n    \"\"\"converts a timestamp of format like 2024-01-10T14:32:05.880079Z to datetime\n    \n    Args:\n        timestamp: the timestamp string\n\n    Returns:\n        the datetime corresponding to the given timestamp string\n    \"\"\"\n    return datetime.fromisoformat(timestamp.replace(\"Z\", \"+00:00\"))\n\n\ndef is_in_month(\n    month_year: Tuple[int, int],\n    timestamp: str,\n) -&gt; bool:\n    \"\"\"Checks if the given timestamp is in the given month\n\n    Note that months start at 1 i.e. January = 1, February = 2, ...\n\n    Args:\n        month_year: the (month, year) pair\n        timestamp: the timestamp string in format like 2024-01-10T14:32:05.880079Z\n\n    Returns:\n        True if the timestamp belongs to the same month, False if otherwise\n    \"\"\"\n    timestamp_date = to_datetime(timestamp)\n    month, year = month_year\n    return timestamp_date.month == month and timestamp_date.year == year\nNow let’s get the plan periods for the current month\n_NOW = datetime.now(tz=timezone.utc)\n_SELECTED_PLAN_PERIOD: Optional[Dict[str, Any]] = None\n\n_PLAN_PERIODS_FOR_CURRENT_MONTH = [\n    v for v in _PLAN_PERIODS \n    if is_in_month((_NOW.month, _NOW.year), v[\"start\"])\n]\n\ntry:\n    _SELECTED_PLAN_PERIOD = _PLAN_PERIODS_FOR_CURRENT_MONTH[-1]\nexcept IndexError:\n    raise PlanPeriodNotFoundError(f\"no plan period was found for month: {(_NOW.month, _NOW.year)}, for resource {_SELECTED_RESOURCE['uuid']}\")\n\n_SELECTED_PLAN_PERIOD\n\n\nSubmit the Usage Report\nWe are now ready to submit the usage report.\nWe will create a component usage for the first plan period of that given resource.\n# requests.post(_USAGE_REPORT_URL, data=_USAGE_REPORT_PAYLOAD, headers=_USAGE_REPORT_HEADERS)\nusage = ComponentUsage(\n    type= _SELECTED_COMPONENT_TYPE,\n    amount=to_measured_unit(\n    800, measured_unit=_SELECTED_COMPONENT[\"measured_unit\"]),\n    description= f\"{_QPU_SECONDS_USED} QPU seconds\",\n)\n\nCLIENT.create_component_usages(plan_period_uuid=_SELECTED_PLAN_PERIOD[\"uuid\"], \n                               usages=[usage])\n\n\n\nPuhuri Waldur Constraint: 1 Usage Per Month\nWhen we try again to submit another usage for the same plan, we may see that no new usage item is added to the ‘components’ of the plan period. To see this, you will have to run the previous code cell, the run the code cell before that.\nAs of now it seems like Puhuri can only accept 1 usage per month. This might change in future but for now, we must accumulate usages internally, and send the accumulated data\nThis means that only one request is expected per day. Any requests sent within that month (say 2024-01) will overwrite the previous entry for that month.\n\nHow to Work With Constraint\nWe will have to log every usage internally every month as a separate usage. We expect only one usage report for each job ID. Now and again, at whatever interval we wish, we will compute the accumulated usage for the current month and project and send it over to the Puhuri waldur server.\nWe do not have to wait for a month to elapse in order to resend usage reports for the same resource, (or plan) since it will be overwritten.\nFor us to limit access to users who have gone beyond the current limit for a given project, we might need to get the current pending QPUs left basing on the accumulated usage we have internally in Tergite, vs the allocated QPU seconds.",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#getting-list-of-new-projects",
+    "href": "tutorials/06_puhuri_tergite_flows.html#getting-list-of-new-projects",
+    "title": "Puhuri-Tergite playground",
+    "section": "Getting List of New Projects",
+    "text": "Getting List of New Projects\nWe also need to get all new projects that have been created that are requesting for a resource governed by this service provider.\n\nGet All New Resources\nWe first get all the new resources attached to this provider uuid\n_NEW_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"Creating\"\n})\n\n_NEW_RESOURCES\nFrom these resources, we can extract the unique individual project UUID’s that are attached to these resources, and upsert them into our databases as new Project instances\nFirst of all we need to group the resources by project UUID.\nNote that a given pre-existing project can order new resources. When updating the database, we should upsert in such a way that we increment the prexisting qpu_seconds for any project that exists or we create a new project.\nLet’s group the new resources by project UUID. We will sum their “limit”s and “limit_usage”\nclass PuhuriProjectMetadata(pydantic.BaseModel):\n    \"\"\"Metadata as extracted from Puhuri resources\"\"\"\n    uuid: str \n    # dict of offering_uuid and limits dict\n    limits: Dict[str, Dict[str, float]] = {}\n    # dict of offering_uuid and limit_usage dict\n    limit_usage: Dict[str, Dict[str, float]] = {}\n    resource_uuids: List[str]\n\n\ndef remove_nones(data: Dict[str, Optional[Any]], __new: Any):\n    \"\"\"Replaces None values with the replacement\n    \n    Args:\n        data: the dictionary whose None values are to be replaced\n        __new: the replacement for the None values\n\n    Returns:\n        the dictionary with the None values replaced with the replacement\n    \"\"\"\n    return {k: v if v is not None else __new for k, v in data.items()}\n\n\ndef extract_project_metadata(resources: List[Dict[str, Any]]) -&gt; List[PuhuriProjectMetadata]:\n    \"\"\"Extracts the project metadata from a list of resources\n    \n    A project can contan any number of resources so we need to group the resources\n    by project UUID and aggregate any relevant fields like \"limits\" and \"limit_usage\"\n\n    Args:\n        resources: the list of resource dictionaries\n\n    Returns:\n        list of PuhuriProjectMetadata\n    \"\"\"\n    results: Dict[str, PuhuriProjectMetadata] = {}\n\n    for resource in resources:\n        offering_uuid = resource[\"offering_uuid\"]\n        project_uuid = resource[\"project_uuid\"]\n        limits = remove_nones(resource[\"limits\"], 0)\n        limit_usage = remove_nones(resource[\"limit_usage\"], 0)\n        project_meta = PuhuriProjectMetadata(\n                uuid=project_uuid,\n                limits={offering_uuid: limits},\n                limit_usage={offering_uuid: limit_usage},\n                resource_uuids=[resource[\"uuid\"]],\n            )\n        original_meta = results.get(project_uuid, None)\n        \n        if isinstance(original_meta, PuhuriProjectMetadata):\n            original_limits = original_meta.limits.get(offering_uuid, {})\n            project_meta.limits[offering_uuid] = {\n                k: v + original_limits.get(k, 0)\n                for k, v in limits.items() \n            }\n\n            original_usages = original_meta.limit_usage.get(offering_uuid, {})\n            project_meta.limit_usage[offering_uuid] = {\n                k: v + original_usages.get(k, 0)\n                for k, v in limit_usage.items() \n            }\n\n            project_meta.resource_uuids.extend(original_meta.resource_uuids)\n\n        results[project_uuid] = project_meta\n\n    return list(results.values())\n\n_NEW_PROJECT_METADATA = extract_project_metadata(_NEW_RESOURCES)\n\n_NEW_PROJECT_METADATA\n\nCompute the QPU seconds for each project\nBefore we can update our database, we need to compute the QPU seconds for each project.\nLet’s create a function to do just that\ndef get_qpu_seconds(metadata: PuhuriProjectMetadata) -&gt; float:\n    \"\"\"Computes the net QPU seconds the project is left with\n    \n    Args:\n        metadata: the metadata of the project\n\n    Returns:\n        the net QPU seconds, i.e. allocated minus used\n    \"\"\"\n    net_qpu_seconds = 0\n    _components_cache: Dict[Tuple[str, str], Dict[str, Any]] = {}\n\n    for offering_uuid, limits in metadata.limits.items():\n        limit_usage = metadata.limit_usage.get(offering_uuid, {})\n\n        for comp_type, comp_amount in limits.items():\n            component = get_accounting_component(\n                offering_uuid=offering_uuid, component_type=comp_type, cache=_components_cache)\n\n            unit_value = _COMPONENT_UNIT_SECONDS_MAP[component[\"measured_unit\"]]\n            net_comp_amount = comp_amount - limit_usage.get(comp_type, 0)\n            net_qpu_seconds += (net_comp_amount * unit_value)\n\n    return net_qpu_seconds\nWe can now extract Project instances from the PuhuriProjectMetadata\n_NEW_PROJECTS: List[Project] = [Project(\n    ext_id=item.uuid,\n    source=ProjectSource.PUHURI,\n    qpu_seconds=get_qpu_seconds(item),\n    is_active=False,\n    resource_ids=item.resource_uuids,\n) for item in _NEW_PROJECT_METADATA]\n\n_NEW_PROJECTS\n\n\nUpsert the New Projects into Database\nWe now have to upsert the new projects into the database.\nRemember, if any of the projects already exist, we should increment their QPU seconds; and their is_active set to False momentarily.\nNotice that we have not yet approved the above orders. However, all these new projects are set to is_active=False, until their orders are approved. This is after they are inserted into the database.\nFirst, let us create a unique Index for the project ext_id in the projects database collection. This is to ensure that no project has more than one entry.\nSideNote: beanie ODM can be a good tool to use to create database models that have indexes\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    await _collection.create_index(\"ext_id\", unique=True)\nThen we will update our projects\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    _responses = await asyncio.gather(*(_collection.update_one({\n            \"ext_id\": project.ext_id, \n            # a guard to ensure projects whose order approvals keep\n            # failing do not have their qpu_seconds incremented indefinitely\n            # NOTE: this may fail with a Conflict Error if any of the resource_ids \n            #   already exists in the project. You might need to resolve this manually\n            \"resource_ids\": {\"$nin\": project.resource_ids},\n            }, {\n            \"$set\": {\n                \"source\": ProjectSource.PUHURI.value,\n                \"is_active\": project.is_active,\n            },\n            \"$inc\": {\n                \"qpu_seconds\": project.qpu_seconds,\n            },\n            \"$addToSet\": {\"resource_ids\": {\"$each\": project.resource_ids}}\n        }, upsert=True) for project in _NEW_PROJECTS), return_exceptions=True)\n    \n    _UPDATED_PROJECTS = [\n        _NEW_PROJECTS[index]\n        for index, resp in enumerate(_responses)\n        if not isinstance(resp, Exception)\n    ]\n    \n\n    pprint.pprint(_UPDATED_PROJECTS)\n\n\nApprove All Orders for the given resources\nWe will then approve all the orders for the new resources and when successful, we will activate their associated projects\nWe will first create a function to do the approvals\nasync def approve_pending_orders(client: WaldurClient, provider_uuid: str, **kwargs) -&gt; Dict[str, Any]:\n    \"\"\"Approves all orders for the given service provider that are in the 'pending-provider' state\n\n    Args:\n        client: the WaldurClient\n        provider_uuid: the UUID string of the service provider\n        kwargs: extra filters for filtering the orders\n\n    Returns:\n        dictionary of kwargs used to filter orders.\n\n    Raises:\n        WaldurClientException: error making request\n        ValueError: no order item found for filter {kwargs}\n    \"\"\"\n    # This function does not have to be asynchronous in this notebook\n    # but it needs to be asynchronous in web-servers so that it does not\n    # block other requests. Same thing for all other functions that make\n    # network calls.\n    loop = asyncio.get_event_loop()\n\n    filter_obj = {\n        'state': 'pending-provider',\n        'provider_uuid': provider_uuid,\n        **kwargs\n    }\n    order_items = await loop.run_in_executor(None, client.list_orders, filter_obj)\n    if len(order_items) == 0:\n        raise ValueError(f\"no order item found for filter {kwargs}\")\n    \n    await asyncio.gather(*(loop.run_in_executor(None, client.marketplace_order_approve_by_provider, order[\"uuid\"]) \n                      for order in order_items),)\n    return kwargs\nThen we can make the API calls to Puhuri top approve the pending orders\n# if using mongo db\nif DB_CLIENT:\n    _RESOURCE_UUID_PROJECT_UUID_MAP = {\n        resource_uuid: project.ext_id\n        for project in _UPDATED_PROJECTS\n        for resource_uuid in project.resource_ids\n    }\n    pprint.pprint(_RESOURCE_UUID_PROJECT_UUID_MAP)\n\n    # _results is a list of Dict[resource_uuid, str]\n    # Note that we are filtering by resource UUID, not project UUID, because there is a chance \n    # that a project could have added new resources while we were still processing the \n    # current ones\n    _responses = await asyncio.gather(*(\n        approve_pending_orders(CLIENT, PROVIDER_UUID, resource_uuid=resource_uuid)\n        for resource_uuid in _RESOURCE_UUID_PROJECT_UUID_MAP.keys()\n    ), return_exceptions=True)\n\n    _APPROVED_RESOURCE_UUID_MAPS = [resp for resp in _responses if isinstance(resp, dict)]\n\n\n    pprint.pprint(_APPROVED_RESOURCE_UUID_MAPS)\nWe then have to get all approved projects i.e. projects without a non-approved order\n# if using mongo db\nif DB_CLIENT:\n    _results_map = {item[\"resource_uuid\"]: True for item in _APPROVED_RESOURCE_UUID_MAPS}\n\n    # approved projects are those that have all their resources approved\n    _APPROVED_PROJECT_UUIDS = [\n        metadata.uuid for metadata in _NEW_PROJECT_METADATA\n        if all(_results_map.get(resource_uuid) for resource_uuid in metadata.resource_uuids)\n    ]\n\n    pprint.pprint(_APPROVED_PROJECT_UUIDS)\nThen we update the approved projects in the database by setting their is_active to True.\nNote that some projects might have been active before new orders were queried. But then due to a failing order approval, they suddenly become inactive. That order must be resolved before they are reactivated, on the next run.\nOtherwise, no new resources will be added to that project\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    # set the approved projects' \"is_active\" to True\n    _result = await _collection.bulk_write(\n        [UpdateOne({\n            \"ext_id\": ext_id, \n            }, {\n            \"$set\": {\n                \"is_active\": True,\n            }\n        }) \n         for ext_id in _APPROVED_PROJECT_UUIDS]\n    )\n\n    pprint.pprint(_result)",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#updating-qpu-seconds-for-each-pre-existing-project",
+    "href": "tutorials/06_puhuri_tergite_flows.html#updating-qpu-seconds-for-each-pre-existing-project",
+    "title": "Puhuri-Tergite playground",
+    "section": "Updating QPU Seconds for Each Pre-existing Project",
+    "text": "Updating QPU Seconds for Each Pre-existing Project\nWe need to update the allocated QPU seconds for all projects. This is like taking a snapshot of Puhuri’s state at a given time and transfering it to QAL9000.\nWe should first of all get all approved resources. This should ideally be done after approving all pending orders (i.e. after updating the project list in Tergite).\n_APPROVED_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"OK\"\n})\n\n_APPROVED_RESOURCES\nWe are assuming that all projects allocated to QAL9000 in puhuri will be “limit-based”, as this allows us to restrict usage of the quantum computer once the limits for the allocation have been exhausted.\nHowever, we are not able to stop any one from creating a ‘usage-based’ resource and attaching it to QAL9000. We will thus keep the qpu_seconds of such projects at 0 hence no access to their members.\nIn future, this could change. For instance, we could begin tracking whether a project is ‘usage-based’ or ‘limit-based’ within QAL9000. And then update the authorization logic to allow users whose projects are ‘usage-based’ even when their qpu_seconds is &lt;= 0\nLet us now add up all the net qpu_seconds for each project (since a project can have multiple resources).\nWe do this by grouping the resources into PuhuriProjectMetadata.\n_ALL_PROJECT_METADATA = extract_project_metadata(_APPROVED_RESOURCES)\n\n_ALL_PROJECT_METADATA\nThen we compute the QPU seconds of each project from the PuhuriProjectMetadata\n_ALL_PROJECTS: List[Project] = [Project(\n    ext_id=item.uuid,\n    source=ProjectSource.PUHURI,\n    qpu_seconds=get_qpu_seconds(item),\n    is_active=True,\n    resource_ids=item.resource_uuids,\n) for item in _ALL_PROJECT_METADATA]\n\n_ALL_PROJECTS\nWe then update the database; replacing the QPU seconds for each project with the new one.\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    _responses = await asyncio.gather(*(_collection.update_one({\n            \"ext_id\": project.ext_id, \n            # a guard to ensure that no resource is ignored\n            # NOTE: this may fail with a Conflict Error if any of the resource_ids \n            #   does not already exist in the project. You might need to resolve this manually\n            \"resource_ids\": {\"$in\": project.resource_ids},\n            }, \n            {\n                \"$set\": {\n                    \"source\": ProjectSource.PUHURI.value,\n                    \"is_active\": project.is_active,\n                    \"qpu_seconds\": project.qpu_seconds,\n                    \"resource_ids\": project.resource_ids,\n                },\n            }, \n        upsert=True) for project in _ALL_PROJECTS), return_exceptions=True)\n    \n    _ALL_UPDATED_PROJECTS = [\n        _ALL_PROJECTS[index]\n        for index, resp in enumerate(_responses)\n        if not isinstance(resp, Exception)\n    ]\n    \n\n    pprint.pprint(_ALL_UPDATED_PROJECTS)\n\nEnsuring Idempotency\nWe do not upsert in this case.\nAny projects whose approved resources have changed between the last time the database was updated with new resource_uuids and now, will not be updated by this routine.\nIt should be updated by the routine that deals with new resource allocations.",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/06_puhuri_tergite_flows.html#updating-list-of-users-attached-to-projects",
+    "href": "tutorials/06_puhuri_tergite_flows.html#updating-list-of-users-attached-to-projects",
+    "title": "Puhuri-Tergite playground",
+    "section": "Updating List of Users Attached to Projects",
+    "text": "Updating List of Users Attached to Projects\nWe also need to be able to get all users that are all given projects recently.\nPreferably, it would be better to get any new user attachments as opposed to scanning all projects every single time. However, this seems like it is not possible at this time.\n\nGet All Approved Resources\nSo we need to first get all approved resources. This should ideally be done after approving all pending orders (i.e. after we have updated the project list in Tergite with the new orders).\n\n_APPROVED_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"OK\"\n})\n\n_APPROVED_RESOURCES\n\n\nGet the Teams for Each Approved Resource\nFor each approved resource, we extract the teams and associate them with the project_uuid for that resource\n# A map of project_uuid and the list of users attached to it\n_PROJECTS_USERS_MAP = {\n    resource[\"project_uuid\"]: CLIENT.marketplace_resource_get_team(resource[\"uuid\"])\n    for resource in _APPROVED_RESOURCES\n}\n\n_PROJECTS_USERS_MAP\nWe can them update our databases with the new projects users, ensuring to overwrite any existing user lists for any project, while closing all puhuri-attached projects that we have at we have in QAL9000 that have no users anymore.\nThis requires that we tag every project in QAL9000 with a ‘source’ attribute so that we are able to extract those that are from Puhuri (i.e. with source=‘puhuri’).\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    await _collection.bulk_write(\n        [UpdateOne({\n            \"ext_id\": project_id, \n            \"source\": ProjectSource.PUHURI.value,\n            }, {\n            \"$set\": {\n                \"user_emails\": [user[\"email\"] for user in user_list],\n            }\n        }) \n         for project_id, user_list in _PROJECTS_USERS_MAP.items()]\n    )\n\n\nEnsuring Idempotency\nWe do not upsert in this case. We just replace the user_emails field with the new lists\nThis also requires that we bulk update all projects whose ‘external ID’ are not IN the list of keys from _PROJECTS_USERS_MAP and yet have ‘source’ = ‘puhuri’\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    \n    _filter_obj = {\n        \"source\": ProjectSource.PUHURI.value, \n        \"ext_id\": {\"$nin\": list(_PROJECTS_USERS_MAP.keys())},\n    }\n    await _collection.update_many(filter=_filter_obj, update={\n        \"$set\": {\"user_emails\": []}\n    })",
+    "crumbs": [
+      "Tutorials",
+      "Puhuri-Tergite playground"
+    ]
+  },
+  {
+    "objectID": "tutorials/01_quick_start.html",
+    "href": "tutorials/01_quick_start.html",
+    "title": "Quick Start",
     "section": "",
-    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic one-qubit circuit to produce the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\), and retrieving the measurement results.",
+    "text": "Let’s attempt to setup the tergite stack to run on a dummy cluster on your local machine.\nWe will not need an actual quantum computer. Take note, however, that the dummy cluster only returns 0 in its results.",
+    "crumbs": [
+      "Tutorials",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/01_quick_start.html#prerequisites",
+    "href": "tutorials/01_quick_start.html#prerequisites",
+    "title": "Quick Start",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nYou may have to install these software if you don’t have them already installed.\n\nDocker +v23.0.5\nConda\nRedis\nMongoDb\nVisual Studio Code\nMongo compass",
+    "crumbs": [
+      "Tutorials",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/01_quick_start.html#setup-the-backend",
+    "href": "tutorials/01_quick_start.html#setup-the-backend",
+    "title": "Quick Start",
+    "section": "Setup the Backend",
+    "text": "Setup the Backend\n\nEnsure you have conda installed. (You could simply have python +3.9 installed instead.)\nEnsure you have the Redis server running.\n\nredis-server\n\nOpen terminal.\nClone the tergite-backend repo\n\ngit clone https://github.com/tergite/tergite-backend.git\n\nCreate conda environment\n\nconda create -n bcc -y python=3.9\nconda activate bcc\n\nInstall dependencies\n\ncd tergite-backend\npip install -r requirements.txt\n\nCreate an .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate .env file to have the following content\n\n# .env\nAPP_SETTINGS=development\nIS_AUTH_ENABLED=False\n\nDEFAULT_PREFIX=loke\nSTORAGE_ROOT=/tmp\nLOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool\nLOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool\nJOB_UPLOAD_POOL_DIRNAME=job_upload_pool\nJOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool\nJOB_EXECUTION_POOL_DIRNAME=job_execution_pool\n\n# Main Service Server\nMSS_MACHINE_ROOT_URL=http://localhost:8002\nMSS_PORT=8002\n\n# Backend Control computer\nBCC_MACHINE_ROOT_URL=http://localhost:8000\nBCC_PORT=8000\n\nEXECUTOR_CONFIG_FILE=executor-config.yml\n\nCreate an executor-config.yml file with visual studio code (or any other text editor).\n\ncode executor-config.yml\n\nUpdate the executor-config.yml with the following content\n\n# executor-config.yml\ngeneral:\n  data_directory: data\n\nclusters:\n  - name: clusterA\n    instrument_type: Cluster\n    is_dummy: true\n    ref: internal\n    instrument_address: \"192.0.2.141\"\n\n    modules:\n      - name: \"clusterA_module7\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 4458000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive0\"\n              clock: \"d0\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n      - name: \"clusterA_module8\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 5110000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive1\"\n              clock: \"d1\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n      - name: \"clusterA_module9\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 4445000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive2\"\n              clock: \"d2\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n\n      - name: \"clusterA_module17\"\n        instrument_type: \"QRM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 6838000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"readout0\"\n              clock: \"m0\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n            - port: \"readout1\"\n              clock: \"m1\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n            - port: \"readout2\"\n              clock: \"m2\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\nRun start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
+    "crumbs": [
+      "Tutorials",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/01_quick_start.html#setup-the-frontend",
+    "href": "tutorials/01_quick_start.html#setup-the-frontend",
+    "title": "Quick Start",
+    "section": "Setup the Frontend",
+    "text": "Setup the Frontend\n\nEnsure you have docker is running.\n\ndocker --help\n\nOpen another terminal\nClone the tergite-frontend repo\n\ngit clone https://github.com/tergite/tergite-frontend.git\n\nEnter the tergite-frontend folder\n\ncd tergite-frontend\n\nCreate an mss-config.toml file with visual studio code (or any other text editor).\n\ncode mss-config.toml\n\nUpdate the mss-config.toml with the following content\n\n# mss-config.toml\n\n# general configurations\n[general]\n# the port on which MSS is running\nmss_port = 8002\n# the port on which the websocket is running\nws_port = 6532\n# environment reflect which environment the app is to run in.\nenvironment = \"development\"\n# the host the uvicorn runs on.\n# During testing auth on 127.0.0.1, set this to \"127.0.0.1\". default: \"0.0.0.0\"\nmss_host = \"127.0.0.1\"\n\n[database]\n# configurations for the database\nname = \"testing\"\n# database URI\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"mongodb://host.docker.internal:27017\"\n\n[[backends]]\nname = \"loke\"\n# the URL where this backend is running\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"http://host.docker.internal:8000\"\n\n[auth]\n# turn auth OFF or ON, default=true\nis_enabled = false\n\n# Puhuri synchronization\n# Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's\n[puhuri]\n# turn puhuri synchronization OFF or ON, default=true\nis_enabled = false\n\nCreate a .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate the .env with the following content\n\n# .env\n\n# required\nENVIRONMENT=\"development\"\nWEBGUI_ENDPOINT=\"http://127.0.0.1:3000\"\nLANDING_ENDPOINT=\"http://127.0.0.1:8030\"\nMSS_ENDPOINT=\"http://127.0.0.1:8002\"\nGRAFANA_LOKI_URL=http://127.0.0.1:3100/loki/api/v1/push\nLOKI_LOGGER_ID=some-generic-id\n\n# docker LOGGING_DRIVER can be journald, json-file, local etc. \nLOGGING_DRIVER=json-file\n# image versions:\n# Note: If you ever want the images to be rebuilt, \n# you have to change the app version numbers here \n# before running \"docker compose up\"\nMSS_VERSION=v0.0.1\nWEBGUI_VERSION=v0.0.1\nLANDING_PAGE_VERSION=v0.0.1\nPROMTAIL_VERSION=2.8.3\n\nOpen the Mongo compass application and connect to the default local mongo database\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a new mongo database called “testing” that contains a “backends” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “backends” collection in your mongo compass\n\n\n\n\n\n\n\n\n\n\n\n\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"664756593b639968c2d3df24\"\n  },\n  \"name\": \"loke\",\n  \"characterized\": true,\n  \"open_pulse\": true,\n  \"timelog\": {\n    \"REGISTERED\": \"2023-11-15T16:36:17.474815\",\n    \"LAST_UPDATED\": \"2023-11-15T15:41:51.528Z\"\n  },\n  \"version\": \"2024.04.0\",\n  \"num_qubits\": 5,\n  \"num_couplers\": 8,\n  \"num_resonators\": 5,\n  \"dt\": 1e-9,\n  \"dtm\": 1e-9,\n  \"meas_map\": [\n    [\n      0,\n      1,\n      2,\n      3,\n      4\n    ]\n  ],\n  \"coupling_map\": [\n    [\n      0,\n      2\n    ],\n    [\n      2,\n      0\n    ],\n    [\n      1,\n      2\n    ],\n    [\n      2,\n      1\n    ],\n    [\n      2,\n      3\n    ],\n    [\n      3,\n      2\n    ],\n    [\n      2,\n      4\n    ],\n    [\n      4,\n      2\n    ]\n  ],\n  \"device_properties\": {\n    \"qubit\": [\n      {\n        \"frequency\": 4511480043.556283,\n        \"pi_pulse_amplitude\": 0.17555712637424228,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 0\n      },\n      {\n        \"frequency\": 4677112343.360253,\n        \"pi_pulse_amplitude\": 0.17535338530538067,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 1\n      },\n      {\n        \"frequency\": 5770226599.80365,\n        \"pi_pulse_amplitude\": 0.17873594718151276,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 2\n      },\n      {\n        \"frequency\": 6856217811.995201,\n        \"pi_pulse_amplitude\": 0.17326197853513559,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 3\n      },\n      {\n        \"frequency\": 6701096836.557067,\n        \"pi_pulse_amplitude\": 0.16948867103728774,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 4\n      }\n    ],\n    \"readout_resonator\": [\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7260080000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.1266499392606423,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.985,\n            \"coef\": [\n              [\n                -98953.87504155144,\n                -114154.48696231026\n              ]\n            ],\n            \"intercept\": [\n              -38.4344477840827\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9580015923566879,\n            \"coef\": [\n              [\n                67556.81859745766,\n                71505.66931668088\n              ],\n              [\n                -14142.401380443791,\n                -68814.26719610114\n              ],\n              [\n                -104325.0336269802,\n                -5256.644766757276\n              ]\n            ],\n            \"intercept\": [\n              18.888335231525723,\n              -21.898486762901555,\n              -33.556356307556854\n            ]\n          }\n        },\n        \"id\": 0\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7380000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.12660078572926436,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.987,\n            \"coef\": [\n              [\n                -107941.00358803963,\n                -124239.32054386326\n              ]\n            ],\n            \"intercept\": [\n              -42.05181160328822\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9589968152866242,\n            \"coef\": [\n              [\n                74144.78052369223,\n                80219.75345675235\n              ],\n              [\n                -20263.355831418605,\n                -73050.73707640498\n              ],\n              [\n                -105237.1576020969,\n                -14001.985117865986\n              ]\n            ],\n            \"intercept\": [\n              21.107115767442064,\n              -24.401897244641916,\n              -36.12273520392597\n            ]\n          }\n        },\n        \"id\": 1\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7502000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.08245560237524203,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.9905,\n            \"coef\": [\n              [\n                -191087.42493249022,\n                -20803.06874845618\n              ]\n            ],\n            \"intercept\": [\n              -22.684588212281916\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9301353503184714,\n            \"coef\": [\n              [\n                117698.79312336461,\n                1323.6059974854222\n              ],\n              [\n                -73571.40229985592,\n                -28205.57304588287\n              ],\n              [\n                -86186.31020216543,\n                52503.84189140131\n              ]\n            ],\n            \"intercept\": [\n              8.616211460736217,\n              -14.506319082756788,\n              -15.607187419129968\n            ]\n          }\n        },\n        \"id\": 2\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7712000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.04188729430238,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.8735,\n            \"coef\": [\n              [\n                -29474.17108465108,\n                78360.1067777809\n              ]\n            ],\n            \"intercept\": [\n              -1.933795064413808\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.7563694267515924,\n            \"coef\": [\n              [\n                9107.496591845296,\n                -51304.48625833322\n              ],\n              [\n                -21037.874286196384,\n                28857.813926275605\n              ],\n              [\n                23301.518934279466,\n                43841.15689855003\n              ]\n            ],\n            \"intercept\": [\n              -0.42091088440579094,\n              -2.3990628805824983,\n              -3.202495936672423\n            ]\n          }\n        },\n        \"id\": 3\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7871000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.05844291534543274,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.96375,\n            \"coef\": [\n              [\n                -106998.96952984166,\n                66774.10489889105\n              ]\n            ],\n            \"intercept\": [\n              -6.6282190356967075\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.8578821656050956,\n            \"coef\": [\n              [\n                60709.720254705426,\n                -51675.5747833689\n              ],\n              [\n                -49881.622682824636,\n                16479.42339459183\n              ],\n              [\n                -21148.62807007965,\n                68742.48318120521\n              ]\n            ],\n            \"intercept\": [\n              1.4575641967873554,\n              -5.385810943207904,\n              -6.329888946815834\n            ]\n          }\n        },\n        \"id\": 4\n      }\n    ],\n    \"coupler\": [\n      {}\n    ]\n  },\n  \"discriminators\": {\n    \"lda\": {\n      \"q0\": {\n        \"score\": 0.985,\n        \"intercept\": -38.4344477840827,\n        \"coef_0\": -98953.87504155144,\n        \"coef_1\": -114154.48696231026\n      },\n      \"q1\": {\n        \"score\": 0.987,\n        \"intercept\": -42.05181160328822,\n        \"coef_0\": -107941.00358803963,\n        \"coef_1\": -124239.32054386326\n      },\n      \"q2\": {\n        \"score\": 0.9905,\n        \"intercept\": -22.684588212281916,\n        \"coef_0\": -191087.42493249022,\n        \"coef_1\": -20803.06874845618\n      },\n      \"q3\": {\n        \"score\": 0.8735,\n        \"intercept\": -1.933795064413808,\n        \"coef_0\": -29474.17108465108,\n        \"coef_1\": 78360.1067777809\n      },\n      \"q4\": {\n        \"score\": 0.96375,\n        \"intercept\": -6.6282190356967075,\n        \"coef_0\": -106998.96952984166,\n        \"coef_1\": 66774.10489889105\n      }\n    }\n  },\n  \"qubit_ids\": [\n    \"q0\",\n    \"q1\",\n    \"q2\",\n    \"q3\",\n    \"q4\"\n  ],\n  \"description\": \"Backend for the simulator supporting qiskit-connector parsing for the release 2024.3\"\n}\n\nClick “Insert” to insert the document into the “backends” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nTo Run the services, use the fresh-docker-compose.yml.\n\ndocker compose -f fresh-docker-compose.yml up -d\n\nOpen your browser at\n\nhttp://localhost:8030 to see the landing page\nhttp://localhost:8002 to see the MSS service\nhttp://localhost:3000 to see the webGUI application\n\nTo view the status of the services, run:\n\ndocker compose -f fresh-docker-compose.yml ps\n\nTo stop the services, run:\n\ndocker compose -f fresh-docker-compose.yml stop\n\nTo remove stop the services and remove their containers also, run:\n\ndocker compose -f fresh-docker-compose.yml down\n\nTo view logs of the docker containers to catch some errors, use:\n\ndocker compose -f fresh-docker-compose.yml logs -f\nsee more at https://docs.docker.com/reference/cli/docker/compose/logs/\n\nEnsure that the services are running. If they are not, restart them.\n\ndocker compose -f fresh-docker-compose.yml up -d",
+    "crumbs": [
+      "Tutorials",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/01_quick_start.html#run-an-experiment",
+    "href": "tutorials/01_quick_start.html#run-an-experiment",
+    "title": "Quick Start",
+    "section": "Run an Experiment",
+    "text": "Run an Experiment\n\nOpen another terminal\nCreate a new folder “tergite-test” and enter it\n\nmkdir tergite-test\ncd tergite-test\n\nCreate conda environment and activate it\n\nconda create -n terg -y python=3.9\nconda activate terg\n\nInstall qiskit and tergite SDK by running the command below:\n\npip install qiskit\npip install tergite\n\nCreate a file main.py with visual studio code (or any other text editor).\n\ncode main.py\n\nUpdate the main.py file with the following content:\n\n# main.py\n\"\"\"A sample script doing a very simple quantum operation\"\"\"\nimport time\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\n\nfrom tergite.qiskit.providers import Job, Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount\n\nif __name__ == \"__main__\":\n    # the Tergite API URL\n    API_URL = \"http://localhost:8002\"\n    # The name of the Quantum Computer to use from the available quantum computers\n    BACKEND_NAME = \"loke\"\n    # the name of this service. For your own bookkeeping.\n    SERVICE_NAME = \"local\"\n    # the timeout in seconds for how long to keep checking for results\n    POLL_TIMEOUT = 100\n\n    # create the Qiskit circuit\n    qc = circuit.QuantumCircuit(1)\n    qc.x(0)\n    qc.h(0)\n    qc.measure_all()\n\n    # create a provider\n    # provider account creation can be skipped in case you already saved\n    # your provider account to the `~/.qiskit/tergiterc` file.\n    # See below how that is done.\n    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL)\n    provider = Tergite.use_provider_account(account)\n    # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n    # provider = Tergite.use_provider_account(account, save=True)\n\n    # Get the tergite backend in case you skipped provider account creation\n    # provider = Tergite.get_provider(service_name=SERVICE_NAME)\n    backend = provider.get_backend(BACKEND_NAME)\n    backend.set_options(shots=1024)\n\n    # compile the circuit\n    tc = compiler.transpile(qc, backend=backend)\n\n    # run the circuit\n    job: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\n\n    # view the results\n    elapsed_time = 0\n    result = None\n    while result is None:\n        if elapsed_time &gt; POLL_TIMEOUT:\n            raise TimeoutError(\n                f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\"\n            )\n\n        time.sleep(1)\n        elapsed_time += 1\n        result = job.result()\n\n    print(result.get_counts())\n\nExecute the above script by running the commnad below.\n\npython main.py\n\nIt should return something like:\n\n{0: 1024}\nNote: We get only 0’s because we are using the dummy cluster from quantify scheduler",
+    "crumbs": [
+      "Tutorials",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "examples/02_bell_state.html",
+    "href": "examples/02_bell_state.html",
+    "title": "Bell State",
+    "section": "",
+    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic two-qubit circuit to generate the bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle\\), and retrieving the measurement results.",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#install-dependencies",
-    "href": "examples/03_equal_superposition.html#install-dependencies",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#install-dependencies",
+    "href": "examples/02_bell_state.html#install-dependencies",
+    "title": "Bell State",
     "section": "Install dependencies",
     "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\nInstall these dependencies\n\n%pip install qiskit\n%pip install tergite",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#import-the-basic-dependencies",
-    "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#import-the-basic-dependencies",
+    "href": "examples/02_bell_state.html#import-the-basic-dependencies",
+    "title": "Bell State",
     "section": "Import the basic dependencies",
     "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#configure-session",
-    "href": "examples/03_equal_superposition.html#configure-session",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#configure-session",
+    "href": "examples/02_bell_state.html#configure-session",
+    "title": "Bell State",
     "section": "Configure Session",
     "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#get-the-tergite-backend",
-    "href": "examples/03_equal_superposition.html#get-the-tergite-backend",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#get-the-tergite-backend",
+    "href": "examples/02_bell_state.html#get-the-tergite-backend",
+    "title": "Bell State",
     "section": "Get the Tergite Backend",
     "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
-    "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#create-the-qiskit-circuit",
+    "href": "examples/02_bell_state.html#create-the-qiskit-circuit",
+    "title": "Bell State",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure_all()\nqc.draw()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure_all()\nqc.draw()",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#compile-circuit",
-    "href": "examples/03_equal_superposition.html#compile-circuit",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#compile-circuit",
+    "href": "examples/02_bell_state.html#compile-circuit",
+    "title": "Bell State",
     "section": "Compile Circuit",
     "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#run-the-circuit",
-    "href": "examples/03_equal_superposition.html#run-the-circuit",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#run-the-circuit",
+    "href": "examples/02_bell_state.html#run-the-circuit",
+    "title": "Bell State",
     "section": "Run the Circuit",
     "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#see-the-results",
-    "href": "examples/03_equal_superposition.html#see-the-results",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#see-the-results",
+    "href": "examples/02_bell_state.html#see-the-results",
+    "title": "Bell State",
     "section": "See the Results",
     "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#acknowledgement",
-    "href": "examples/03_equal_superposition.html#acknowledgement",
-    "title": "Equal Superposition",
+    "objectID": "examples/02_bell_state.html#acknowledgement",
+    "href": "examples/02_bell_state.html#acknowledgement",
+    "title": "Bell State",
     "section": "Acknowledgement",
     "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
     "crumbs": [
       "Examples",
-      "Equal Superposition"
+      "Bell State"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html",
-    "href": "examples/01_hello_tergite.html",
-    "title": "Hello Tergite",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tergite",
     "section": "",
-    "text": "This is a showcase of connecting to tergite via the tergite SDK and running a basic circuit.",
+    "text": "Why tergite?\n  \n  \n    \n     Quick Start\n  \n  \n    \n     GitHub"
+  },
+  {
+    "objectID": "index.html#structure",
+    "href": "index.html#structure",
+    "title": "Tergite",
+    "section": "Structure",
+    "text": "Structure\n\n\nComponents\nThe tergite stack is composed of three components\n\ntergite-backend\n\nThe operating system of the quantum computer. It communicates with the world via a RESTful API.\n\ntergite-frontend\n\nThe server that gives remote access to any tergite-backend instance. It communicates with the world via a RESTful API.\n\ntergite SDK (or just tergite)\n\nThe Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.\n\n\n\n\nAccessories\nThe tergite stack has a number of accessory softwares that are currently not initmately woven into the stack but mught be in future\n\ntergite-autocalibration\n\nThe Python commandline application (CLI) that is used to automatically tune the quantum computer.\n\n\n\n\nLanguage of Communication\nWe use OpenPulse to communicate pass quantum computer instructions from the SDK to the backend part of the tergite stack."
+  },
+  {
+    "objectID": "index.html#developmment",
+    "href": "index.html#developmment",
+    "title": "Tergite",
+    "section": "Developmment",
+    "text": "Developmment\nThis project is developed by a core group of collaborators. Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.\n\nContributors\nWe are grateful for the wonderful contributions from:\n\nChalmers Next Labs AB - Quantum Division\nChalmers University of Technology - Microtechnology and Nanoscience department\n\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n\nSponsors\n\nKnut and Alice Wallenburg Foundation under the Wallenberg Center for Quantum Technology (WAQCT) project at Chalmers University of Technology\nNordic e-Infrastructure Collaboration (NeIC) and NordForsk under the NordIQuEst project\nEuropean Union’s Horizon Europe under the OpenSuperQ project\nEuropean Union’s Horizon Europe under the OpenSuperQPlus project"
+  },
+  {
+    "objectID": "why.html",
+    "href": "why.html",
+    "title": "Why tergite?",
+    "section": "",
+    "text": "TODO\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html",
+    "href": "release_notes/tergite-frontend.html",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Frontend"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#install-dependencies",
-    "href": "examples/01_hello_tergite.html#install-dependencies",
-    "title": "Hello Tergite",
-    "section": "Install dependencies",
-    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\n\n%pip install qiskit\n%pip install tergite",
+    "objectID": "release_notes/tergite-frontend.html#section",
+    "href": "release_notes/tergite-frontend.html#section",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Frontend"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#import-the-basic-dependencies",
-    "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
-    "title": "Hello Tergite",
-    "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "objectID": "release_notes/tergite-backend.html",
+    "href": "release_notes/tergite-backend.html",
+    "title": "Tergite Backend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Backend"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#update-some-variables",
-    "href": "examples/01_hello_tergite.html#update-some-variables",
-    "title": "Hello Tergite",
-    "section": "Update Some Variables",
-    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 100",
+    "objectID": "release_notes/tergite-backend.html#section",
+    "href": "release_notes/tergite-backend.html#section",
+    "title": "Tergite Backend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Backend"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
-    "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
-    "title": "Hello Tergite",
-    "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(1)\nqc.x(0)\nqc.h(0)\nqc.measure_all()\nqc.draw()",
+    "objectID": "release_notes/tergite-autocalibration.html",
+    "href": "release_notes/tergite-autocalibration.html",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Autocalibration"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#get-the-tergite-backend",
-    "href": "examples/01_hello_tergite.html#get-the-tergite-backend",
-    "title": "Hello Tergite",
-    "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
+    "objectID": "release_notes/tergite-autocalibration.html#section",
+    "href": "release_notes/tergite-autocalibration.html#section",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite Autocalibration"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#compile-circuit",
-    "href": "examples/01_hello_tergite.html#compile-circuit",
-    "title": "Hello Tergite",
-    "section": "Compile Circuit",
-    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "objectID": "release_notes/tergite-sdk.html",
+    "href": "release_notes/tergite-sdk.html",
+    "title": "Tergite SDK",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite SDK"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#run-the-circuit",
-    "href": "examples/01_hello_tergite.html#run-the-circuit",
-    "title": "Hello Tergite",
-    "section": "Run the Circuit",
-    "text": "Run the Circuit\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")\n\nTergite: Job has been successfully submitted",
+    "objectID": "release_notes/tergite-sdk.html#section",
+    "href": "release_notes/tergite-sdk.html#section",
+    "title": "Tergite SDK",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#see-the-results",
-    "href": "examples/01_hello_tergite.html#see-the-results",
-    "title": "Hello Tergite",
-    "section": "See the Results",
-    "text": "See the Results\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#acknowledgement",
-    "href": "examples/01_hello_tergite.html#acknowledgement",
-    "title": "Hello Tergite",
-    "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Release Notes",
+      "Tergite SDK"
     ]
   },
   {
@@ -396,394 +508,289 @@
     ]
   },
   {
-    "objectID": "release_notes/tergite-sdk.html",
-    "href": "release_notes/tergite-sdk.html",
-    "title": "Tergite SDK",
+    "objectID": "examples/01_hello_tergite.html",
+    "href": "examples/01_hello_tergite.html",
+    "title": "Hello Tergite",
     "section": "",
-    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite SDK"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-sdk.html#section",
-    "href": "release_notes/tergite-sdk.html#section",
-    "title": "Tergite SDK",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite SDK"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-autocalibration.html",
-    "href": "release_notes/tergite-autocalibration.html",
-    "title": "Tergite Autocalibration",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Autocalibration"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-autocalibration.html#section",
-    "href": "release_notes/tergite-autocalibration.html#section",
-    "title": "Tergite Autocalibration",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Autocalibration"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-backend.html",
-    "href": "release_notes/tergite-backend.html",
-    "title": "Tergite Backend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Backend"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-backend.html#section",
-    "href": "release_notes/tergite-backend.html#section",
-    "title": "Tergite Backend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\n\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\n\n\nFixed duplicate job uploads to respond with HTTP 409",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Backend"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-frontend.html",
-    "href": "release_notes/tergite-frontend.html",
-    "title": "Tergite Frontend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Frontend"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-frontend.html#section",
-    "href": "release_notes/tergite-frontend.html#section",
-    "title": "Tergite Frontend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Frontend"
-    ]
-  },
-  {
-    "objectID": "why.html",
-    "href": "why.html",
-    "title": "Why tergite?",
-    "section": "",
-    "text": "TODO\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Tergite",
-    "section": "",
-    "text": "Why tergite?\n  \n  \n    \n     Quick Start\n  \n  \n    \n     GitHub"
-  },
-  {
-    "objectID": "index.html#structure",
-    "href": "index.html#structure",
-    "title": "Tergite",
-    "section": "Structure",
-    "text": "Structure\n\n\nComponents\nThe tergite stack is composed of three components\n\ntergite-backend\n\nThe operating system of the quantum computer. It communicates with the world via a RESTful API.\n\ntergite-frontend\n\nThe server that gives remote access to any tergite-backend instance. It communicates with the world via a RESTful API.\n\ntergite SDK (or just tergite)\n\nThe Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.\n\n\n\n\nAccessories\nThe tergite stack has a number of accessory softwares that are currently not initmately woven into the stack but mught be in future\n\ntergite-autocalibration\n\nThe Python commandline application (CLI) that is used to automatically tune the quantum computer.\n\n\n\n\nLanguage of Communication\nWe use OpenPulse to communicate pass quantum computer instructions from the SDK to the backend part of the tergite stack."
-  },
-  {
-    "objectID": "index.html#developmment",
-    "href": "index.html#developmment",
-    "title": "Tergite",
-    "section": "Developmment",
-    "text": "Developmment\nThis project is developed by a core group of collaborators. Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.\n\nContributors\nWe are grateful for the wonderful contributions from:\n\nChalmers Next Labs AB - Quantum Division\nChalmers University of Technology - Microtechnology and Nanoscience department\n\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n\nSponsors\n\nKnut and Alice Wallenburg Foundation under the Wallenberg Center for Quantum Technology (WAQCT) project at Chalmers University of Technology\nNordic e-Infrastructure Collaboration (NeIC) and NordForsk under the NordIQuEst project\nEuropean Union’s Horizon Europe under the OpenSuperQ project\nEuropean Union’s Horizon Europe under the OpenSuperQPlus project"
-  },
-  {
-    "objectID": "examples/02_bell_state.html",
-    "href": "examples/02_bell_state.html",
-    "title": "Bell State",
-    "section": "",
-    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic two-qubit circuit to generate the bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle\\), and retrieving the measurement results.",
+    "text": "This is a showcase of connecting to tergite via the tergite SDK and running a basic circuit.",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Hello Tergite"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#install-dependencies",
-    "href": "examples/02_bell_state.html#install-dependencies",
-    "title": "Bell State",
+    "objectID": "examples/01_hello_tergite.html#install-dependencies",
+    "href": "examples/01_hello_tergite.html#install-dependencies",
+    "title": "Hello Tergite",
     "section": "Install dependencies",
-    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\nInstall these dependencies\n\n%pip install qiskit\n%pip install tergite",
+    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\n\n%pip install qiskit\n%pip install tergite",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Hello Tergite"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#import-the-basic-dependencies",
-    "href": "examples/02_bell_state.html#import-the-basic-dependencies",
-    "title": "Bell State",
+    "objectID": "examples/01_hello_tergite.html#import-the-basic-dependencies",
+    "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
+    "title": "Hello Tergite",
     "section": "Import the basic dependencies",
     "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Hello Tergite"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#configure-session",
-    "href": "examples/02_bell_state.html#configure-session",
-    "title": "Bell State",
+    "objectID": "examples/01_hello_tergite.html#update-some-variables",
+    "href": "examples/01_hello_tergite.html#update-some-variables",
+    "title": "Hello Tergite",
+    "section": "Update Some Variables",
+    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 100",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
+    "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
+    "title": "Hello Tergite",
+    "section": "Create the Qiskit Circuit",
+    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(1)\nqc.x(0)\nqc.h(0)\nqc.measure_all()\nqc.draw()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#get-the-tergite-backend",
+    "href": "examples/01_hello_tergite.html#get-the-tergite-backend",
+    "title": "Hello Tergite",
+    "section": "Get the Tergite Backend",
+    "text": "Get the Tergite Backend\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#compile-circuit",
+    "href": "examples/01_hello_tergite.html#compile-circuit",
+    "title": "Hello Tergite",
+    "section": "Compile Circuit",
+    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#run-the-circuit",
+    "href": "examples/01_hello_tergite.html#run-the-circuit",
+    "title": "Hello Tergite",
+    "section": "Run the Circuit",
+    "text": "Run the Circuit\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")\n\nTergite: Job has been successfully submitted",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#see-the-results",
+    "href": "examples/01_hello_tergite.html#see-the-results",
+    "title": "Hello Tergite",
+    "section": "See the Results",
+    "text": "See the Results\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#acknowledgement",
+    "href": "examples/01_hello_tergite.html#acknowledgement",
+    "title": "Hello Tergite",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html",
+    "href": "examples/03_equal_superposition.html",
+    "title": "Equal Superposition",
+    "section": "",
+    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic one-qubit circuit to produce the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\), and retrieving the measurement results.",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#install-dependencies",
+    "href": "examples/03_equal_superposition.html#install-dependencies",
+    "title": "Equal Superposition",
+    "section": "Install dependencies",
+    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\nInstall these dependencies\n\n%pip install qiskit\n%pip install tergite",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#import-the-basic-dependencies",
+    "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
+    "title": "Equal Superposition",
+    "section": "Import the basic dependencies",
+    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#configure-session",
+    "href": "examples/03_equal_superposition.html#configure-session",
+    "title": "Equal Superposition",
     "section": "Configure Session",
     "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#get-the-tergite-backend",
-    "href": "examples/02_bell_state.html#get-the-tergite-backend",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#get-the-tergite-backend",
+    "href": "examples/03_equal_superposition.html#get-the-tergite-backend",
+    "title": "Equal Superposition",
     "section": "Get the Tergite Backend",
     "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#create-the-qiskit-circuit",
-    "href": "examples/02_bell_state.html#create-the-qiskit-circuit",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
+    "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
+    "title": "Equal Superposition",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure_all()\nqc.draw()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure_all()\nqc.draw()",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#compile-circuit",
-    "href": "examples/02_bell_state.html#compile-circuit",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#compile-circuit",
+    "href": "examples/03_equal_superposition.html#compile-circuit",
+    "title": "Equal Superposition",
     "section": "Compile Circuit",
     "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#run-the-circuit",
-    "href": "examples/02_bell_state.html#run-the-circuit",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#run-the-circuit",
+    "href": "examples/03_equal_superposition.html#run-the-circuit",
+    "title": "Equal Superposition",
     "section": "Run the Circuit",
     "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#see-the-results",
-    "href": "examples/02_bell_state.html#see-the-results",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#see-the-results",
+    "href": "examples/03_equal_superposition.html#see-the-results",
+    "title": "Equal Superposition",
     "section": "See the Results",
     "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "examples/02_bell_state.html#acknowledgement",
-    "href": "examples/02_bell_state.html#acknowledgement",
-    "title": "Bell State",
+    "objectID": "examples/03_equal_superposition.html#acknowledgement",
+    "href": "examples/03_equal_superposition.html#acknowledgement",
+    "title": "Equal Superposition",
     "section": "Acknowledgement",
     "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
     "crumbs": [
       "Examples",
-      "Bell State"
+      "Equal Superposition"
     ]
   },
   {
-    "objectID": "tutorials/01_quick_start.html",
-    "href": "tutorials/01_quick_start.html",
-    "title": "Quick Start",
+    "objectID": "tutorials/04_configuration.html",
+    "href": "tutorials/04_configuration.html",
+    "title": "Configuration",
     "section": "",
-    "text": "Let’s attempt to setup the tergite stack to run on a dummy cluster on your local machine.\nWe will not need an actual quantum computer. Take note, however, that the dummy cluster only returns 0 in its results.",
+    "text": "TODO\n\n\n\n Back to top",
     "crumbs": [
       "Tutorials",
-      "Quick Start"
+      "Configuration"
     ]
   },
   {
-    "objectID": "tutorials/01_quick_start.html#prerequisites",
-    "href": "tutorials/01_quick_start.html#prerequisites",
-    "title": "Quick Start",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nYou may have to install these software if you don’t have them already installed.\n\nDocker +v23.0.5\nConda\nRedis\nMongoDb\nVisual Studio Code\nMongo compass",
-    "crumbs": [
-      "Tutorials",
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "tutorials/01_quick_start.html#setup-the-backend",
-    "href": "tutorials/01_quick_start.html#setup-the-backend",
-    "title": "Quick Start",
-    "section": "Setup the Backend",
-    "text": "Setup the Backend\n\nEnsure you have conda installed. (You could simply have python +3.9 installed instead.)\nEnsure you have the Redis server running.\n\nredis-server\n\nOpen terminal.\nClone the tergite-backend repo\n\ngit clone https://github.com/tergite/tergite-backend.git\n\nCreate conda environment\n\nconda create -n bcc -y python=3.9\nconda activate bcc\n\nInstall dependencies\n\ncd tergite-backend\npip install -r requirements.txt\n\nCreate an .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate .env file to have the following content\n\n# .env\nAPP_SETTINGS=development\nIS_AUTH_ENABLED=False\n\nDEFAULT_PREFIX=loke\nSTORAGE_ROOT=/tmp\nLOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool\nLOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool\nJOB_UPLOAD_POOL_DIRNAME=job_upload_pool\nJOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool\nJOB_EXECUTION_POOL_DIRNAME=job_execution_pool\n\n# Main Service Server\nMSS_MACHINE_ROOT_URL=http://localhost:8002\nMSS_PORT=8002\n\n# Backend Control computer\nBCC_MACHINE_ROOT_URL=http://localhost:8000\nBCC_PORT=8000\n\nEXECUTOR_CONFIG_FILE=executor-config.yml\n\nCreate an executor-config.yml file with visual studio code (or any other text editor).\n\ncode executor-config.yml\n\nUpdate the executor-config.yml with the following content\n\n# executor-config.yml\ngeneral:\n  data_directory: data\n\nclusters:\n  - name: clusterA\n    instrument_type: Cluster\n    is_dummy: true\n    ref: internal\n    instrument_address: \"192.0.2.141\"\n\n    modules:\n      - name: \"clusterA_module7\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 4458000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive0\"\n              clock: \"d0\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n      - name: \"clusterA_module8\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 5110000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive1\"\n              clock: \"d1\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n      - name: \"clusterA_module9\"\n        instrument_type: \"QCM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 4445000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"drive2\"\n              clock: \"d2\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\n\n      - name: \"clusterA_module17\"\n        instrument_type: \"QRM_RF\"\n\n        complex_outputs:\n          - name: \"complex_output_0\"\n            lo_freq: 6838000000\n            dc_mixer_offset_I: 0\n            dc_mixer_offset_Q: 0\n            portclock_configs:\n            - port: \"readout0\"\n              clock: \"m0\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n            - port: \"readout1\"\n              clock: \"m1\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n            - port: \"readout2\"\n              clock: \"m2\"\n              mixer_amp_ratio: 1\n              mixer_phase_error_deg: 0\n\nRun start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
-    "crumbs": [
-      "Tutorials",
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "tutorials/01_quick_start.html#setup-the-frontend",
-    "href": "tutorials/01_quick_start.html#setup-the-frontend",
-    "title": "Quick Start",
-    "section": "Setup the Frontend",
-    "text": "Setup the Frontend\n\nEnsure you have docker is running.\n\ndocker --help\n\nOpen another terminal\nClone the tergite-frontend repo\n\ngit clone https://github.com/tergite/tergite-frontend.git\n\nEnter the tergite-frontend folder\n\ncd tergite-frontend\n\nCreate an mss-config.toml file with visual studio code (or any other text editor).\n\ncode mss-config.toml\n\nUpdate the mss-config.toml with the following content\n\n# mss-config.toml\n\n# general configurations\n[general]\n# the port on which MSS is running\nmss_port = 8002\n# the port on which the websocket is running\nws_port = 6532\n# environment reflect which environment the app is to run in.\nenvironment = \"development\"\n# the host the uvicorn runs on.\n# During testing auth on 127.0.0.1, set this to \"127.0.0.1\". default: \"0.0.0.0\"\nmss_host = \"127.0.0.1\"\n\n[database]\n# configurations for the database\nname = \"testing\"\n# database URI\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"mongodb://host.docker.internal:27017\"\n\n[[backends]]\nname = \"loke\"\n# the URL where this backend is running\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"http://host.docker.internal:8000\"\n\n[auth]\n# turn auth OFF or ON, default=true\nis_enabled = false\n\n# Puhuri synchronization\n# Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's\n[puhuri]\n# turn puhuri synchronization OFF or ON, default=true\nis_enabled = false\n\nCreate a .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate the .env with the following content\n\n# .env\n\n# required\nENVIRONMENT=\"development\"\nWEBGUI_ENDPOINT=\"http://127.0.0.1:3000\"\nLANDING_ENDPOINT=\"http://127.0.0.1:8030\"\nMSS_ENDPOINT=\"http://127.0.0.1:8002\"\nGRAFANA_LOKI_URL=http://127.0.0.1:3100/loki/api/v1/push\nLOKI_LOGGER_ID=some-generic-id\n\n# docker LOGGING_DRIVER can be journald, json-file, local etc. \nLOGGING_DRIVER=json-file\n# image versions:\n# Note: If you ever want the images to be rebuilt, \n# you have to change the app version numbers here \n# before running \"docker compose up\"\nMSS_VERSION=v0.0.1\nWEBGUI_VERSION=v0.0.1\nLANDING_PAGE_VERSION=v0.0.1\nPROMTAIL_VERSION=2.8.3\n\nOpen the Mongo compass application and connect to the default local mongo database\n\n\n\n\n\n\n\n\n\n\n\n\nCreate a new mongo database called “testing” that contains a “backends” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “backends” collection in your mongo compass\n\n\n\n\n\n\n\n\n\n\n\n\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"664756593b639968c2d3df24\"\n  },\n  \"name\": \"loke\",\n  \"characterized\": true,\n  \"open_pulse\": true,\n  \"timelog\": {\n    \"REGISTERED\": \"2023-11-15T16:36:17.474815\",\n    \"LAST_UPDATED\": \"2023-11-15T15:41:51.528Z\"\n  },\n  \"version\": \"2024.04.0\",\n  \"num_qubits\": 5,\n  \"num_couplers\": 8,\n  \"num_resonators\": 5,\n  \"dt\": 1e-9,\n  \"dtm\": 1e-9,\n  \"meas_map\": [\n    [\n      0,\n      1,\n      2,\n      3,\n      4\n    ]\n  ],\n  \"coupling_map\": [\n    [\n      0,\n      2\n    ],\n    [\n      2,\n      0\n    ],\n    [\n      1,\n      2\n    ],\n    [\n      2,\n      1\n    ],\n    [\n      2,\n      3\n    ],\n    [\n      3,\n      2\n    ],\n    [\n      2,\n      4\n    ],\n    [\n      4,\n      2\n    ]\n  ],\n  \"device_properties\": {\n    \"qubit\": [\n      {\n        \"frequency\": 4511480043.556283,\n        \"pi_pulse_amplitude\": 0.17555712637424228,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 0\n      },\n      {\n        \"frequency\": 4677112343.360253,\n        \"pi_pulse_amplitude\": 0.17535338530538067,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 1\n      },\n      {\n        \"frequency\": 5770226599.80365,\n        \"pi_pulse_amplitude\": 0.17873594718151276,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 2\n      },\n      {\n        \"frequency\": 6856217811.995201,\n        \"pi_pulse_amplitude\": 0.17326197853513559,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 3\n      },\n      {\n        \"frequency\": 6701096836.557067,\n        \"pi_pulse_amplitude\": 0.16948867103728774,\n        \"pi_pulse_duration\": 5.6e-8,\n        \"pulse_sigma\": 7e-9,\n        \"pulse_type\": \"Gaussian\",\n        \"t1_decoherence\": 0.000034,\n        \"t2_decoherence\": 0.000033,\n        \"id\": 4\n      }\n    ],\n    \"readout_resonator\": [\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7260080000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.1266499392606423,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.985,\n            \"coef\": [\n              [\n                -98953.87504155144,\n                -114154.48696231026\n              ]\n            ],\n            \"intercept\": [\n              -38.4344477840827\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9580015923566879,\n            \"coef\": [\n              [\n                67556.81859745766,\n                71505.66931668088\n              ],\n              [\n                -14142.401380443791,\n                -68814.26719610114\n              ],\n              [\n                -104325.0336269802,\n                -5256.644766757276\n              ]\n            ],\n            \"intercept\": [\n              18.888335231525723,\n              -21.898486762901555,\n              -33.556356307556854\n            ]\n          }\n        },\n        \"id\": 0\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7380000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.12660078572926436,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.987,\n            \"coef\": [\n              [\n                -107941.00358803963,\n                -124239.32054386326\n              ]\n            ],\n            \"intercept\": [\n              -42.05181160328822\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9589968152866242,\n            \"coef\": [\n              [\n                74144.78052369223,\n                80219.75345675235\n              ],\n              [\n                -20263.355831418605,\n                -73050.73707640498\n              ],\n              [\n                -105237.1576020969,\n                -14001.985117865986\n              ]\n            ],\n            \"intercept\": [\n              21.107115767442064,\n              -24.401897244641916,\n              -36.12273520392597\n            ]\n          }\n        },\n        \"id\": 1\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7502000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.08245560237524203,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.9905,\n            \"coef\": [\n              [\n                -191087.42493249022,\n                -20803.06874845618\n              ]\n            ],\n            \"intercept\": [\n              -22.684588212281916\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.9301353503184714,\n            \"coef\": [\n              [\n                117698.79312336461,\n                1323.6059974854222\n              ],\n              [\n                -73571.40229985592,\n                -28205.57304588287\n              ],\n              [\n                -86186.31020216543,\n                52503.84189140131\n              ]\n            ],\n            \"intercept\": [\n              8.616211460736217,\n              -14.506319082756788,\n              -15.607187419129968\n            ]\n          }\n        },\n        \"id\": 2\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7712000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.04188729430238,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.8735,\n            \"coef\": [\n              [\n                -29474.17108465108,\n                78360.1067777809\n              ]\n            ],\n            \"intercept\": [\n              -1.933795064413808\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.7563694267515924,\n            \"coef\": [\n              [\n                9107.496591845296,\n                -51304.48625833322\n              ],\n              [\n                -21037.874286196384,\n                28857.813926275605\n              ],\n              [\n                23301.518934279466,\n                43841.15689855003\n              ]\n            ],\n            \"intercept\": [\n              -0.42091088440579094,\n              -2.3990628805824983,\n              -3.202495936672423\n            ]\n          }\n        },\n        \"id\": 3\n      },\n      {\n        \"acq_delay\": 5e-8,\n        \"acq_integration_time\": 0.000001,\n        \"frequency\": {\n          \"$numberLong\": \"7871000000\"\n        },\n        \"pulse_delay\": 0,\n        \"pulse_duration\": 9e-7,\n        \"pulse_type\": \"Square\",\n        \"pulse_amplitude\": 0.05844291534543274,\n        \"lda_parameters\": {\n          \"twoState\": {\n            \"score\": 0.96375,\n            \"coef\": [\n              [\n                -106998.96952984166,\n                66774.10489889105\n              ]\n            ],\n            \"intercept\": [\n              -6.6282190356967075\n            ]\n          },\n          \"threeState\": {\n            \"score\": 0.8578821656050956,\n            \"coef\": [\n              [\n                60709.720254705426,\n                -51675.5747833689\n              ],\n              [\n                -49881.622682824636,\n                16479.42339459183\n              ],\n              [\n                -21148.62807007965,\n                68742.48318120521\n              ]\n            ],\n            \"intercept\": [\n              1.4575641967873554,\n              -5.385810943207904,\n              -6.329888946815834\n            ]\n          }\n        },\n        \"id\": 4\n      }\n    ],\n    \"coupler\": [\n      {}\n    ]\n  },\n  \"discriminators\": {\n    \"lda\": {\n      \"q0\": {\n        \"score\": 0.985,\n        \"intercept\": -38.4344477840827,\n        \"coef_0\": -98953.87504155144,\n        \"coef_1\": -114154.48696231026\n      },\n      \"q1\": {\n        \"score\": 0.987,\n        \"intercept\": -42.05181160328822,\n        \"coef_0\": -107941.00358803963,\n        \"coef_1\": -124239.32054386326\n      },\n      \"q2\": {\n        \"score\": 0.9905,\n        \"intercept\": -22.684588212281916,\n        \"coef_0\": -191087.42493249022,\n        \"coef_1\": -20803.06874845618\n      },\n      \"q3\": {\n        \"score\": 0.8735,\n        \"intercept\": -1.933795064413808,\n        \"coef_0\": -29474.17108465108,\n        \"coef_1\": 78360.1067777809\n      },\n      \"q4\": {\n        \"score\": 0.96375,\n        \"intercept\": -6.6282190356967075,\n        \"coef_0\": -106998.96952984166,\n        \"coef_1\": 66774.10489889105\n      }\n    }\n  },\n  \"qubit_ids\": [\n    \"q0\",\n    \"q1\",\n    \"q2\",\n    \"q3\",\n    \"q4\"\n  ],\n  \"description\": \"Backend for the simulator supporting qiskit-connector parsing for the release 2024.3\"\n}\n\nClick “Insert” to insert the document into the “backends” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nTo Run the services, use the fresh-docker-compose.yml.\n\ndocker compose -f fresh-docker-compose.yml up -d\n\nOpen your browser at\n\nhttp://localhost:8030 to see the landing page\nhttp://localhost:8002 to see the MSS service\nhttp://localhost:3000 to see the webGUI application\n\nTo view the status of the services, run:\n\ndocker compose -f fresh-docker-compose.yml ps\n\nTo stop the services, run:\n\ndocker compose -f fresh-docker-compose.yml stop\n\nTo remove stop the services and remove their containers also, run:\n\ndocker compose -f fresh-docker-compose.yml down\n\nTo view logs of the docker containers to catch some errors, use:\n\ndocker compose -f fresh-docker-compose.yml logs -f\nsee more at https://docs.docker.com/reference/cli/docker/compose/logs/\n\nEnsure that the services are running. If they are not, restart them.\n\ndocker compose -f fresh-docker-compose.yml up -d",
-    "crumbs": [
-      "Tutorials",
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "tutorials/01_quick_start.html#run-an-experiment",
-    "href": "tutorials/01_quick_start.html#run-an-experiment",
-    "title": "Quick Start",
-    "section": "Run an Experiment",
-    "text": "Run an Experiment\n\nOpen another terminal\nCreate a new folder “tergite-test” and enter it\n\nmkdir tergite-test\ncd tergite-test\n\nCreate conda environment and activate it\n\nconda create -n terg -y python=3.9\nconda activate terg\n\nInstall qiskit and tergite SDK by running the command below:\n\npip install qiskit\npip install tergite\n\nCreate a file main.py with visual studio code (or any other text editor).\n\ncode main.py\n\nUpdate the main.py file with the following content:\n\n# main.py\n\"\"\"A sample script doing a very simple quantum operation\"\"\"\nimport time\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\n\nfrom tergite.qiskit.providers import Job, Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount\n\nif __name__ == \"__main__\":\n    # the Tergite API URL\n    API_URL = \"http://localhost:8002\"\n    # The name of the Quantum Computer to use from the available quantum computers\n    BACKEND_NAME = \"loke\"\n    # the name of this service. For your own bookkeeping.\n    SERVICE_NAME = \"local\"\n    # the timeout in seconds for how long to keep checking for results\n    POLL_TIMEOUT = 100\n\n    # create the Qiskit circuit\n    qc = circuit.QuantumCircuit(1)\n    qc.x(0)\n    qc.h(0)\n    qc.measure_all()\n\n    # create a provider\n    # provider account creation can be skipped in case you already saved\n    # your provider account to the `~/.qiskit/tergiterc` file.\n    # See below how that is done.\n    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL)\n    provider = Tergite.use_provider_account(account)\n    # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n    # provider = Tergite.use_provider_account(account, save=True)\n\n    # Get the tergite backend in case you skipped provider account creation\n    # provider = Tergite.get_provider(service_name=SERVICE_NAME)\n    backend = provider.get_backend(BACKEND_NAME)\n    backend.set_options(shots=1024)\n\n    # compile the circuit\n    tc = compiler.transpile(qc, backend=backend)\n\n    # run the circuit\n    job: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\n\n    # view the results\n    elapsed_time = 0\n    result = None\n    while result is None:\n        if elapsed_time &gt; POLL_TIMEOUT:\n            raise TimeoutError(\n                f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\"\n            )\n\n        time.sleep(1)\n        elapsed_time += 1\n        result = job.result()\n\n    print(result.get_counts())\n\nExecute the above script by running the commnad below.\n\npython main.py\n\nIt should return something like:\n\n{0: 1024}\nNote: We get only 0’s because we are using the dummy cluster from quantify scheduler",
-    "crumbs": [
-      "Tutorials",
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html",
-    "href": "tutorials/06_puhuri_tergite_flows.html",
-    "title": "Puhuri-Tergite playground",
+    "objectID": "tutorials/05_resource_management.html",
+    "href": "tutorials/05_resource_management.html",
+    "title": "Resource Management with Puhuri",
     "section": "",
-    "text": "This is just a playgorund as we try to connect Tergite to Puhuri",
+    "text": "Puhuri is an HPC resource management platform that could also be used to manage Quantumm Computer systems.\nWe need to synchronize MSS’s resource management with that in Puhuri\nThe Puhuri Entity Layout",
     "crumbs": [
       "Tutorials",
-      "Puhuri-Tergite playground"
+      "Resource Management with Puhuri"
     ]
   },
   {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#global-variables",
-    "href": "tutorials/06_puhuri_tergite_flows.html#global-variables",
-    "title": "Puhuri-Tergite playground",
-    "section": "GLOBAL VARIABLES",
-    "text": "GLOBAL VARIABLES\nThe following gloabl variables should be set to the right values.\nimport asyncio\nimport enum\nimport pprint\n\nimport pydantic\n\nfrom datetime import datetime, timezone\nfrom typing import Any, Dict, Optional, Tuple, List\n\nfrom motor import motor_asyncio\nfrom pymongo import UpdateOne\nfrom waldur_client import WaldurClient, ComponentUsage\n\n# The User-set variables\nWALDUR_URI = \"https://access.nordiquest.net/api/\"\nWALDUR_TOKEN = \"&lt;API key of your user, click on the user in the navbar&gt;\"\nPROVIDER_UUID = \"&lt;Unique ID of the Service provider for QAL900, visit the service provider detail page and get the uuid in the URL box&gt;\"\n# this requires one to install mongodb. Or you can set it to \"\" or None and it will be ignored\nMONGODB_URI = \"mongodb://localhost:27017\"\n\n\n# Puhuri Waldur client\nCLIENT = WaldurClient(WALDUR_URI, WALDUR_TOKEN)\nDB_CLIENT: Optional[motor_asyncio.AsyncIOMotorClient] = None\nif MONGODB_URI:\n    DB_CLIENT = motor_asyncio.AsyncIOMotorClient(MONGODB_URI)\n    DB_NAME = \"your-database\"\n    PROJECTS_COLLECTION = \"projects\"\n\n# Exceptions\n\nclass BaseQal9000Exception(Exception):\n    def __init__(self, message: str = \"\"):\n        self._message = message\n\n    def __repr__(self):\n        return f\"{self.__class__.__name__}: {self._message}\"\n\n    def __str__(self):\n        return self._message if self._message else self.__class__.__name__\n\nclass ResourceNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no resources are found\"\"\"\n\nclass ComponentNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no component is found\"\"\"\n\nclass PlanPeriodNotFoundError(BaseQal9000Exception):\n    \"\"\"Raised when no plan period is found\"\"\"\n\nPuhuri Entity Layout\n\n\n\nPuhuri-qal9000-entity-layout",
+    "objectID": "tutorials/05_resource_management.html#flows",
+    "href": "tutorials/05_resource_management.html#flows",
+    "title": "Resource Management with Puhuri",
+    "section": "Flows",
+    "text": "Flows\nMore information about flows can be found in the puhuri tergite flows tutorial\n\n\n\n\n\n\n\n\n\nSelecting resource to report on",
     "crumbs": [
       "Tutorials",
-      "Puhuri-Tergite playground"
+      "Resource Management with Puhuri"
     ]
   },
   {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#database-schemas",
-    "href": "tutorials/06_puhuri_tergite_flows.html#database-schemas",
-    "title": "Puhuri-Tergite playground",
-    "section": "Database Schemas",
-    "text": "Database Schemas\nThere are a few database schemas we may need. We are using mongodb here, but any kind of storage can be used/\nclass ProjectSource(str, enum.Enum):\n    PUHURI = 'puhuri'\n    INTERNAL = 'internal'\n\nclass Project(pydantic.BaseModel):\n    # ...\n    ext_id: str  # the project_uuid in this case\n    source: ProjectSource\n    user_emails: List[str] = []\n    qpu_seconds: int = 0\n    is_active: bool = True\n    resource_ids: List[str] = []",
+    "objectID": "tutorials/05_resource_management.html#assumptions",
+    "href": "tutorials/05_resource_management.html#assumptions",
+    "title": "Resource Management with Puhuri",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWhen creating components in the puhuri UI, the ‘measurement unit’s set on the component are of the following possible values: ’second’, ‘hour’, ‘minute’, ‘day’, ‘week’, ‘half_month’, and ‘month’.",
     "crumbs": [
       "Tutorials",
-      "Puhuri-Tergite playground"
+      "Resource Management with Puhuri"
     ]
   },
   {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#operations",
-    "href": "tutorials/06_puhuri_tergite_flows.html#operations",
-    "title": "Puhuri-Tergite playground",
-    "section": "Operations",
-    "text": "Operations\nThere are some important operations we need to pull off. They include:\n\nReport usage on a per-project basis for projects that have Tergite offerings\nRetrieve latest approved resource allocations that have Tergite offerings from puhuri\nRetrieve latest users added to given projects that have Tergite offerings from puhuri\n\n\nProject-based Usage Report Submission\nThe flow of logic is as shown below\n\n\n\nPuhuri-qal9000-report-usage\n\n\n\nRetrieving Resources of a Given Project\nWe should be able to retrieve all resources attached to a project by running the cell below.\nNote that we need to first approve all pending orders for this provider. This ensures that all resources that we will query later have ‘plan periods’. (We should have updated our projects lists first)\nOnly resources with approved orders have plan periods.\nResources associated with approved orders have state “OK”. This is something we will filter for later.\n# Set the UUID of the project whose resources you wish to inspect\nPROJECT_UUID = \"\"\n\n_resource_filter = {\"provider_uuid\": PROVIDER_UUID, \"state\": \"OK\"}\nif PROJECT_UUID:\n    _resource_filter[\"project_uuid\"] = PROJECT_UUID\n\n# If you don't set the PROJECT_UUID, all resources that have offerings from\n# your given service provider will appear here\n_RESOURCES = CLIENT.filter_marketplace_resources(_resource_filter)\n_RESOURCES\nLet us check if there are any resources and exit with an error if none are found\nif len(_RESOURCES) == 0:\n    raise ResourceNotFoundError(f\"no resource found for provider and project\")\n\n\nSeparate Limit-based From Usage-based Resources\nSince Tergite keeps track of only the project uuid, and yet a project can have multiple resources, we need to determine the resource against which our usage report is to be made.\nCurrently, we think we should consume limit-based resources first before we move on to the usage-based resources.\nLimit-based resources are those that are prepaid i.e. can only be used after a given amount of QPU minutes has been purchased.\nOn the other hand, usage-based resources are billed, say at the end of the month.\nWe therefore need to separate limit-based resources of a project from usage-based resources and only report usage on the usage-based resources if there is no limit-based resource.\nQuestion: What should we do if all limit-based resources are depleted yet there are some usage-based resources? (Probably report on the usage-based resources)\n_USAGE_BASED_RESOURCES = []\n_LIMIT_BASED_RESOURCES = []\n\nfor resource in _RESOURCES:\n    # usage-based resources have an empty {} as their limits\n    if len(resource[\"limits\"]) == 0:\n        _USAGE_BASED_RESOURCES.append(resource)\n    else:\n        _LIMIT_BASED_RESOURCES.append(resource)\n\nprint(\"USAGE BASED RESOURCES\")\npprint.pprint(_USAGE_BASED_RESOURCES)\n\nprint(\"LIMIT BASED RESOURCES\")\npprint.pprint(_LIMIT_BASED_RESOURCES)\n\n\nSelecting the Right Resource to Report Usage Against\nWe are going to look through the different resources and select the right resource to report usage against.\n# the QPU seconds to be reported against the selected resource\n_QPU_SECONDS_USED = 80\n\n# the resource whose usage is to be updated\n_SELECTED_RESOURCE: Optional[Dict[str, Any]] = None\n\n# the accounting component to use when send resource usage.\n# Note: project -&gt; many resources -&gt; each with an (accounting) plan -&gt; each with multiple (accounting) components\n_SELECTED_COMPONENT: Optional[Dict[str, Any]] = None\n\n# the limit-based resources have a dictionary of \"limits\" with keys as the \"internal names\" or \"types\" of the components\n# and the values as the maximum amount for that component. This amount is in units of that component\n# e.g. 10 for one component, might mean 10 days, while for another it might mean 10 minutes depending\n# on the 'measurement_unit' of that component.\n# We will select the component whose limit (in seconds) &gt;= the usage\n_SELECTED_COMPONENT_TYPE: Optional[str] = None\nNOTE: We are making a big assumption that when creating components in the puhuri UI, the ‘measurement unit’s set on the component are of the following possible values: ’second’, ‘hour’, ‘minute’, ‘day’, ‘week’, ‘half_month’, and ‘month’.\nWe attempt to get the first limit-based resource that has a limit value (in seconds) greater or equal to the _QPU_SECONDS_USED to be reported. This is only polite to the customer so that we don’t run one resource to below zero while the others are one way above zero.\ndef get_accounting_component(\n        offering_uuid: str, \n        component_type: str, \n        cache: Optional[Dict[Tuple[str, str], Dict[str, Any]]] = None,\n        ) -&gt; Dict[str, Any]:\n    \"\"\"Gets the accounting component given the component type and the offering_uuid\n    \n    If the caches are provided, it attempts to extract the component \n    from the cache if the cache is provided\n\n    Args:\n        offering_uuid: the UUID string of the offering the component belongs to\n        component_type: the type of the component\n        cache: the dictionary cache that holds components, \n            accessible by (offering_uuid, component_type) tuple\n\n    Returns:\n        the component\n    \"\"\"\n    _cache = cache if isinstance(cache, dict) else {}\n    component = _cache.get((offering_uuid, component_type))\n\n    if component is None:\n        offering = CLIENT.get_marketplace_provider_offering(offering_uuid)\n        _cache.update({(offering_uuid, v[\"type\"]): v for v in offering[\"components\"]})\n        component = _cache[(offering_uuid, component_type)]\n\n    return component\n    \n\n# A map to help convert limits and amounts to-and-fro seconds given a particular accounting component\n_COMPONENT_UNIT_SECONDS_MAP: Dict[str, int] = {\n    \"month\": 30 * 24 * 3_600,\n    \"half_month\": 15 * 24 * 3_600,\n    \"week\": 7 * 24 * 3_600,\n    \"day\": 24 * 3_600,\n    \"hour\": 3_600,\n    \"minute\": 60,\n    \"second\": 1,\n}\n\n_COMPONENTS_CACHE: Dict[Tuple[str, str], Dict[str, Any]] = {}\n\nfor resource in _LIMIT_BASED_RESOURCES:\n    offering_uuid = resource[\"offering_uuid\"]\n\n    for comp_type, comp_amount in resource[\"limits\"].items():\n        component = get_accounting_component(\n            offering_uuid=offering_uuid, component_type=comp_type, cache=_COMPONENTS_CACHE)\n\n        unit_value = _COMPONENT_UNIT_SECONDS_MAP[component[\"measured_unit\"]]\n        limit_in_seconds = comp_amount * unit_value\n\n        # select resource which has at least one limit (or purchased QPU seconds) \n        # greater or equal to the seconds to be reported.\n        if limit_in_seconds &gt;= _QPU_SECONDS_USED:\n            _SELECTED_RESOURCE = resource\n            _SELECTED_COMPONENT = component\n            _SELECTED_COMPONENT_TYPE = comp_type\n            break\n\n    # get out of loop once we have a selected resource\n    if _SELECTED_RESOURCE is not None:\n        break\n\nprint(\"_SELECTED_RESOURCE\")\npprint.pprint(_SELECTED_RESOURCE)\n\nprint(\"_SELECTED_COMPONENT_TYPE\")\npprint.pprint(_SELECTED_COMPONENT_TYPE)\n\nprint(\"_SELECTED_COMPONENT\")\npprint.pprint(_SELECTED_COMPONENT)\nIf no limit-based resource has enough QPU minutes, we select the first usage-based resource. If no usage-based resource exists, we select the first limit-based resource.\nOf course if there are no resources at all, we should have not reached this far! We should have exited, with an error already.\nif _SELECTED_RESOURCE is None:\n    try:\n        _SELECTED_RESOURCE = _USAGE_BASED_RESOURCES[0]\n    except IndexError:\n        _SELECTED_RESOURCE = _LIMIT_BASED_RESOURCES[0]\n\n_SELECTED_RESOURCE\n\n\nGetting the Right Component Type\nWe need to get the corresponding accounting component type to use to report usage. If we got a limit-based resource, we should have already set the _SELECTED_COMPONENT_TYPE basing on the key in the limits dict that had an amount greater or equal to the QPU minutes we are going to report.\nRemember that limits is a dict containing the component types and their corresponding limits\nIf _SELECTED_COMPONENT_TYPE is not yet set, we need to obtain the first component type in the offering associated with the selected resource.\nLet us first get the offering that is associcated with the selected resource\n# This should not be necessary if you already have _SELECTED_COMPONENT_TYPE set\nif _SELECTED_COMPONENT_TYPE is None:\n    _SELECTED_OFFERING = CLIENT.get_marketplace_provider_offering(_SELECTED_RESOURCE[\"offering_uuid\"])\n\n    _SELECTED_OFFERING\nIf offering has no components, we raise an exception and exit\n# This should not be necessary if you already have _SELECTED_COMPONENT_TYPE set\nif _SELECTED_COMPONENT_TYPE is None:\n    _components = _SELECTED_OFFERING[\"components\"]\n    if len(_components) == 0:\n        raise ComponentNotFoundError(\"no components found for the selected offering\")\n    \n    _SELECTED_COMPONENT = _components[0]\n    _SELECTED_COMPONENT_TYPE = _SELECTED_COMPONENT[\"type\"]\n\n\nGenerate a Usage Report\nWe now need to generate the usage report to send over to puhuri\nLet us create a function to convert the QPU seconds into the component unit e.g “hour”, “month” e.t.c\ndef to_measured_unit(qpu_seconds: float, measured_unit: str) -&gt; float:\n    \"\"\"Converts the qpu seconds into the given measured unit of the component\n     \n    measured_unit e.g. hour, day etc\n    \n    Args:\n        qpu_seconds: the QPU seconds to convert\n        measured_unit: the 'measured_unit' of the accounting component\n\n    Returns:\n        the QPU time in 'measured_unit's\n    \"\"\"\n    # round up to two decimal places\n    return round(qpu_seconds / _COMPONENT_UNIT_SECONDS_MAP[measured_unit], 2)\nAnd then the usage report.\n\nGet the Plan Period for the Selected Resource\nIn order to send the usage report, one must sent the plan preiod UUID for the given resource. Note that only resources whose orders have been approved (or ar in state ‘OK’), have associated planned periods.\nLet’s retrieve the plan periods for the selected resource\n_PLAN_PERIODS = CLIENT.marketplace_resource_get_plan_periods(resource_uuid=_SELECTED_RESOURCE[\"uuid\"])\n\n_PLAN_PERIODS\nWe now need to get the plan period for the current month. We may not be sure whether there is only one plan period for this month or not so we will get the last one in the list for this month.\nLet’s first create some datetime utility functions\ndef to_datetime(timestamp: str) -&gt; datetime:\n    \"\"\"converts a timestamp of format like 2024-01-10T14:32:05.880079Z to datetime\n    \n    Args:\n        timestamp: the timestamp string\n\n    Returns:\n        the datetime corresponding to the given timestamp string\n    \"\"\"\n    return datetime.fromisoformat(timestamp.replace(\"Z\", \"+00:00\"))\n\n\ndef is_in_month(\n    month_year: Tuple[int, int],\n    timestamp: str,\n) -&gt; bool:\n    \"\"\"Checks if the given timestamp is in the given month\n\n    Note that months start at 1 i.e. January = 1, February = 2, ...\n\n    Args:\n        month_year: the (month, year) pair\n        timestamp: the timestamp string in format like 2024-01-10T14:32:05.880079Z\n\n    Returns:\n        True if the timestamp belongs to the same month, False if otherwise\n    \"\"\"\n    timestamp_date = to_datetime(timestamp)\n    month, year = month_year\n    return timestamp_date.month == month and timestamp_date.year == year\nNow let’s get the plan periods for the current month\n_NOW = datetime.now(tz=timezone.utc)\n_SELECTED_PLAN_PERIOD: Optional[Dict[str, Any]] = None\n\n_PLAN_PERIODS_FOR_CURRENT_MONTH = [\n    v for v in _PLAN_PERIODS \n    if is_in_month((_NOW.month, _NOW.year), v[\"start\"])\n]\n\ntry:\n    _SELECTED_PLAN_PERIOD = _PLAN_PERIODS_FOR_CURRENT_MONTH[-1]\nexcept IndexError:\n    raise PlanPeriodNotFoundError(f\"no plan period was found for month: {(_NOW.month, _NOW.year)}, for resource {_SELECTED_RESOURCE['uuid']}\")\n\n_SELECTED_PLAN_PERIOD\n\n\nSubmit the Usage Report\nWe are now ready to submit the usage report.\nWe will create a component usage for the first plan period of that given resource.\n# requests.post(_USAGE_REPORT_URL, data=_USAGE_REPORT_PAYLOAD, headers=_USAGE_REPORT_HEADERS)\nusage = ComponentUsage(\n    type= _SELECTED_COMPONENT_TYPE,\n    amount=to_measured_unit(\n    800, measured_unit=_SELECTED_COMPONENT[\"measured_unit\"]),\n    description= f\"{_QPU_SECONDS_USED} QPU seconds\",\n)\n\nCLIENT.create_component_usages(plan_period_uuid=_SELECTED_PLAN_PERIOD[\"uuid\"], \n                               usages=[usage])\n\n\n\nPuhuri Waldur Constraint: 1 Usage Per Month\nWhen we try again to submit another usage for the same plan, we may see that no new usage item is added to the ‘components’ of the plan period. To see this, you will have to run the previous code cell, the run the code cell before that.\nAs of now it seems like Puhuri can only accept 1 usage per month. This might change in future but for now, we must accumulate usages internally, and send the accumulated data\nThis means that only one request is expected per day. Any requests sent within that month (say 2024-01) will overwrite the previous entry for that month.\n\nHow to Work With Constraint\nWe will have to log every usage internally every month as a separate usage. We expect only one usage report for each job ID. Now and again, at whatever interval we wish, we will compute the accumulated usage for the current month and project and send it over to the Puhuri waldur server.\nWe do not have to wait for a month to elapse in order to resend usage reports for the same resource, (or plan) since it will be overwritten.\nFor us to limit access to users who have gone beyond the current limit for a given project, we might need to get the current pending QPUs left basing on the accumulated usage we have internally in Tergite, vs the allocated QPU seconds.",
+    "objectID": "tutorials/05_resource_management.html#how-to-start-the-puhuri-sync",
+    "href": "tutorials/05_resource_management.html#how-to-start-the-puhuri-sync",
+    "title": "Resource Management with Puhuri",
+    "section": "How to Start the Puhuri Sync",
+    "text": "How to Start the Puhuri Sync\n\nEnsure that the is_enabled = true in the [puhuri] table in your mss-config.toml file\nEnsure all other variables in the [puhuri] table in your mss-config.toml file are appropriately set e.g.\n\n[puhuri]\n# the URI to the Puhuri WALDUR server instance\n# Please contact the Puhuri team to get this.\nwaldur_api_uri = \"&lt;the URI to the Puhuri Waldur server&gt;\"\n# The access token to be used in the Waldur client [https://docs.waldur.com/user-guide/] to connect to Puhuri\n# Please contact the Puhuri team on how to get this from the UI\nwaldur_client_token = \"&lt;API token for a puhuri user who has 'service provider manager' role for our offering on puhuri&gt;\"\n# The unique ID for the service provider associated with this app in the Waldur Puhuri server\n# Please contact the Puhuri team on how to get this from the UI\nprovider_uuid = \"&lt;the unique ID for the service provider associated with this app in Puhuri&gt;\"\n# the interval in seconds at which puhuri is polled. default is 900 (15 minutes)\npoll_interval = \"&lt;some value&gt;\"\n\nIf you wish to start only the puhuri synchronization script without the REST API, run in your virtual environment:\n\npython -m api.scripts.puhuri_sync --ignore-if-disabled\n\nIn order to run both the REST API and this puhuri synchronization script, run in your virtual environment:\n\npython -m api.scripts.puhuri_sync --ignore-if-disabled & \\\n  uvicorn --host 0.0.0.0 --port 8000 api.rest:app  --proxy-headers\n\n\n\nPuhuri Layout\nSelecting resource to report on",
     "crumbs": [
       "Tutorials",
-      "Puhuri-Tergite playground"
+      "Resource Management with Puhuri"
     ]
   },
   {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#getting-list-of-new-projects",
-    "href": "tutorials/06_puhuri_tergite_flows.html#getting-list-of-new-projects",
-    "title": "Puhuri-Tergite playground",
-    "section": "Getting List of New Projects",
-    "text": "Getting List of New Projects\nWe also need to get all new projects that have been created that are requesting for a resource governed by this service provider.\n\nGet All New Resources\nWe first get all the new resources attached to this provider uuid\n_NEW_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"Creating\"\n})\n\n_NEW_RESOURCES\nFrom these resources, we can extract the unique individual project UUID’s that are attached to these resources, and upsert them into our databases as new Project instances\nFirst of all we need to group the resources by project UUID.\nNote that a given pre-existing project can order new resources. When updating the database, we should upsert in such a way that we increment the prexisting qpu_seconds for any project that exists or we create a new project.\nLet’s group the new resources by project UUID. We will sum their “limit”s and “limit_usage”\nclass PuhuriProjectMetadata(pydantic.BaseModel):\n    \"\"\"Metadata as extracted from Puhuri resources\"\"\"\n    uuid: str \n    # dict of offering_uuid and limits dict\n    limits: Dict[str, Dict[str, float]] = {}\n    # dict of offering_uuid and limit_usage dict\n    limit_usage: Dict[str, Dict[str, float]] = {}\n    resource_uuids: List[str]\n\n\ndef remove_nones(data: Dict[str, Optional[Any]], __new: Any):\n    \"\"\"Replaces None values with the replacement\n    \n    Args:\n        data: the dictionary whose None values are to be replaced\n        __new: the replacement for the None values\n\n    Returns:\n        the dictionary with the None values replaced with the replacement\n    \"\"\"\n    return {k: v if v is not None else __new for k, v in data.items()}\n\n\ndef extract_project_metadata(resources: List[Dict[str, Any]]) -&gt; List[PuhuriProjectMetadata]:\n    \"\"\"Extracts the project metadata from a list of resources\n    \n    A project can contan any number of resources so we need to group the resources\n    by project UUID and aggregate any relevant fields like \"limits\" and \"limit_usage\"\n\n    Args:\n        resources: the list of resource dictionaries\n\n    Returns:\n        list of PuhuriProjectMetadata\n    \"\"\"\n    results: Dict[str, PuhuriProjectMetadata] = {}\n\n    for resource in resources:\n        offering_uuid = resource[\"offering_uuid\"]\n        project_uuid = resource[\"project_uuid\"]\n        limits = remove_nones(resource[\"limits\"], 0)\n        limit_usage = remove_nones(resource[\"limit_usage\"], 0)\n        project_meta = PuhuriProjectMetadata(\n                uuid=project_uuid,\n                limits={offering_uuid: limits},\n                limit_usage={offering_uuid: limit_usage},\n                resource_uuids=[resource[\"uuid\"]],\n            )\n        original_meta = results.get(project_uuid, None)\n        \n        if isinstance(original_meta, PuhuriProjectMetadata):\n            original_limits = original_meta.limits.get(offering_uuid, {})\n            project_meta.limits[offering_uuid] = {\n                k: v + original_limits.get(k, 0)\n                for k, v in limits.items() \n            }\n\n            original_usages = original_meta.limit_usage.get(offering_uuid, {})\n            project_meta.limit_usage[offering_uuid] = {\n                k: v + original_usages.get(k, 0)\n                for k, v in limit_usage.items() \n            }\n\n            project_meta.resource_uuids.extend(original_meta.resource_uuids)\n\n        results[project_uuid] = project_meta\n\n    return list(results.values())\n\n_NEW_PROJECT_METADATA = extract_project_metadata(_NEW_RESOURCES)\n\n_NEW_PROJECT_METADATA\n\nCompute the QPU seconds for each project\nBefore we can update our database, we need to compute the QPU seconds for each project.\nLet’s create a function to do just that\ndef get_qpu_seconds(metadata: PuhuriProjectMetadata) -&gt; float:\n    \"\"\"Computes the net QPU seconds the project is left with\n    \n    Args:\n        metadata: the metadata of the project\n\n    Returns:\n        the net QPU seconds, i.e. allocated minus used\n    \"\"\"\n    net_qpu_seconds = 0\n    _components_cache: Dict[Tuple[str, str], Dict[str, Any]] = {}\n\n    for offering_uuid, limits in metadata.limits.items():\n        limit_usage = metadata.limit_usage.get(offering_uuid, {})\n\n        for comp_type, comp_amount in limits.items():\n            component = get_accounting_component(\n                offering_uuid=offering_uuid, component_type=comp_type, cache=_components_cache)\n\n            unit_value = _COMPONENT_UNIT_SECONDS_MAP[component[\"measured_unit\"]]\n            net_comp_amount = comp_amount - limit_usage.get(comp_type, 0)\n            net_qpu_seconds += (net_comp_amount * unit_value)\n\n    return net_qpu_seconds\nWe can now extract Project instances from the PuhuriProjectMetadata\n_NEW_PROJECTS: List[Project] = [Project(\n    ext_id=item.uuid,\n    source=ProjectSource.PUHURI,\n    qpu_seconds=get_qpu_seconds(item),\n    is_active=False,\n    resource_ids=item.resource_uuids,\n) for item in _NEW_PROJECT_METADATA]\n\n_NEW_PROJECTS\n\n\nUpsert the New Projects into Database\nWe now have to upsert the new projects into the database.\nRemember, if any of the projects already exist, we should increment their QPU seconds; and their is_active set to False momentarily.\nNotice that we have not yet approved the above orders. However, all these new projects are set to is_active=False, until their orders are approved. This is after they are inserted into the database.\nFirst, let us create a unique Index for the project ext_id in the projects database collection. This is to ensure that no project has more than one entry.\nSideNote: beanie ODM can be a good tool to use to create database models that have indexes\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    await _collection.create_index(\"ext_id\", unique=True)\nThen we will update our projects\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    _responses = await asyncio.gather(*(_collection.update_one({\n            \"ext_id\": project.ext_id, \n            # a guard to ensure projects whose order approvals keep\n            # failing do not have their qpu_seconds incremented indefinitely\n            # NOTE: this may fail with a Conflict Error if any of the resource_ids \n            #   already exists in the project. You might need to resolve this manually\n            \"resource_ids\": {\"$nin\": project.resource_ids},\n            }, {\n            \"$set\": {\n                \"source\": ProjectSource.PUHURI.value,\n                \"is_active\": project.is_active,\n            },\n            \"$inc\": {\n                \"qpu_seconds\": project.qpu_seconds,\n            },\n            \"$addToSet\": {\"resource_ids\": {\"$each\": project.resource_ids}}\n        }, upsert=True) for project in _NEW_PROJECTS), return_exceptions=True)\n    \n    _UPDATED_PROJECTS = [\n        _NEW_PROJECTS[index]\n        for index, resp in enumerate(_responses)\n        if not isinstance(resp, Exception)\n    ]\n    \n\n    pprint.pprint(_UPDATED_PROJECTS)\n\n\nApprove All Orders for the given resources\nWe will then approve all the orders for the new resources and when successful, we will activate their associated projects\nWe will first create a function to do the approvals\nasync def approve_pending_orders(client: WaldurClient, provider_uuid: str, **kwargs) -&gt; Dict[str, Any]:\n    \"\"\"Approves all orders for the given service provider that are in the 'pending-provider' state\n\n    Args:\n        client: the WaldurClient\n        provider_uuid: the UUID string of the service provider\n        kwargs: extra filters for filtering the orders\n\n    Returns:\n        dictionary of kwargs used to filter orders.\n\n    Raises:\n        WaldurClientException: error making request\n        ValueError: no order item found for filter {kwargs}\n    \"\"\"\n    # This function does not have to be asynchronous in this notebook\n    # but it needs to be asynchronous in web-servers so that it does not\n    # block other requests. Same thing for all other functions that make\n    # network calls.\n    loop = asyncio.get_event_loop()\n\n    filter_obj = {\n        'state': 'pending-provider',\n        'provider_uuid': provider_uuid,\n        **kwargs\n    }\n    order_items = await loop.run_in_executor(None, client.list_orders, filter_obj)\n    if len(order_items) == 0:\n        raise ValueError(f\"no order item found for filter {kwargs}\")\n    \n    await asyncio.gather(*(loop.run_in_executor(None, client.marketplace_order_approve_by_provider, order[\"uuid\"]) \n                      for order in order_items),)\n    return kwargs\nThen we can make the API calls to Puhuri top approve the pending orders\n# if using mongo db\nif DB_CLIENT:\n    _RESOURCE_UUID_PROJECT_UUID_MAP = {\n        resource_uuid: project.ext_id\n        for project in _UPDATED_PROJECTS\n        for resource_uuid in project.resource_ids\n    }\n    pprint.pprint(_RESOURCE_UUID_PROJECT_UUID_MAP)\n\n    # _results is a list of Dict[resource_uuid, str]\n    # Note that we are filtering by resource UUID, not project UUID, because there is a chance \n    # that a project could have added new resources while we were still processing the \n    # current ones\n    _responses = await asyncio.gather(*(\n        approve_pending_orders(CLIENT, PROVIDER_UUID, resource_uuid=resource_uuid)\n        for resource_uuid in _RESOURCE_UUID_PROJECT_UUID_MAP.keys()\n    ), return_exceptions=True)\n\n    _APPROVED_RESOURCE_UUID_MAPS = [resp for resp in _responses if isinstance(resp, dict)]\n\n\n    pprint.pprint(_APPROVED_RESOURCE_UUID_MAPS)\nWe then have to get all approved projects i.e. projects without a non-approved order\n# if using mongo db\nif DB_CLIENT:\n    _results_map = {item[\"resource_uuid\"]: True for item in _APPROVED_RESOURCE_UUID_MAPS}\n\n    # approved projects are those that have all their resources approved\n    _APPROVED_PROJECT_UUIDS = [\n        metadata.uuid for metadata in _NEW_PROJECT_METADATA\n        if all(_results_map.get(resource_uuid) for resource_uuid in metadata.resource_uuids)\n    ]\n\n    pprint.pprint(_APPROVED_PROJECT_UUIDS)\nThen we update the approved projects in the database by setting their is_active to True.\nNote that some projects might have been active before new orders were queried. But then due to a failing order approval, they suddenly become inactive. That order must be resolved before they are reactivated, on the next run.\nOtherwise, no new resources will be added to that project\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    # set the approved projects' \"is_active\" to True\n    _result = await _collection.bulk_write(\n        [UpdateOne({\n            \"ext_id\": ext_id, \n            }, {\n            \"$set\": {\n                \"is_active\": True,\n            }\n        }) \n         for ext_id in _APPROVED_PROJECT_UUIDS]\n    )\n\n    pprint.pprint(_result)",
-    "crumbs": [
-      "Tutorials",
-      "Puhuri-Tergite playground"
-    ]
-  },
-  {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#updating-qpu-seconds-for-each-pre-existing-project",
-    "href": "tutorials/06_puhuri_tergite_flows.html#updating-qpu-seconds-for-each-pre-existing-project",
-    "title": "Puhuri-Tergite playground",
-    "section": "Updating QPU Seconds for Each Pre-existing Project",
-    "text": "Updating QPU Seconds for Each Pre-existing Project\nWe need to update the allocated QPU seconds for all projects. This is like taking a snapshot of Puhuri’s state at a given time and transfering it to QAL9000.\nWe should first of all get all approved resources. This should ideally be done after approving all pending orders (i.e. after updating the project list in Tergite).\n_APPROVED_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"OK\"\n})\n\n_APPROVED_RESOURCES\nWe are assuming that all projects allocated to QAL9000 in puhuri will be “limit-based”, as this allows us to restrict usage of the quantum computer once the limits for the allocation have been exhausted.\nHowever, we are not able to stop any one from creating a ‘usage-based’ resource and attaching it to QAL9000. We will thus keep the qpu_seconds of such projects at 0 hence no access to their members.\nIn future, this could change. For instance, we could begin tracking whether a project is ‘usage-based’ or ‘limit-based’ within QAL9000. And then update the authorization logic to allow users whose projects are ‘usage-based’ even when their qpu_seconds is &lt;= 0\nLet us now add up all the net qpu_seconds for each project (since a project can have multiple resources).\nWe do this by grouping the resources into PuhuriProjectMetadata.\n_ALL_PROJECT_METADATA = extract_project_metadata(_APPROVED_RESOURCES)\n\n_ALL_PROJECT_METADATA\nThen we compute the QPU seconds of each project from the PuhuriProjectMetadata\n_ALL_PROJECTS: List[Project] = [Project(\n    ext_id=item.uuid,\n    source=ProjectSource.PUHURI,\n    qpu_seconds=get_qpu_seconds(item),\n    is_active=True,\n    resource_ids=item.resource_uuids,\n) for item in _ALL_PROJECT_METADATA]\n\n_ALL_PROJECTS\nWe then update the database; replacing the QPU seconds for each project with the new one.\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    _responses = await asyncio.gather(*(_collection.update_one({\n            \"ext_id\": project.ext_id, \n            # a guard to ensure that no resource is ignored\n            # NOTE: this may fail with a Conflict Error if any of the resource_ids \n            #   does not already exist in the project. You might need to resolve this manually\n            \"resource_ids\": {\"$in\": project.resource_ids},\n            }, \n            {\n                \"$set\": {\n                    \"source\": ProjectSource.PUHURI.value,\n                    \"is_active\": project.is_active,\n                    \"qpu_seconds\": project.qpu_seconds,\n                    \"resource_ids\": project.resource_ids,\n                },\n            }, \n        upsert=True) for project in _ALL_PROJECTS), return_exceptions=True)\n    \n    _ALL_UPDATED_PROJECTS = [\n        _ALL_PROJECTS[index]\n        for index, resp in enumerate(_responses)\n        if not isinstance(resp, Exception)\n    ]\n    \n\n    pprint.pprint(_ALL_UPDATED_PROJECTS)\n\nEnsuring Idempotency\nWe do not upsert in this case.\nAny projects whose approved resources have changed between the last time the database was updated with new resource_uuids and now, will not be updated by this routine.\nIt should be updated by the routine that deals with new resource allocations.",
-    "crumbs": [
-      "Tutorials",
-      "Puhuri-Tergite playground"
-    ]
-  },
-  {
-    "objectID": "tutorials/06_puhuri_tergite_flows.html#updating-list-of-users-attached-to-projects",
-    "href": "tutorials/06_puhuri_tergite_flows.html#updating-list-of-users-attached-to-projects",
-    "title": "Puhuri-Tergite playground",
-    "section": "Updating List of Users Attached to Projects",
-    "text": "Updating List of Users Attached to Projects\nWe also need to be able to get all users that are all given projects recently.\nPreferably, it would be better to get any new user attachments as opposed to scanning all projects every single time. However, this seems like it is not possible at this time.\n\nGet All Approved Resources\nSo we need to first get all approved resources. This should ideally be done after approving all pending orders (i.e. after we have updated the project list in Tergite with the new orders).\n\n_APPROVED_RESOURCES = CLIENT.filter_marketplace_resources({\n    \"provider_uuid\": PROVIDER_UUID,\n    \"state\": \"OK\"\n})\n\n_APPROVED_RESOURCES\n\n\nGet the Teams for Each Approved Resource\nFor each approved resource, we extract the teams and associate them with the project_uuid for that resource\n# A map of project_uuid and the list of users attached to it\n_PROJECTS_USERS_MAP = {\n    resource[\"project_uuid\"]: CLIENT.marketplace_resource_get_team(resource[\"uuid\"])\n    for resource in _APPROVED_RESOURCES\n}\n\n_PROJECTS_USERS_MAP\nWe can them update our databases with the new projects users, ensuring to overwrite any existing user lists for any project, while closing all puhuri-attached projects that we have at we have in QAL9000 that have no users anymore.\nThis requires that we tag every project in QAL9000 with a ‘source’ attribute so that we are able to extract those that are from Puhuri (i.e. with source=‘puhuri’).\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    await _collection.bulk_write(\n        [UpdateOne({\n            \"ext_id\": project_id, \n            \"source\": ProjectSource.PUHURI.value,\n            }, {\n            \"$set\": {\n                \"user_emails\": [user[\"email\"] for user in user_list],\n            }\n        }) \n         for project_id, user_list in _PROJECTS_USERS_MAP.items()]\n    )\n\n\nEnsuring Idempotency\nWe do not upsert in this case. We just replace the user_emails field with the new lists\nThis also requires that we bulk update all projects whose ‘external ID’ are not IN the list of keys from _PROJECTS_USERS_MAP and yet have ‘source’ = ‘puhuri’\n# if using mongo db\nif DB_CLIENT:\n    _db: motor_asyncio.AsyncIOMotorDatabase = DB_CLIENT[DB_NAME]\n    _collection: motor_asyncio.AsyncIOMotorCollection = _db[PROJECTS_COLLECTION]\n\n    \n    _filter_obj = {\n        \"source\": ProjectSource.PUHURI.value, \n        \"ext_id\": {\"$nin\": list(_PROJECTS_USERS_MAP.keys())},\n    }\n    await _collection.update_many(filter=_filter_obj, update={\n        \"$set\": {\"user_emails\": []}\n    })",
-    "crumbs": [
-      "Tutorials",
-      "Puhuri-Tergite playground"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_authentication.html",
-    "href": "tutorials/02_authentication.html",
-    "title": "Authentication",
+    "objectID": "tutorials/03_authorization.html",
+    "href": "tutorials/03_authorization.html",
+    "title": "Authorization",
     "section": "",
-    "text": "This is how the Main Service Server (MSS) in tergite-frontend authenticates its users.",
+    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its BCCs using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
     "crumbs": [
       "Tutorials",
-      "Authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_authentication.html#add-a-new-oauth2-provider",
-    "href": "tutorials/02_authentication.html#add-a-new-oauth2-provider",
-    "title": "Authentication",
-    "section": "Add a New Oauth2 Provider",
-    "text": "Add a New Oauth2 Provider\n\nUpdate tergite-mss app in tergite-frontend\n\nLet’s say we want some ‘Company B’ users to have access to MSS.\nCopy the mss-config.example.toml to mss-config.toml in the tergite-frontend folder, and update the configs therein.\nNote: You could also create a new toml file based on mss-config.example.toml\nand set the MSS_CONFIG_FILE environment variable to point to that file.\nAdd the new client:\n\n[[auth.clients]]\n# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/company-b/...\nname = \"company-b\"\nclient_id = \"some-openid-client-id\"\nclient_secret = \"some-openid-client-secret\"\n# the URL to redirect to after user authenticates with the system.\n# It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback\nredirect_url = \"http://127.0.0.1:8002/auth/app/company-b/callback\"\nclient_type = \"openid\"\nemail_regex = \".*\"\n# Roles that are automatically given to users who authenticate through Company B\n# roles can be: \"admin\", \"user\", \"researcher\", \"partner\". Default is \"user\".\nroles = [\"partner\", \"user\"]\n# openid_configuration_endpoint is necessary if Company B uses OpenID Connect, otherwise ignore.\nopenid_configuration_endpoint = \"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration\"\n\n\nUpdate tergite-landing-page app in tergite-frontend\n\nAdd the logo for the new provider in the tergite-frontend/apps/tergite-landing-page/public/img folder.\nOpen the tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts file and update its OAUTH2_LOGOS list to include your new provider’s logo.\n\nconst OAUTH2_LOGOS: { [key: string]: string } = {\n    github: '/img/github-black.png',\n    chalmers: '/img/chalmers-logo.svg',\n    company-b: '/img/company-b-logo.svg',\n};\n\nStart the frontend application. Instructions are on the tergite-frontend/README.md\n\ndocker compose -f fresh-docker-compose.yml up -d\nNote: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.",
-    "crumbs": [
-      "Tutorials",
-      "Authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_authentication.html#faqs",
-    "href": "tutorials/02_authentication.html#faqs",
-    "title": "Authentication",
-    "section": "FAQs",
-    "text": "FAQs\n\n- How do we bypass authentication in development?\nWe use feature flag auth.is_enabled property in the mss-config.toml file, setting it to false\nis_enabled = false\nNote: /auth endpoints will still require authentication because they depend on the current user\n\n\n- How do we ensure that in production, authentication is always turned on?\nOn startup, we raise a ValueError when auth.is_enabled = false in the mss-config.toml file yet\nconfig variable environment = production and log it.\n\n\n- How do we allow other qal9000 services (e.g. tergite-backend or calibration workers) to access MSS, without user intervention?\nUse app tokens created by any user who had the ‘system’ role. The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped. Since they won’t be used to run jobs, their project QPU seconds are expected not to run out.\nIf you are in development mode, you can just switch of authentication altogether.\n\n\nHow do I log in?\n\nYou need to run the tergite-frontend.\nMake sure that your mss-config.toml files have all variables filled appropriately.\nThe landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.\n\n\n\nHow does the backend get authenticated?\n\nA client (say tergite) sends a POST request is sent to /jobs on MSS (this app) with an app_token in its Authorization header\nA new job entry is created in the database, together with a new unique job_id.\nMSS notifies tergite-backend of the job_id and its associated app_token by sending a POST request to /auth endpoint of tergite-backend.\nIn the response to the client, MSS returns the /jobs url for the given tergite-backend instance\nThe client then sends its experiment data to the tergite-backend /jobs url, with the same app_token in its Authorization header and the same job_id in the experiment data.\ntergite-backend checks if the job_id and the app_token are first of all associated, and if no other experiment data has been sent already with the same job_id-app_token pair. This is to ensure no user attempts to fool the system by using the same job_id for multiple experiments, which is theoretically possible.\nIf tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401 or a 403 HTTP error is thrown.\nThe same job_id-app_token pair is used to download raw logfiles from tergite-backend at /logfiles/{job_id} endpoint. This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.\nThis is the same behaviour when reading the job results at jobs/{job_id}/result or the job status at jobs/{job_id}/status or the entire job entry at jobs/{job_id} in tergite-backend.\nThis is also the same behaviour when attempting to delete the job at /jobs/{job_id} or to cancel it at /jobs/{job_id}/cancel in tergite-backend.",
-    "crumbs": [
-      "Tutorials",
-      "Authentication"
+      "Authorization"
     ]
   }
 ]
