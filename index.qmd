@@ -15,7 +15,7 @@ about:
     - icon: info-circle
       href: why.qmd
     - icon: book
-      href: quick_start.qmd
+      href: tutorials/01_quick_start.qmd
     - icon: github
       text: GitHub
       href: https://github.com/tergite
