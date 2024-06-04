@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tergite.github.io/tutorials/authentication.html</loc>
-    <lastmod>2024-05-30T14:24:29.588Z</lastmod>
+    <loc>https://tergite.github.io/tutorials/04_resource_allocation_&_management.html</loc>
+    <lastmod>2024-06-04T09:09:00.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/tutorials/03_configuration.html</loc>
+    <lastmod>2024-06-04T08:40:59.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/examples/03_equal_superposition.html</loc>
+    <lastmod>2024-06-04T09:06:59.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/examples/01_hello_tergite.html</loc>
+    <lastmod>2024-06-04T09:08:04.640Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes.html</loc>
     <lastmod>2024-05-30T12:27:32.914Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tergite.github.io/quick_start.html</loc>
-    <lastmod>2024-06-03T16:40:34.174Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/why.html</loc>
@@ -22,6 +30,18 @@
   </url>
   <url>
     <loc>https://tergite.github.io/index.html</loc>
-    <lastmod>2024-06-03T15:32:10.471Z</lastmod>
+    <lastmod>2024-06-04T09:24:34.410Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/examples/02_bell_state.html</loc>
+    <lastmod>2024-06-04T09:07:08.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/tutorials/01_quick_start.html</loc>
+    <lastmod>2024-06-04T09:15:19.379Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/tutorials/02_authentication.html</loc>
+    <lastmod>2024-05-30T14:24:29.588Z</lastmod>
   </url>
 </urlset>

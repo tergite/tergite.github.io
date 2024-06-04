@@ -30,6 +30,7 @@ website:
 
     left:
       - sidebar:guides-list
+      - sidebar:examples-list
 
     right:
       - release_notes.qmd
@@ -55,8 +56,13 @@ website:
       style: "docked"
       collapse-level: 2
       contents:
-        - quick_start.qmd
-        - auto: tutorials/*.qmd
+        - auto: tutorials
+    - id: examples-list
+      title: "Examples"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: examples
     - id: contribute
       title: "Contribute"
       style: "docked"

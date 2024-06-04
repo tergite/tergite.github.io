@@ -267,19 +267,19 @@ PROMTAIL_VERSION=2.8.3
 - Open the Mongo compass application and connect to the default local mongo database
 
 ::: {layout-ncol=1}
-![](./assets/img/quick_start/mongo-compass-new-connection.png)
+![](../assets/img/quick_start/mongo-compass-new-connection.png)
 :::
 
 - Create a new mongo database called "testing" that contains a "backends" collection.
 
 ::: {layout-ncol=1}
-![](./assets/img/quick_start/mongo-compass-new-database-collection.png)
+![](../assets/img/quick_start/mongo-compass-new-database-collection.png)
 :::
 
 - Click on "ADD DATA" then "Insert document" in your "backends" collection in your mongo compass
 
 ::: {layout-ncol=1}
-![](./assets/img/quick_start/mongo-compass-add-new-backend.png)
+![](../assets/img/quick_start/mongo-compass-add-new-backend.png)
 :::
 
 - Copy and paste the following document into the window that opens, replacing everything that was already there.
@@ -692,7 +692,7 @@ PROMTAIL_VERSION=2.8.3
 - Click "Insert" to insert the document into the "backends" collection.
 
 ::: {layout-ncol=1}
-![](./assets/img/quick_start/mongo-compass-insert-copied-backend.png)
+![](../assets/img/quick_start/mongo-compass-insert-copied-backend.png)
 :::
 
 
@@ -752,7 +752,7 @@ conda activate terg
 
 ```zsh
 pip install qiskit
-pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple tergite
+pip install tergite
 ```
 
 - Create a file `main.py` with visual studio code (or any other text editor).
