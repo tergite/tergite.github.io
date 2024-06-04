@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -109,12 +143,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Authentication</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/03_configuration.html">
+    <a class="dropdown-item" href="../tutorials/03_authorization.html">
+ <span class="dropdown-text">Authorization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/04_configuration.html">
  <span class="dropdown-text">Configuration</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/04_resource_allocation_&amp;_management.html">
- <span class="dropdown-text">Resource Allocation &amp; Management</span></a>
+    <a class="dropdown-item" href="../tutorials/05_resource_management.html">
+ <span class="dropdown-text">Resource Management with Puhuri</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/06_puhuri_tergite_flows.html">
+ <span class="dropdown-text">Puhuri-Tergite playground</span></a>
   </li>  
     </ul>
   </li>
@@ -233,14 +275,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/03_configuration.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/03_authorization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Authorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/04_configuration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/04_resource_allocation_&amp;_management.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resource Allocation &amp; Management</span></a>
+  <a href="../tutorials/05_resource_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resource Management with Puhuri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/06_puhuri_tergite_flows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puhuri-Tergite playground</span></a>
   </div>
 </li>
       </ul>
@@ -251,7 +305,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#add-a-new-oauth2-provider" id="toc-add-a-new-oauth2-provider" class="nav-link active" data-scroll-target="#add-a-new-oauth2-provider">Add a New Oauth2 Provider</a>
+  <ul class="collapse">
+  <li><a href="#update-tergite-mss-app-in-tergite-frontend" id="toc-update-tergite-mss-app-in-tergite-frontend" class="nav-link" data-scroll-target="#update-tergite-mss-app-in-tergite-frontend">Update tergite-mss app in tergite-frontend</a></li>
+  <li><a href="#update-tergite-landing-page-app-in-tergite-frontend" id="toc-update-tergite-landing-page-app-in-tergite-frontend" class="nav-link" data-scroll-target="#update-tergite-landing-page-app-in-tergite-frontend">Update tergite-landing-page app in tergite-frontend</a></li>
+  </ul></li>
+  <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQs</a>
+  <ul class="collapse">
+  <li><a href="#how-do-we-bypass-authentication-in-development" id="toc-how-do-we-bypass-authentication-in-development" class="nav-link" data-scroll-target="#how-do-we-bypass-authentication-in-development">- How do we bypass authentication in development?</a></li>
+  <li><a href="#how-do-we-ensure-that-in-production-authentication-is-always-turned-on" id="toc-how-do-we-ensure-that-in-production-authentication-is-always-turned-on" class="nav-link" data-scroll-target="#how-do-we-ensure-that-in-production-authentication-is-always-turned-on">- How do we ensure that in production, authentication is always turned on?</a></li>
+  <li><a href="#how-do-we-allow-other-qal9000-services-e.g.-tergite-backend-or-calibration-workers-to-access-mss-without-user-intervention" id="toc-how-do-we-allow-other-qal9000-services-e.g.-tergite-backend-or-calibration-workers-to-access-mss-without-user-intervention" class="nav-link" data-scroll-target="#how-do-we-allow-other-qal9000-services-e.g.-tergite-backend-or-calibration-workers-to-access-mss-without-user-intervention">- How do we allow other qal9000 services (e.g.&nbsp;tergite-backend or calibration workers) to access MSS, without user intervention?</a></li>
+  <li><a href="#how-do-i-log-in" id="toc-how-do-i-log-in" class="nav-link" data-scroll-target="#how-do-i-log-in">How do I log in?</a></li>
+  <li><a href="#how-does-the-backend-get-authenticated" id="toc-how-does-the-backend-get-authenticated" class="nav-link" data-scroll-target="#how-does-the-backend-get-authenticated">How does the backend get authenticated?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -275,9 +347,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<p>This is how the Main Service Server (MSS) in <a href="https://github.com/tergite/tergite-frontend">tergite-frontend</a> authenticates its users.</p>
+<ul>
+<li>It uses <a href="https://oauth.net/2/">Oauth2</a>, a standard similar to HTTP in the sense that for any system, also called an <strong>Oauth2 client</strong>, to allow its users to authenticate with another system, called an <strong>Oauth2 provider</strong>, all that is needed are two strings:
+<ul>
+<li><code>CLIENT_ID</code></li>
+<li><code>CLIENT_SECRET</code></li>
+</ul></li>
+<li>The two strings are unique to this system, but are given by the Oauth2 provider</li>
+<li>Common Oauth2 providers include Google, Github, Microsoft, Chalmers (which uses Microsoft)</li>
+<li>Organizations which have a sort of ActiveDirectory can automatically be Oauth2 providers.</li>
+<li>We also use <a href="">OpenID Connect</a> which is a flavour of Oauth2 that requires a third string, a<br>
+<code>OPENID_CONFIGURATION_ENDPOINT</code>, from where to get the configuration of the openID provider.</li>
+</ul>
+<section id="add-a-new-oauth2-provider" class="level2">
+<h2 class="anchored" data-anchor-id="add-a-new-oauth2-provider">Add a New Oauth2 Provider</h2>
+<section id="update-tergite-mss-app-in-tergite-frontend" class="level3">
+<h3 class="anchored" data-anchor-id="update-tergite-mss-app-in-tergite-frontend">Update tergite-mss app in tergite-frontend</h3>
+<ul>
+<li>Let’s say we want some ‘Ericsson’ users to have access to MSS.</li>
+<li>Copy the <code>mss-config.example.toml</code> to <code>mss-config.toml</code> in the tergite-frontend folder, and update the configs therein.<br>
+Note: You could also create a new toml file based on <code>mss-config.example.toml</code><br>
+and set the <code>MSS_CONFIG_FILE</code> environment variable to point to that file.</li>
+<li>Add the new client:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[auth.clients]]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/ericsson/...</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"ericsson"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">client_id</span> <span class="op">=</span> <span class="st">"some-openid-client-id"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">client_secret</span> <span class="op">=</span> <span class="st">"some-openid-client-secret"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># the URL to redirect to after user authenticates with the system.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">redirect_url</span> <span class="op">=</span> <span class="st">"http://127.0.0.1:8002/auth/app/ericsson/callback"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">client_type</span> <span class="op">=</span> <span class="st">"openid"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">email_regex</span> <span class="op">=</span> <span class="st">".*"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Roles that are automatically given to users who authenticate through Ericsson</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># roles can be: "admin", "user", "researcher", "partner". Default is "user".</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">roles</span> <span class="op">=</span> <span class="op">[</span><span class="st">"partner"</span><span class="op">,</span> <span class="st">"user"</span><span class="op">]</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># openid_configuration_endpoint is necessary if Ericsson uses OpenID Connect, otherwise ignore.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">openid_configuration_endpoint</span> <span class="op">=</span> <span class="st">"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="update-tergite-landing-page-app-in-tergite-frontend" class="level3">
+<h3 class="anchored" data-anchor-id="update-tergite-landing-page-app-in-tergite-frontend">Update tergite-landing-page app in tergite-frontend</h3>
+<ul>
+<li>Add the logo for the new provider in the <a href="https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-landing-page/public/img"><code>tergite-frontend/apps/tergite-landing-page/public/img</code></a> folder.</li>
+<li>Open the <a href="../src/app/api/config/route.ts"><code>tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts</code></a> file and update its <code>OAUTH2_LOGOS</code> list to include your new provider’s logo.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> OAUTH2_LOGOS<span class="op">:</span> { [key<span class="op">:</span> <span class="dt">string</span>]<span class="op">:</span> <span class="dt">string</span> } <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    github<span class="op">:</span> <span class="st">'/img/github-black.png'</span><span class="op">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    chalmers<span class="op">:</span> <span class="st">'/img/chalmers-logo.svg'</span><span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    ericsson<span class="op">:</span> <span class="st">'/img/ericsson-logo.svg'</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Start the frontend application. <em>Instructions are on the <a href="https://github.com/tergite/tergite-frontend/blob/main/README.md">tergite-frontend/README.md</a></em></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose <span class="at">-f</span> fresh-docker-compose.yml up <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Note: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.</strong></p>
+</section>
+</section>
+<section id="faqs" class="level2">
+<h2 class="anchored" data-anchor-id="faqs">FAQs</h2>
+<section id="how-do-we-bypass-authentication-in-development" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-we-bypass-authentication-in-development">- How do we bypass authentication in development?</h3>
+<p>We use feature flag <code>auth.is_enabled</code> property in the <code>mss-config.toml</code> file, setting it to <code>false</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Note: <code>/auth</code> endpoints will still require authentication because they depend on the current user</strong></p>
+</section>
+<section id="how-do-we-ensure-that-in-production-authentication-is-always-turned-on" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-we-ensure-that-in-production-authentication-is-always-turned-on">- How do we ensure that in production, authentication is always turned on?</h3>
+<p>On startup, we raise a ValueError when <code>auth.is_enabled = false</code> in the <code>mss-config.toml</code> file yet<br>
+config variable <code>environment = production</code> and log it.</p>
+</section>
+<section id="how-do-we-allow-other-qal9000-services-e.g.-tergite-backend-or-calibration-workers-to-access-mss-without-user-intervention" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-we-allow-other-qal9000-services-e.g.-tergite-backend-or-calibration-workers-to-access-mss-without-user-intervention">- How do we allow other qal9000 services (e.g.&nbsp;tergite-backend or calibration workers) to access MSS, without user intervention?</h3>
+<p>Use app tokens created by any user who had the ‘system’ role. The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped. Since they won’t be used to run jobs, their project QPU seconds are expected not to run out.</p>
+<p>If you are in development mode, you can just switch of authentication altogether.</p>
+</section>
+<section id="how-do-i-log-in" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-log-in">How do I log in?</h3>
+<ul>
+<li>You need to run the <a href="https://github.com/tergite/tergite-frontend">tergite-frontend</a>.</li>
+<li><strong>Make sure that your <code>mss-config.toml</code> files have all variables filled appropriately</strong>.</li>
+<li>The landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.</li>
+</ul>
+</section>
+<section id="how-does-the-backend-get-authenticated" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-the-backend-get-authenticated">How does the backend get authenticated?</h3>
+<ul>
+<li>A client (say <a href="https://github.com/tergite/tergite">tergite</a>) sends a <code>POST</code> request is sent to <code>/jobs</code> on MSS (this app) with an <code>app_token</code> in its <code>Authorization</code> header</li>
+<li>A new job entry is created in the database, together with a new unique <code>job_id</code>.</li>
+<li>MSS notifies tergite-backend of the <code>job_id</code> and its associated <code>app_token</code> by sending a <code>POST</code> request to <code>/auth</code> endpoint of <a href="https://github.com/tergite/tergite-backend">tergite-backend</a>.</li>
+<li>In the response to the client, MSS returns the <code>/jobs</code> url for the given tergite-backend instance</li>
+<li>The client then sends its experiment data to the tergite-backend <code>/jobs</code> url, with the same <code>app_token</code> in its <code>Authorization</code> header and the same <code>job_id</code> in the experiment data.</li>
+<li>tergite-backend checks if the <code>job_id</code> and the <code>app_token</code> are first of all associated, and if no other experiment data has been sent already with the same <code>job_id</code>-<code>app_token</code> pair. This is to ensure no user attempts to fool the system by using the same <code>job_id</code> for multiple experiments, which is theoretically possible.</li>
+<li>If tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401 or a 403 HTTP error is thrown.</li>
+<li>The same <code>job_id</code>-<code>app_token</code> pair is used to download raw logfiles from tergite-backend at <code>/logfiles/{job_id}</code> endpoint. This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.</li>
+<li>This is the same behaviour when reading the job results at <code>jobs/{job_id}/result</code> or the job status at <code>jobs/{job_id}/status</code> or the entire job entry at <code>jobs/{job_id}</code> in tergite-backend.</li>
+<li>This is also the same behaviour when attempting to delete the job at <code>/jobs/{job_id}</code> or to cancel it at <code>/jobs/{job_id}/cancel</code> in tergite-backend.</li>
+</ul>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

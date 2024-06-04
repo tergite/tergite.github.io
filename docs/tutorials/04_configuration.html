@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite</title>
+<title>Tergite - Configuration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contributing/guidelines.html">Contributing</a></li><li class="breadcrumb-item"><a href="../contributing/guidelines.html">Contributing to tergite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_configuration.html">Configuration</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Contributing</span></a>
+ <span class="menu-text">Tutorials</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -229,8 +229,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contributing/guidelines.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Contributing to tergite</span></a>
+  <a href="../tutorials/01_quick_start.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Start</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/02_authentication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Authentication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/03_authorization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Authorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/04_configuration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Configuration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/05_resource_management.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resource Management with Puhuri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/06_puhuri_tergite_flows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puhuri-Tergite playground</span></a>
   </div>
 </li>
       </ul>
@@ -241,107 +271,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#contributing-to-tergite" id="toc-contributing-to-tergite" class="nav-link active" data-scroll-target="#contributing-to-tergite">Contributing to tergite</a>
-  <ul class="collapse">
-  <li><a href="#government-model" id="toc-government-model" class="nav-link" data-scroll-target="#government-model">Government Model</a></li>
-  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version Control</a></li>
-  <li><a href="#contacting-the-tergite-developers" id="toc-contacting-the-tergite-developers" class="nav-link" data-scroll-target="#contacting-the-tergite-developers">Contacting the Tergite Developers</a></li>
-  <li><a href="#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests" id="toc-but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests" class="nav-link" data-scroll-target="#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests">But We Use Github Flow, So All Code Changes Happen Through Pull Requests</a></li>
-  <li><a href="#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses" id="toc-any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses" class="nav-link" data-scroll-target="#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses">Any contributions you make will be under the Apache 2.0 Software Licenses</a></li>
-  <li><a href="#write-bug-reports-with-detail-background-and-sample-code" id="toc-write-bug-reports-with-detail-background-and-sample-code" class="nav-link" data-scroll-target="#write-bug-reports-with-detail-background-and-sample-code">Write bug reports with detail, background, and sample code</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  <li><a href="#contributor-licensing-agreement" id="toc-contributor-licensing-agreement" class="nav-link" data-scroll-target="#contributor-licensing-agreement">Contributor Licensing Agreement</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_configuration.html">Configuration</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Configuration</h1>
+</div>
 
 
 
-<section id="contributing-to-tergite" class="level1">
-<h1>Contributing to tergite</h1>
-<p><strong>This project is currently not accepting pull requests from the general public yet.</strong></p>
-<p><strong>It is currently being developed by the core developers only.</strong></p>
-<p>We love your input! We want to make contributing to this project as easy and transparent as possible, whether it’s:</p>
-<ul>
-<li>Reporting a bug</li>
-<li>Discussing the current state of the code</li>
-<li>Submitting a fix</li>
-<li>Proposing new features</li>
-<li>Becoming a maintainer</li>
-</ul>
-<section id="government-model" class="level2">
-<h2 class="anchored" data-anchor-id="government-model">Government Model</h2>
-<p><a href="https://chalmersnextlabs.se">Chalmers Next Labs AB (CNL)</a> manages and maintains this project on behalf of all contributors.</p>
-</section>
-<section id="version-control" class="level2">
-<h2 class="anchored" data-anchor-id="version-control">Version Control</h2>
-<p>Tergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.</p>
-</section>
-<section id="contacting-the-tergite-developers" class="level2">
-<h2 class="anchored" data-anchor-id="contacting-the-tergite-developers">Contacting the Tergite Developers</h2>
-<p>Since the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked at. Please get in touch via email <a href="mailto:quantum.nextlabs@chalmers.se" class="email">quantum.nextlabs@chalmers.se</a> instead.</p>
-<p>Take note that the maintainers may not answer every email.</p>
-</section>
-<section id="but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests" class="level2">
-<h2 class="anchored" data-anchor-id="but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests">But We Use <a href="https://docs.github.com/en/get-started/quickstart/github-flow">Github Flow</a>, So All Code Changes Happen Through Pull Requests</h2>
-<p>Pull requests are the best way to propose changes to the codebase (we use <a href="https://docs.github.com/en/get-started/quickstart/github-flow">Github Flow</a>). We actively welcome your pull requests:</p>
-<ol type="1">
-<li>Clone the repo and create your branch from <code>main</code>.</li>
-<li>If you’ve added code that should be tested, add tests.</li>
-<li>If you’ve changed APIs, update the documentation.</li>
-<li>Ensure the test suite passes.</li>
-<li>Make sure your code lints.</li>
-<li>Issue that pull request!</li>
-</ol>
-</section>
-<section id="any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses" class="level2">
-<h2 class="anchored" data-anchor-id="any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses">Any contributions you make will be under the Apache 2.0 Software Licenses</h2>
-<p>In short, when you submit code changes, your submissions are understood to be under the same <a href="./LICENSE">Apache 2.0 License</a> that covers the project. Feel free to contact the maintainers if that’s a concern.</p>
-</section>
-<section id="write-bug-reports-with-detail-background-and-sample-code" class="level2">
-<h2 class="anchored" data-anchor-id="write-bug-reports-with-detail-background-and-sample-code">Write bug reports with detail, background, and sample code</h2>
-<p><a href="http://stackoverflow.com/q/12488905/180626">This is an example</a>. Here’s <a href="http://www.openradar.me/11905408">another example from Craig Hockenberry</a>.</p>
-<p><strong>Great Bug Reports</strong> tend to have:</p>
-<ul>
-<li>A quick summary and/or background</li>
-<li>Steps to reproduce
-<ul>
-<li>Be specific!</li>
-<li>Give sample code if you can.</li>
-</ul></li>
-<li>What you expected would happen</li>
-<li>What actually happens</li>
-<li>Notes (possibly including why you think this might be happening, or stuff you tried that didn’t work)</li>
-</ul>
-<p>People <em>love</em> thorough bug reports. I’m not even kidding.</p>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>By contributing, you agree that your contributions will be licensed under its Apache 2.0 License.</p>
-</section>
-<section id="contributor-licensing-agreement" class="level2">
-<h2 class="anchored" data-anchor-id="contributor-licensing-agreement">Contributor Licensing Agreement</h2>
-<p>Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.</p>
-<p>“The <a href="./icla.pdf">individual CLA</a> document is available for review as a PDF.</p>
-<p>Please note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a <a href="./ccla.pdf">corporate CLA</a>.</p>
-<p>All signed CLAs are emails to us at <a href="mailto:quantum.nextlabs@chalmers.se" class="email">quantum.nextlabs@chalmers.se</a>.”</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>This document was adapted from <a href="https://gist.github.com/briandk/3d2e8b3ec8daf5a27a62">a gist by Brian A. Danielak</a> which was originally adapted from the open-source contribution guidelines for <a href="https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md">Facebook’s Draft</a></p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-</section>
-</section>
+</header>
+
+
+<p>TODO</p>
+
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

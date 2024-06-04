@@ -1,0 +1,23 @@
+---
+title: "Authorization"
+---
+
+This is how the Main Service Server (MSS) in [tergite-frontend](https://github.com/tergite/tergite-frontend) 
+controls the user access to the quantum computer resource.
+
+- We control access to MSS, and its BCCs using two ways
+  - `roles` control basic access to auth-related endpoints e.g. project creation, token management etc.
+  - `projects` control access to all other endpoints. To create a job, or get its results etc,
+    one must be attached to a project that has more than zero QPU seconds.
+- QPU seconds are the number of seconds a project's experiments are allocated on the quantum computer.
+- QPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.
+- A job could run for longer than the allocated project QPU seconds but
+  it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.
+
+### How Authorization Works
+
+Here is an interaction diagram of auth showcasing authentication via [MyAccessID](https://ds.myaccessid.org/).
+
+::: {layout-ncol=1}
+![Interaction diagram of auth showcasing MyAccessID](../assets/img/tutorials/authorization/auth.png){.lightbox}
+:::

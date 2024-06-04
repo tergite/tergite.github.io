@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tergite.github.io/tutorials/04_resource_allocation_&_management.html</loc>
-    <lastmod>2024-06-04T09:09:00.544Z</lastmod>
+    <loc>https://tergite.github.io/tutorials/03_authorization.html</loc>
+    <lastmod>2024-06-04T12:32:06.088Z</lastmod>
   </url>
   <url>
-    <loc>https://tergite.github.io/tutorials/03_configuration.html</loc>
+    <loc>https://tergite.github.io/tutorials/05_resource_management.html</loc>
+    <lastmod>2024-06-04T12:37:37.969Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/tutorials/04_configuration.html</loc>
     <lastmod>2024-06-04T08:40:59.379Z</lastmod>
   </url>
   <url>
@@ -14,7 +18,7 @@
   </url>
   <url>
     <loc>https://tergite.github.io/examples/01_hello_tergite.html</loc>
-    <lastmod>2024-06-04T09:08:04.640Z</lastmod>
+    <lastmod>2024-06-04T10:33:38.244Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/contributing/guidelines.html</loc>
@@ -50,10 +54,14 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/01_quick_start.html</loc>
-    <lastmod>2024-06-04T09:15:19.379Z</lastmod>
+    <lastmod>2024-06-04T11:19:33.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tergite.github.io/tutorials/06_puhuri_tergite_flows.html</loc>
+    <lastmod>2024-06-04T12:40:32.510Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/02_authentication.html</loc>
-    <lastmod>2024-05-30T14:24:29.588Z</lastmod>
+    <lastmod>2024-06-04T12:18:36.108Z</lastmod>
   </url>
 </urlset>

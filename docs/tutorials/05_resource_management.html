@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite - Resource Allocation &amp; Management</title>
+<title>Tergite - Resource Management with Puhuri</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -42,6 +76,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,12 +146,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Authentication</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/03_configuration.html">
+    <a class="dropdown-item" href="../tutorials/03_authorization.html">
+ <span class="dropdown-text">Authorization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/04_configuration.html">
  <span class="dropdown-text">Configuration</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/04_resource_allocation_&amp;_management.html">
- <span class="dropdown-text">Resource Allocation &amp; Management</span></a>
+    <a class="dropdown-item" href="../tutorials/05_resource_management.html">
+ <span class="dropdown-text">Resource Management with Puhuri</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/06_puhuri_tergite_flows.html">
+ <span class="dropdown-text">Puhuri-Tergite playground</span></a>
   </li>  
     </ul>
   </li>
@@ -198,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_resource_allocation_&amp;_management.html">Resource Allocation &amp; Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/05_resource_management.html">Resource Management with Puhuri</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -233,14 +278,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/03_configuration.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials/03_authorization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Authorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/04_configuration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/04_resource_allocation_&amp;_management.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Resource Allocation &amp; Management</span></a>
+  <a href="../tutorials/05_resource_management.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Resource Management with Puhuri</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/06_puhuri_tergite_flows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puhuri-Tergite playground</span></a>
   </div>
 </li>
       </ul>
@@ -251,14 +308,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#flows" id="toc-flows" class="nav-link active" data-scroll-target="#flows">Flows</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#how-to-start-the-puhuri-sync" id="toc-how-to-start-the-puhuri-sync" class="nav-link" data-scroll-target="#how-to-start-the-puhuri-sync">How to Start the Puhuri Sync</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_resource_allocation_&amp;_management.html">Resource Allocation &amp; Management</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/05_resource_management.html">Resource Management with Puhuri</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Resource Allocation &amp; Management</h1>
+<h1 class="title">Resource Management with Puhuri</h1>
 </div>
 
 
@@ -275,9 +340,83 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<p><a href="https://puhuri.neic.no/">Puhuri</a> is an HPC resource management platform that could also be used to manage Quantumm Computer systems.</p>
+<p>We need to synchronize MSS’s resource management with that in Puhuri</p>
+<p>The Puhuri Entity Layout</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/tutorials/resource_management/puhuri-entity-layout.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Puhuri Layout"><img src="../assets/img/tutorials/resource_management/puhuri-entity-layout.png" class="img-fluid figure-img" alt="Puhuri Layout"></a></p>
+<figcaption>Puhuri Layout</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="flows" class="level2">
+<h2 class="anchored" data-anchor-id="flows">Flows</h2>
+<p>More information about flows can be found in the <a href="../tutorials/06_puhuri_tergite_flows.html">puhuri tergite flows tutorial</a></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/img/tutorials/resource_management/puhuri-resource-usage-reporting-flow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Selecting resource to report on"><img src="../assets/img/tutorials/resource_management/puhuri-resource-usage-reporting-flow.png" class="img-fluid figure-img" alt="Selecting resource to report on"></a></p>
+<figcaption>Selecting resource to report on</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<ul>
+<li>When creating components in the puhuri UI, the ‘measurement unit’s set on the component are of the following possible values: ’second’, ‘hour’, ‘minute’, ‘day’, ‘week’, ‘half_month’, and ‘month’.</li>
+</ul>
+</section>
+<section id="how-to-start-the-puhuri-sync" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-start-the-puhuri-sync">How to Start the Puhuri Sync</h2>
+<ul>
+<li>Ensure that the <code>is_enabled = true</code> in the <code>[puhuri]</code> table in your <code>mss-config.toml</code> file</li>
+<li>Ensure all other variables in the <code>[puhuri]</code> table in your <code>mss-config.toml</code> file are appropriately set e.g.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[puhuri]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the URI to the Puhuri WALDUR server instance</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Please contact the Puhuri team to get this.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">waldur_api_uri</span> <span class="op">=</span> <span class="st">"&lt;the URI to the Puhuri Waldur server&gt;"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The access token to be used in the Waldur client [https://docs.waldur.com/user-guide/] to connect to Puhuri</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Please contact the Puhuri team on how to get this from the UI</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">waldur_client_token</span> <span class="op">=</span> <span class="st">"&lt;API token for a puhuri user who has 'service provider manager' role for our offering on puhuri&gt;"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The unique ID for the service provider associated with this app in the Waldur Puhuri server</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Please contact the Puhuri team on how to get this from the UI</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">provider_uuid</span> <span class="op">=</span> <span class="st">"&lt;the unique ID for the service provider associated with this app in Puhuri&gt;"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># the interval in seconds at which puhuri is polled. default is 900 (15 minutes)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">poll_interval</span> <span class="op">=</span> <span class="st">"&lt;some value&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>If you wish to start only the puhuri synchronization script without the REST API, run in your virtual environment:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> api.scripts.puhuri_sync <span class="at">--ignore-if-disabled</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>In order to run both the REST API and this puhuri synchronization script, run in your virtual environment:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> api.scripts.puhuri_sync <span class="at">--ignore-if-disabled</span> <span class="kw">&amp;</span> <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">uvicorn</span> <span class="at">--host</span> 0.0.0.0 <span class="at">--port</span> 8000 api.rest:app  <span class="at">--proxy-headers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Puhuri Layout</span>
+<span class="glightbox-desc lightbox-desc-2">Selecting resource to report on</span>
+</div>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -900,6 +1039,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
