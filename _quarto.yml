@@ -4,6 +4,7 @@ project:
   resources:
     - contributing/ccla.pdf
     - contributing/icla.pdf
+    - LICENSE
 
 highlight-style: ayu
 code-annotations: hover
