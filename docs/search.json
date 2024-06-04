@@ -728,14 +728,36 @@
     ]
   },
   {
-    "objectID": "tutorials/04_configuration.html",
-    "href": "tutorials/04_configuration.html",
-    "title": "Configuration",
+    "objectID": "tutorials/04_hardware_configuration.html",
+    "href": "tutorials/04_hardware_configuration.html",
+    "title": "Hardware Configuration",
     "section": "",
-    "text": "TODO\n\n\n\n Back to top",
+    "text": "Documentation about configuring tergite-backend",
     "crumbs": [
       "Tutorials",
-      "Configuration"
+      "Hardware Configuration"
+    ]
+  },
+  {
+    "objectID": "tutorials/04_hardware_configuration.html#general-configuration",
+    "href": "tutorials/04_hardware_configuration.html#general-configuration",
+    "title": "Hardware Configuration",
+    "section": "General Configuration",
+    "text": "General Configuration\nTo configure the entire tergite-backend application, we use .env files.\nJust copy the dot-env-template.txt to env and update the variables there in.\ncp dot-env-template.txt .env",
+    "crumbs": [
+      "Tutorials",
+      "Hardware Configuration"
+    ]
+  },
+  {
+    "objectID": "tutorials/04_hardware_configuration.html#qblox-instruments-configuration",
+    "href": "tutorials/04_hardware_configuration.html#qblox-instruments-configuration",
+    "title": "Hardware Configuration",
+    "section": "QBLOX Instruments Configuration",
+    "text": "QBLOX Instruments Configuration\nWe use the executor-config.example.yml as a template for how to configure this application to control the QBLOX instruments that control the quantum computer.\nIt is well documented. Just copy it to executor-config.yml in the tergite-backend folder and update its variables and you are good to go.\ncp executor-config.example.yml executor-config.yml\n\nDummy QBLOX Instrumments\nYou may wish to run some dummy QBLOX instruments if you don’t have access to the physical QBLOX instruments\nWe already have a preconfigured dummy-executor-config.yml for this in the app/tests/fixtures folder.\nCopy it to the tergite-backend folder.\ncp app/tests/fixtures/dummy-executor-config.yml executor-config.yml\nNOTE: You can find out more about the configuration properties in the executor-config file by visiting the quantify_scheduler docs and the QCoDeS drivers docs.\nNOTE: You could choose to use a different name for your quantum executor config file e.g. foobar.yml. You however need to explicitly set this name in the .env file EXECUTOR_CONFIG_FILE=foobar.yml\n\n\nCalibrated Data Configuration\nWe also recalibrate the quantum computer from time to time and store that data in TOML files in the configs folder.\nWhen starting the application, one needs to supply one calibration set from any of those configuration files.\n./start_tergite-backend.sh --device configs/device_default.toml\nNOTE: You don’t need to pass the .env file or the executor-config.yml file to the start script as these are automatically loaded for you.",
+    "crumbs": [
+      "Tutorials",
+      "Hardware Configuration"
     ]
   },
   {
@@ -787,7 +809,7 @@
     "href": "tutorials/03_authorization.html",
     "title": "Authorization",
     "section": "",
-    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its BCCs using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
+    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its tergite-backend instances using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
     "crumbs": [
       "Tutorials",
       "Authorization"

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite - Configuration</title>
+<title>Tergite - Hardware Configuration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,8 +147,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Authorization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/04_configuration.html">
- <span class="dropdown-text">Configuration</span></a>
+    <a class="dropdown-item" href="../tutorials/04_hardware_configuration.html">
+ <span class="dropdown-text">Hardware Configuration</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../tutorials/05_resource_management.html">
@@ -206,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_configuration.html">Configuration</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_hardware_configuration.html">Hardware Configuration</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -247,8 +281,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/04_configuration.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Configuration</span></a>
+  <a href="../tutorials/04_hardware_configuration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hardware Configuration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -271,14 +305,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general-configuration" id="toc-general-configuration" class="nav-link active" data-scroll-target="#general-configuration">General Configuration</a></li>
+  <li><a href="#qblox-instruments-configuration" id="toc-qblox-instruments-configuration" class="nav-link" data-scroll-target="#qblox-instruments-configuration">QBLOX Instruments Configuration</a>
+  <ul class="collapse">
+  <li><a href="#dummy-qblox-instrumments" id="toc-dummy-qblox-instrumments" class="nav-link" data-scroll-target="#dummy-qblox-instrumments">Dummy QBLOX Instrumments</a></li>
+  <li><a href="#calibrated-data-configuration" id="toc-calibrated-data-configuration" class="nav-link" data-scroll-target="#calibrated-data-configuration">Calibrated Data Configuration</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_configuration.html">Configuration</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/04_hardware_configuration.html">Hardware Configuration</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Configuration</h1>
+<h1 class="title">Hardware Configuration</h1>
 </div>
 
 
@@ -295,9 +340,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO</p>
+<p>Documentation about configuring <a href="https://github.com/tergite/tergite-backend">tergite-backend</a></p>
+<section id="general-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="general-configuration">General Configuration</h2>
+<p>To configure the entire tergite-backend application, we use <code>.env</code> files.</p>
+<p>Just copy the <a href="https://github.com/tergite/tergite-backend/blob/main/dot-env-template.txt"><code>dot-env-template.txt</code></a> to <code>env</code> and update the variables there in.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> dot-env-template.txt .env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="qblox-instruments-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="qblox-instruments-configuration">QBLOX Instruments Configuration</h2>
+<p>We use the <a href="https://github.com/tergite/tergite-backend/blob/main/executor-config.example.yml"><code>executor-config.example.yml</code></a> as a template for how to configure this application to control the <a href="https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/index.html">QBLOX instruments</a> that control the quantum computer.</p>
+<p>It is well documented. Just copy it to <code>executor-config.yml</code> in the tergite-backend folder and update its variables and you are good to go.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> executor-config.example.yml executor-config.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="dummy-qblox-instrumments" class="level3">
+<h3 class="anchored" data-anchor-id="dummy-qblox-instrumments">Dummy QBLOX Instrumments</h3>
+<p>You may wish to run some dummy QBLOX instruments if you don’t have access to the physical QBLOX instruments</p>
+<p>We already have a preconfigured <a href="https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-executor-config.yml"><code>dummy-executor-config.yml</code></a> for this in the <code>app/tests/fixtures</code> folder.</p>
+<p>Copy it to the tergite-backend folder.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> app/tests/fixtures/dummy-executor-config.yml executor-config.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>NOTE: You can find out more about the configuration properties in the executor-config file by visiting the <a href="https://quantify-os.org/docs/quantify-scheduler/dev/reference/qblox/Cluster.html">quantify_scheduler docs</a> and the <a href="https://microsoft.github.io/Qcodes/">QCoDeS drivers docs</a>.</em></p>
+<p><em>NOTE: You could choose to use a different name for your quantum executor config file e.g.&nbsp;<code>foobar.yml</code>. You however need to explicitly set this name in the <code>.env</code> file <code>EXECUTOR_CONFIG_FILE=foobar.yml</code></em></p>
+</section>
+<section id="calibrated-data-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="calibrated-data-configuration">Calibrated Data Configuration</h3>
+<p>We also recalibrate the quantum computer from time to time and store that data in TOML files in the <a href="https://github.com/tergite/tergite-backend/blob/main/configs"><code>configs</code></a> folder.</p>
+<p>When starting the application, one needs to supply one calibration set from any of those configuration files.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./start_tergite-backend.sh</span> <span class="at">--device</span> configs/device_default.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>NOTE: You don’t need to pass the <code>.env</code> file or the <code>executor-config.yml</code> file to the start script as these are automatically loaded for you.</em></p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
