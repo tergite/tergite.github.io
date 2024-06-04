@@ -33,7 +33,7 @@ website:
       - sidebar:examples-list
 
     right:
-      - release_notes.qmd
+      - sidebar:release-notes
       - sidebar:contribute
 
   # options
@@ -69,6 +69,12 @@ website:
       collapse-level: 2
       contents:
         - auto: contributing
+    - id: release-notes
+      title: "Release notes"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: release_notes
 
 format:
   html:

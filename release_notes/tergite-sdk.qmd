@@ -1,0 +1,14 @@
+---
+title: "Tergite SDK"
+---
+
+## [2024.04.1] - 2024-05-29
+
+Initial Public Release
+
+### Changed
+
+- Changed README.rst to README.md
+- Changed CONTRIBUTING.rst to CONTRIBUTING.md
+- Changed CREDITS.rst to CREDITS.md
+- Updated the contribution guidelines and government model statements
