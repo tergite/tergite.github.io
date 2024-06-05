@@ -80,7 +80,7 @@
         <mxCell id="JHPLUJ7aycdd25sqj4u7-8" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="110" y="410" width="203" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="JHPLUJ7aycdd25sqj4u7-7" value="QC Pulse Instructions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="JHPLUJ7aycdd25sqj4u7-8">
+        <mxCell id="JHPLUJ7aycdd25sqj4u7-7" value="Microwave Pulse instructions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="JHPLUJ7aycdd25sqj4u7-8">
           <mxGeometry x="58" y="55" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="d2YfcmywuFba4Ras1Hy--1" value="" style="endArrow=classic;html=1;rounded=0;" parent="JHPLUJ7aycdd25sqj4u7-8" edge="1">

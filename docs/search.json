@@ -286,7 +286,7 @@
     "href": "index.html",
     "title": "Tergite",
     "section": "",
-    "text": "Why tergite?\n  \n  \n    \n     Quick Start\n  \n  \n    \n     GitHub"
+    "text": "Quick Start\n  \n  \n    \n     GitHub"
   },
   {
     "objectID": "index.html#structure",
@@ -296,11 +296,11 @@
     "text": "Structure\n\n\nComponents\nThe tergite stack is composed of three components\n\ntergite-backend\n\nThe operating system of the quantum computer. It communicates with the world via a RESTful API.\n\ntergite-frontend\n\nThe server that gives remote access to any tergite-backend instance. It communicates with the world via a RESTful API.\n\ntergite SDK (or just tergite)\n\nThe Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.\n\n\n\n\nAccessories\nThe tergite stack has a number of accessory softwares that are currently not initmately woven into the stack but mught be in future\n\ntergite-autocalibration\n\nThe Python commandline application (CLI) that is used to automatically tune the quantum computer.\n\n\n\n\nLanguage of Communication\nWe use OpenPulse to communicate pass quantum computer instructions from the SDK to the backend part of the tergite stack."
   },
   {
-    "objectID": "index.html#developmment",
-    "href": "index.html#developmment",
+    "objectID": "index.html#development",
+    "href": "index.html#development",
     "title": "Tergite",
-    "section": "Developmment",
-    "text": "Developmment\nThis project is developed by a core group of collaborators. Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.\n\nContributors\nWe are grateful for the wonderful contributions from:\n\nChalmers Next Labs AB - Quantum Division\nChalmers University of Technology - Microtechnology and Nanoscience department\n\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n\nSponsors\n\nKnut and Alice Wallenburg Foundation under the Wallenberg Center for Quantum Technology (WAQCT) project at Chalmers University of Technology\nNordic e-Infrastructure Collaboration (NeIC) and NordForsk under the NordIQuEst project\nEuropean Union’s Horizon Europe under the OpenSuperQ project\nEuropean Union’s Horizon Europe under the OpenSuperQPlus project"
+    "section": "Development",
+    "text": "Development\nThis project is developed by a core group of collaborators. Chalmers Next Labs AB (CNL) takes on the role of managing and maintaining this project.\n\nContributors\nWe are grateful for the wonderful contributions from:\n\nChalmers Next Labs AB - WACQT Quantum Technology Testbed\nChalmers University of Technology - Microtechnology and Nanoscience department\n\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n\nSponsors\n\nKnut and Alice Wallenburg Foundation under the Wallenberg Center for Quantum Technology (WAQCT) project at Chalmers University of Technology\nNordic e-Infrastructure Collaboration (NeIC) and NordForsk under the NordIQuEst project\nEuropean Union’s Horizon Europe under the OpenSuperQ project\nEuropean Union’s Horizon Europe under the OpenSuperQPlus project"
   },
   {
     "objectID": "why.html",

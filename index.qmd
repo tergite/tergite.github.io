@@ -1,6 +1,6 @@
 ---
 title: "Tergite"
-description: "the software stack for the Swedish quantum computer"
+description: "the software stack for the WACQT quantum computer"
 repo-actions: false
 code-annotations: hover
 format:
@@ -12,8 +12,6 @@ about:
   template: jolla
   image: assets/img/shared/logo.svg
   links:
-    - icon: info-circle
-      href: why.qmd
     - icon: book
       href: tutorials/01_quick_start.qmd
     - icon: github
@@ -59,7 +57,7 @@ We use [OpenPulse](https://arxiv.org/abs/1809.03452) to communicate pass quantum
 the SDK to the backend part of the tergite stack.
 
 
-## Developmment
+## Development
 
 This project is developed by a core group of collaborators.
 [Chalmers Next Labs AB (CNL)](https://chalmersnextlabs.se/) takes on the role of managing and maintaining this project.
@@ -68,7 +66,7 @@ This project is developed by a core group of collaborators.
 
 We are grateful for the wonderful contributions from:
 
-- [Chalmers Next Labs AB - Quantum Division](https://chalmersnextlabs.se/)
+- [Chalmers Next Labs AB - WACQT Quantum Technology Testbed](https://chalmersnextlabs.se/)
 - [Chalmers University of Technology - Microtechnology and Nanoscience department](https://www.chalmers.se/en/departments/mc2/)
 
 ::: {layout-ncol=2}
