@@ -861,7 +861,8 @@ python main.py
 - It should return something like:
 
 ```zsh
-{0: 1024}
+Results OK
+{'0': 1024}
 ```
 
 _Note: We get only 0's because we are using the [dummy cluster](https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/api_reference/cluster.html#qblox_instruments.Cluster) from quantify scheduler_
