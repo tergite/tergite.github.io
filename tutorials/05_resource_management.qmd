@@ -2,7 +2,7 @@
 title: "Resource Management with Puhuri"
 ---
 
-[Puhuri](https://puhuri.neic.no/) is an HPC resource management platform that could also be used to manage Quantumm Computer systems.
+[Puhuri](https://puhuri.neic.no/) is an HPC resource management platform that could also be used to manage Quantum Computer systems.
 
 We need to synchronize MSS's resource management with that in Puhuri
 
