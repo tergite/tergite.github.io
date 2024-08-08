@@ -729,7 +729,7 @@ PROMTAIL_VERSION=2.8.3
     "_id": {
     "$oid": "66b4c90e98a38e78191582de"
     },
-    "name": "loki",
+    "name": "loke",
     "version": "2023.06.0",
     "number_of_qubits": 5,
     "is_online": true,
