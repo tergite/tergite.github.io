@@ -710,6 +710,222 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-backend.png)
 :::
 
+- Create another mongodb collection called 'devices' in the same database
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-create-devices-collection.png)
+:::
+
+- Click on "ADD DATA" then "Insert document" in your "devices" collection in your mongo compass
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-add-new-device.png)
+:::
+
+- Copy and paste the following document into the window that opens, replacing everything that was already there.
+
+```JSON
+{
+    "_id": {
+    "$oid": "66b4c90e98a38e78191582de"
+    },
+    "name": "loki",
+    "version": "2023.06.0",
+    "number_of_qubits": 5,
+    "is_online": true,
+    "last_online": null,
+    "basis_gates": ["u", "h", "x"],
+    "is_simulator": true,
+    "coupling_map": [
+      [0, 1],
+      [0, 2],
+      [2, 3],
+      [1, 4],
+      [3, 4]
+    ],
+    "coordinates": [
+      [1, 1],
+      [3, 1],
+      [1, 2],
+      [2, 2],
+      [3, 2]
+    ]
+}
+```
+
+- Click "Insert" to insert the document into the "devices" collection.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-device.png)
+:::
+
+- Create another mongodb collection called 'calibrations_v2' in the same database
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-create-calibrations-v2-collection.png)
+:::
+
+- Click on "ADD DATA" then "Insert document" in your "calibrations_v2" collection in your mongo compass
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-add-new-calibration-data.png)
+:::
+
+- Copy and paste the following document into the window that opens, replacing everything that was already there.
+
+```JSON
+{
+  "_id": {
+    "$oid": "66b4d17a98a38e78191582e3"
+  },
+    "name": "loke",
+    "version": "2023.06.0",
+    "last_calibrated": {"$date": "2023-05-24T09:12:00.733Z"},
+    "qubits": [
+      {
+        "t1_decoherence": {
+          "date": {"$date": "2024-07-08T06:42:01Z"},
+          "unit": "us",
+          "value": 420.05541643339404
+        },
+        "t2_decoherence": {
+          "date": {"$date": "2024-07-08T07:18:48Z"},
+          "unit": "us",
+          "value": 83.18816437202933
+        },
+        "frequency": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": 4.637963897242323
+        },
+        "anharmonicity": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": -0.29264088813258476
+        },
+        "readout_assignment_error": {
+          "date": {"$date": "2024-07-08T06:16:05Z"},
+          "unit": "",
+          "value": 0.028900000000000037
+        }
+      },
+      {
+        "t1_decoherence": {
+          "date": {"$date": "2024-07-08T06:42:01Z"},
+          "unit": "us",
+          "value": 247.7993516943705
+        },
+        "t2_decoherence": {
+          "date": {"$date": "2024-07-08T06:56:44Z"},
+          "unit": "us",
+          "value": 187.26864764151065
+        },
+        "frequency": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": 4.804417611336644
+        },
+        "anharmonicity": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": -0.31122742580861
+        },
+        "readout_assignment_error": {
+          "date": {"$date": "2024-07-08T06:16:05Z"},
+          "unit": "",
+          "value": 0.011199999999999988
+        }
+      },
+      {
+        "t1_decoherence": {
+          "date": {"$date": "2024-07-08T06:42:01Z"},
+          "unit": "us",
+          "value": 260.54956749612603
+        },
+        "t2_decoherence": {
+          "date": {"$date": "2024-07-08T07:18:48Z"},
+          "unit": "us",
+          "value": 81.99099168984513
+        },
+        "frequency": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": 4.74331607417109
+        },
+        "anharmonicity": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": -0.31179417408967897
+        },
+        "readout_assignment_error": {
+          "date": {"$date": "2024-07-08T06:16:05Z"},
+          "unit": "",
+          "value": 0.009700000000000042
+        }
+      },
+      {
+        "t1_decoherence": {
+          "date": {"$date": "2024-07-08T06:42:01Z"},
+          "unit": "us",
+          "value": 345.26623339601684
+        },
+        "t2_decoherence": {
+          "date": {"$date": "2024-07-08T06:56:44Z"},
+          "unit": "us",
+          "value": 336.5462418628414
+        },
+        "frequency": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": 4.625938044796286
+        },
+        "anharmonicity": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": -0.31372359565205904
+        },
+        "readout_assignment_error": {
+          "date": {"$date": "2024-07-08T06:16:05Z"},
+          "unit": "",
+          "value": 0.017800000000000038
+        }
+      },
+      {
+        "t1_decoherence": {
+          "date": {"$date": "2024-07-08T06:42:01Z"},
+          "unit": "us",
+          "value": 133.43700196576077
+        },
+        "t2_decoherence": {
+          "date": {"$date": "2024-07-08T07:18:48Z"},
+          "unit": "us",
+          "value": 163.4358380960457
+        },
+        "frequency": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": 4.556956356759932
+        },
+        "anharmonicity": {
+          "date": {"$date": "2024-07-08T22:03:09Z"},
+          "unit": "GHz",
+          "value": -0.31377871528415735
+        },
+        "readout_assignment_error": {
+          "date": {"$date": "2024-07-08T06:16:05Z"},
+          "unit": "",
+          "value": 0.042100000000000026
+        }
+      }
+    ]
+}
+```
+
+- Click "Insert" to insert the document into the "calibrations_v2" collection.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-calibration-data.png)
+:::
 
 - To Run the services, use the `fresh-docker-compose.yml`.
 

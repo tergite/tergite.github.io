@@ -37,6 +37,8 @@ client_secret = "some-openid-client-secret"
 redirect_url = "http://127.0.0.1:8002/auth/app/company-b/callback"
 client_type = "openid"
 email_regex = ".*"
+# the domain of the emails of the users that should be directed to this auth client
+email_domain = "example.com"
 # Roles that are automatically given to users who authenticate through Company B
 # roles can be: "admin", "user", "researcher", "partner". Default is "user".
 roles = ["partner", "user"]
