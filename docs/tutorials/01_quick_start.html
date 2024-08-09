@@ -548,11 +548,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co"># turn auth OFF or ON, default=true</span></span>
 <span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span>
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Puhuri synchronization</span></span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's</span></span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="kw">[puhuri]</span></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co"># turn puhuri synchronization OFF or ON, default=true</span></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="kw">[[auth.clients]]</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"github"</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="dt">client_id</span> <span class="op">=</span> <span class="st">"some-github-obtained-client-id"</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="dt">client_secret</span> <span class="op">=</span> <span class="st">"some-github-obtained-client-secret"</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="dt">redirect_url</span> <span class="op">=</span> <span class="st">"http://127.0.0.1:8002/auth/app/github/callback"</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="dt">client_type</span> <span class="op">=</span> <span class="st">"github"</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="dt">email_regex</span> <span class="op">=</span> <span class="st">"^(john</span><span class="sc">\\</span><span class="st">.doe|jane|aggrey)@example</span><span class="sc">\\</span><span class="st">.com$"</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="dt">email_domain</span> <span class="op">=</span> <span class="st">"example.com"</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="dt">roles</span> <span class="op">=</span> <span class="op">[</span><span class="st">"admin"</span><span class="op">,</span> <span class="st">"user"</span><span class="op">]</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="kw">[[auth.clients]]</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"puhuri"</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="dt">client_id</span> <span class="op">=</span> <span class="st">"some-puhuri-obtained-client-id"</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="dt">client_secret</span> <span class="op">=</span> <span class="st">"some-puhuri-obtained-client-secret"</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="dt">redirect_url</span> <span class="op">=</span> <span class="st">"http://127.0.0.1:8002/auth/app/puhuri/callback"</span></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="dt">client_type</span> <span class="op">=</span> <span class="st">"openid"</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="dt">email_regex</span> <span class="op">=</span> <span class="st">"^(john</span><span class="sc">\\</span><span class="st">.doe|jane)@example</span><span class="sc">\\</span><span class="st">.com$"</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="dt">email_domain</span> <span class="op">=</span> <span class="st">"example.com"</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="dt">roles</span> <span class="op">=</span> <span class="op">[</span><span class="st">"user"</span><span class="op">]</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a><span class="dt">openid_configuration_endpoint</span> <span class="op">=</span> <span class="st">"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration"</span></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Puhuri synchronization</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="kw">[puhuri]</span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="co"># turn puhuri synchronization OFF or ON, default=true</span></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="dt">is_enabled</span> <span class="op">=</span> <span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Create a <code>.env</code> file with visual studio code (or any other text editor).</li>
 </ul>
