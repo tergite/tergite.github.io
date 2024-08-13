@@ -179,7 +179,7 @@ docker compose -f fresh-docker-compose.yml up -d
 ![](../assets/img/tutorials/adding_authentication/mongo-compass-edit-user-document.png)
 :::
 
-- Type in "system" in the new empty value that appears uner roles
+- Type in "system" in the new empty value that appears under roles
 
 ::: {layout-ncol=1}
 ![](../assets/img/tutorials/adding_authentication/mongo-compass-update-system-user-role.png)
