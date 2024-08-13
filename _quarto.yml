@@ -4,6 +4,9 @@ project:
   resources:
     - contributing/ccla.pdf
     - contributing/icla.pdf
+  render:
+    - "*.{qmd,R,py,ipynb}"
+    - "!test_**"
 
 highlight-style: ayu
 code-annotations: hover

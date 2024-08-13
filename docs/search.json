@@ -1,54 +1,10 @@
 [
   {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "Tergite",
+    "objectID": "why.html",
+    "href": "why.html",
+    "title": "Why tergite?",
     "section": "",
-    "text": "Apache License\n                       Version 2.0, January 2004\n                    http://www.apache.org/licenses/\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\nDefinitions.\n“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.\n“Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.\n“Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.\n“You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.\n“Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.\n“Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.\n“Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).\n“Derivative Works” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.\n“Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”\n“Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.\nGrant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.\nGrant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.\nRedistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:\n\nYou must give any other recipients of the Work or Derivative Works a copy of this License; and\nYou must cause any modified files to carry prominent notices stating that You changed the files; and\nYou must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and\nIf the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.\n\nYou may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.\nSubmission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.\nTrademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.\nDisclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.\nLimitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\nAccepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\nAPPENDIX: How to apply the Apache License to your work.\n  To apply the Apache License to your work, attach the following\n  boilerplate notice, with the fields enclosed by brackets \"[]\"\n  replaced with your own identifying information. (Don't include\n  the brackets!)  The text should be enclosed in the appropriate\n  comment syntax for the file format. We also recommend that a\n  file or class name and description of purpose be included on the\n  same \"printed page\" as the copyright notice for easier\n  identification within third-party archives.\nCopyright [yyyy] [name of copyright owner]\nLicensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n   http://www.apache.org/licenses/LICENSE-2.0\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "tutorials/04_authorization.html",
-    "href": "tutorials/04_authorization.html",
-    "title": "Authorization",
-    "section": "",
-    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its tergite-backend instances using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
-    "crumbs": [
-      "Tutorials",
-      "Authorization"
-    ]
-  },
-  {
-    "objectID": "tutorials/05_hardware_configuration.html",
-    "href": "tutorials/05_hardware_configuration.html",
-    "title": "Hardware Configuration",
-    "section": "",
-    "text": "Documentation about configuring tergite-backend",
-    "crumbs": [
-      "Tutorials",
-      "Hardware Configuration"
-    ]
-  },
-  {
-    "objectID": "tutorials/05_hardware_configuration.html#general-configuration",
-    "href": "tutorials/05_hardware_configuration.html#general-configuration",
-    "title": "Hardware Configuration",
-    "section": "General Configuration",
-    "text": "General Configuration\nTo configure the entire tergite-backend application, we use .env files.\nJust copy the dot-env-template.txt to env and update the variables there in.\ncp dot-env-template.txt .env",
-    "crumbs": [
-      "Tutorials",
-      "Hardware Configuration"
-    ]
-  },
-  {
-    "objectID": "tutorials/05_hardware_configuration.html#qblox-instruments-configuration",
-    "href": "tutorials/05_hardware_configuration.html#qblox-instruments-configuration",
-    "title": "Hardware Configuration",
-    "section": "QBLOX Instruments Configuration",
-    "text": "QBLOX Instruments Configuration\nWe use the executor-config.example.yml as a template for how to configure this application to control the QBLOX instruments that control the quantum computer.\nIt is well documented. Just copy it to executor-config.yml in the tergite-backend folder and update its variables and you are good to go.\ncp executor-config.example.yml executor-config.yml\n\nDummy QBLOX Instrumments\nYou may wish to run some dummy QBLOX instruments if you don’t have access to the physical QBLOX instruments\nWe already have a preconfigured dummy-executor-config.yml for this in the app/tests/fixtures folder.\nCopy it to the tergite-backend folder.\ncp app/tests/fixtures/dummy-executor-config.yml executor-config.yml\nNOTE: You can find out more about the configuration properties in the executor-config file by visiting the quantify_scheduler docs and the QCoDeS drivers docs.\nNOTE: You could choose to use a different name for your quantum executor config file e.g. foobar.yml. You however need to explicitly set this name in the .env file EXECUTOR_CONFIG_FILE=foobar.yml\n\n\nCalibrated Data Configuration\nWe also recalibrate the quantum computer from time to time and store that data in TOML files in the configs folder.\nWhen starting the application, one needs to supply one calibration set from any of those configuration files.\n./start_tergite-backend.sh --device configs/device_default.toml\nNOTE: You don’t need to pass the .env file or the executor-config.yml file to the start script as these are automatically loaded for you.",
-    "crumbs": [
-      "Tutorials",
-      "Hardware Configuration"
-    ]
+    "text": "TODO\n\n\n\n Back to top"
   },
   {
     "objectID": "tutorials/06_resource_management.html",
@@ -95,333 +51,69 @@
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html",
-    "href": "examples/03_equal_superposition.html",
-    "title": "Equal Superposition",
+    "objectID": "tutorials/04_authorization.html",
+    "href": "tutorials/04_authorization.html",
+    "title": "Authorization",
     "section": "",
-    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic one-qubit circuit to produce the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\), and retrieving the measurement results.",
+    "text": "This is how the Main Service Server (MSS) in tergite-frontend controls the user access to the quantum computer resource.\n\nWe control access to MSS, and its tergite-backend instances using two ways\n\nroles control basic access to auth-related endpoints e.g. project creation, token management etc.\nprojects control access to all other endpoints. To create a job, or get its results etc, one must be attached to a project that has more than zero QPU seconds.\n\nQPU seconds are the number of seconds a project’s experiments are allocated on the quantum computer.\nQPU seconds can be increased, decreased etc., but no job can be created without positive QPU seconds.\nA job could run for longer than the allocated project QPU seconds but it may fail to update MSS of its results. A user must thus make sure their project has enough QPU seconds.\n\n\nHow Authorization Works\nHere is an interaction diagram of auth showcasing authentication via MyAccessID.\n\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n\n\n\n\n\nInteraction diagram of auth showcasing MyAccessID\n\n\n\n Back to top",
     "crumbs": [
-      "Examples",
-      "Equal Superposition"
+      "Tutorials",
+      "Authorization"
     ]
   },
   {
-    "objectID": "examples/03_equal_superposition.html#install-dependencies",
-    "href": "examples/03_equal_superposition.html#install-dependencies",
-    "title": "Equal Superposition",
-    "section": "Install dependencies",
-    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\nInstall these dependencies\n\n%pip install qiskit\n%pip install tergite",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#import-the-basic-dependencies",
-    "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
-    "title": "Equal Superposition",
-    "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#configure-session",
-    "href": "examples/03_equal_superposition.html#configure-session",
-    "title": "Equal Superposition",
-    "section": "Configure Session",
-    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#get-the-tergite-backend",
-    "href": "examples/03_equal_superposition.html#get-the-tergite-backend",
-    "title": "Equal Superposition",
-    "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
-    "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
-    "title": "Equal Superposition",
-    "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure_all()\nqc.draw()",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#compile-circuit",
-    "href": "examples/03_equal_superposition.html#compile-circuit",
-    "title": "Equal Superposition",
-    "section": "Compile Circuit",
-    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#run-the-circuit",
-    "href": "examples/03_equal_superposition.html#run-the-circuit",
-    "title": "Equal Superposition",
-    "section": "Run the Circuit",
-    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#see-the-results",
-    "href": "examples/03_equal_superposition.html#see-the-results",
-    "title": "Equal Superposition",
-    "section": "See the Results",
-    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/03_equal_superposition.html#acknowledgement",
-    "href": "examples/03_equal_superposition.html#acknowledgement",
-    "title": "Equal Superposition",
-    "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
-    "crumbs": [
-      "Examples",
-      "Equal Superposition"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html",
-    "href": "examples/01_hello_tergite.html",
-    "title": "Hello Tergite",
+    "objectID": "tutorials/02_adding_authentication.html",
+    "href": "tutorials/02_adding_authentication.html",
+    "title": "Adding authentication",
     "section": "",
-    "text": "This is a showcase of connecting to tergite via the tergite SDK and running a basic circuit.",
+    "text": "As a continuation of the quick start tutorial, we can enable authentication and authorization.\nLet’s do that now.",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Tutorials",
+      "Adding authentication"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#install-dependencies",
-    "href": "examples/01_hello_tergite.html#install-dependencies",
-    "title": "Hello Tergite",
-    "section": "Install dependencies",
-    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\n\n%pip install qiskit\n%pip install tergite",
+    "objectID": "tutorials/02_adding_authentication.html#prerequisites",
+    "href": "tutorials/02_adding_authentication.html#prerequisites",
+    "title": "Adding authentication",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nYou must start from the quick start tutorial.",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Tutorials",
+      "Adding authentication"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#import-the-basic-dependencies",
-    "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
-    "title": "Hello Tergite",
-    "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "objectID": "tutorials/02_adding_authentication.html#setup-the-backend",
+    "href": "tutorials/02_adding_authentication.html#setup-the-backend",
+    "title": "Adding authentication",
+    "section": "Setup the Backend",
+    "text": "Setup the Backend\n\nStart with the quick start tutorial’s ‘Setup the Backend’ section.\nStop the backend by pressing “Ctrl-C” on your keyboard.\nOpen the .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate .env file to have the following content\n\n# .env\nAPP_SETTINGS=development\nIS_AUTH_ENABLED=True \nMSS_APP_TOKEN=\"QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0\"\n\nDEFAULT_PREFIX=loke\nSTORAGE_ROOT=/tmp\nLOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool\nLOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool\nJOB_UPLOAD_POOL_DIRNAME=job_upload_pool\nJOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool\nJOB_EXECUTION_POOL_DIRNAME=job_execution_pool\n\n# Main Service Server\nMSS_MACHINE_ROOT_URL=http://localhost:8002\nMSS_PORT=8002\n\n# Backend Control computer\nBCC_MACHINE_ROOT_URL=http://localhost:8000\nBCC_PORT=8000\n\nEXECUTOR_CONFIG_FILE=executor-config.yml\n\nRun the start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Tutorials",
+      "Adding authentication"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#update-some-variables",
-    "href": "examples/01_hello_tergite.html#update-some-variables",
-    "title": "Hello Tergite",
-    "section": "Update Some Variables",
-    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 100",
+    "objectID": "tutorials/02_adding_authentication.html#setup-the-frontend",
+    "href": "tutorials/02_adding_authentication.html#setup-the-frontend",
+    "title": "Adding authentication",
+    "section": "Setup the Frontend",
+    "text": "Setup the Frontend\n\nStart with the quick start tutorial’s ‘Setup the Frontend’ section.\nStop the frontend.\n\ndocker compose -f fresh-docker-compose.yml down\n\nCreate a new Github Oauth2 application via the official instructions, with Homepage URL: “http://127.0.0.1:8002” and Authorization callback URL: “http://127.0.0.1:8002/”.\nCopy the client ID and the client secret of the Github Oauth2 application.\nOpen the mss-config.toml file in the tergite-frontend folder with visual studio code (or any other text editor).\n\ncode mss-config.toml\n\nUpdate the mss-config.toml with the following content\n\n# mss-config.toml\n\n# general configurations\n[general]\n# the port on which MSS is running\nmss_port = 8002\n# the port on which the websocket is running\nws_port = 6532\n# environment reflect which environment the app is to run in.\nenvironment = \"development\"\n# the host the uvicorn runs on.\n# During testing auth on 127.0.0.1, set this to \"127.0.0.1\". default: \"0.0.0.0\"\nmss_host = \"127.0.0.1\"\n\n[database]\n# configurations for the database\nname = \"testing\"\n# database URI\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"mongodb://host.docker.internal:27017\"\n\n[[backends]]\nname = \"loke\"\n# the URL where this backend is running\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"http://host.docker.internal:8000\"\n\n[auth]\n# turn auth OFF or ON, default=true\nis_enabled = true\njwt_secret = \"f236ffd1332dc9e38effd8fff582a69e56d72d7dae9a377f1fda5e0ebedeaa42\"\njwt_ttl = 3600\ncookie_domain = \"127.0.0.1\"\ncookie_name = \"tergiteauth\"\n\n[[auth.clients]]\nname = \"github\"\nclient_id = \"the-client-id-copied-from-github\"\nclient_secret = \"the-client-secret-copied-from-github\"\nredirect_url = \"http://127.0.0.1:8002/auth/app/github/callback\"\nclient_type = \"github\"\nemail_regex = \"^(john\\\\.doe|jane|your-gmail-username)@gmail\\\\.com$\"\nemail_domain = \"gmail.com\"\nroles = [\"admin\", \"user\"]\n\n# Puhuri synchronization\n# Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's\n[puhuri]\n# turn puhuri synchronization OFF or ON, default=true\nis_enabled = false\n\n**Make sure you replace the your-gmail-username, the-client-id-copied-from-github, and the-client-secret-copied-from-github placeholders with the right values.\nDelete the old docker images of “tergite/tergite-mss”, “tergite/tergite-landing-page”, “tergite/tergite-webgui” from docker if they exist.\n\ndocker rmi tergite/tergite-mss:v0.0.1\ndocker rmi tergite/tergite-landing-page:v0.0.1\ndocker rmi tergite/tergite-webgui:v0.0.1\n\nTo Run the services, use the fresh-docker-compose.yml.\n\ndocker compose -f fresh-docker-compose.yml up -d\n\nOpen your browser at http://127.0.0.1:3000 to see the dashboard and attempt to login with github.\n\n\n\n\n\n\n\n\n\n\n\n\nAfter successful login, open the Mongo compass application and connect to the default local mongo database\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the “auth_users” collection in the “testing” database in your mongo compass\nNote down the “_id” of the document that contains your details. Let us call it YOUR_USER_ID for now.\nDouble-click the “roles” field on the document containing your user details in the “auth_users” collection.\nClick the + button on the left side of the “roles” field and then click “Add item to roles” in the popup that appears.\n\n\n\n\n\n\n\n\n\n\n\n\nType in “system” in the new empty value that appears uner roles\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “auth_app_tokens” collection in the “testing” database in your mongo compass\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"66bb23aaf19421387021040b\"\n  },\n  \"title\": \"test1-1723540394175\",\n  \"project_ext_id\": \"test1\",\n  \"lifespan_seconds\": 7200,\n  \"token\": \"QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0\",\n  \"user_id\": {\n    \"$oid\": \"YOUR_USER_ID\"\n  },\n  \"created_at\": {\n    \"$date\": \"2024-08-13T09:13:14.187Z\"\n  }\n}\nMake sure to replace the YOUR_USER_ID place holder with the actual string value from your database.\n\nClick “Insert” to insert the document into the “auth_app_tokens” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “auth_projects” collection in the “testing” database in your mongo compass\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"66ba1b56f073eac3b195814c\"\n  },\n    \"version\": 2,\n    \"name\": \"Test 1\",\n    \"ext_id\": \"test1\",\n    \"admin_id\": \"YOUR_USER_ID\",\n    \"user_ids\": [ \"YOUR_USER_ID\"],\n    \"qpu_seconds\": 54000,\n    \"is_active\": true,\n    \"description\": \"This is a test project by the International Group of Other Testers\",\n    \"created_at\": \"2024-06-20T09:12:00.733Z\",\n    \"updated_at\": \"2024-06-20T09:12:00.733Z\"\n}\nMake sure to replace the YOUR_USER_ID place holder with the actual string value from your database.\n\nClick “Insert” to insert the document into the “auth_projects” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the dashboard at http://127.0.0.1:3000\nSelect project “Test 1” in the top bar.\n\n\n\n\n\n\n\n\n\n\n\n\nGenerate a new api token and copy it to the clipboard. Let’s call it THE_API_TOKEN_YOU_CREATED for the sake of this tutorial.",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
+      "Tutorials",
+      "Adding authentication"
     ]
   },
   {
-    "objectID": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
-    "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
-    "title": "Hello Tergite",
-    "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(1)\nqc.x(0)\nqc.h(0)\nqc.measure_all()\nqc.draw()",
+    "objectID": "tutorials/02_adding_authentication.html#run-an-experiment",
+    "href": "tutorials/02_adding_authentication.html#run-an-experiment",
+    "title": "Adding authentication",
+    "section": "Run an Experiment",
+    "text": "Run an Experiment\n\nStart with the quick start tutorial’s ‘Run an Experiment’ section.\nOpen the main.py file with visual studio code (or any other text editor).\n\ncode main.py\n\nUpdate the main.py file with the following content:\n\n# main.py\n\"\"\"A sample script doing a very simple quantum operation\"\"\"\nimport time\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\n\nfrom tergite.qiskit.providers import Job, Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount\n\nif __name__ == \"__main__\":\n    # the Tergite API URL\n    API_URL = \"http://localhost:8002\"\n    # The name of the Quantum Computer to use from the available quantum computers\n    BACKEND_NAME = \"loke\"\n    # the application token for logging in\n    API_TOKEN = \"THE_API_TOKEN_YOU_CREATED\"\n    # the name of this service. For your own bookkeeping.\n    SERVICE_NAME = \"local\"\n    # the timeout in seconds for how long to keep checking for results\n    POLL_TIMEOUT = 100\n\n    # create the Qiskit circuit\n    qc = circuit.QuantumCircuit(1)\n    qc.x(0)\n    qc.h(0)\n    qc.measure_all()\n\n    # create a provider\n    # provider account creation can be skipped in case you already saved\n    # your provider account to the `~/.qiskit/tergiterc` file.\n    # See below how that is done.\n    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n    provider = Tergite.use_provider_account(account)\n    # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n    # provider = Tergite.use_provider_account(account, save=True)\n\n    # Get the tergite backend in case you skipped provider account creation\n    # provider = Tergite.get_provider(service_name=SERVICE_NAME)\n    backend = provider.get_backend(BACKEND_NAME)\n    backend.set_options(shots=1024)\n\n    # compile the circuit\n    tc = compiler.transpile(qc, backend=backend)\n\n    # run the circuit\n    job: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\n\n    # view the results\n    elapsed_time = 0\n    result = None\n    while result is None:\n        if elapsed_time &gt; POLL_TIMEOUT:\n            raise TimeoutError(\n                f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\"\n            )\n\n        time.sleep(1)\n        elapsed_time += 1\n        result = job.result()\n\n    print(result.get_counts())\nMake sure you replace the THE_API_TOKEN_YOU_CREATED placeholder with the right API token.\n\nExecute the above script by running the commnad below.\n\npython main.py\n\nIt should return something like:\n\nResults OK\n{'0': 1024}\nNote: We get only 0’s because we are using the dummy cluster from quantify scheduler",
     "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#get-the-tergite-backend",
-    "href": "examples/01_hello_tergite.html#get-the-tergite-backend",
-    "title": "Hello Tergite",
-    "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#compile-circuit",
-    "href": "examples/01_hello_tergite.html#compile-circuit",
-    "title": "Hello Tergite",
-    "section": "Compile Circuit",
-    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#run-the-circuit",
-    "href": "examples/01_hello_tergite.html#run-the-circuit",
-    "title": "Hello Tergite",
-    "section": "Run the Circuit",
-    "text": "Run the Circuit\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")\n\nTergite: Job has been successfully submitted",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#see-the-results",
-    "href": "examples/01_hello_tergite.html#see-the-results",
-    "title": "Hello Tergite",
-    "section": "See the Results",
-    "text": "See the Results\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "examples/01_hello_tergite.html#acknowledgement",
-    "href": "examples/01_hello_tergite.html#acknowledgement",
-    "title": "Hello Tergite",
-    "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura",
-    "crumbs": [
-      "Examples",
-      "Hello Tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html",
-    "href": "contributing/guidelines.html",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "This project is currently not accepting pull requests from the general public yet.\nIt is currently being developed by the core developers only.\nWe love your input! We want to make contributing to this project as easy and transparent as possible, whether it’s:\n\nReporting a bug\nDiscussing the current state of the code\nSubmitting a fix\nProposing new features\nBecoming a maintainer\n\n\n\nChalmers Next Labs AB (CNL) manages and maintains this project on behalf of all contributors.\n\n\n\nTergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.\n\n\n\nSince the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked at. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.\n\n\n\nPull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!\n\n\n\n\nIn short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.\n\n\n\nThis is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.\n\n\n\nBy contributing, you agree that your contributions will be licensed under its Apache 2.0 License.\n\n\n\nBefore you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”\n\n\n\nThis document was adapted from a gist by Brian A. Danielak",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#government-model",
-    "href": "contributing/guidelines.html#government-model",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "Chalmers Next Labs AB (CNL) manages and maintains this project on behalf of all contributors.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#version-control",
-    "href": "contributing/guidelines.html#version-control",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "Tergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#contacting-the-tergite-developers",
-    "href": "contributing/guidelines.html#contacting-the-tergite-developers",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "Since the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked at. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
-    "href": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "Pull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
-    "href": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "In short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
-    "href": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "This is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#license",
-    "href": "contributing/guidelines.html#license",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "By contributing, you agree that your contributions will be licensed under its Apache 2.0 License.",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#contributor-licensing-agreement",
-    "href": "contributing/guidelines.html#contributor-licensing-agreement",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
-    ]
-  },
-  {
-    "objectID": "contributing/guidelines.html#references",
-    "href": "contributing/guidelines.html#references",
-    "title": "Contributing to tergite",
-    "section": "",
-    "text": "This document was adapted from a gist by Brian A. Danielak",
-    "crumbs": [
-      "Contributing",
-      "Contributing to tergite"
+      "Tutorials",
+      "Adding authentication"
     ]
   },
   {
@@ -447,28 +139,6 @@
     ]
   },
   {
-    "objectID": "release_notes/tergite-autocalibration.html",
-    "href": "release_notes/tergite-autocalibration.html",
-    "title": "Tergite Autocalibration",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Autocalibration"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-autocalibration.html#section",
-    "href": "release_notes/tergite-autocalibration.html#section",
-    "title": "Tergite Autocalibration",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Autocalibration"
-    ]
-  },
-  {
     "objectID": "release_notes/tergite-backend.html",
     "href": "release_notes/tergite-backend.html",
     "title": "Tergite Backend",
@@ -489,35 +159,6 @@
       "Release Notes",
       "Tergite Backend"
     ]
-  },
-  {
-    "objectID": "release_notes/tergite-frontend.html",
-    "href": "release_notes/tergite-frontend.html",
-    "title": "Tergite Frontend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Frontend"
-    ]
-  },
-  {
-    "objectID": "release_notes/tergite-frontend.html#section",
-    "href": "release_notes/tergite-frontend.html#section",
-    "title": "Tergite Frontend",
-    "section": "",
-    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
-    "crumbs": [
-      "Release Notes",
-      "Tergite Frontend"
-    ]
-  },
-  {
-    "objectID": "why.html",
-    "href": "why.html",
-    "title": "Why tergite?",
-    "section": "",
-    "text": "TODO\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -651,6 +292,387 @@
     ]
   },
   {
+    "objectID": "contributing/guidelines.html",
+    "href": "contributing/guidelines.html",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This project is currently not accepting pull requests from the general public yet.\nIt is currently being developed by the core developers only.\nWe love your input! We want to make contributing to this project as easy and transparent as possible, whether it’s:\n\nReporting a bug\nDiscussing the current state of the code\nSubmitting a fix\nProposing new features\nBecoming a maintainer\n\n\n\nChalmers Next Labs AB (CNL) manages and maintains this project on behalf of all contributors.\n\n\n\nTergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.\n\n\n\nSince the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked at. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.\n\n\n\nPull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!\n\n\n\n\nIn short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.\n\n\n\nThis is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.\n\n\n\nBy contributing, you agree that your contributions will be licensed under its Apache 2.0 License.\n\n\n\nBefore you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”\n\n\n\nThis document was adapted from a gist by Brian A. Danielak",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#government-model",
+    "href": "contributing/guidelines.html#government-model",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Chalmers Next Labs AB (CNL) manages and maintains this project on behalf of all contributors.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#version-control",
+    "href": "contributing/guidelines.html#version-control",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Tergite is developed on a separate version control system and mirrored on Github. If you are reading this on GitHub, then you are looking at a mirror.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#contacting-the-tergite-developers",
+    "href": "contributing/guidelines.html#contacting-the-tergite-developers",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Since the Github repositories are only mirrors, no Github pull requests or Github issue/bug reports are looked at. Please get in touch via email quantum.nextlabs@chalmers.se instead.\nTake note that the maintainers may not answer every email.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
+    "href": "contributing/guidelines.html#but-we-use-github-flow-so-all-code-changes-happen-through-pull-requests",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Pull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:\n\nClone the repo and create your branch from main.\nIf you’ve added code that should be tested, add tests.\nIf you’ve changed APIs, update the documentation.\nEnsure the test suite passes.\nMake sure your code lints.\nIssue that pull request!",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
+    "href": "contributing/guidelines.html#any-contributions-you-make-will-be-under-the-apache-2.0-software-licenses",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "In short, when you submit code changes, your submissions are understood to be under the same Apache 2.0 License that covers the project. Feel free to contact the maintainers if that’s a concern.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
+    "href": "contributing/guidelines.html#write-bug-reports-with-detail-background-and-sample-code",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This is an example. Here’s another example from Craig Hockenberry.\nGreat Bug Reports tend to have:\n\nA quick summary and/or background\nSteps to reproduce\n\nBe specific!\nGive sample code if you can.\n\nWhat you expected would happen\nWhat actually happens\nNotes (possibly including why you think this might be happening, or stuff you tried that didn’t work)\n\nPeople love thorough bug reports. I’m not even kidding.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#license",
+    "href": "contributing/guidelines.html#license",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "By contributing, you agree that your contributions will be licensed under its Apache 2.0 License.",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#contributor-licensing-agreement",
+    "href": "contributing/guidelines.html#contributor-licensing-agreement",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you’re attesting that you are the author of the contribution, and that you’re freely contributing it under the terms of the Apache-2.0 license.\n“The individual CLA document is available for review as a PDF.\nPlease note that if your contribution is part of your employment or your contribution is the property of your employer, you will also most likely need to sign a corporate CLA.\nAll signed CLAs are emails to us at quantum.nextlabs@chalmers.se.”",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "contributing/guidelines.html#references",
+    "href": "contributing/guidelines.html#references",
+    "title": "Contributing to tergite",
+    "section": "",
+    "text": "This document was adapted from a gist by Brian A. Danielak",
+    "crumbs": [
+      "Contributing",
+      "Contributing to tergite"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "Tergite",
+    "section": "",
+    "text": "Apache License\n                       Version 2.0, January 2004\n                    http://www.apache.org/licenses/\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\nDefinitions.\n“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.\n“Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.\n“Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.\n“You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.\n“Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.\n“Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.\n“Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).\n“Derivative Works” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.\n“Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”\n“Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.\nGrant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.\nGrant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.\nRedistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:\n\nYou must give any other recipients of the Work or Derivative Works a copy of this License; and\nYou must cause any modified files to carry prominent notices stating that You changed the files; and\nYou must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and\nIf the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.\n\nYou may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.\nSubmission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.\nTrademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.\nDisclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.\nLimitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\nAccepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\nAPPENDIX: How to apply the Apache License to your work.\n  To apply the Apache License to your work, attach the following\n  boilerplate notice, with the fields enclosed by brackets \"[]\"\n  replaced with your own identifying information. (Don't include\n  the brackets!)  The text should be enclosed in the appropriate\n  comment syntax for the file format. We also recommend that a\n  file or class name and description of purpose be included on the\n  same \"printed page\" as the copyright notice for easier\n  identification within third-party archives.\nCopyright [yyyy] [name of copyright owner]\nLicensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at\n   http://www.apache.org/licenses/LICENSE-2.0\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html",
+    "href": "examples/01_hello_tergite.html",
+    "title": "Hello Tergite",
+    "section": "",
+    "text": "This is a showcase of connecting to tergite via the tergite SDK and running a basic circuit.",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#install-dependencies",
+    "href": "examples/01_hello_tergite.html#install-dependencies",
+    "title": "Hello Tergite",
+    "section": "Install dependencies",
+    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\n\n%pip install qiskit\n%pip install tergite",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#import-the-basic-dependencies",
+    "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
+    "title": "Hello Tergite",
+    "section": "Import the basic dependencies",
+    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#update-some-variables",
+    "href": "examples/01_hello_tergite.html#update-some-variables",
+    "title": "Hello Tergite",
+    "section": "Update Some Variables",
+    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 100",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
+    "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
+    "title": "Hello Tergite",
+    "section": "Create the Qiskit Circuit",
+    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(1)\nqc.x(0)\nqc.h(0)\nqc.measure_all()\nqc.draw()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#get-the-tergite-backend",
+    "href": "examples/01_hello_tergite.html#get-the-tergite-backend",
+    "title": "Hello Tergite",
+    "section": "Get the Tergite Backend",
+    "text": "Get the Tergite Backend\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#compile-circuit",
+    "href": "examples/01_hello_tergite.html#compile-circuit",
+    "title": "Hello Tergite",
+    "section": "Compile Circuit",
+    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#run-the-circuit",
+    "href": "examples/01_hello_tergite.html#run-the-circuit",
+    "title": "Hello Tergite",
+    "section": "Run the Circuit",
+    "text": "Run the Circuit\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")\n\nTergite: Job has been successfully submitted",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#see-the-results",
+    "href": "examples/01_hello_tergite.html#see-the-results",
+    "title": "Hello Tergite",
+    "section": "See the Results",
+    "text": "See the Results\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#acknowledgement",
+    "href": "examples/01_hello_tergite.html#acknowledgement",
+    "title": "Hello Tergite",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html",
+    "href": "examples/03_equal_superposition.html",
+    "title": "Equal Superposition",
+    "section": "",
+    "text": "This is a showcase of connecting to tergite via the tergite SDK, running a basic one-qubit circuit to produce the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\), and retrieving the measurement results.",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#install-dependencies",
+    "href": "examples/03_equal_superposition.html#install-dependencies",
+    "title": "Equal Superposition",
+    "section": "Install dependencies",
+    "text": "Install dependencies\nThis example depends on:\n\nqiskit\ntergite\n\nInstall these dependencies\n\n%pip install qiskit\n%pip install tergite",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#import-the-basic-dependencies",
+    "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
+    "title": "Equal Superposition",
+    "section": "Import the basic dependencies",
+    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#configure-session",
+    "href": "examples/03_equal_superposition.html#configure-session",
+    "title": "Equal Superposition",
+    "section": "Configure Session",
+    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#get-the-tergite-backend",
+    "href": "examples/03_equal_superposition.html#get-the-tergite-backend",
+    "title": "Equal Superposition",
+    "section": "Get the Tergite Backend",
+    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
+    "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
+    "title": "Equal Superposition",
+    "section": "Create the Qiskit Circuit",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure_all()\nqc.draw()",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#compile-circuit",
+    "href": "examples/03_equal_superposition.html#compile-circuit",
+    "title": "Equal Superposition",
+    "section": "Compile Circuit",
+    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#run-the-circuit",
+    "href": "examples/03_equal_superposition.html#run-the-circuit",
+    "title": "Equal Superposition",
+    "section": "Run the Circuit",
+    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#see-the-results",
+    "href": "examples/03_equal_superposition.html#see-the-results",
+    "title": "Equal Superposition",
+    "section": "See the Results",
+    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#acknowledgement",
+    "href": "examples/03_equal_superposition.html#acknowledgement",
+    "title": "Equal Superposition",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-autocalibration.html",
+    "href": "release_notes/tergite-autocalibration.html",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Autocalibration"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-autocalibration.html#section",
+    "href": "release_notes/tergite-autocalibration.html#section",
+    "title": "Tergite Autocalibration",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\n\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Autocalibration"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html",
+    "href": "release_notes/tergite-frontend.html",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html#section",
+    "href": "release_notes/tergite-frontend.html#section",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "Initial Public Release\n\n\n\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
     "objectID": "tutorials/01_quick_start.html",
     "href": "tutorials/01_quick_start.html",
     "title": "Quick Start",
@@ -703,6 +725,72 @@
     "crumbs": [
       "Tutorials",
       "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/03_authentication.html",
+    "href": "tutorials/03_authentication.html",
+    "title": "Authentication",
+    "section": "",
+    "text": "This is how the Main Service Server (MSS) in tergite-frontend authenticates its users.",
+    "crumbs": [
+      "Tutorials",
+      "Authentication"
+    ]
+  },
+  {
+    "objectID": "tutorials/03_authentication.html#add-a-new-oauth2-provider",
+    "href": "tutorials/03_authentication.html#add-a-new-oauth2-provider",
+    "title": "Authentication",
+    "section": "Add a New Oauth2 Provider",
+    "text": "Add a New Oauth2 Provider\n\nUpdate tergite-mss app in tergite-frontend\n\nLet’s say we want some ‘Company B’ users to have access to MSS.\nCopy the mss-config.example.toml to mss-config.toml in the tergite-frontend folder, and update the configs therein.\nNote: You could also create a new toml file based on mss-config.example.toml\nand set the MSS_CONFIG_FILE environment variable to point to that file.\nAdd the new client:\n\n[[auth.clients]]\n# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/company-b/...\nname = \"company-b\"\nclient_id = \"some-openid-client-id\"\nclient_secret = \"some-openid-client-secret\"\n# the URL to redirect to after user authenticates with the system.\n# It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback\nredirect_url = \"http://127.0.0.1:8002/auth/app/company-b/callback\"\nclient_type = \"openid\"\nemail_regex = \".*\"\n# the domain of the emails of the users that should be directed to this auth client\nemail_domain = \"example.com\"\n# Roles that are automatically given to users who authenticate through Company B\n# roles can be: \"admin\", \"user\", \"researcher\", \"partner\". Default is \"user\".\nroles = [\"partner\", \"user\"]\n# openid_configuration_endpoint is necessary if Company B uses OpenID Connect, otherwise ignore.\nopenid_configuration_endpoint = \"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration\"\n\n\nUpdate tergite-landing-page app in tergite-frontend\n\nAdd the logo for the new provider in the tergite-frontend/apps/tergite-landing-page/public/img folder.\nOpen the tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts file and update its OAUTH2_LOGOS list to include your new provider’s logo.\n\nconst OAUTH2_LOGOS: { [key: string]: string } = {\n    github: '/img/github-black.png',\n    chalmers: '/img/chalmers-logo.svg',\n    company-b: '/img/company-b-logo.svg',\n};\n\nStart the frontend application. Instructions are on the tergite-frontend/README.md\n\ndocker compose -f fresh-docker-compose.yml up -d\nNote: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.",
+    "crumbs": [
+      "Tutorials",
+      "Authentication"
+    ]
+  },
+  {
+    "objectID": "tutorials/03_authentication.html#faqs",
+    "href": "tutorials/03_authentication.html#faqs",
+    "title": "Authentication",
+    "section": "FAQs",
+    "text": "FAQs\n\n- How do we bypass authentication in development?\nWe use feature flag auth.is_enabled property in the mss-config.toml file, setting it to false\nis_enabled = false\nNote: /auth endpoints will still require authentication because they depend on the current user\n\n\n- How do we ensure that in production, authentication is always turned on?\nOn startup, we raise a ValueError when auth.is_enabled = false in the mss-config.toml file yet\nconfig variable environment = production and log it.\n\n\n- How do we allow other qal9000 services (e.g. tergite-backend or calibration workers) to access MSS, without user intervention?\nUse app tokens created by any user who had the ‘system’ role. The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped. Since they won’t be used to run jobs, their project QPU seconds are expected not to run out.\nIf you are in development mode, you can just switch of authentication altogether.\n\n\nHow do I log in?\n\nYou need to run the tergite-frontend.\nMake sure that your mss-config.toml files have all variables filled appropriately.\nThe landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.\n\n\n\nHow does the backend get authenticated?\n\nA client (say tergite) sends a POST request is sent to /jobs on MSS (this app) with an app_token in its Authorization header\nA new job entry is created in the database, together with a new unique job_id.\nMSS notifies tergite-backend of the job_id and its associated app_token by sending a POST request to /auth endpoint of tergite-backend.\nIn the response to the client, MSS returns the /jobs url for the given tergite-backend instance\nThe client then sends its experiment data to the tergite-backend /jobs url, with the same app_token in its Authorization header and the same job_id in the experiment data.\ntergite-backend checks if the job_id and the app_token are first of all associated, and if no other experiment data has been sent already with the same job_id-app_token pair. This is to ensure no user attempts to fool the system by using the same job_id for multiple experiments, which is theoretically possible.\nIf tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401 or a 403 HTTP error is thrown.\nThe same job_id-app_token pair is used to download raw logfiles from tergite-backend at /logfiles/{job_id} endpoint. This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.\nThis is the same behaviour when reading the job results at jobs/{job_id}/result or the job status at jobs/{job_id}/status or the entire job entry at jobs/{job_id} in tergite-backend.\nThis is also the same behaviour when attempting to delete the job at /jobs/{job_id} or to cancel it at /jobs/{job_id}/cancel in tergite-backend.",
+    "crumbs": [
+      "Tutorials",
+      "Authentication"
+    ]
+  },
+  {
+    "objectID": "tutorials/05_hardware_configuration.html",
+    "href": "tutorials/05_hardware_configuration.html",
+    "title": "Hardware Configuration",
+    "section": "",
+    "text": "Documentation about configuring tergite-backend",
+    "crumbs": [
+      "Tutorials",
+      "Hardware Configuration"
+    ]
+  },
+  {
+    "objectID": "tutorials/05_hardware_configuration.html#general-configuration",
+    "href": "tutorials/05_hardware_configuration.html#general-configuration",
+    "title": "Hardware Configuration",
+    "section": "General Configuration",
+    "text": "General Configuration\nTo configure the entire tergite-backend application, we use .env files.\nJust copy the dot-env-template.txt to env and update the variables there in.\ncp dot-env-template.txt .env",
+    "crumbs": [
+      "Tutorials",
+      "Hardware Configuration"
+    ]
+  },
+  {
+    "objectID": "tutorials/05_hardware_configuration.html#qblox-instruments-configuration",
+    "href": "tutorials/05_hardware_configuration.html#qblox-instruments-configuration",
+    "title": "Hardware Configuration",
+    "section": "QBLOX Instruments Configuration",
+    "text": "QBLOX Instruments Configuration\nWe use the executor-config.example.yml as a template for how to configure this application to control the QBLOX instruments that control the quantum computer.\nIt is well documented. Just copy it to executor-config.yml in the tergite-backend folder and update its variables and you are good to go.\ncp executor-config.example.yml executor-config.yml\n\nDummy QBLOX Instrumments\nYou may wish to run some dummy QBLOX instruments if you don’t have access to the physical QBLOX instruments\nWe already have a preconfigured dummy-executor-config.yml for this in the app/tests/fixtures folder.\nCopy it to the tergite-backend folder.\ncp app/tests/fixtures/dummy-executor-config.yml executor-config.yml\nNOTE: You can find out more about the configuration properties in the executor-config file by visiting the quantify_scheduler docs and the QCoDeS drivers docs.\nNOTE: You could choose to use a different name for your quantum executor config file e.g. foobar.yml. You however need to explicitly set this name in the .env file EXECUTOR_CONFIG_FILE=foobar.yml\n\n\nCalibrated Data Configuration\nWe also recalibrate the quantum computer from time to time and store that data in TOML files in the configs folder.\nWhen starting the application, one needs to supply one calibration set from any of those configuration files.\n./start_tergite-backend.sh --device configs/device_default.toml\nNOTE: You don’t need to pass the .env file or the executor-config.yml file to the start script as these are automatically loaded for you.",
+    "crumbs": [
+      "Tutorials",
+      "Hardware Configuration"
     ]
   },
   {
@@ -780,94 +868,6 @@
     "crumbs": [
       "Tutorials",
       "Puhuri-Tergite playground"
-    ]
-  },
-  {
-    "objectID": "tutorials/03_authentication.html",
-    "href": "tutorials/03_authentication.html",
-    "title": "Authentication",
-    "section": "",
-    "text": "This is how the Main Service Server (MSS) in tergite-frontend authenticates its users.",
-    "crumbs": [
-      "Tutorials",
-      "Authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/03_authentication.html#add-a-new-oauth2-provider",
-    "href": "tutorials/03_authentication.html#add-a-new-oauth2-provider",
-    "title": "Authentication",
-    "section": "Add a New Oauth2 Provider",
-    "text": "Add a New Oauth2 Provider\n\nUpdate tergite-mss app in tergite-frontend\n\nLet’s say we want some ‘Company B’ users to have access to MSS.\nCopy the mss-config.example.toml to mss-config.toml in the tergite-frontend folder, and update the configs therein.\nNote: You could also create a new toml file based on mss-config.example.toml\nand set the MSS_CONFIG_FILE environment variable to point to that file.\nAdd the new client:\n\n[[auth.clients]]\n# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/company-b/...\nname = \"company-b\"\nclient_id = \"some-openid-client-id\"\nclient_secret = \"some-openid-client-secret\"\n# the URL to redirect to after user authenticates with the system.\n# It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback\nredirect_url = \"http://127.0.0.1:8002/auth/app/company-b/callback\"\nclient_type = \"openid\"\nemail_regex = \".*\"\n# the domain of the emails of the users that should be directed to this auth client\nemail_domain = \"example.com\"\n# Roles that are automatically given to users who authenticate through Company B\n# roles can be: \"admin\", \"user\", \"researcher\", \"partner\". Default is \"user\".\nroles = [\"partner\", \"user\"]\n# openid_configuration_endpoint is necessary if Company B uses OpenID Connect, otherwise ignore.\nopenid_configuration_endpoint = \"https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration\"\n\n\nUpdate tergite-landing-page app in tergite-frontend\n\nAdd the logo for the new provider in the tergite-frontend/apps/tergite-landing-page/public/img folder.\nOpen the tergite-frontend/apps/tergite-landing-page/src/app/api/config/route.ts file and update its OAUTH2_LOGOS list to include your new provider’s logo.\n\nconst OAUTH2_LOGOS: { [key: string]: string } = {\n    github: '/img/github-black.png',\n    chalmers: '/img/chalmers-logo.svg',\n    company-b: '/img/company-b-logo.svg',\n};\n\nStart the frontend application. Instructions are on the tergite-frontend/README.md\n\ndocker compose -f fresh-docker-compose.yml up -d\nNote: The tergite-landing-page and tergite-mss apps must share the same domain if they are to work with cookies.",
-    "crumbs": [
-      "Tutorials",
-      "Authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/03_authentication.html#faqs",
-    "href": "tutorials/03_authentication.html#faqs",
-    "title": "Authentication",
-    "section": "FAQs",
-    "text": "FAQs\n\n- How do we bypass authentication in development?\nWe use feature flag auth.is_enabled property in the mss-config.toml file, setting it to false\nis_enabled = false\nNote: /auth endpoints will still require authentication because they depend on the current user\n\n\n- How do we ensure that in production, authentication is always turned on?\nOn startup, we raise a ValueError when auth.is_enabled = false in the mss-config.toml file yet\nconfig variable environment = production and log it.\n\n\n- How do we allow other qal9000 services (e.g. tergite-backend or calibration workers) to access MSS, without user intervention?\nUse app tokens created by any user who had the ‘system’ role. The advantage of using app tokens is that they are more secure because they can easily be revoked and scoped. Since they won’t be used to run jobs, their project QPU seconds are expected not to run out.\nIf you are in development mode, you can just switch of authentication altogether.\n\n\nHow do I log in?\n\nYou need to run the tergite-frontend.\nMake sure that your mss-config.toml files have all variables filled appropriately.\nThe landing page, when running, has appropriate links, say in the navbar, to direct you on how to the authentication screens.\n\n\n\nHow does the backend get authenticated?\n\nA client (say tergite) sends a POST request is sent to /jobs on MSS (this app) with an app_token in its Authorization header\nA new job entry is created in the database, together with a new unique job_id.\nMSS notifies tergite-backend of the job_id and its associated app_token by sending a POST request to /auth endpoint of tergite-backend.\nIn the response to the client, MSS returns the /jobs url for the given tergite-backend instance\nThe client then sends its experiment data to the tergite-backend /jobs url, with the same app_token in its Authorization header and the same job_id in the experiment data.\ntergite-backend checks if the job_id and the app_token are first of all associated, and if no other experiment data has been sent already with the same job_id-app_token pair. This is to ensure no user attempts to fool the system by using the same job_id for multiple experiments, which is theoretically possible.\nIf tergite-backend is comfortable with the results of the check, it allows the job to be submitted. Otherwise, either a 401 or a 403 HTTP error is thrown.\nThe same job_id-app_token pair is used to download raw logfiles from tergite-backend at /logfiles/{job_id} endpoint. This time, tergite-backend just checks that the pair match but it does not check if the pair was used already.\nThis is the same behaviour when reading the job results at jobs/{job_id}/result or the job status at jobs/{job_id}/status or the entire job entry at jobs/{job_id} in tergite-backend.\nThis is also the same behaviour when attempting to delete the job at /jobs/{job_id} or to cancel it at /jobs/{job_id}/cancel in tergite-backend.",
-    "crumbs": [
-      "Tutorials",
-      "Authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_adding_authentication.html",
-    "href": "tutorials/02_adding_authentication.html",
-    "title": "Adding authentication",
-    "section": "",
-    "text": "As a continuation of the quick start tutorial, we can enable authentication and authorization.\nLet’s do that now.",
-    "crumbs": [
-      "Tutorials",
-      "Adding authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_adding_authentication.html#prerequisites",
-    "href": "tutorials/02_adding_authentication.html#prerequisites",
-    "title": "Adding authentication",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nYou must start from the quick start tutorial.",
-    "crumbs": [
-      "Tutorials",
-      "Adding authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_adding_authentication.html#setup-the-backend",
-    "href": "tutorials/02_adding_authentication.html#setup-the-backend",
-    "title": "Adding authentication",
-    "section": "Setup the Backend",
-    "text": "Setup the Backend\n\nStart with the quick start tutorial’s ‘Setup the Backend’ section.\nStop the backend by pressing “Ctrl-C” on your keyboard.\nOpen the .env file with visual studio code (or any other text editor).\n\ncode .env\n\nUpdate .env file to have the following content\n\n# .env\nAPP_SETTINGS=development\nIS_AUTH_ENABLED=True \nMSS_APP_TOKEN=\"QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0\"\n\nDEFAULT_PREFIX=loke\nSTORAGE_ROOT=/tmp\nLOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool\nLOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool\nJOB_UPLOAD_POOL_DIRNAME=job_upload_pool\nJOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool\nJOB_EXECUTION_POOL_DIRNAME=job_execution_pool\n\n# Main Service Server\nMSS_MACHINE_ROOT_URL=http://localhost:8002\nMSS_PORT=8002\n\n# Backend Control computer\nBCC_MACHINE_ROOT_URL=http://localhost:8000\nBCC_PORT=8000\n\nEXECUTOR_CONFIG_FILE=executor-config.yml\n\nRun the start script\n\n./start_bcc.sh --device configs/device_default.toml\n\nOpen your browser at http://localhost:8000/docs to see the interactive API docs",
-    "crumbs": [
-      "Tutorials",
-      "Adding authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_adding_authentication.html#setup-the-frontend",
-    "href": "tutorials/02_adding_authentication.html#setup-the-frontend",
-    "title": "Adding authentication",
-    "section": "Setup the Frontend",
-    "text": "Setup the Frontend\n\nStart with the quick start tutorial’s ‘Setup the Frontend’ section.\nStop the frontend.\n\ndocker compose -f fresh-docker-compose.yml down\n\nCreate a new Github Oauth2 application via the official instructions, with Homepage URL: “http://127.0.0.1:8002” and Authorization callback URL: “http://127.0.0.1:8002/”.\nCopy the client ID and the client secret of the Github Oauth2 application.\nOpen the mss-config.toml file in the tergite-frontend folder with visual studio code (or any other text editor).\n\ncode mss-config.toml\n\nUpdate the mss-config.toml with the following content\n\n# mss-config.toml\n\n# general configurations\n[general]\n# the port on which MSS is running\nmss_port = 8002\n# the port on which the websocket is running\nws_port = 6532\n# environment reflect which environment the app is to run in.\nenvironment = \"development\"\n# the host the uvicorn runs on.\n# During testing auth on 127.0.0.1, set this to \"127.0.0.1\". default: \"0.0.0.0\"\nmss_host = \"127.0.0.1\"\n\n[database]\n# configurations for the database\nname = \"testing\"\n# database URI\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"mongodb://host.docker.internal:27017\"\n\n[[backends]]\nname = \"loke\"\n# the URL where this backend is running\n# host.docker.internal resolves to the host's 127.0.0.1\n# see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732\nurl = \"http://host.docker.internal:8000\"\n\n[auth]\n# turn auth OFF or ON, default=true\nis_enabled = true\njwt_secret = \"f236ffd1332dc9e38effd8fff582a69e56d72d7dae9a377f1fda5e0ebedeaa42\"\njwt_ttl = 3600\ncookie_domain = \"127.0.0.1\"\ncookie_name = \"tergiteauth\"\n\n[[auth.clients]]\nname = \"github\"\nclient_id = \"the-client-id-copied-from-github\"\nclient_secret = \"the-client-secret-copied-from-github\"\nredirect_url = \"http://127.0.0.1:8002/auth/app/github/callback\"\nclient_type = \"github\"\nemail_regex = \"^(john\\\\.doe|jane|your-gmail-username)@gmail\\\\.com$\"\nemail_domain = \"gmail.com\"\nroles = [\"admin\", \"user\"]\n\n# Puhuri synchronization\n# Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's\n[puhuri]\n# turn puhuri synchronization OFF or ON, default=true\nis_enabled = false\n\n**Make sure you replace the your-gmail-username, the-client-id-copied-from-github, and the-client-secret-copied-from-github placeholders with the right values.\nDelete the old docker images of “tergite/tergite-mss”, “tergite/tergite-landing-page”, “tergite/tergite-webgui” from docker if they exist.\n\ndocker rmi tergite/tergite-mss:v0.0.1\ndocker rmi tergite/tergite-landing-page:v0.0.1\ndocker rmi tergite/tergite-webgui:v0.0.1\n\nTo Run the services, use the fresh-docker-compose.yml.\n\ndocker compose -f fresh-docker-compose.yml up -d\n\nOpen your browser at http://127.0.0.1:3000 to see the dashboard and attempt to login with github.\n\n\n\n\n\n\n\n\n\n\n\n\nAfter successful login, open the Mongo compass application and connect to the default local mongo database\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the “auth_users” collection in the “testing” database in your mongo compass\nNote down the “_id” of the document that contains your details. Let us call it YOUR_USER_ID for now.\nDouble-click the “roles” field on the document containing your user details in the “auth_users” collection.\nClick the + button on the left side of the “roles” field and then click “Add item to roles” in the popup that appears.\n\n\n\n\n\n\n\n\n\n\n\n\nType in “system” in the new empty value that appears uner roles\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “auth_app_tokens” collection in the “testing” database in your mongo compass\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"66bb23aaf19421387021040b\"\n  },\n  \"title\": \"test1-1723540394175\",\n  \"project_ext_id\": \"test1\",\n  \"lifespan_seconds\": 7200,\n  \"token\": \"QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0\",\n  \"user_id\": {\n    \"$oid\": \"YOUR_USER_ID\"\n  },\n  \"created_at\": {\n    \"$date\": \"2024-08-13T09:13:14.187Z\"\n  }\n}\nMake sure to replace the YOUR_USER_ID place holder with the actual string value from your database.\n\nClick “Insert” to insert the document into the “auth_app_tokens” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nClick on “ADD DATA” then “Insert document” in your “auth_projects” collection in the “testing” database in your mongo compass\nCopy and paste the following document into the window that opens, replacing everything that was already there.\n\n{\n  \"_id\": {\n    \"$oid\": \"66ba1b56f073eac3b195814c\"\n  },\n    \"version\": 2,\n    \"name\": \"Test 1\",\n    \"ext_id\": \"test1\",\n    \"admin_id\": \"YOUR_USER_ID\",\n    \"user_ids\": [ \"YOUR_USER_ID\"],\n    \"qpu_seconds\": 54000,\n    \"is_active\": true,\n    \"description\": \"This is a test project by the International Group of Other Testers\",\n    \"created_at\": \"2024-06-20T09:12:00.733Z\",\n    \"updated_at\": \"2024-06-20T09:12:00.733Z\"\n}\nMake sure to replace the YOUR_USER_ID place holder with the actual string value from your database.\n\nClick “Insert” to insert the document into the “auth_projects” collection.\n\n\n\n\n\n\n\n\n\n\n\n\nOpen the dashboard at http://127.0.0.1:3000\nSelect project “Test 1” in the top bar.\n\n\n\n\n\n\n\n\n\n\n\n\nGenerate a new api token and copy it to the clipboard. Let’s call it THE_API_TOKEN_YOU_CREATED for the sake of this tutorial.",
-    "crumbs": [
-      "Tutorials",
-      "Adding authentication"
-    ]
-  },
-  {
-    "objectID": "tutorials/02_adding_authentication.html#run-an-experiment",
-    "href": "tutorials/02_adding_authentication.html#run-an-experiment",
-    "title": "Adding authentication",
-    "section": "Run an Experiment",
-    "text": "Run an Experiment\n\nStart with the quick start tutorial’s ‘Run an Experiment’ section.\nOpen the main.py file with visual studio code (or any other text editor).\n\ncode main.py\n\nUpdate the main.py file with the following content:\n\n# main.py\n\"\"\"A sample script doing a very simple quantum operation\"\"\"\nimport time\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\n\nfrom tergite.qiskit.providers import Job, Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount\n\nif __name__ == \"__main__\":\n    # the Tergite API URL\n    API_URL = \"http://localhost:8002\"\n    # The name of the Quantum Computer to use from the available quantum computers\n    BACKEND_NAME = \"loke\"\n    # the application token for logging in\n    API_TOKEN = \"THE_API_TOKEN_YOU_CREATED\"\n    # the name of this service. For your own bookkeeping.\n    SERVICE_NAME = \"local\"\n    # the timeout in seconds for how long to keep checking for results\n    POLL_TIMEOUT = 100\n\n    # create the Qiskit circuit\n    qc = circuit.QuantumCircuit(1)\n    qc.x(0)\n    qc.h(0)\n    qc.measure_all()\n\n    # create a provider\n    # provider account creation can be skipped in case you already saved\n    # your provider account to the `~/.qiskit/tergiterc` file.\n    # See below how that is done.\n    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n    provider = Tergite.use_provider_account(account)\n    # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n    # provider = Tergite.use_provider_account(account, save=True)\n\n    # Get the tergite backend in case you skipped provider account creation\n    # provider = Tergite.get_provider(service_name=SERVICE_NAME)\n    backend = provider.get_backend(BACKEND_NAME)\n    backend.set_options(shots=1024)\n\n    # compile the circuit\n    tc = compiler.transpile(qc, backend=backend)\n\n    # run the circuit\n    job: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\n\n    # view the results\n    elapsed_time = 0\n    result = None\n    while result is None:\n        if elapsed_time &gt; POLL_TIMEOUT:\n            raise TimeoutError(\n                f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\"\n            )\n\n        time.sleep(1)\n        elapsed_time += 1\n        result = job.result()\n\n    print(result.get_counts())\nMake sure you replace the THE_API_TOKEN_YOU_CREATED placeholder with the right API token.\n\nExecute the above script by running the commnad below.\n\npython main.py\n\nIt should return something like:\n\nResults OK\n{'0': 1024}\nNote: We get only 0’s because we are using the dummy cluster from quantify scheduler",
-    "crumbs": [
-      "Tutorials",
-      "Adding authentication"
     ]
   }
 ]
