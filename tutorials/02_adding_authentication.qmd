@@ -196,18 +196,27 @@ docker compose -f fresh-docker-compose.yml up -d
   },
   "title": "test1-1723540394175",
   "project_ext_id": "test1",
-  "lifespan_seconds": 7200,
+  "lifespan_seconds": 720000000,
   "token": "QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0",
   "user_id": {
     "$oid": "YOUR_USER_ID"
   },
   "created_at": {
-    "$date": "2024-08-13T09:13:14.187Z"
+    "$date": "CURRENT_TIMESTAMP"
   }
 }
 ```
 
-**Make sure to replace the `YOUR_USER_ID` place holder with the actual string value from your database.**
+```{ojs}
+//| echo: false
+//| output: false
+""
+```
+
+**Make sure to replace the `YOUR_USER_ID` place holder with the actual string value from your database.**  
+
+
+**Make sure to replace the `CURRENT_TIMESTAMP` place holder with ' `{ojs} new Date().toISOString()` '**
 
 - Click "Insert" to insert the document into the "auth_app_tokens" collection.
 
