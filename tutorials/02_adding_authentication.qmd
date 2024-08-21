@@ -141,12 +141,11 @@ is_enabled = false
 
 - **Make sure you replace the `your-gmail-username`, `the-client-id-copied-from-github`, and `the-client-secret-copied-from-github` placeholders with the right values.
 
-- Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-landing-page", "tergite/tergite-webgui" from docker if they exist.
+- Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
 docker rmi tergite/tergite-mss:v0.0.1
-docker rmi tergite/tergite-landing-page:v0.0.1
-docker rmi tergite/tergite-webgui:v0.0.1
+docker rmi tergite/tergite-dashboard:v0.0.1
 ```
 
 - To Run the services, use the `fresh-docker-compose.yml`.

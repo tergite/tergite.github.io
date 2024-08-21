@@ -282,9 +282,7 @@ code .env
 
 # required
 ENVIRONMENT="development"
-WEBGUI_ENDPOINT="http://127.0.0.1:3000"
-LANDING_ENDPOINT="http://127.0.0.1:8030"
-MSS_ENDPOINT="http://127.0.0.1:8002"
+MSS_V2_API_URL="http://127.0.0.1:8002/v2"
 GRAFANA_LOKI_URL=http://127.0.0.1:3100/loki/api/v1/push
 LOKI_LOGGER_ID=some-generic-id
 
@@ -295,8 +293,7 @@ LOGGING_DRIVER=json-file
 # you have to change the app version numbers here 
 # before running "docker compose up"
 MSS_VERSION=v0.0.1
-WEBGUI_VERSION=v0.0.1
-LANDING_PAGE_VERSION=v0.0.1
+DASHBOARD_VERSION=v0.0.1
 PROMTAIL_VERSION=2.8.3
 ```
 
@@ -948,12 +945,11 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-calibration-data.png)
 :::
 
-- Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-landing-page", "tergite/tergite-webgui" from docker if they exist.
+- Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
 docker rmi tergite/tergite-mss:v0.0.1
-docker rmi tergite/tergite-landing-page:v0.0.1
-docker rmi tergite/tergite-webgui:v0.0.1
+docker rmi tergite/tergite-dashboard:v0.0.1
 ```
 
 - To Run the services, use the `fresh-docker-compose.yml`.
@@ -964,9 +960,8 @@ docker compose -f fresh-docker-compose.yml up -d
 
 - Open your browser at
 
-  - [http://localhost:8030](http://localhost:8030){.external target="_blank"} to see the landing page
   - [http://localhost:8002](http://localhost:8002){.external target="_blank"} to see the MSS service
-  - [http://localhost:3000](http://localhost:3000){.external target="_blank"} to see the webGUI application
+  - [http://localhost:3000](http://localhost:3000){.external target="_blank"} to see the Dashboard application
 
 - To view the status of the services, run:
 

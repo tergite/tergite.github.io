@@ -595,22 +595,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># required</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="va">ENVIRONMENT</span><span class="op">=</span><span class="st">"development"</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="va">WEBGUI_ENDPOINT</span><span class="op">=</span><span class="st">"http://127.0.0.1:3000"</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="va">LANDING_ENDPOINT</span><span class="op">=</span><span class="st">"http://127.0.0.1:8030"</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="va">MSS_ENDPOINT</span><span class="op">=</span><span class="st">"http://127.0.0.1:8002"</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="va">GRAFANA_LOKI_URL</span><span class="op">=</span>http://127.0.0.1:3100/loki/api/v1/push</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="va">LOKI_LOGGER_ID</span><span class="op">=</span>some-generic-id</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># docker LOGGING_DRIVER can be journald, json-file, local etc. </span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="va">LOGGING_DRIVER</span><span class="op">=</span>json-file</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># image versions:</span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you ever want the images to be rebuilt, </span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># you have to change the app version numbers here </span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co"># before running "docker compose up"</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="va">MSS_VERSION</span><span class="op">=</span>v0.0.1</span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="va">WEBGUI_VERSION</span><span class="op">=</span>v0.0.1</span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="va">LANDING_PAGE_VERSION</span><span class="op">=</span>v0.0.1</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="va">PROMTAIL_VERSION</span><span class="op">=</span>2.8.3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="va">MSS_V2_API_URL</span><span class="op">=</span><span class="st">"http://127.0.0.1:8002/v2"</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="va">GRAFANA_LOKI_URL</span><span class="op">=</span>http://127.0.0.1:3100/loki/api/v1/push</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="va">LOKI_LOGGER_ID</span><span class="op">=</span>some-generic-id</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># docker LOGGING_DRIVER can be journald, json-file, local etc. </span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="va">LOGGING_DRIVER</span><span class="op">=</span>json-file</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># image versions:</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you ever want the images to be rebuilt, </span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># you have to change the app version numbers here </span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co"># before running "docker compose up"</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="va">MSS_VERSION</span><span class="op">=</span>v0.0.1</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="va">DASHBOARD_VERSION</span><span class="op">=</span>v0.0.1</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="va">PROMTAIL_VERSION</span><span class="op">=</span>2.8.3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Open the Mongo compass application and connect to the default local mongo database</li>
 </ul>
@@ -1324,11 +1321,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ul>
-<li>Delete the old docker images of “tergite/tergite-mss”, “tergite/tergite-landing-page”, “tergite/tergite-webgui” from docker if they exist.</li>
+<li>Delete the old docker images of “tergite/tergite-mss”, “tergite/tergite-dashboard” from docker if they exist.</li>
 </ul>
 <div class="sourceCode" id="cb20"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rmi tergite/tergite-mss:v0.0.1</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rmi tergite/tergite-landing-page:v0.0.1</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rmi tergite/tergite-webgui:v0.0.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> rmi tergite/tergite-dashboard:v0.0.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>To Run the services, use the <code>fresh-docker-compose.yml</code>.</li>
 </ul>
@@ -1336,9 +1332,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>Open your browser at</p>
 <ul>
-<li><a href="http://localhost:8030" class="external" target="_blank">http://localhost:8030</a> to see the landing page</li>
 <li><a href="http://localhost:8002" class="external" target="_blank">http://localhost:8002</a> to see the MSS service</li>
-<li><a href="http://localhost:3000" class="external" target="_blank">http://localhost:3000</a> to see the webGUI application</li>
+<li><a href="http://localhost:3000" class="external" target="_blank">http://localhost:3000</a> to see the Dashboard application</li>
 </ul></li>
 <li><p>To view the status of the services, run:</p></li>
 </ul>
