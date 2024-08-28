@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite - Hello Tergite</title>
+<title>Tergite - SDK</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,62 +20,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/img/shared/logo.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/img/shared/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -115,10 +81,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/img/shared/logo.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/img/shared/logo.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tergite</span>
     </a>
   </div>
@@ -135,31 +101,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-guides">    
         <li class="dropdown-header">Tutorials</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/01_quick_start.html">
+    <a class="dropdown-item" href="../../tutorials/01_quick_start.html">
  <span class="dropdown-text">Quick Start</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/02_adding_authentication.html">
+    <a class="dropdown-item" href="../../tutorials/02_adding_authentication.html">
  <span class="dropdown-text">Adding authentication</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/03_authentication.html">
+    <a class="dropdown-item" href="../../tutorials/03_authentication.html">
  <span class="dropdown-text">Authentication</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/04_authorization.html">
+    <a class="dropdown-item" href="../../tutorials/04_authorization.html">
  <span class="dropdown-text">Authorization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/05_hardware_configuration.html">
+    <a class="dropdown-item" href="../../tutorials/05_hardware_configuration.html">
  <span class="dropdown-text">Hardware Configuration</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/06_resource_management.html">
+    <a class="dropdown-item" href="../../tutorials/06_resource_management.html">
  <span class="dropdown-text">Resource Management with Puhuri</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/07_puhuri_tergite_flows.html">
+    <a class="dropdown-item" href="../../tutorials/07_puhuri_tergite_flows.html">
  <span class="dropdown-text">Puhuri-Tergite playground</span></a>
   </li>  
     </ul>
@@ -171,15 +137,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-examples">    
         <li class="dropdown-header">Examples</li>
         <li>
-    <a class="dropdown-item" href="../examples/01_hello_tergite.html">
+    <a class="dropdown-item" href="../../examples/01_hello_tergite.html">
  <span class="dropdown-text">Hello Tergite</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../examples/02_bell_state.html">
+    <a class="dropdown-item" href="../../examples/02_bell_state.html">
  <span class="dropdown-text">Bell State</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../examples/03_equal_superposition.html">
+    <a class="dropdown-item" href="../../examples/03_equal_superposition.html">
  <span class="dropdown-text">Equal Superposition</span></a>
   </li>  
     </ul>
@@ -191,11 +157,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-developer">    
         <li class="dropdown-header">Developer</li>
         <li>
-    <a class="dropdown-item" href="../developer/limitations/1_overview.html">
+    <a class="dropdown-item" href="../../developer/limitations/1_overview.html">
  <span class="dropdown-text">Limitations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../developer/system_design/1_overview.html">
+    <a class="dropdown-item" href="../../developer/system_design/1_overview.html">
  <span class="dropdown-text">System Design</span></a>
   </li>  
     </ul>
@@ -209,19 +175,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-release-notes">    
         <li class="dropdown-header">Release Notes</li>
         <li>
-    <a class="dropdown-item" href="../release_notes/tergite-autocalibration.html">
+    <a class="dropdown-item" href="../../release_notes/tergite-autocalibration.html">
  <span class="dropdown-text">Tergite Autocalibration</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../release_notes/tergite-backend.html">
+    <a class="dropdown-item" href="../../release_notes/tergite-backend.html">
  <span class="dropdown-text">Tergite Backend</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../release_notes/tergite-frontend.html">
+    <a class="dropdown-item" href="../../release_notes/tergite-frontend.html">
  <span class="dropdown-text">Tergite Frontend</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../release_notes/tergite-sdk.html">
+    <a class="dropdown-item" href="../../release_notes/tergite-sdk.html">
  <span class="dropdown-text">Tergite SDK</span></a>
   </li>  
     </ul>
@@ -233,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-contribute">    
         <li class="dropdown-header">Contributing</li>
         <li>
-    <a class="dropdown-item" href="../contributing/guidelines.html">
+    <a class="dropdown-item" href="../../contributing/guidelines.html">
  <span class="dropdown-text">Contributing to tergite</span></a>
   </li>  
     </ul>
@@ -260,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../examples/01_hello_tergite.html">Examples</a></li><li class="breadcrumb-item"><a href="../examples/01_hello_tergite.html">Hello Tergite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Developer</li><li class="breadcrumb-item"><a href="../../developer/system_design/1_overview.html">System Design</a></li><li class="breadcrumb-item"><a href="../../developer/system_design/5_sdk.html">SDK</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -275,30 +241,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Examples</span></a>
+ <span class="menu-text">Developer</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Limitations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/01_hello_tergite.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Hello Tergite</span></a>
+  <a href="../../developer/limitations/1_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/02_bell_state.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bell State</span></a>
+  <a href="../../developer/limitations/2_backend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Backend</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/03_equal_superposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Equal Superposition</span></a>
+  <a href="../../developer/limitations/3_public_api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Public API</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/limitations/4_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/limitations/5_sdk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDK</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">System Design</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/system_design/1_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/system_design/2_backend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Backend</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/system_design/3_public_api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Public API</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/system_design/4_dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../developer/system_design/5_sdk.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SDK</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -307,28 +337,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#install-dependencies" id="toc-install-dependencies" class="nav-link active" data-scroll-target="#install-dependencies">Install dependencies</a></li>
-  <li><a href="#import-the-basic-dependencies" id="toc-import-the-basic-dependencies" class="nav-link" data-scroll-target="#import-the-basic-dependencies">Import the basic dependencies</a></li>
-  <li><a href="#update-some-variables" id="toc-update-some-variables" class="nav-link" data-scroll-target="#update-some-variables">Update Some Variables</a></li>
-  <li><a href="#create-the-qiskit-circuit" id="toc-create-the-qiskit-circuit" class="nav-link" data-scroll-target="#create-the-qiskit-circuit">Create the Qiskit Circuit</a></li>
-  <li><a href="#get-the-tergite-backend" id="toc-get-the-tergite-backend" class="nav-link" data-scroll-target="#get-the-tergite-backend">Get the Tergite Backend</a></li>
-  <li><a href="#compile-circuit" id="toc-compile-circuit" class="nav-link" data-scroll-target="#compile-circuit">Compile Circuit</a></li>
-  <li><a href="#run-the-circuit" id="toc-run-the-circuit" class="nav-link" data-scroll-target="#run-the-circuit">Run the Circuit</a></li>
-  <li><a href="#see-the-results" id="toc-see-the-results" class="nav-link" data-scroll-target="#see-the-results">See the Results</a></li>
-  <li><a href="#acknowledgement" id="toc-acknowledgement" class="nav-link" data-scroll-target="#acknowledgement">Acknowledgement</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../examples/01_hello_tergite.html">Examples</a></li><li class="breadcrumb-item"><a href="../examples/01_hello_tergite.html">Hello Tergite</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Developer</li><li class="breadcrumb-item"><a href="../../developer/system_design/1_overview.html">System Design</a></li><li class="breadcrumb-item"><a href="../../developer/system_design/5_sdk.html">SDK</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hello Tergite</h1>
+<h1 class="title">SDK</h1>
+<p class="subtitle lead">System design of the tergite SDK</p>
 </div>
 
 
@@ -345,115 +362,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a showcase of connecting to tergite via the <code>tergite</code> SDK and running a basic circuit.</p>
-<section id="install-dependencies" class="level2">
-<h2 class="anchored" data-anchor-id="install-dependencies">Install dependencies</h2>
-<p>This example depends on:</p>
-<ul>
-<li><a href="https://github.com/Qiskit/qiskit">qiskit</a></li>
-<li><a href="https://pypi.org/project/tergite/">tergite</a></li>
-</ul>
-<div id="44c5ae30" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install qiskit</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="import-the-basic-dependencies" class="level2">
-<h2 class="anchored" data-anchor-id="import-the-basic-dependencies">Import the basic dependencies</h2>
-<div id="ea5ee959" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.circuit <span class="im">as</span> circuit</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.compiler <span class="im">as</span> compiler</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers <span class="im">import</span> Tergite</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers.provider_account <span class="im">import</span> ProviderAccount</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="update-some-variables" class="level2">
-<h2 class="anchored" data-anchor-id="update-some-variables">Update Some Variables</h2>
-<div id="83870a1c" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the Tergite API URL e.g. "https://api.tergite.example"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>API_URL <span class="op">=</span> <span class="st">"https://api.qal9000.se"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># API token for connecting to tergite</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>API_TOKEN <span class="op">=</span> <span class="st">"&lt;your Tergite API key &gt;"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The name of the Quantum Computer to use from the available quantum computers</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>BACKEND_NAME <span class="op">=</span> <span class="st">"SimulatorC"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the name of this service. For your own bookkeeping.</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>SERVICE_NAME <span class="op">=</span> <span class="st">"local"</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># the timeout in seconds for how long to keep checking for results</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>POLL_TIMEOUT <span class="op">=</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="create-the-qiskit-circuit" class="level2">
-<h2 class="anchored" data-anchor-id="create-the-qiskit-circuit">Create the Qiskit Circuit</h2>
-<div id="59229850" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">1</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>qc.x(<span class="dv">0</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>qc.h(<span class="dv">0</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>qc.measure_all()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="get-the-tergite-backend" class="level2">
-<h2 class="anchored" data-anchor-id="get-the-tergite-backend">Get the Tergite Backend</h2>
-<div id="e777662e" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># provider account creation can be skipped in case you already saved</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># your provider account to the `~/.qiskit/tergiterc` file.</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># See below how that is done.</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>account <span class="op">=</span> ProviderAccount(service_name<span class="op">=</span>SERVICE_NAME, url<span class="op">=</span>API_URL, token<span class="op">=</span>API_TOKEN)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>provider <span class="op">=</span> Tergite.use_provider_account(account)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># provider = Tergite.use_provider_account(account, save=True)</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the tergite backend in case you skipped provider account creation</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># provider = Tergite.get_provider(service_name=SERVICE_NAME)</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>backend <span class="op">=</span> provider.get_backend(BACKEND_NAME)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>backend.set_options(shots<span class="op">=</span><span class="dv">1024</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>backend</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="compile-circuit" class="level2">
-<h2 class="anchored" data-anchor-id="compile-circuit">Compile Circuit</h2>
-<div id="0c70eb23" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tc <span class="op">=</span> compiler.transpile(qc, backend<span class="op">=</span>backend)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tc.draw()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="run-the-circuit" class="level2">
-<h2 class="anchored" data-anchor-id="run-the-circuit">Run the Circuit</h2>
-<div id="03c6871b" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>job <span class="op">=</span> backend.run(tc, meas_level<span class="op">=</span><span class="dv">2</span>, meas_return<span class="op">=</span><span class="st">"single"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tergite: Job has been successfully submitted</code></pre>
-</div>
-</div>
-</section>
-<section id="see-the-results" class="level2">
-<h2 class="anchored" data-anchor-id="see-the-results">See the Results</h2>
-<div id="5fa591f2" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>elapsed_time <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> result <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> elapsed_time <span class="op">&gt;</span> POLL_TIMEOUT:</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">TimeoutError</span>(<span class="ss">f"result polling timeout </span><span class="sc">{</span>POLL_TIMEOUT<span class="sc">}</span><span class="ss"> seconds exceeded"</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    time.sleep(<span class="dv">1</span>)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    elapsed_time <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> job.result()</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>result.get_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="acknowledgement" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgement">Acknowledgement</h2>
-<p>This notebook was prepared by:</p>
-<ul>
-<li><a href="https://github.com/ch-stefanhi">Stefan Hill</a></li>
-<li><a href="https://github.com/ch-ahindura">Martin Ahindura</a></li>
-</ul>
+<p>TODO</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

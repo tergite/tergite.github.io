@@ -1,0 +1,6 @@
+---
+title: "Dashboard"
+subtitle: "System design of the tergite dashboard"
+---
+
+TODO

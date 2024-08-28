@@ -153,6 +153,22 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-developer" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Developer</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-developer">    
+        <li class="dropdown-header">Developer</li>
+        <li>
+    <a class="dropdown-item" href="../developer/limitations/1_overview.html">
+ <span class="dropdown-text">Limitations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../developer/system_design/1_overview.html">
+ <span class="dropdown-text">System Design</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
@@ -971,7 +987,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -17,6 +17,8 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/tergite
+    - icon: question
+      href: why.qmd
 ---
 
 ::: {#about}

@@ -34,6 +34,7 @@ website:
     left:
       - sidebar:guides-list
       - sidebar:examples-list
+      - sidebar:developer
 
     right:
       - sidebar:release-notes
@@ -78,6 +79,12 @@ website:
       collapse-level: 2
       contents:
         - auto: release_notes
+    - id: developer
+      title: "Developer"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - auto: developer
 
 format:
   html:
