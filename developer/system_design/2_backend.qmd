@@ -3,4 +3,17 @@ title: "Backend"
 subtitle: "System design of the tergite backend"
 ---
 
-TODO
+## Flows
+
+```
+Experiments         Job register         Preprocessing         Execution                 Postprocessing
+in Open pulse --->  Worker        -----> Worker        ------> Worker               ---> Worker
+                    ----                 ----                  ----                      ---
+                    saves job in         Does nothing          - Parses to control       - discriminate results
+                    database             for now                instruments' native        if discriminated results
+                                                                instructions               are required
+                                                               - Runs instructions       - Save results in local 
+                                                               - Saves results             database
+                                                                                         - Send results to 
+                                                                                           public API app
+```                                 
