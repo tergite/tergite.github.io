@@ -5,15 +5,72 @@ subtitle: "System design of the tergite backend"
 
 ## Flows
 
-```
-Experiments         Job register         Preprocessing         Execution                 Postprocessing
-in Open pulse --->  Worker        -----> Worker        ------> Worker               ---> Worker
-                    ----                 ----                  ----                      ---
-                    saves job in         Does nothing          - Parses to control       - discriminate results
-                    database             for now                instruments' native        if discriminated results
-                                                                instructions               are required
-                                                               - Runs instructions       - Save results in local 
-                                                               - Saves results             database
-                                                                                         - Send results to 
-                                                                                           public API app
-```                                 
+![Tergite backend flows](../../assets/img/developer/system_design/2_backend/tergite-backend-flows.svg){height=500}
+
+
+### Before arrival 
+
+The [tergite SDK](https://github.com/tergite/tergite) is used by the experimantalist to specify the 
+quantum circuits or the pulses to run on the quantum computer, sending these instructions 
+in [OpenPulse](https://arxiv.org/abs/1809.03452) format to the [tergite backend](https://github.com/tergite/tergite-backend).
+
+### On arrival
+
+The [tergite backend](https://github.com/tergite/tergite-backend) receives the experiments as an
+[HDF5](https://docs.hdfgroup.org/hdf5/v1_14/_intro_h_d_f5.html) file sent to its RESTful API.
+It passes the file over to the quantum jobs queue for processing and execution.
+
+### In the quantum jobs queue
+
+#### Job Registration worker
+
+In order to keep track of the experiment(s) while in the queue, it is registered in the database of 
+[tergite backend](https://github.com/tergite/tergite-backend).
+It is then passed onto the next worker: the preprocessing worker.
+
+#### Preprocessing worker
+
+Currently, this worker does nothing of significance.
+The experiment(s) is then passed onto the execution worker.
+
+#### Execution worker
+
+The experiment(s) are then converted from OpenPulse into the format that the control instruments of the
+quantum computer understand and then forwarded to the control instruments to be executed.
+
+The results are then passed on to the postprocessing worker.
+
+#### Postprocessing worker
+
+In case the final results were expected to be discriminated, this worker discriminates them.
+Discriminating is the transformation of raw measurement values into ones and zeroes (and twos)
+
+The worker saves the results in the database and then sends them to the public API app so 
+that the experimentalist can query it from there.
+
+
+## Special Techniques
+
+### Transpiling OpenPulse
+
+The real control devices in current use are produced by [Qblox](https://www.qblox.com/).
+However, the simulators (COMING SOON) are developed on top of the 
+[qiskit dynamics](https://qiskit-community.github.io/qiskit-dynamics/).
+
+There is therefore two types of native instrument targets to transpile OpenPulse to.
+
+#### Real Device (Qblox)
+
+Qblox instruments can be controlled using the [quantify](https://quantify-os.org/) python 
+packages produced by Qblox itself. Transpilation is therefore from OpenPulse to quantify's `Schedule`.
+
+TODO
+
+- [ ] Add the transpilation process as a diagram and as text
+
+#### Simulator (qiskit dynamics)
+
+TODO
+
+- [ ] Add introduction about what OpenPulse is transpiled to
+- [ ] Add the transpilation process as a diagram and as text
