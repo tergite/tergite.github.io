@@ -3,4 +3,41 @@ title: "Public API"
 subtitle: "System design of the tergite public API"
 ---
 
+## Flows
+
+![Tergite public API flows](../../assets/img/developer/system_design/2_backend/tergite-mss-flows.svg){height=500 width=800}
+
+### Initializing experiment
+
+The [tergite SDK](https://github.com/tergite/tergite) sends a request to the 
+[tergite public API](https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss) to initialize
+the experiment for a given backend.
+
+The public API creates an empty job with a unique ID and saves it in ites database.
+It responds to the SDK with the job ID and the URL of the backend.
+
+### Updating experiment results
+
+The [tergite SDK](https://github.com/tergite/tergite) sends the OpenPulse representation of the
+experiment(s) to the [tergite backend](https://github.com/tergite/tergite-backend).
+The tergite backend runs the experiments and sends the results to the
+[tergite public API](https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss) app.
+
+The public API app updates the job in the database with the status of the run and the results, if any,
+of the experiment(s).
+
+### Retrieving experiment results
+
+The [tergite SDK](https://github.com/tergite/tergite) then requests the 
+[tergite public API](https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss)
+for the results. The public API then reads the results from its database and responds to the SDK with them.
+
+## Special Techniques
+
+### Authentication
+
+TODO
+
+### Accounting
+
 TODO

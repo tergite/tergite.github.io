@@ -343,7 +343,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#flows" id="toc-flows" class="nav-link active" data-scroll-target="#flows">Flows</a>
+  <ul class="collapse">
+  <li><a href="#initializing-experiment" id="toc-initializing-experiment" class="nav-link" data-scroll-target="#initializing-experiment">Initializing experiment</a></li>
+  <li><a href="#updating-experiment-results" id="toc-updating-experiment-results" class="nav-link" data-scroll-target="#updating-experiment-results">Updating experiment results</a></li>
+  <li><a href="#retrieving-experiment-results" id="toc-retrieving-experiment-results" class="nav-link" data-scroll-target="#retrieving-experiment-results">Retrieving experiment results</a></li>
+  </ul></li>
+  <li><a href="#special-techniques" id="toc-special-techniques" class="nav-link" data-scroll-target="#special-techniques">Special Techniques</a>
+  <ul class="collapse">
+  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
+  <li><a href="#accounting" id="toc-accounting" class="nav-link" data-scroll-target="#accounting">Accounting</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -368,9 +384,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="flows" class="level2">
+<h2 class="anchored" data-anchor-id="flows">Flows</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/img/developer/system_design/2_backend/tergite-mss-flows.svg" width="800" height="500" class="figure-img"></p>
+<figcaption>Tergite public API flows</figcaption>
+</figure>
+</div>
+<section id="initializing-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="initializing-experiment">Initializing experiment</h3>
+<p>The <a href="https://github.com/tergite/tergite">tergite SDK</a> sends a request to the <a href="https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss">tergite public API</a> to initialize the experiment for a given backend.</p>
+<p>The public API creates an empty job with a unique ID and saves it in ites database. It responds to the SDK with the job ID and the URL of the backend.</p>
+</section>
+<section id="updating-experiment-results" class="level3">
+<h3 class="anchored" data-anchor-id="updating-experiment-results">Updating experiment results</h3>
+<p>The <a href="https://github.com/tergite/tergite">tergite SDK</a> sends the OpenPulse representation of the experiment(s) to the <a href="https://github.com/tergite/tergite-backend">tergite backend</a>. The tergite backend runs the experiments and sends the results to the <a href="https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss">tergite public API</a> app.</p>
+<p>The public API app updates the job in the database with the status of the run and the results, if any, of the experiment(s).</p>
+</section>
+<section id="retrieving-experiment-results" class="level3">
+<h3 class="anchored" data-anchor-id="retrieving-experiment-results">Retrieving experiment results</h3>
+<p>The <a href="https://github.com/tergite/tergite">tergite SDK</a> then requests the <a href="https://github.com/tergite/tergite-frontend/tree/main/apps/tergite-mss">tergite public API</a> for the results. The public API then reads the results from its database and responds to the SDK with them.</p>
+</section>
+</section>
+<section id="special-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="special-techniques">Special Techniques</h2>
+<section id="authentication" class="level3">
+<h3 class="anchored" data-anchor-id="authentication">Authentication</h3>
+<p>TODO</p>
+</section>
+<section id="accounting" class="level3">
+<h3 class="anchored" data-anchor-id="accounting">Accounting</h3>
 <p>TODO</p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

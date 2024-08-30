@@ -557,7 +557,31 @@
     "href": "developer/system_design/3_public_api.html",
     "title": "Public API",
     "section": "",
-    "text": "TODO\n\n\n\n Back to top",
+    "text": "Tergite public API flows\n\n\n\n\nThe tergite SDK sends a request to the tergite public API to initialize the experiment for a given backend.\nThe public API creates an empty job with a unique ID and saves it in ites database. It responds to the SDK with the job ID and the URL of the backend.\n\n\n\nThe tergite SDK sends the OpenPulse representation of the experiment(s) to the tergite backend. The tergite backend runs the experiments and sends the results to the tergite public API app.\nThe public API app updates the job in the database with the status of the run and the results, if any, of the experiment(s).\n\n\n\nThe tergite SDK then requests the tergite public API for the results. The public API then reads the results from its database and responds to the SDK with them.",
+    "crumbs": [
+      "Developer",
+      "System Design",
+      "Public API"
+    ]
+  },
+  {
+    "objectID": "developer/system_design/3_public_api.html#flows",
+    "href": "developer/system_design/3_public_api.html#flows",
+    "title": "Public API",
+    "section": "",
+    "text": "Tergite public API flows\n\n\n\n\nThe tergite SDK sends a request to the tergite public API to initialize the experiment for a given backend.\nThe public API creates an empty job with a unique ID and saves it in ites database. It responds to the SDK with the job ID and the URL of the backend.\n\n\n\nThe tergite SDK sends the OpenPulse representation of the experiment(s) to the tergite backend. The tergite backend runs the experiments and sends the results to the tergite public API app.\nThe public API app updates the job in the database with the status of the run and the results, if any, of the experiment(s).\n\n\n\nThe tergite SDK then requests the tergite public API for the results. The public API then reads the results from its database and responds to the SDK with them.",
+    "crumbs": [
+      "Developer",
+      "System Design",
+      "Public API"
+    ]
+  },
+  {
+    "objectID": "developer/system_design/3_public_api.html#special-techniques",
+    "href": "developer/system_design/3_public_api.html#special-techniques",
+    "title": "Public API",
+    "section": "Special Techniques",
+    "text": "Special Techniques\n\nAuthentication\nTODO\n\n\nAccounting\nTODO",
     "crumbs": [
       "Developer",
       "System Design",

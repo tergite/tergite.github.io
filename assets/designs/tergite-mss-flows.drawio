@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="3pTlr4eQbmfp9NDaC0PH">
+    <mxGraphModel dx="1430" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-1" value="Restful API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="170" y="260" width="120" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-2" value="database" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="620" y="315" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-5" value="Jobs service" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;arcSize=12;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-6" value="Generates unique job ID" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-5">
+          <mxGeometry y="30" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-7" value="Saves new job in database" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-5">
+          <mxGeometry y="70" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-8" value="Updates job results and status in database" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-5">
+          <mxGeometry y="110" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="20" y="260" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.089;exitY=1.051;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#1ba1e2;strokeColor=#000000;strokeWidth=1;" edge="1" parent="f4tQCsolkJ3zvfdlQmfC-13" source="f4tQCsolkJ3zvfdlQmfC-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="30" as="sourcePoint" />
+            <mxPoint x="150" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-4" value="Initialize experiment request from SDK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-13">
+          <mxGeometry width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="20" y="340" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.089;exitY=1.051;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#1ba1e2;strokeColor=#000000;strokeWidth=1;" edge="1" parent="f4tQCsolkJ3zvfdlQmfC-14" source="f4tQCsolkJ3zvfdlQmfC-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="30" as="sourcePoint" />
+            <mxPoint x="150" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-16" value="results from backend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-14">
+          <mxGeometry width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-17" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="20" y="420" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.089;exitY=1.051;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#1ba1e2;strokeColor=#000000;strokeWidth=1;" edge="1" parent="f4tQCsolkJ3zvfdlQmfC-17" source="f4tQCsolkJ3zvfdlQmfC-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="30" as="sourcePoint" />
+            <mxPoint x="150" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-19" value="&amp;nbsp;SDK requests for results" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="f4tQCsolkJ3zvfdlQmfC-17">
+          <mxGeometry width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.245;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="f4tQCsolkJ3zvfdlQmfC-1" target="f4tQCsolkJ3zvfdlQmfC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.994;entryY=0.597;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.008;exitY=0.831;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="f4tQCsolkJ3zvfdlQmfC-7" target="f4tQCsolkJ3zvfdlQmfC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.008;entryY=0.27;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="f4tQCsolkJ3zvfdlQmfC-6" target="f4tQCsolkJ3zvfdlQmfC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4tQCsolkJ3zvfdlQmfC-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.996;entryY=0.245;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="f4tQCsolkJ3zvfdlQmfC-2" target="f4tQCsolkJ3zvfdlQmfC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
