@@ -283,9 +283,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.04.1] - 2024-05-28</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.09.0] - 2024-09-02</a>
   <ul class="collapse">
+  <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
   <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.04.1] - 2024-05-28</a>
+  <ul class="collapse">
+  <li><a href="#changed-1" id="toc-changed-1" class="nav-link" data-scroll-target="#changed-1">Changed</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -313,10 +318,50 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">[2024.04.1] - 2024-05-28</h2>
-<p>Initial Public Release</p>
+<h2 class="anchored" data-anchor-id="section">[2024.09.0] - 2024-09-02</h2>
+<section id="added" class="level3">
+<h3 class="anchored" data-anchor-id="added">Added</h3>
+<ul>
+<li>Added the tergite-dashboard app. It included:
+<ul>
+<li>Device summary list on the dashboard home</li>
+<li>Jobs list on the dashboard home</li>
+<li>Jobs detail drawer on the dashboard home</li>
+<li>Device list page</li>
+<li>Device detail page</li>
+<li>Error page</li>
+</ul></li>
+<li>Added v2 endpoints on tergite MSS including
+<ul>
+<li><code>/v2/me/projects/</code> to <code>GET</code>, <code>POST</code> current cookie user’s projects</li>
+<li><code>/v2/me/projects/{project_id}</code> to <code>GET</code>, <code>PUT</code> current cookie user’s single project</li>
+<li><code>/v2/me/tokens/</code> to <code>GET</code>, <code>POST</code> current cookie user’s application tokens</li>
+<li><code>/v2/me/tokens/{token_id}</code> to <code>GET</code>, <code>PUT</code> current cookie user’s application token</li>
+<li><code>/v2/me/jobs/</code> to <code>GET</code> current cookie user’s jobs (with option of specifying project id)</li>
+<li><code>/v2/auth/providers</code> to <code>GET</code> the available Oauth2 provider corresponding to a given email domain</li>
+<li><code>/v2/auth/{provider}/authorize</code> to <code>POST</code> Oauth2 initialization request for given <code>provider</code></li>
+<li><code>/v2/auth/{provider}/callback</code> to handle <code>GET</code> redirects from 3rd party Oauth2 providers after successful login</li>
+<li><code>/v2/auth/logout</code> to handle <code>POST</code> requests to logout the current user via cookies</li>
+<li><code>/v2/calibrations/</code> to <code>GET</code>, <code>POST</code> calibration data for all devices. <code>POST</code> is available for only system users.</li>
+<li><code>/v2/calibration/{device_name}</code> to <code>GET</code> calibration data for the device of the given <code>device_name</code></li>
+<li><code>/v2/devices</code> to <code>GET</code>, <code>PUT</code> (upsert) all devices. <code>PUT</code> is available for only system users.</li>
+<li><code>/v2/devices/{name}</code> to <code>GET</code>, <code>PUT</code> the device of a given name. <code>PUT</code> is available for only system users.</li>
+</ul></li>
+</ul>
+</section>
 <section id="changed" class="level3">
 <h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<ul>
+<li>Removed the tergite-landing-page app</li>
+<li>Removed the tergite-webgui app</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">[2024.04.1] - 2024-05-28</h2>
+<p>Initial Public Release</p>
+<section id="changed-1" class="level3">
+<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
 <ul>
 <li>Updated the contribution guidelines and government model statements</li>
 </ul>
