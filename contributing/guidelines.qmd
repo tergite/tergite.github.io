@@ -24,7 +24,7 @@ If you are reading this on GitHub, then you are looking at a mirror.
 ## Contacting the Tergite Developers
 
 Since the GitHub repositories are only mirrors, no GitHub pull requests or GitHub issue/bug reports
-are looked at. Please get in touch via email <quantum.nextlabs@chalmers.se> instead. 
+are looked at. Please get in touch via email <quantum-nextlabs@chalmers.se> instead.
 
 Take note that the maintainers may not answer every email.
 
@@ -81,7 +81,7 @@ Please note that if your contribution is part of your employment or
 your contribution is the property of your employer, 
 you will also most likely need to sign a [corporate CLA](./ccla.pdf){.external target="_blank"}.
 
-All signed CLAs are emails to us at <quantum.nextlabs@chalmers.se>."
+All signed CLAs are emails to us at <quantum-nextlabs@chalmers.se>."
 
 ## References
 
