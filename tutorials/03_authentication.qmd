@@ -11,7 +11,7 @@ authenticates its users.
   - `CLIENT_ID`
   - `CLIENT_SECRET`
 - The two strings are unique to this system, but are given by the Oauth2 provider
-- Common Oauth2 providers include Google, Github, Microsoft, Chalmers (which uses Microsoft)
+- Common Oauth2 providers include Google, GitHub, Microsoft, Chalmers (which uses Microsoft)
 - Organizations which have a sort of ActiveDirectory can automatically be Oauth2 providers.
 - We also use [OpenID Connect](https://openid.net/developers/how-connect-works/) which is a flavour of Oauth2 that requires a third string, a  
   `OPENID_CONFIGURATION_ENDPOINT`, from where to get the configuration of the openID provider.

@@ -2,11 +2,10 @@
 title: "Quick Start"
 ---
 
-Let's attempt to setup the tergite stack to run on a dummy cluster on your local
+Let's attempt to setup the Tergite stack to run on a simulator on your local
 machine.
 
 We will not need an actual quantum computer.
-Take note, however, that the dummy cluster only returns 0 in its results.
 
 ## Prerequisites
 
@@ -50,123 +49,33 @@ cd tergite-backend
 pip install -r requirements.txt
 ```
 
-- Create an `.env` file with visual studio code (or any other text editor).
+- Copy the template for the `.env` file
+
+```zsh
+cp dot-env-template.env .env
+```
+
+- Update the following values in the `.env` file e.g. with visual studio code (or any other text editor).
 
 ```zsh
 code .env
 ```
 
-- Update `.env` file to have the following content
+- Update following variables in the `.env` to:
 
 ```zsh
-# .env
-APP_SETTINGS=development
-IS_AUTH_ENABLED=False
+DEFAULT_PREFIX=qiskit_pulse_1q
 
-DEFAULT_PREFIX=loke
-STORAGE_ROOT=/tmp
-LOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool
-LOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool
-JOB_UPLOAD_POOL_DIRNAME=job_upload_pool
-JOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool
-JOB_EXECUTION_POOL_DIRNAME=job_execution_pool
-
-# Main Service Server
-MSS_MACHINE_ROOT_URL=http://localhost:8002
-MSS_PORT=8002
-
-# Backend Control computer
 BCC_MACHINE_ROOT_URL=http://localhost:8000
 BCC_PORT=8000
 
-EXECUTOR_CONFIG_FILE=executor-config.yml
-``` 
+MSS_MACHINE_ROOT_URL=http://localhost:8002
+MSS_PORT=8002
 
-- Create an `executor-config.yml` file with visual studio code (or any other text editor).
+EXECUTOR_TYPE=qiskit_pulse_1q
 
-```zsh
-code executor-config.yml
-```
-
-- Update the `executor-config.yml` with the following content
-
-```yml
-# executor-config.yml
-general:
-  data_directory: data
-
-clusters:
-  - name: clusterA
-    instrument_type: Cluster
-    is_dummy: true
-    ref: internal
-    instrument_address: "192.0.2.141"
-
-    modules:
-      - name: "clusterA_module7"
-        instrument_type: "QCM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 4458000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive0"
-              clock: "d0"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-
-      - name: "clusterA_module8"
-        instrument_type: "QCM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 5110000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive1"
-              clock: "d1"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-
-      - name: "clusterA_module9"
-        instrument_type: "QCM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 4445000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive2"
-              clock: "d2"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-
-
-      - name: "clusterA_module17"
-        instrument_type: "QRM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 6838000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "readout0"
-              clock: "m0"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-            - port: "readout1"
-              clock: "m1"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-            - port: "readout2"
-              clock: "m2"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
+IS_AUTH_ENABLED=False
+APP_SETTINGS=development
 ```
 
 - Run start script
@@ -231,7 +140,7 @@ name = "testing"
 url = "mongodb://host.docker.internal:27017"
 
 [[backends]]
-name = "loke"
+name = "qiskit_pulse_1q"
 # the URL where this backend is running
 # host.docker.internal resolves to the host's 127.0.0.1
 # see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732
@@ -240,6 +149,8 @@ url = "http://host.docker.internal:8000"
 [auth]
 # turn auth OFF or ON, default=true
 is_enabled = false
+cookie_domain = "127.0.0.1"
+cookie_name = "tergiteauth"
 
 [[auth.clients]]
 name = "github"
@@ -309,472 +220,10 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
 :::
 
-- Click on "ADD DATA" then "Insert document" in your "backends" collection in your mongo compass
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-add-new-backend.png)
-:::
-
-- Copy and paste the following document into the window that opens, replacing everything that was already there.
-
-```JSON
-{
-  "_id": {
-    "$oid": "664756593b639968c2d3df24"
-  },
-  "name": "loke",
-  "characterized": true,
-  "open_pulse": true,
-  "timelog": {
-    "REGISTERED": "2023-11-15T16:36:17.474815",
-    "LAST_UPDATED": "2023-11-15T15:41:51.528Z"
-  },
-  "version": "2024.04.0",
-  "num_qubits": 5,
-  "num_couplers": 8,
-  "num_resonators": 5,
-  "dt": 1e-9,
-  "dtm": 1e-9,
-  "meas_map": [
-    [
-      0,
-      1,
-      2,
-      3,
-      4
-    ]
-  ],
-  "coupling_map": [
-    [
-      0,
-      2
-    ],
-    [
-      2,
-      0
-    ],
-    [
-      1,
-      2
-    ],
-    [
-      2,
-      1
-    ],
-    [
-      2,
-      3
-    ],
-    [
-      3,
-      2
-    ],
-    [
-      2,
-      4
-    ],
-    [
-      4,
-      2
-    ]
-  ],
-  "device_properties": {
-    "qubit": [
-      {
-        "frequency": 4511480043.556283,
-        "pi_pulse_amplitude": 0.17555712637424228,
-        "pi_pulse_duration": 5.6e-8,
-        "pulse_sigma": 7e-9,
-        "pulse_type": "Gaussian",
-        "t1_decoherence": 0.000034,
-        "t2_decoherence": 0.000033,
-        "id": 0
-      },
-      {
-        "frequency": 4677112343.360253,
-        "pi_pulse_amplitude": 0.17535338530538067,
-        "pi_pulse_duration": 5.6e-8,
-        "pulse_sigma": 7e-9,
-        "pulse_type": "Gaussian",
-        "t1_decoherence": 0.000034,
-        "t2_decoherence": 0.000033,
-        "id": 1
-      },
-      {
-        "frequency": 5770226599.80365,
-        "pi_pulse_amplitude": 0.17873594718151276,
-        "pi_pulse_duration": 5.6e-8,
-        "pulse_sigma": 7e-9,
-        "pulse_type": "Gaussian",
-        "t1_decoherence": 0.000034,
-        "t2_decoherence": 0.000033,
-        "id": 2
-      },
-      {
-        "frequency": 6856217811.995201,
-        "pi_pulse_amplitude": 0.17326197853513559,
-        "pi_pulse_duration": 5.6e-8,
-        "pulse_sigma": 7e-9,
-        "pulse_type": "Gaussian",
-        "t1_decoherence": 0.000034,
-        "t2_decoherence": 0.000033,
-        "id": 3
-      },
-      {
-        "frequency": 6701096836.557067,
-        "pi_pulse_amplitude": 0.16948867103728774,
-        "pi_pulse_duration": 5.6e-8,
-        "pulse_sigma": 7e-9,
-        "pulse_type": "Gaussian",
-        "t1_decoherence": 0.000034,
-        "t2_decoherence": 0.000033,
-        "id": 4
-      }
-    ],
-    "readout_resonator": [
-      {
-        "acq_delay": 5e-8,
-        "acq_integration_time": 0.000001,
-        "frequency": {
-          "$numberLong": "7260080000"
-        },
-        "pulse_delay": 0,
-        "pulse_duration": 9e-7,
-        "pulse_type": "Square",
-        "pulse_amplitude": 0.1266499392606423,
-        "lda_parameters": {
-          "twoState": {
-            "score": 0.985,
-            "coef": [
-              [
-                -98953.87504155144,
-                -114154.48696231026
-              ]
-            ],
-            "intercept": [
-              -38.4344477840827
-            ]
-          },
-          "threeState": {
-            "score": 0.9580015923566879,
-            "coef": [
-              [
-                67556.81859745766,
-                71505.66931668088
-              ],
-              [
-                -14142.401380443791,
-                -68814.26719610114
-              ],
-              [
-                -104325.0336269802,
-                -5256.644766757276
-              ]
-            ],
-            "intercept": [
-              18.888335231525723,
-              -21.898486762901555,
-              -33.556356307556854
-            ]
-          }
-        },
-        "id": 0
-      },
-      {
-        "acq_delay": 5e-8,
-        "acq_integration_time": 0.000001,
-        "frequency": {
-          "$numberLong": "7380000000"
-        },
-        "pulse_delay": 0,
-        "pulse_duration": 9e-7,
-        "pulse_type": "Square",
-        "pulse_amplitude": 0.12660078572926436,
-        "lda_parameters": {
-          "twoState": {
-            "score": 0.987,
-            "coef": [
-              [
-                -107941.00358803963,
-                -124239.32054386326
-              ]
-            ],
-            "intercept": [
-              -42.05181160328822
-            ]
-          },
-          "threeState": {
-            "score": 0.9589968152866242,
-            "coef": [
-              [
-                74144.78052369223,
-                80219.75345675235
-              ],
-              [
-                -20263.355831418605,
-                -73050.73707640498
-              ],
-              [
-                -105237.1576020969,
-                -14001.985117865986
-              ]
-            ],
-            "intercept": [
-              21.107115767442064,
-              -24.401897244641916,
-              -36.12273520392597
-            ]
-          }
-        },
-        "id": 1
-      },
-      {
-        "acq_delay": 5e-8,
-        "acq_integration_time": 0.000001,
-        "frequency": {
-          "$numberLong": "7502000000"
-        },
-        "pulse_delay": 0,
-        "pulse_duration": 9e-7,
-        "pulse_type": "Square",
-        "pulse_amplitude": 0.08245560237524203,
-        "lda_parameters": {
-          "twoState": {
-            "score": 0.9905,
-            "coef": [
-              [
-                -191087.42493249022,
-                -20803.06874845618
-              ]
-            ],
-            "intercept": [
-              -22.684588212281916
-            ]
-          },
-          "threeState": {
-            "score": 0.9301353503184714,
-            "coef": [
-              [
-                117698.79312336461,
-                1323.6059974854222
-              ],
-              [
-                -73571.40229985592,
-                -28205.57304588287
-              ],
-              [
-                -86186.31020216543,
-                52503.84189140131
-              ]
-            ],
-            "intercept": [
-              8.616211460736217,
-              -14.506319082756788,
-              -15.607187419129968
-            ]
-          }
-        },
-        "id": 2
-      },
-      {
-        "acq_delay": 5e-8,
-        "acq_integration_time": 0.000001,
-        "frequency": {
-          "$numberLong": "7712000000"
-        },
-        "pulse_delay": 0,
-        "pulse_duration": 9e-7,
-        "pulse_type": "Square",
-        "pulse_amplitude": 0.04188729430238,
-        "lda_parameters": {
-          "twoState": {
-            "score": 0.8735,
-            "coef": [
-              [
-                -29474.17108465108,
-                78360.1067777809
-              ]
-            ],
-            "intercept": [
-              -1.933795064413808
-            ]
-          },
-          "threeState": {
-            "score": 0.7563694267515924,
-            "coef": [
-              [
-                9107.496591845296,
-                -51304.48625833322
-              ],
-              [
-                -21037.874286196384,
-                28857.813926275605
-              ],
-              [
-                23301.518934279466,
-                43841.15689855003
-              ]
-            ],
-            "intercept": [
-              -0.42091088440579094,
-              -2.3990628805824983,
-              -3.202495936672423
-            ]
-          }
-        },
-        "id": 3
-      },
-      {
-        "acq_delay": 5e-8,
-        "acq_integration_time": 0.000001,
-        "frequency": {
-          "$numberLong": "7871000000"
-        },
-        "pulse_delay": 0,
-        "pulse_duration": 9e-7,
-        "pulse_type": "Square",
-        "pulse_amplitude": 0.05844291534543274,
-        "lda_parameters": {
-          "twoState": {
-            "score": 0.96375,
-            "coef": [
-              [
-                -106998.96952984166,
-                66774.10489889105
-              ]
-            ],
-            "intercept": [
-              -6.6282190356967075
-            ]
-          },
-          "threeState": {
-            "score": 0.8578821656050956,
-            "coef": [
-              [
-                60709.720254705426,
-                -51675.5747833689
-              ],
-              [
-                -49881.622682824636,
-                16479.42339459183
-              ],
-              [
-                -21148.62807007965,
-                68742.48318120521
-              ]
-            ],
-            "intercept": [
-              1.4575641967873554,
-              -5.385810943207904,
-              -6.329888946815834
-            ]
-          }
-        },
-        "id": 4
-      }
-    ],
-    "coupler": [
-      {}
-    ]
-  },
-  "discriminators": {
-    "lda": {
-      "q0": {
-        "score": 0.985,
-        "intercept": -38.4344477840827,
-        "coef_0": -98953.87504155144,
-        "coef_1": -114154.48696231026
-      },
-      "q1": {
-        "score": 0.987,
-        "intercept": -42.05181160328822,
-        "coef_0": -107941.00358803963,
-        "coef_1": -124239.32054386326
-      },
-      "q2": {
-        "score": 0.9905,
-        "intercept": -22.684588212281916,
-        "coef_0": -191087.42493249022,
-        "coef_1": -20803.06874845618
-      },
-      "q3": {
-        "score": 0.8735,
-        "intercept": -1.933795064413808,
-        "coef_0": -29474.17108465108,
-        "coef_1": 78360.1067777809
-      },
-      "q4": {
-        "score": 0.96375,
-        "intercept": -6.6282190356967075,
-        "coef_0": -106998.96952984166,
-        "coef_1": 66774.10489889105
-      }
-    }
-  },
-  "qubit_ids": [
-    "q0",
-    "q1",
-    "q2",
-    "q3",
-    "q4"
-  ],
-  "description": "Backend for the simulator supporting qiskit-connector parsing for the release 2024.3"
-}
-```
-
-- Click "Insert" to insert the document into the "backends" collection.
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-backend.png)
-:::
-
 - Create another mongodb collection called 'devices' in the same database
 
 ::: {layout-ncol=1}
 ![](../assets/img/tutorials/quick_start/mongo-compass-create-devices-collection.png)
-:::
-
-- Click on "ADD DATA" then "Insert document" in your "devices" collection in your mongo compass
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-add-new-device.png)
-:::
-
-- Copy and paste the following document into the window that opens, replacing everything that was already there.
-
-```JSON
-{
-    "_id": {
-    "$oid": "66b4c90e98a38e78191582de"
-    },
-    "name": "loke",
-    "version": "2023.06.0",
-    "number_of_qubits": 5,
-    "is_online": true,
-    "last_online": null,
-    "basis_gates": ["u", "h", "x"],
-    "is_simulator": true,
-    "coupling_map": [
-      [0, 1],
-      [0, 2],
-      [2, 3],
-      [1, 4],
-      [3, 4]
-    ],
-    "coordinates": [
-      [1, 1],
-      [3, 1],
-      [1, 2],
-      [2, 2],
-      [3, 2]
-    ]
-}
-```
-
-- Click "Insert" to insert the document into the "devices" collection.
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-device.png)
 :::
 
 - Create another mongodb collection called 'calibrations_v2' in the same database
@@ -783,167 +232,7 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-create-calibrations-v2-collection.png)
 :::
 
-- Click on "ADD DATA" then "Insert document" in your "calibrations_v2" collection in your mongo compass
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-add-new-calibration-data.png)
-:::
-
-- Copy and paste the following document into the window that opens, replacing everything that was already there.
-
-```JSON
-{
-  "_id": {
-    "$oid": "66b4d17a98a38e78191582e3"
-  },
-    "name": "loke",
-    "version": "2023.06.0",
-    "last_calibrated": {"$date": "2023-05-24T09:12:00.733Z"},
-    "qubits": [
-      {
-        "t1_decoherence": {
-          "date": {"$date": "2024-07-08T06:42:01Z"},
-          "unit": "us",
-          "value": 420.05541643339404
-        },
-        "t2_decoherence": {
-          "date": {"$date": "2024-07-08T07:18:48Z"},
-          "unit": "us",
-          "value": 83.18816437202933
-        },
-        "frequency": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": 4.637963897242323
-        },
-        "anharmonicity": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": -0.29264088813258476
-        },
-        "readout_assignment_error": {
-          "date": {"$date": "2024-07-08T06:16:05Z"},
-          "unit": "",
-          "value": 0.028900000000000037
-        }
-      },
-      {
-        "t1_decoherence": {
-          "date": {"$date": "2024-07-08T06:42:01Z"},
-          "unit": "us",
-          "value": 247.7993516943705
-        },
-        "t2_decoherence": {
-          "date": {"$date": "2024-07-08T06:56:44Z"},
-          "unit": "us",
-          "value": 187.26864764151065
-        },
-        "frequency": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": 4.804417611336644
-        },
-        "anharmonicity": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": -0.31122742580861
-        },
-        "readout_assignment_error": {
-          "date": {"$date": "2024-07-08T06:16:05Z"},
-          "unit": "",
-          "value": 0.011199999999999988
-        }
-      },
-      {
-        "t1_decoherence": {
-          "date": {"$date": "2024-07-08T06:42:01Z"},
-          "unit": "us",
-          "value": 260.54956749612603
-        },
-        "t2_decoherence": {
-          "date": {"$date": "2024-07-08T07:18:48Z"},
-          "unit": "us",
-          "value": 81.99099168984513
-        },
-        "frequency": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": 4.74331607417109
-        },
-        "anharmonicity": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": -0.31179417408967897
-        },
-        "readout_assignment_error": {
-          "date": {"$date": "2024-07-08T06:16:05Z"},
-          "unit": "",
-          "value": 0.009700000000000042
-        }
-      },
-      {
-        "t1_decoherence": {
-          "date": {"$date": "2024-07-08T06:42:01Z"},
-          "unit": "us",
-          "value": 345.26623339601684
-        },
-        "t2_decoherence": {
-          "date": {"$date": "2024-07-08T06:56:44Z"},
-          "unit": "us",
-          "value": 336.5462418628414
-        },
-        "frequency": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": 4.625938044796286
-        },
-        "anharmonicity": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": -0.31372359565205904
-        },
-        "readout_assignment_error": {
-          "date": {"$date": "2024-07-08T06:16:05Z"},
-          "unit": "",
-          "value": 0.017800000000000038
-        }
-      },
-      {
-        "t1_decoherence": {
-          "date": {"$date": "2024-07-08T06:42:01Z"},
-          "unit": "us",
-          "value": 133.43700196576077
-        },
-        "t2_decoherence": {
-          "date": {"$date": "2024-07-08T07:18:48Z"},
-          "unit": "us",
-          "value": 163.4358380960457
-        },
-        "frequency": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": 4.556956356759932
-        },
-        "anharmonicity": {
-          "date": {"$date": "2024-07-08T22:03:09Z"},
-          "unit": "GHz",
-          "value": -0.31377871528415735
-        },
-        "readout_assignment_error": {
-          "date": {"$date": "2024-07-08T06:16:05Z"},
-          "unit": "",
-          "value": 0.042100000000000026
-        }
-      }
-    ]
-}
-```
-
-- Click "Insert" to insert the document into the "calibrations_v2" collection.
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-insert-copied-calibration-data.png)
-:::
+- These databases are required to be in place as soon as we want to push the simulator configuration
 
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
@@ -995,6 +284,30 @@ _see more at https://docs.docker.com/reference/cli/docker/compose/logs/_
 docker compose -f fresh-docker-compose.yml up -d
 ```
 
+## Push the simulator configuration to the database
+
+- Before we can connect our simulator, we have to push the configuration for the simulator to the database
+
+- Go to the folder where you installed the backend
+
+```zsh
+cd tergite-backend
+```
+
+- Activate the conda environment for your backend and install the backend
+
+```zsh
+conda activate bcc
+pip install -e .
+```
+
+- Run the script that pushes the configuration to the database
+
+```zsh
+python app/scripts/push_simulator_to_db.py
+```
+
+
 ## Run an Experiment
 
 - Open another terminal
@@ -1009,8 +322,8 @@ cd tergite-test
 - Create conda environment and activate it
 
 ```zsh
-conda create -n terg -y python=3.9
-conda activate terg
+conda create -n tergite -y python=3.9
+conda activate tergite
 ```
 
 - Install [qiskit](https://github.com/Qiskit/qiskit) and [tergite SDK](https://github.com/tergite/tergite) by running the command below:
@@ -1044,7 +357,7 @@ if __name__ == "__main__":
     # the Tergite API URL
     API_URL = "http://localhost:8002"
     # The name of the Quantum Computer to use from the available quantum computers
-    BACKEND_NAME = "loke"
+    BACKEND_NAME = "qiskit_pulse_1q"
     # the name of this service. For your own bookkeeping.
     SERVICE_NAME = "local"
     # the timeout in seconds for how long to keep checking for results
@@ -1092,7 +405,7 @@ if __name__ == "__main__":
     print(result.get_counts())
 ```
 
-- Execute the above script by running the commnad below.
+- Execute the above script by running the command below.
 
 ```zsh
 python main.py
@@ -1102,7 +415,5 @@ python main.py
 
 ```zsh
 Results OK
-{'0': 1024}
+{'0': 776, '1': 248}
 ```
-
-_Note: We get only 0's because we are using the [dummy cluster](https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/api_reference/cluster.html#qblox_instruments.Cluster) from quantify scheduler_

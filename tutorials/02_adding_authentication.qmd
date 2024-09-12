@@ -70,10 +70,10 @@ EXECUTOR_CONFIG_FILE=executor-config.yml
 docker compose -f fresh-docker-compose.yml down
 ```
 
-- Create a new Github Oauth2 application via the [official instructions](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), with
+- Create a new GitHub Oauth2 application via the [official instructions](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), with
 **Homepage URL**: "http://127.0.0.1:8002" and **Authorization callback URL**: "http://127.0.0.1:8002/".
 
-- Copy the client ID and the client secret of the Github Oauth2 application.
+- Copy the client ID and the client secret of the GitHub Oauth2 application.
 
 
 - Open the `mss-config.toml` file in the `tergite-frontend` folder with visual studio code (or any other text editor).
