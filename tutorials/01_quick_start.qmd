@@ -290,18 +290,20 @@ docker compose -f fresh-docker-compose.yml up -d
 
 - Go to the folder where you installed the backend
 
-```
+```zsh
 cd tergite-backend
 ```
 
 - Activate the conda environment for your backend and install the backend
-```
+
+```zsh
 conda activate bcc
 pip install -e .
 ```
 
 - Run the script that pushes the configuration to the database
-```
+
+```zsh
 python app/scripts/push_simulator_to_db.py
 ```
 
@@ -355,7 +357,7 @@ if __name__ == "__main__":
     # the Tergite API URL
     API_URL = "http://localhost:8002"
     # The name of the Quantum Computer to use from the available quantum computers
-    BACKEND_NAME = "loke"
+    BACKEND_NAME = "qiskit_pulse_1q"
     # the name of this service. For your own bookkeeping.
     SERVICE_NAME = "local"
     # the timeout in seconds for how long to keep checking for results
