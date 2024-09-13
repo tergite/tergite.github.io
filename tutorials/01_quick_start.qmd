@@ -18,74 +18,6 @@ You may have to install these software if you don't have them already installed.
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [Mongo compass](https://www.mongodb.com/docs/compass/current/install/)
 
-## Setup the Backend
-
-- Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
- (_You could simply have python +3.9 installed instead._)
-- Ensure you have the [Redis](https://redis.io/) server running. 
-
-```zsh
-redis-server
-```
-
-- Open terminal. 
-- Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
-
-```zsh
-git clone https://github.com/tergite/tergite-backend.git
-```
-
-- Create conda environment
-
-```zsh
-conda create -n bcc -y python=3.9
-conda activate bcc
-```
-
-- Install dependencies
-
-```zsh
-cd tergite-backend
-pip install -r requirements.txt
-```
-
-- Copy the template for the `.env` file
-
-```zsh
-cp dot-env-template.env .env
-```
-
-- Update the following values in the `.env` file e.g. with visual studio code (or any other text editor).
-
-```zsh
-code .env
-```
-
-- Update following variables in the `.env` to:
-
-```zsh
-DEFAULT_PREFIX=qiskit_pulse_1q
-
-BCC_MACHINE_ROOT_URL=http://localhost:8000
-BCC_PORT=8000
-
-MSS_MACHINE_ROOT_URL=http://localhost:8002
-MSS_PORT=8002
-
-EXECUTOR_TYPE=qiskit_pulse_1q
-
-IS_AUTH_ENABLED=False
-APP_SETTINGS=development
-```
-
-- Run start script
-
-```zsh
-./start_bcc.sh --device configs/device_default.toml
-```
-
-- Open your browser at [http://localhost:8000/docs](http://localhost:8000/docs){.external target="_blank"} to see the interactive API docs
-
 ## Setup the Frontend
 
 - Ensure you have [docker](https://docs.docker.com/engine/install/) is running.
@@ -220,20 +152,6 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
 :::
 
-- Create another mongodb collection called 'devices' in the same database
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-create-devices-collection.png)
-:::
-
-- Create another mongodb collection called 'calibrations_v2' in the same database
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-create-calibrations-v2-collection.png)
-:::
-
-- These databases are required to be in place as soon as we want to push the simulator configuration
-
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
@@ -284,28 +202,209 @@ _see more at https://docs.docker.com/reference/cli/docker/compose/logs/_
 docker compose -f fresh-docker-compose.yml up -d
 ```
 
-## Push the simulator configuration to the database
+## Setup the Backend
 
-- Before we can connect our simulator, we have to push the configuration for the simulator to the database
+- Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
+ (_You could simply have python +3.9 installed instead._)
+- Ensure you have the [Redis](https://redis.io/) server running. 
 
-- Go to the folder where you installed the backend
+```zsh
+redis-server
+```
+
+- Open terminal. 
+- Clone the [tergite-backend](https://github.com/tergite/tergite-backend) repo
+
+```zsh
+git clone https://github.com/tergite/tergite-backend.git
+```
+
+- Create conda environment
+
+```zsh
+conda create -n bcc -y python=3.9
+conda activate bcc
+```
+
+- Install dependencies
 
 ```zsh
 cd tergite-backend
+pip install -r requirements.txt
 ```
 
-- Activate the conda environment for your backend and install the backend
+- Create an `.env` file with visual studio code (or any other text editor).
 
 ```zsh
-conda activate bcc
-pip install -e .
+code .env
 ```
 
-- Run the script that pushes the configuration to the database
+- Update the `.env` file with the following content.
 
 ```zsh
-python app/scripts/push_simulator_to_db.py
+APP_SETTINGS=development
+IS_AUTH_ENABLED=False
+
+DEFAULT_PREFIX=qiskit_pulse_1q
+STORAGE_ROOT=/tmp
+LOGFILE_DOWNLOAD_POOL_DIRNAME=logfile_download_pool
+LOGFILE_UPLOAD_POOL_DIRNAME=logfile_upload_pool
+JOB_UPLOAD_POOL_DIRNAME=job_upload_pool
+JOB_PRE_PROC_POOL_DIRNAME=job_preproc_pool
+JOB_EXECUTION_POOL_DIRNAME=job_execution_pool
+
+# Main Service Server
+MSS_MACHINE_ROOT_URL=http://localhost:8002
+MSS_PORT=8002
+
+# Backend Control computer
+BCC_MACHINE_ROOT_URL=http://localhost:8000
+BCC_PORT=8000
+
+EXECUTOR_TYPE=qiskit_pulse_1q
 ```
+
+- Create a `backend_config.toml` file with visual studio code (or any other text editor).
+
+```zsh
+code backend_config.toml
+```
+
+- Update the `backend_config.toml` file with the following content.
+
+```toml
+# backend_config.toml
+[general_config]
+name = "qiskit_pulse_1q"
+version = "1.0.0"
+is_active = true
+characterized = true
+open_pulse = true
+simulator = true
+online_date = "2024-09-11T18:07:31"
+num_qubits = 1
+num_couplers = 0
+num_resonators = 1
+description = "A single transmon Hamiltonian with 4 levels"
+dt = 1e-9
+dtm = 1e-9
+
+[device_config]
+discriminators = [ "lda" ]
+
+qubit_ids = [ "q0" ]
+
+coordinates = [ [ 0, 0 ] ]
+
+meas_map = [ [ 0 ] ]
+
+qubit_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "xy_drive_line",
+  "z_drive_line",
+  "frequency",
+  "pi_pulse_amplitude",
+  "pi_pulse_duration",
+  "pulse_type",
+  "pulse_sigma",
+  "t1_decoherence",
+  "t2_decoherence"
+]
+resonator_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "readout_line",
+  "acq_delay",
+  "acq_integration_time",
+  "frequency",
+  "pulse_delay",
+  "pulse_duration",
+  "pulse_type",
+  "pulse_amplitude"
+]
+
+coupler_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "xy_drive_line",
+  "z_drive_line",
+  "frequency",
+  "pi_pulse_amplitude",
+  "pi_pulse_duration",
+  "pulse_type",
+  "pulse_sigma",
+  "t1_decoherence",
+  "t2_decoherence"
+]
+
+[device_config.discriminator_parameters]
+lda = [
+  "coef_0",
+  "coef_1",
+  "intercept"
+]
+
+[gates.x]
+qasm_def = "gate x q { U(pi, 0, pi) q; }"
+parameters = [ ]
+coupling_map = [[0]]
+
+[simulator_config.units.qubit]
+frequency = "Hz"
+t1_decoherence = "s"
+t2_decoherence = "s"
+
+[simulator_config.units.readout_resonator]
+acq_delay = "s"
+acq_integration_time = "s"
+frequency = "Hz"
+pulse_delay = "s"
+pulse_duration = "s"
+
+[simulator_config.units.discriminators]
+coef_0 = ""  
+coef_1 = ""
+intercept = ""
+
+[[simulator_config.qubit]]
+frequency = 4_700_000_000
+pi_pulse_amplitude = 0.05
+pi_pulse_duration = 5.6e-9
+pulse_sigma = 7e-9
+pulse_type = "Gaussian"
+t1_decoherence = 0.000071
+t2_decoherence = 0.000069
+id = "q0"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8
+acq_integration_time = 0.000001
+frequency = 7_260_080_000
+pulse_delay = 0
+pulse_duration = 9e-7
+pulse_type = "Square"
+pulse_amplitude = 0.1266499392606423
+id = "q0"
+
+
+[simulator_config.discriminators.lda.q0]
+intercept = -38.4344477840827
+coef_0 = -98_953.87504155144
+coef_1 = -114_154.48696231026
+
+```
+
+- Run start script
+
+```zsh
+./start_bcc.sh
+```
+
+- Open your browser at [http://localhost:8000/docs](http://localhost:8000/docs){.external target="_blank"} to see the interactive API docs
 
 
 ## Run an Experiment

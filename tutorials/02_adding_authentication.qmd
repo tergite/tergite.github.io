@@ -49,7 +49,7 @@ MSS_PORT=8002
 BCC_MACHINE_ROOT_URL=http://localhost:8000
 BCC_PORT=8000
 
-EXECUTOR_CONFIG_FILE=executor-config.yml
+QUANTIFY_CONFIG_FILE=quantify-config.yml
 ``` 
 
 - Run the start script

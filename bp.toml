@@ -1,0 +1,243 @@
+[general_config]
+name = "loke"
+description = "Backend for the simulator supporting qiskit-connector parsing for the release 2024.3"
+characterized = true
+open_pulse = true
+version = "2024.04.0"
+num_qubits = 5
+num_couplers = 8
+num_resonators = 5
+simulator = true
+online_date = "2022-04-13T19:50:31"
+dt = 1e-9
+dtm = 1e-9 
+
+[device_config]
+meas_map = [ [ 0, 1, 2, 3, 4 ] ]
+coupling_map = [
+  [ 0, 2 ],
+  [ 2, 0 ],
+  [ 1, 2 ],
+  [ 2, 1 ],
+  [ 2, 3 ],
+  [ 3, 2 ],
+  [ 2, 4 ],
+  [ 4, 2 ]
+]
+coordinates = [
+      [1, 1],
+      [3, 1],
+      [1, 2],
+      [2, 2],
+      [3, 2]
+]
+discriminators = [ "lda" ]
+qubit_ids = [ "q0", "q1", "q2", "q3", "q4" ]
+qubit_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "xy_drive_line",
+  "z_drive_line",
+  "frequency",
+  "pi_pulse_amplitude",
+  "pi_pulse_duration",
+  "pulse_type",
+  "pulse_sigma",
+  "t1_decoherence",
+  "t2_decoherence"
+]
+resonator_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "readout_line",
+  "acq_delay",
+  "acq_integration_time",
+  "frequency",
+  "pulse_delay",
+  "pulse_duration",
+  "pulse_type",
+  "pulse_amplitude"
+]
+
+coupler_parameters = [
+  "id",
+  "x_position",
+  "y_position",
+  "xy_drive_line",
+  "z_drive_line",
+  "frequency",
+  "pi_pulse_amplitude",
+  "pi_pulse_duration",
+  "pulse_type",
+  "pulse_sigma",
+  "t1_decoherence",
+  "t2_decoherence"
+]
+
+[device_config.discriminator_parameters]
+lda = [
+  "coef_0",
+  "coef_1",
+  "intercept",
+  "score"
+]
+
+[gates.u]
+qubits = [ 0 ]
+qasm_def = "gate id q { U(0, 0, 0) q; }"
+parameters = [ ]
+
+[gates.h]
+qubits = [ 0 ]
+qasm_def = "gate id q { U(0, 0, 0) q; }"
+parameters = [ ]
+
+[gates.x]
+qubits = [ 0 ]
+qasm_def = "gate id q { U(0, 0, 0) q; }"
+parameters = [ ]
+
+[simulator_config.units.qubit]
+# configs for units
+frequency = "Hz"
+t1_decoherence = "s"
+t2_decoherence = "s"
+
+[simulator_config.units.readout_resonator]
+acq_delay = "s"
+acq_integration_time = "s"
+frequency = "Hz"
+pulse_delay = "s"
+pulse_duration = "s"
+
+[[simulator_config.qubit]]
+frequency = 4_511_480_043.556283
+pi_pulse_amplitude = 0.17555712637424228
+pi_pulse_duration = 5.6e-8
+pulse_sigma = 7e-9 
+pulse_type = "Gaussian"
+t1_decoherence = 0.000034
+t2_decoherence = 0.000033
+id = "q0"
+
+[[simulator_config.qubit]]
+frequency = 4_677_112_343.360253
+pi_pulse_amplitude = 0.17535338530538067
+pi_pulse_duration = 5.6e-8
+pulse_sigma = 7e-9 
+pulse_type = "Gaussian"
+t1_decoherence = 0.000034
+t2_decoherence = 0.000033
+id = "q1"
+
+[[simulator_config.qubit]]
+frequency = 5_770_226_599.80365
+pi_pulse_amplitude = 0.17873594718151276
+pi_pulse_duration = 5.6e-8
+pulse_sigma = 7e-9 
+pulse_type = "Gaussian"
+t1_decoherence = 0.000034
+t2_decoherence = 0.000033
+id = "q2"
+
+[[simulator_config.qubit]]
+frequency = 6_856_217_811.995201
+pi_pulse_amplitude = 0.17326197853513559
+pi_pulse_duration = 5.6e-8
+pulse_sigma = 7e-9 
+pulse_type = "Gaussian"
+t1_decoherence = 0.000034
+t2_decoherence = 0.000033
+id = "q3"
+
+[[simulator_config.qubit]]
+frequency = 6_701_096_836.557067
+pi_pulse_amplitude = 0.16948867103728774
+pi_pulse_duration = 5.6e-8
+pulse_sigma = 7e-9 
+pulse_type = "Gaussian"
+t1_decoherence = 0.000034
+t2_decoherence = 0.000033
+id = "q4"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8 
+acq_integration_time = 0.000001
+frequency = 7_260_080_000
+pulse_delay = 0
+pulse_duration = 9e-7 
+pulse_type = "Square"
+pulse_amplitude = 0.1266499392606423
+id = "q0"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8 
+acq_integration_time = 0.000001
+frequency = 7_380_000_000
+pulse_delay = 0
+pulse_duration = 9e-7 
+pulse_type = "Square"
+pulse_amplitude = 0.12660078572926436
+id = "q1"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8 
+acq_integration_time = 0.000001
+frequency = 7_502_000_000
+pulse_delay = 0
+pulse_duration = 9e-7 
+pulse_type = "Square"
+pulse_amplitude = 0.08245560237524203
+id = "q2"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8 
+acq_integration_time = 0.000001
+frequency = 7_712_000_000
+pulse_delay = 0
+pulse_duration = 9e-7 
+pulse_type = "Square"
+pulse_amplitude = 0.04188729430238
+id = "q3"
+
+[[simulator_config.readout_resonator]]
+acq_delay = 5e-8 
+acq_integration_time = 0.000001
+frequency = 7_871_000_000
+pulse_delay = 0
+pulse_duration = 9e-7 
+pulse_type = "Square"
+pulse_amplitude = 0.05844291534543274
+id = "q4"
+
+[simulator_config.discriminators.lda.q0]
+score = 0.985
+intercept = -38.4344477840827
+coef_0 = -98_953.87504155144
+coef_1 = -114_154.48696231026
+
+[simulator_config.discriminators.lda.q1]
+score = 0.987
+intercept = -42.05181160328822
+coef_0 = -107_941.00358803963
+coef_1 = -124_239.32054386326
+
+[simulator_config.discriminators.lda.q2]
+score = 0.9905
+intercept = -22.684588212281916
+coef_0 = -191_087.42493249022
+coef_1 = -20_803.06874845618
+
+[simulator_config.discriminators.lda.q3]
+score = 0.8735
+intercept = -1.933795064413808
+coef_0 = -29_474.17108465108
+coef_1 = 78_360.1067777809
+
+[simulator_config.discriminators.lda.q4]
+score = 0.96375
+intercept = -6.6282190356967075
+coef_0 = -106_998.96952984166
+coef_1 = 66_774.10489889105

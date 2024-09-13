@@ -16,26 +16,26 @@ cp dot-env-template.txt .env
 
 ## QBLOX Instruments Configuration
 
-We use the [`executor-config.example.yml`](https://github.com/tergite/tergite-backend/blob/main/executor-config.example.yml) as a template for how to configure this application
+We use the [`quantify-config.example.yml`](https://github.com/tergite/tergite-backend/blob/main/quantify-config.example.yml) as a template for how to configure this application
 to control the [QBLOX instruments](https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/index.html) that control the quantum computer. 
 
-It is well documented. Just copy it to `executor-config.yml` in the tergite-backend folder and update its variables and you are good to go.
+It is well documented. Just copy it to `quantify-config.yml` in the tergite-backend folder and update its variables and you are good to go.
 
 ```zsh
-cp executor-config.example.yml executor-config.yml
+cp quantify-config.example.yml quantify-config.yml
 ```
 
 ### Dummy QBLOX Instrumments
 
 You may wish to run some dummy QBLOX instruments if you don't have access to the physical QBLOX instruments
 
-We already have a preconfigured [`dummy-executor-config.yml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-executor-config.yml) for this in the 
+We already have a preconfigured [`dummy-quantify-config.yml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-quantify-config.yml) for this in the 
 `app/tests/fixtures` folder.   
 
 Copy it to the tergite-backend folder.
 
 ```zsh
-cp app/tests/fixtures/dummy-executor-config.yml executor-config.yml
+cp app/tests/fixtures/dummy-quantify-config.yml quantify-config.yml
 ```
 
 _NOTE: You can find out more about the configuration properties in the executor-config file by 
@@ -43,18 +43,39 @@ visiting the [quantify_scheduler docs](https://quantify-os.org/docs/quantify-sch
 and the [QCoDeS drivers docs](https://microsoft.github.io/Qcodes/)._  
 
 _NOTE: You could choose to use a different name for your quantum executor config file e.g. `foobar.yml`.
-You however need to explicitly set this name in the `.env` file `EXECUTOR_CONFIG_FILE=foobar.yml`_  
+You however need to explicitly set this name in the `.env` file `QUANTIFY_CONFIG_FILE=foobar.yml`_  
 
-### Calibrated Data Configuration
+### General Backend Configuration
 
-We also recalibrate the quantum computer from time to time and store that data in TOML files in the [`configs`](https://github.com/tergite/tergite-backend/blob/main/configs) folder.  
+We configure all backends using the `backend_config.toml`.   
+We use the [`backend_config.example.toml`](https://github.com/tergite/tergite-backend/blob/main/backend_config.example.toml) as a template.  
 
-When starting the application, one needs to supply one calibration set from any of those configuration files.
+This configuration file can contain the calibration values in case we are running it as a simulator.
+The calibration values are under the key `simulator_config`. 
+
+**Note: the `simulator_config` is ignored if the `general_config.simulator` variable is not set to `true`.**    
+
+_NOTE: You don't need to pass the `.env` file, the `backend_config.toml` file or the `quantify-config.yml` file to the 
+start script as these are automatically loaded for you._  
+
+#### Single-Qubit Qiskit Pulse Simulator
+
+You may wish to run a single-qubit simulator.  
+
+First update the `.env` file to contain `EXECUTOR_TYPE=qiskit_pulse_1q`.  
+
+We already have a preconfigured [`backend_config.simq1.toml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/backend_config.simq1.toml) for this in the 
+`app/tests/fixtures` folder.   
+
+Copy it to your root folder.
 
 ```zsh
-./start_tergite-backend.sh --device configs/device_default.toml
+# on the root of the project
+cp app/tests/fixtures/backend_config.simq1.toml backend_config.toml
 ```
 
-_NOTE: You don't need to pass the `.env` file or the `executor-config.yml` file to the start script as these are 
-automatically loaded for you._  
+And run the application.
 
+```zsh
+./start_bcc.sh
+```
