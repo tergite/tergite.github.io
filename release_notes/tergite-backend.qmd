@@ -2,7 +2,10 @@
 title: "Tergite Backend"
 ---
 
-## [2024.09.0] - 2024-09-16
+---
+
+## [2024.09.0]
+_released on: 16th of September 2024_
 
 ### Added
 - The `QuantumExecutor` as abstract class to implement a backend
@@ -24,7 +27,10 @@ title: "Tergite Backend"
 - Moved the `storage`, `date_time`, `representation` and `logging` utils to the `properties` lib
 - Removed the `scripts` folder
 
-## [2024.04.0] - 2024-05-28
+---
+
+## [2024.04.0]
+_released on 28th of May 2024_
 
 Initial Public Release
 
