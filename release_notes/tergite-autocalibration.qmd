@@ -2,7 +2,10 @@
 title: "Tergite Autocalibration"
 ---
 
-## [2024.09.0] - 2024-09-16
+---
+
+## [2024.09.0]
+_released on 16th of September 2024_
 
 ### Added
 - Redis storage manager
@@ -10,7 +13,10 @@ title: "Tergite Autocalibration"
 ### Changed
 - Switch to quantify-scheduler version 0.20.0
 
-## [2024.04.0] - 2024-05-29
+---
+
+## [2024.04.0]
+_released on 29th of May 2024_
 
 Initial Public Release
 

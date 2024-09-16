@@ -2,11 +2,17 @@
 title: "Tergite SDK"
 ---
 
-## [2024.09.0] - 2024-09-16
+---
+
+### [2024.09.0]
+_released on: 16th of September 2024_
 
 - No change
 
-## [2024.04.1] - 2024-05-29
+---
+
+### [2024.04.1]
+_released on: 29th of May 2024_
 
 Initial Public Release
 
