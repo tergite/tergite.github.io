@@ -33,7 +33,7 @@ about:
     
 ### Components
 
-The tergite stack is composed of three components
+The Tergite stack is composed of three components
 
 [tergite-backend](https://github.com/tergite/tergite-backend)
 : The operating system of the quantum computer. It communicates with the world via a RESTful API.  
@@ -41,13 +41,13 @@ The tergite stack is composed of three components
 [tergite-frontend](https://github.com/tergite/tergite-frontend)
 : The server that gives remote access to any [tergite-backend instance](https://github.com/tergite/tergite-backend). It communicates with the world via a RESTful API.  
 
-[tergite SDK (or just _tergite_)](https://github.com/tergite/tergite)
-: The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.
+[Tergite SDK (or just _tergite_)](https://github.com/tergite/tergite)
+: The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the Tergite stack.
 
 
 ### Accessories
 
-The tergite stack has a number of accessory softwares that are currently not initmately woven into the
+The Tergite stack has a number of accessory softwares that are currently not initmately woven into the
 stack but mught be in future
 
 [tergite-autocalibration](https://github.com/tergite/tergite-autocalibration)
@@ -56,7 +56,7 @@ stack but mught be in future
 ### Language of Communication
 
 We use [OpenPulse](https://arxiv.org/abs/1809.03452) to communicate pass quantum computer instructions from 
-the SDK to the backend part of the tergite stack.
+the SDK to the backend part of the Tergite stack.
 
 
 ## Development

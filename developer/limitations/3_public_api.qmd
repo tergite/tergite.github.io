@@ -1,6 +1,6 @@
 ---
 title: "Public API"
-subtitle: "Limitations of the tergite public API"
+subtitle: "Limitations of the Tergite public API"
 ---
 
 TODO

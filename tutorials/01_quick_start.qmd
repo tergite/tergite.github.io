@@ -425,7 +425,7 @@ conda create -n tergite -y python=3.9
 conda activate tergite
 ```
 
-- Install [qiskit](https://github.com/Qiskit/qiskit) and [tergite SDK](https://github.com/tergite/tergite) by running the command below:
+- Install [qiskit](https://github.com/Qiskit/qiskit) and [Tergite SDK](https://github.com/tergite/tergite) by running the command below:
 
 
 ```zsh
@@ -477,7 +477,7 @@ if __name__ == "__main__":
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
     # provider = Tergite.use_provider_account(account, save=True)
 
-    # Get the tergite backend in case you skipped provider account creation
+    # Get the Tergite backend in case you skipped provider account creation
     # provider = Tergite.get_provider(service_name=SERVICE_NAME)
     backend = provider.get_backend(BACKEND_NAME)
     backend.set_options(shots=1024)

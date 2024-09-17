@@ -1,6 +1,6 @@
 ---
 title: "Backend"
-subtitle: "Limitations of the tergite backend"
+subtitle: "Limitations of the Tergite backend"
 ---
 
 TODO

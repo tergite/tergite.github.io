@@ -16,7 +16,7 @@ _released on: 2nd of September 2024_
     - Device list page
     - Device detail page
     - Error page
-- Added v2 endpoints on tergite MSS including
+- Added v2 endpoints on Tergite MSS including
     - `/v2/me/projects/` to `GET`, `POST` current cookie user's projects
     - `/v2/me/projects/{project_id}` to `GET`, `PUT` current cookie user's single project
     - `/v2/me/tokens/` to `GET`, `POST` current cookie user's application tokens

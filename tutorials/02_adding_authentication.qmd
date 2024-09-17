@@ -319,7 +319,7 @@ if __name__ == "__main__":
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
     # provider = Tergite.use_provider_account(account, save=True)
 
-    # Get the tergite backend in case you skipped provider account creation
+    # Get the Tergite backend in case you skipped provider account creation
     # provider = Tergite.get_provider(service_name=SERVICE_NAME)
     backend = provider.get_backend(BACKEND_NAME)
     backend.set_options(shots=1024)

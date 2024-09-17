@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-subtitle: "Limitations of tergite"
+subtitle: "Limitations of Tergite"
 ---
 
 TODO

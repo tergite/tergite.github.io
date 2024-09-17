@@ -1,6 +1,6 @@
 ---
 title: "Automatic calibration"
-subtitle: "System design of the tergite autocalibration"
+subtitle: "System design of the Tergite autocalibration"
 ---
 
 TODO

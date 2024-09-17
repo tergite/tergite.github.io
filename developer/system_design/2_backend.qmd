@@ -1,6 +1,6 @@
 ---
 title: "Backend"
-subtitle: "System design of the tergite backend"
+subtitle: "System design of the Tergite backend"
 ---
 
 ## Flows
@@ -10,13 +10,13 @@ subtitle: "System design of the tergite backend"
 
 ### Before arrival 
 
-The [tergite SDK](https://github.com/tergite/tergite) is used by the experimantalist to specify the 
+The [Tergite SDK](https://github.com/tergite/tergite) is used by the experimantalist to specify the 
 quantum circuits or the pulses to run on the quantum computer, sending these instructions 
-in [OpenPulse](https://arxiv.org/abs/1809.03452) format to the [tergite backend](https://github.com/tergite/tergite-backend).
+in [OpenPulse](https://arxiv.org/abs/1809.03452) format to the [Tergite backend](https://github.com/tergite/tergite-backend).
 
 ### On arrival
 
-The [tergite backend](https://github.com/tergite/tergite-backend) receives the experiments as an
+The [Tergite backend](https://github.com/tergite/tergite-backend) receives the experiments as an
 [HDF5](https://docs.hdfgroup.org/hdf5/v1_14/_intro_h_d_f5.html) file sent to its RESTful API.
 It passes the file over to the quantum jobs queue for processing and execution.
 
@@ -25,7 +25,7 @@ It passes the file over to the quantum jobs queue for processing and execution.
 #### Job Registration worker
 
 In order to keep track of the experiment(s) while in the queue, it is registered in the database of 
-[tergite backend](https://github.com/tergite/tergite-backend).
+[Tergite backend](https://github.com/tergite/tergite-backend).
 It is then passed onto the next worker: the preprocessing worker.
 
 #### Preprocessing worker

@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-subtitle: "Limitations of the tergite dashboard"
+subtitle: "Limitations of the Tergite dashboard"
 ---
 
 TODO

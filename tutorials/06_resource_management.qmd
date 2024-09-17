@@ -14,7 +14,7 @@ The Puhuri Entity Layout
 
 ## Flows
 
-More information about flows can be found in the [puhuri tergite flows tutorial](./07_puhuri_tergite_flows.qmd)
+More information about flows can be found in the [puhuri Tergite flows tutorial](./07_puhuri_tergite_flows.qmd)
 
 ::: {layout-ncol=1}
 ![Selecting resource to report on](../assets/img/tutorials/resource_management/puhuri-resource-usage-reporting-flow.png){.lightbox}

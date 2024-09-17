@@ -1,6 +1,6 @@
 ---
 title: "SDK"
-subtitle: "System design of the tergite SDK"
+subtitle: "System design of the Tergite SDK"
 ---
 
 TODO

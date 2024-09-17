@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-subtitle: "System design of the tergite"
+subtitle: "System design of the Tergite"
 ---
 
 ## Structure
@@ -10,7 +10,7 @@ subtitle: "System design of the tergite"
 
 ### Components
 
-The tergite stack is composed of three components
+The Tergite stack is composed of three components
 
 [backend](./2_backend.qmd)
 : The operating system of the quantum computer. It communicates with the world via a RESTful API.  
@@ -25,12 +25,12 @@ The tergite stack is composed of three components
     : The RESTful API to take a peek into the quantum computer's properties  
 
 [SDK](./5_sdk.qmd)
-: The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the tergite stack.
+: The Python software development kit (SDK) quantum computer researchers can use in their scripts to interact with the Tergite stack.
 
 
 ### Accessories
 
-The tergite stack has a number of accessory softwares that are currently not initmately woven into the
+The Tergite stack has a number of accessory softwares that are currently not initmately woven into the
 stack but mught be in future
 
 [automatic calibration](./6_automatic_calibration.qmd)

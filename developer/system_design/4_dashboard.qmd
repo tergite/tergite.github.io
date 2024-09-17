@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-subtitle: "System design of the tergite dashboard"
+subtitle: "System design of the Tergite dashboard"
 ---
 
 TODO
