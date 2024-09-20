@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tergite.github.io/why.html</loc>
-    <lastmod>2024-08-28T09:30:25.315Z</lastmod>
+    <lastmod>2024-09-17T14:58:16.343Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/07_puhuri_tergite_flows.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/01_quick_start.html</loc>
-    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
+    <lastmod>2024-09-20T13:48:41.998Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-frontend.html</loc>
@@ -118,6 +118,6 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/08_quick_start_dummy_cluster.html</loc>
-    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
+    <lastmod>2024-09-20T14:53:33.547Z</lastmod>
   </url>
 </urlset>

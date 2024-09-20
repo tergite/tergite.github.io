@@ -296,6 +296,8 @@ qubit_ids = [ "q0" ]
 
 coordinates = [ [ 0, 0 ] ]
 
+coupling_map = [[ 0, 0 ]]
+
 meas_map = [ [ 0 ] ]
 
 qubit_parameters = [

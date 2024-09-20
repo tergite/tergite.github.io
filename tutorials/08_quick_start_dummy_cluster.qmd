@@ -475,6 +475,8 @@ frequency = "Hz"
 pulse_delay = "s"
 pulse_duration = "s"
 
+[simulator_config.units.discriminators]
+
 [[simulator_config.qubit]]
 frequency = 4_511_480_043.556283
 pi_pulse_amplitude = 0.17555712637424228

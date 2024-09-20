@@ -1,5 +1,5 @@
 ---
-title: "Why tergite?"
+title: "Why Tergite?"
 ---
 
 Tergite was built to enable multiple users across the world interface with a single
