@@ -4,6 +4,17 @@ title: "Tergite Backend"
 
 ---
 
+## [2024.09.1]
+_released on: 24th of September 2024_
+
+### Fixed
+
+- Fixed 'KeyError' when no units are not passed in the backend_config file
+- Fixed "...bin/conda/activate: Not a directory" error when starting as systemd service
+- Fixed silent error where calibrations are not sent to MSS on executor initialization
+- Fixed "TypeError: Object of type datetime is not JSON serializable" when sending calibration data to MSS
+- Fixed 'SyntaxWarning: 'is not' with a literal' when initializing backend
+
 ## [2024.09.0]
 _released on: 16th of September 2024_
 

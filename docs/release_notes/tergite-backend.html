@@ -271,16 +271,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.09.0]</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.09.1]</a>
+  <ul class="collapse">
+  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.09.0]</a>
   <ul class="collapse">
   <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
   <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.04.0]</a>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2024.04.0]</a>
   <ul class="collapse">
   <li><a href="#added-1" id="toc-added-1" class="nav-link" data-scroll-target="#added-1">Added</a></li>
   <li><a href="#changed-1" id="toc-changed-1" class="nav-link" data-scroll-target="#changed-1">Changed</a></li>
-  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
+  <li><a href="#fixed-1" id="toc-fixed-1" class="nav-link" data-scroll-target="#fixed-1">Fixed</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -309,7 +313,21 @@ ul.task-list li input[type="checkbox"] {
 
 <hr>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">[2024.09.0]</h2>
+<h2 class="anchored" data-anchor-id="section">[2024.09.1]</h2>
+<p><em>released on: 24th of September 2024</em></p>
+<section id="fixed" class="level3">
+<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<ul>
+<li>Fixed ‘KeyError’ when no units are not passed in the backend_config file</li>
+<li>Fixed “…bin/conda/activate: Not a directory” error when starting as systemd service</li>
+<li>Fixed silent error where calibrations are not sent to MSS on executor initialization</li>
+<li>Fixed “TypeError: Object of type datetime is not JSON serializable” when sending calibration data to MSS</li>
+<li>Fixed ‘SyntaxWarning: ’is not’ with a literal’ when initializing backend</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">[2024.09.0]</h2>
 <p><em>released on: 16th of September 2024</em></p>
 <section id="added" class="level3">
 <h3 class="anchored" data-anchor-id="added">Added</h3>
@@ -337,8 +355,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">[2024.04.0]</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">[2024.04.0]</h2>
 <p><em>released on 28th of May 2024</em></p>
 <p>Initial Public Release</p>
 <section id="added-1" class="level3">
@@ -372,8 +390,8 @@ yet <code>SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float
 <li>BREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to <code>settings.DEFAULT_PREFIX</code></li>
 </ul>
 </section>
-<section id="fixed" class="level3">
-<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<section id="fixed-1" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-1">Fixed</h3>
 <ul>
 <li>Fixed duplicate job uploads to respond with HTTP 409</li>
 </ul>
