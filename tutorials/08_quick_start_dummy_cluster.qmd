@@ -166,6 +166,12 @@ docker rmi tergite/tergite-dashboard:v0.0.1
 docker compose -f fresh-docker-compose.yml up -d
 ```
 
+- Remove any stale artefacts created during the docker build
+
+```zsh
+docker system prune
+```
+
 - Open your browser at
 
   - [http://localhost:8002](http://localhost:8002){.external target="_blank"} to see the MSS service
