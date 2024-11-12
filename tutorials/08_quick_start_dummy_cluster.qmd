@@ -124,6 +124,8 @@ code .env
 ```zsh
 # .env
 
+MSS_PORT=8002
+
 # required
 ENVIRONMENT="development"
 MSS_V2_API_URL="http://127.0.0.1:8002/v2"

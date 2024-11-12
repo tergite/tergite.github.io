@@ -5,7 +5,7 @@ subtitle: "System design of the Tergite backend"
 
 ## Flows
 
-![Tergite backend flows](../../assets/img/developer/system_design/2_backend/tergite-backend-flows.svg){height=500}
+![Tergite backend flows](../../assets/img/developer/system_design/2_backend/tergite-backend-flows.svg)
 
 
 ### Before arrival 
