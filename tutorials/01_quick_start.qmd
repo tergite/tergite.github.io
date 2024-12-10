@@ -436,7 +436,7 @@ pulse_amplitude = 0.12660078572926436
 pulse_type = "Square"
 
 [[simulator_config.coupler]]
-id = "c0"
+id = "u0"
 frequency = 7.8e9
 frequency_detuning = -0.015e9
 anharmonicity = -0.17e9
