@@ -300,7 +300,6 @@ dtm = 0.01e-9
 [device_config]
 discriminators = [ "lda" ]
 qubit_ids = [ "q0", "q1" ]
-coupling_map = [ [ 0, 1 ], [ 1, 0 ] ]
 
 meas_map = [ [ 0 ], [ 1 ] ]
 
@@ -355,6 +354,9 @@ lda = [
   "coef_1",
   "intercept"
 ]
+
+[device_config.coupling_dict]
+u0 = ["q0", "q1"]
 
 [gates.x]
 coupling_map = [ [ 0, 1], [1, 0] ]
