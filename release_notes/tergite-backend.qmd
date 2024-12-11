@@ -4,6 +4,28 @@ title: "Tergite Backend"
 
 ---
 
+## [2024.12.0] - 2024-12-11
+_released on: 11th of December 2024_
+
+### Added
+
+- Added redis connection environment variables
+- Added GitLab CI configuration
+- Added storing of Qobj header data in the logfiles of the quantum jobs
+- Qiskit dynamics simulator backend with two-qubit CZ gate ("qiskit_pulse_2q")
+- Added CouplerProps to Backend Configurations
+- Added the `coupling_dict` to the `backend_config.toml`
+
+### Fixed
+
+- Fixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient
+
+### Changed
+
+- Removed the `coupling_map` from the `backend_config.toml` as it is generated on-the-fly from the `coupling_dict`.
+
+---
+
 ## [2024.09.1]
 _released on: 24th of September 2024_
 
@@ -14,6 +36,8 @@ _released on: 24th of September 2024_
 - Fixed silent error where calibrations are not sent to MSS on executor initialization
 - Fixed "TypeError: Object of type datetime is not JSON serializable" when sending calibration data to MSS
 - Fixed 'SyntaxWarning: 'is not' with a literal' when initializing backend
+
+---
 
 ## [2024.09.0]
 _released on: 16th of September 2024_
