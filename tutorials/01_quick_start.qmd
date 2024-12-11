@@ -300,8 +300,11 @@ dtm = 0.01e-9
 [device_config]
 discriminators = [ "lda" ]
 qubit_ids = [ "q0", "q1" ]
-
 meas_map = [ [ 0 ], [ 1 ] ]
+coordinates = [
+  [0, 0],
+  [1, 0]
+]
 
 qubit_parameters = [
   "id",
@@ -345,7 +348,6 @@ coupler_parameters = [
   "cz_pulse_duration_rise",
   "cz_pulse_duration_constant",
   "pulse_type"
-
 ]
 
 [device_config.discriminator_parameters]

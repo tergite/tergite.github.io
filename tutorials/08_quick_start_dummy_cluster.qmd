@@ -440,13 +440,13 @@ coupler_parameters = [
 
 [device_config.coupling_dict]
 u0 = ["q0", "q1"]
-u1 = ["q0", "q4"]
-u2 = ["q0", "q3"]
-u3 = ["q2", "q3"]
-u4 = ["q2", "q5"]
-u5 = ["q3", "q4"]
-u6 = ["q3", "q5"]
-u7 = ["q4", "q5"]
+u1 = ["q0", "q3"]
+u2 = ["q0", "q2"]
+u3 = ["q1", "q2"]
+u4 = ["q1", "q4"]
+u5 = ["q2", "q3"]
+u6 = ["q2", "q4"]
+u7 = ["q3", "q4"]
 
 [device_config.discriminator_parameters]
 lda = [
