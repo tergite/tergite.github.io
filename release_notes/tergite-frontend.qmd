@@ -4,6 +4,57 @@ title: "Tergite Frontend"
 
 ---
 
+## [2024.12.0]
+_released on: 11th of December 2024_
+
+### Added
+
+- Added the admin pages for managing user access in the tergite-dashboard app.
+
+    - Added the tokens list page for viewing, editing and deleting tokens of current user
+    - Added the projects list page for viewing, requesting QPU time and deleting projects for current user
+    - Added admin page for viewing, and approving user requests
+    - Added admin page for viewing, editing, deleting and creating new projects
+    - Added close button on the job detail drawer on the home page
+
+- Added user access endpoints to the v2 API version of the tergite-mss app.
+
+    - Added GET `/v2/me` endpoint to get current user info
+    - Added DELETE `/v2/me/projects/{id}` endpoint to delete project current user administers
+    - Added GET `/v2/admin/qpu-time-requests` endpoint to get all user requests to increase QPU seconds on a project
+    - Added POST `/v2/admin/qpu-time-requests` endpoint for project members to request for more QPU seconds 
+    - Added GET `/v2/admin/user-requests` endpoint for admins to retrieve a list of user requests
+    - Added PUT `/v2/admin/user-requests/{id}` endpoint for admins to update (e.g. approve/reject) as user request
+    - Added POST `/v2/admin/projects/` endpoint for admins to create a new project
+        - Creates new empty user if non-existent emails are passed as user_emails or admin_email
+    - Added GET `/v2/admin/projects/` endpoint for admins to retireve a list of projects
+    - Added GET `/v2/admin/projects/{id}` endpoint for admins to view a project of given id
+    - Added PUT `/v2/admin/projects/{id}` endpoint for admins to update a project of given id
+        - Creates new empty user if non-existent emails are passed as user_emails or admin_email
+    - Added DELETE `/v2/admin/projects/{id}` endpoint for admins to soft delete a project
+    - Added the PUT `/auth/me/app-tokens/{token_id}` endpoint for extending app token's lifetimes
+    - Added the PUT `/v2/me/tokens/{token_id}` endpoint for extending app token's lifetimes
+    - Added user access endpoints to the v2 API version of the tergite-mss app.
+
+- Added the `MSS_PORT` environment variable to the `.env.example` to configure the port on which tergite-mss runs on in docker compose.
+- Added the `NETWORK_MODE` environment variable to the `.env.example` to configure the `network_mode` to use in docker compose file
+
+### Fixed
+
+- tergite-mss 
+
+    - Fixed the not found error when deleting expired app tokens
+    - Fixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient
+
+### Changed 
+
+- tergite-dashboard
+
+    - Changed devices page to show 'no devices found' when no devices are available.
+    - Changed to show sidebar placeholder on admin user requests page when no user request is selected
+
+---
+
 ## [2024.09.1]
 _released on: 24th of September 2024_
 
@@ -23,6 +74,8 @@ _released on: 24th of September 2024_
 - Removed `dev` folder in tergite-mss
 - Changed all calibration v2 properties optional
 - Normalized calibration data to have frequencies in GHz and durations in microseconds in the dashboard
+
+---
 
 ## [2024.09.0]
 _released on: 2nd of September 2024_
