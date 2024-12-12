@@ -4,13 +4,33 @@ title: "Tergite Autocalibration"
 
 ---
 
+## [2024.12.0]
+_released on 12th of December 2024_
+
+### Added
+
+- Dataset browser
+- ScheduleNode and ExternalParameterSweepNode as subclasses of BaseNode
+- DeviceManager class
+
+### Changed
+
+- Migrated cli from click to typer
+- Switch to quantify-scheduler version 0.21.2
+- Switch to qblox-instruments version 0.14.1 (qblox-firmware should be 9.0.1)
+- Upgrade to Python version 3.10
+
+---
+
 ## [2024.09.0]
 _released on 16th of September 2024_
 
 ### Added
+
 - Redis storage manager
 
 ### Changed
+
 - Switch to quantify-scheduler version 0.20.0
 
 ---
@@ -21,10 +41,12 @@ _released on 29th of May 2024_
 Initial Public Release
 
 ### Added
+
 - All research-related features regarding the calibration of a CZ gate
 - Updater to push calibration values as a backend to MSS/database
 
 ### Changed
+
 - Improved command line interface
 - Renamed from tergite-acl to tergite-autocalibration
 - Updated the contribution guidelines and government model statements
