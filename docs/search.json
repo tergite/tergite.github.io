@@ -920,8 +920,8 @@
     "objectID": "release_notes/tergite-sdk.html#section",
     "href": "release_notes/tergite-sdk.html#section",
     "title": "Tergite SDK",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the job() method to provider to retrieve job by job ID\nAdded functionality to get control channel index given qubit tuple\nAdded two qubit CZ gate functionality\n\n\n\nChanged\n\nUpgraded Qiskit version to 1.0+, &lt;1.3\nUse MSS v2 endpoints for backend and calibration data",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 18th of December 2024\n\nChanged\n\nUpdated tests to run tests against multiple backends\nUpdated Provider.job() to return a Job instance without an upload_url\n\n\n\nFixed\n\nFixed the error ‘Coupling (0, 0) not a coupling map’ for backends without couplers",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -931,8 +931,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-1",
     "href": "release_notes/tergite-sdk.html#section-1",
     "title": "Tergite SDK",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nNo change",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the job() method to provider to retrieve job by job ID\nAdded functionality to get control channel index given qubit tuple\nAdded two qubit CZ gate functionality\n\n\n\nChanged\n\nUpgraded Qiskit version to 1.0+, &lt;1.3\nUse MSS v2 endpoints for backend and calibration data",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -941,6 +941,17 @@
   {
     "objectID": "release_notes/tergite-sdk.html#section-2",
     "href": "release_notes/tergite-sdk.html#section-2",
+    "title": "Tergite SDK",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nNo change",
+    "crumbs": [
+      "Release Notes",
+      "Tergite SDK"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-sdk.html#section-3",
+    "href": "release_notes/tergite-sdk.html#section-3",
     "title": "Tergite SDK",
     "section": "[2024.04.1]",
     "text": "[2024.04.1]\nreleased on: 29th of May 2024\nInitial Public Release\n\nChanged\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
