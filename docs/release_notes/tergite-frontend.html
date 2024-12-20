@@ -271,26 +271,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.12.0]</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2024.12.1]</a>
   <ul class="collapse">
   <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
-  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
   <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
+  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.09.1]</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.12.0]</a>
   <ul class="collapse">
   <li><a href="#added-1" id="toc-added-1" class="nav-link" data-scroll-target="#added-1">Added</a></li>
   <li><a href="#fixed-1" id="toc-fixed-1" class="nav-link" data-scroll-target="#fixed-1">Fixed</a></li>
   <li><a href="#changed-1" id="toc-changed-1" class="nav-link" data-scroll-target="#changed-1">Changed</a></li>
   </ul></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2024.09.0]</a>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2024.09.1]</a>
   <ul class="collapse">
   <li><a href="#added-2" id="toc-added-2" class="nav-link" data-scroll-target="#added-2">Added</a></li>
+  <li><a href="#fixed-2" id="toc-fixed-2" class="nav-link" data-scroll-target="#fixed-2">Fixed</a></li>
   <li><a href="#changed-2" id="toc-changed-2" class="nav-link" data-scroll-target="#changed-2">Changed</a></li>
   </ul></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[2024.04.1]</a>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[2024.09.0]</a>
   <ul class="collapse">
+  <li><a href="#added-3" id="toc-added-3" class="nav-link" data-scroll-target="#added-3">Added</a></li>
   <li><a href="#changed-3" id="toc-changed-3" class="nav-link" data-scroll-target="#changed-3">Changed</a></li>
+  </ul></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">[2024.04.1]</a>
+  <ul class="collapse">
+  <li><a href="#changed-4" id="toc-changed-4" class="nav-link" data-scroll-target="#changed-4">Changed</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -319,10 +325,37 @@ ul.task-list li input[type="checkbox"] {
 
 <hr>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">[2024.12.0]</h2>
-<p><em>released on: 11th of December 2024</em></p>
+<h2 class="anchored" data-anchor-id="section">[2024.12.1]</h2>
+<p><em>released on: 20th of December 2024</em></p>
 <section id="added" class="level3">
 <h3 class="anchored" data-anchor-id="added">Added</h3>
+<ul>
+<li><p>Dashboard:</p>
+<ul>
+<li>Added <code>run-nginx.sh</code> script to help initialize/update the variables like cookie names API urls and the like in docker prebuilt containers.</li>
+</ul></li>
+</ul>
+</section>
+<section id="changed" class="level3">
+<h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<ul>
+<li>Updated the Github actions to push the ‘:latest’ tag along side the version tag to docker registry</li>
+<li>Updated <code>prebuilt-docker-compose.yml</code> to pick relevant values from the environment as well as from <code>mss-config.toml</code> for the dashboard docker compose service</li>
+</ul>
+</section>
+<section id="fixed" class="level3">
+<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<ul>
+<li>Fixed the ‘parent-folder’ image not found error in the Github actions for the dashboard</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">[2024.12.0]</h2>
+<p><em>released on: 11th of December 2024</em></p>
+<section id="added-1" class="level3">
+<h3 class="anchored" data-anchor-id="added-1">Added</h3>
 <ul>
 <li><p>Added the admin pages for managing user access in the tergite-dashboard app.</p>
 <ul>
@@ -359,8 +392,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Added the <code>NETWORK_MODE</code> environment variable to the <code>.env.example</code> to configure the <code>network_mode</code> to use in docker compose file</p></li>
 </ul>
 </section>
-<section id="fixed" class="level3">
-<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<section id="fixed-1" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-1">Fixed</h3>
 <ul>
 <li><p>tergite-mss</p>
 <ul>
@@ -369,8 +402,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="changed" class="level3">
-<h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<section id="changed-1" class="level3">
+<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
 <ul>
 <li><p>tergite-dashboard</p>
 <ul>
@@ -381,25 +414,25 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">[2024.09.1]</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">[2024.09.1]</h2>
 <p><em>released on: 24th of September 2024</em></p>
-<section id="added-1" class="level3">
-<h3 class="anchored" data-anchor-id="added-1">Added</h3>
+<section id="added-2" class="level3">
+<h3 class="anchored" data-anchor-id="added-2">Added</h3>
 <ul>
 <li>Added example scopes in the mss_config.example.toml in tergite-mss</li>
 <li>Added units ‘Hz’ and ‘s’ to calibration data schema</li>
 </ul>
 </section>
-<section id="fixed-1" class="level3">
-<h3 class="anchored" data-anchor-id="fixed-1">Fixed</h3>
+<section id="fixed-2" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-2">Fixed</h3>
 <ul>
 <li>Fixed CORS error when dashboard and MSS are on different domains or subdomains</li>
 <li>Fixed ‘AttributeError: ’NoneType’ object has no attribute ‘resource_usage’’ on GET /v2/me/jobs</li>
 </ul>
 </section>
-<section id="changed-1" class="level3">
-<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
+<section id="changed-2" class="level3">
+<h3 class="anchored" data-anchor-id="changed-2">Changed</h3>
 <ul>
 <li>Removed <code>archives</code> folder in tergite-mss</li>
 <li>Removed <code>dev</code> folder in tergite-mss</li>
@@ -409,11 +442,11 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">[2024.09.0]</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">[2024.09.0]</h2>
 <p><em>released on: 2nd of September 2024</em></p>
-<section id="added-2" class="level3">
-<h3 class="anchored" data-anchor-id="added-2">Added</h3>
+<section id="added-3" class="level3">
+<h3 class="anchored" data-anchor-id="added-3">Added</h3>
 <ul>
 <li>Added the tergite-dashboard app. It included:
 <ul>
@@ -442,8 +475,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="changed-2" class="level3">
-<h3 class="anchored" data-anchor-id="changed-2">Changed</h3>
+<section id="changed-3" class="level3">
+<h3 class="anchored" data-anchor-id="changed-3">Changed</h3>
 <ul>
 <li>Removed the tergite-landing-page app</li>
 <li>Removed the tergite-webgui app</li>
@@ -451,12 +484,12 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">[2024.04.1]</h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">[2024.04.1]</h2>
 <p><em>released on: 28th of May 2024</em></p>
 <p>Initial Public Release</p>
-<section id="changed-3" class="level3">
-<h3 class="anchored" data-anchor-id="changed-3">Changed</h3>
+<section id="changed-4" class="level3">
+<h3 class="anchored" data-anchor-id="changed-4">Changed</h3>
 <ul>
 <li>Updated the contribution guidelines and government model statements</li>
 </ul>

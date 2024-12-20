@@ -4,6 +4,29 @@ title: "Tergite Frontend"
 
 ---
 
+## [2024.12.1]
+_released on: 20th of December 2024_
+
+### Added
+
+- Dashboard:
+
+    - Added `run-nginx.sh` script to help initialize/update the variables like cookie names
+    API urls and the like in docker prebuilt containers.
+
+### Changed
+
+- Updated the Github actions to push the ':latest' tag along side the version tag to docker registry
+- Updated `prebuilt-docker-compose.yml` to pick relevant values from the environment as well as
+  from `mss-config.toml` for the dashboard docker compose service
+
+### Fixed
+
+- Fixed the 'parent-folder' image not found error in the Github actions for the dashboard
+
+
+---
+
 ## [2024.12.0]
 _released on: 11th of December 2024_
 
