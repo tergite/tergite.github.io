@@ -158,8 +158,8 @@ PROMTAIL_VERSION=2.8.3
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
-docker rmi tergite/tergite-mss:v0.0.1
-docker rmi tergite/tergite-dashboard:v0.0.1
+docker rmi -f tergite/tergite-mss:v0.0.1
+docker rmi -f tergite/tergite-dashboard:v0.0.1
 ```
 
 - To Run the services, use the `fresh-docker-compose.yml`.
