@@ -839,9 +839,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>    POLL_TIMEOUT <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create the Qiskit circuit</span></span>
-<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">2</span>)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">2</span>, <span class="dv">2</span>)</span>
 <span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
-<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>    qc.cx(<span class="dv">0</span>)</span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>    qc.cx(<span class="dv">0</span>, <span class="dv">1</span>)</span>
 <span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>    qc.measure(<span class="dv">0</span>, <span class="dv">0</span>)</span>
 <span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>    qc.measure(<span class="dv">1</span>, <span class="dv">1</span>)</span>
 <span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a></span>
