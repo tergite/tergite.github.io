@@ -2,122 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tergite.github.io/why.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-09-17T14:58:16.343Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/07_puhuri_tergite_flows.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-08-28T07:46:19.910Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/05_hardware_configuration.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-09-13T20:40:22.118Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/03_authentication.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-09-12T15:16:01.735Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/01_quick_start.html</loc>
-    <lastmod>2025-01-14T14:18:37.389Z</lastmod>
+    <lastmod>2025-01-22T10:44:35.218Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-frontend.html</loc>
-    <lastmod>2025-01-14T12:28:07.597Z</lastmod>
+    <lastmod>2025-01-22T10:47:23.395Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-autocalibration.html</loc>
-    <lastmod>2025-01-14T12:28:07.597Z</lastmod>
+    <lastmod>2024-12-13T18:34:11.397Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/examples/03_equal_superposition.html</loc>
-    <lastmod>2025-01-14T12:28:07.596Z</lastmod>
+    <lastmod>2024-06-04T09:06:59.988Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/examples/01_hello_tergite.html</loc>
-    <lastmod>2025-01-14T12:28:07.596Z</lastmod>
+    <lastmod>2024-06-04T10:33:38.244Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/5_sdk.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/3_public_api.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/1_overview.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/limitations/4_dashboard.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/limitations/2_backend.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.056Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/contributing/guidelines.html</loc>
-    <lastmod>2025-01-14T12:28:07.542Z</lastmod>
+    <lastmod>2024-09-12T15:16:01.693Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/LICENSE.html</loc>
-    <lastmod>2025-01-14T12:28:07.498Z</lastmod>
+    <lastmod>2024-06-04T14:03:04.152Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/limitations/1_overview.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T10:23:22.639Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/limitations/3_public_api.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/limitations/5_sdk.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/2_backend.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-11-07T09:49:43.756Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/4_dashboard.html</loc>
-    <lastmod>2025-01-14T12:28:07.543Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/developer/system_design/6_automatic_calibration.html</loc>
-    <lastmod>2025-01-14T12:28:07.544Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/examples/02_bell_state.html</loc>
-    <lastmod>2025-01-14T12:28:07.596Z</lastmod>
+    <lastmod>2024-06-04T09:07:08.841Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/index.html</loc>
-    <lastmod>2025-01-14T12:28:07.596Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.049Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-backend.html</loc>
-    <lastmod>2025-01-14T12:28:07.597Z</lastmod>
+    <lastmod>2024-12-20T09:51:16.680Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-sdk.html</loc>
-    <lastmod>2025-01-14T12:28:07.597Z</lastmod>
+    <lastmod>2024-12-18T18:28:16.925Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/02_adding_authentication.html</loc>
-    <lastmod>2025-01-14T12:28:07.597Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/04_authorization.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-08-28T09:32:26.604Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/06_resource_management.html</loc>
-    <lastmod>2025-01-14T12:28:07.598Z</lastmod>
+    <lastmod>2024-09-17T12:44:37.055Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/08_quick_start_dummy_cluster.html</loc>
-    <lastmod>2025-01-14T12:48:28.807Z</lastmod>
+    <lastmod>2025-01-22T10:44:35.219Z</lastmod>
   </url>
 </urlset>

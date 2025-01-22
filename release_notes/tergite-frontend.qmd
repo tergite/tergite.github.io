@@ -4,6 +4,21 @@ title: "Tergite Frontend"
 
 ---
 
+## [2024.12.2]
+_released on: 22nd of January 2025_
+
+### Changed
+
+- Raised logging level to WARN in tergite-frontend when app settings are not production
+- Removed NETWORK_MODE environment variable in tergite-mss
+
+### Fixed
+
+- Fixed auth openid errors in tergite-mss when auth is disabled
+
+
+---
+
 ## [2024.12.1]
 _released on: 20th of December 2024_
 
