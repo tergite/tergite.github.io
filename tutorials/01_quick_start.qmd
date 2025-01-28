@@ -158,13 +158,13 @@ DASHBOARD_VERSION=v0.0.1
 PROMTAIL_VERSION=2.8.3
 ```
 
-- Open MongoDB configurations file
+- **For Linux**: open MongoDB configurations file
 
 ```zsh
 code /etc/mongod.conf
 ``` 
 
-- And replace the contents with the following:
+- **For Linux**: Replace the contents that config file with the following:
 
 ```zsh
 # mongod.conf
@@ -208,12 +208,11 @@ processManagement:
 
 ```
 
-- Restart mongod service and make sure that it's active
+- **For Linux**: restart mongod service and make sure that it's active
 ```zsh
 sudo service mongod restart
 sudo service mongod status
 ```
-
 
 - Open the Mongo compass application and connect to the default local mongo database
 
@@ -230,8 +229,8 @@ sudo service mongod status
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
-docker rmi tergite/tergite-mss:v0.0.1
-docker rmi tergite/tergite-dashboard:v0.0.1
+docker rmi -f tergite/tergite-mss:v0.0.1
+docker rmi -f tergite/tergite-dashboard:v0.0.1
 ```
 
 - To Run the services, use the `fresh-docker-compose.yml`.

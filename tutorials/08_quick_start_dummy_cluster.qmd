@@ -173,6 +173,63 @@ PROMTAIL_VERSION=2.8.3
 ![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
 :::
 
+
+- **For Linux**: open MongoDB configurations file
+
+```zsh
+code /etc/mongod.conf
+``` 
+
+- **For Linux**: Replace the contents that config file with the following:
+
+```zsh
+# mongod.conf
+
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongodb
+#  engine:
+#  wiredTiger:
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+
+
+# how the process runs
+processManagement:
+  timeZoneInfo: /usr/share/zoneinfo
+
+#security:
+
+#operationProfiling:
+
+#replication:
+
+#sharding:
+
+## Enterprise-Only Options:
+
+#auditLog:
+
+```
+
+- **For Linux**: restart mongod service and make sure that it's active
+```zsh
+sudo service mongod restart
+sudo service mongod status
+```
+
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
