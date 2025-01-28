@@ -27,6 +27,24 @@ You may have to install these software if you don't have them already installed.
 docker --help
 ```
 
+Note: for MacOS, start docker by running this command 
+
+```zsh
+open -a Docker
+```
+
+Note: for Windows, start docker by running this command 
+
+```zsh
+Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+```
+
+Note: for Linux, start docker by running this command 
+
+```zsh
+sudo systemctl start docker
+```
+
 - Open another terminal
 
 - Clone the [tergite-frontend](https://github.com/tergite/tergite-frontend) repo
