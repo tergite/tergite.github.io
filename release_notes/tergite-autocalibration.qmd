@@ -4,6 +4,23 @@ title: "Tergite Autocalibration"
 
 ---
 
+## [2025.03.0]
+_released on 16th of March 2024_
+
+### Added
+- Advanced logging
+- Debugging endpoint
+- Quickstart endpoint to generate templates semi-automatically
+
+### Changed
+
+- Rename all node class names to camel case
+- Re-analysis is more user-friendly
+- Make pipeline more modular
+- Improved node documentation
+
+---
+
 ## [2024.12.0]
 _released on 12th of December 2024_
 
