@@ -4,6 +4,34 @@ title: "Tergite Frontend"
 
 ---
 
+## [2025.03.0]
+_release on: 14th of March 2025_
+
+### Added
+
+- Added Full end-to-end testing combining the backend, API and dashboard
+
+- Dashboard:
+    - Added dark mode color change on dark mode toggle button click
+    - Added a dark mode toggle button on the login page
+    - Added a dark mode toggle button on the dashboard page
+    - Changed the coloring of the device map chart to use muted connection lines
+    - Changed the coloring of the device bar chart to use purple bar lines, and muted axes
+
+### Changed
+
+- MSS:
+    - Renamed `quantum_jobs` to `jobs` service
+    - Removed the api routes, DTOs and service methods for the old WebGUI project.
+- Dashboard:
+    - Disabled the "live" switch when creating projects as admin
+
+### Fixed
+
+- Fix project list in nav bar to be only active projects
+
+---
+
 ## [2024.12.2]
 _released on: 22nd of January 2025_
 
