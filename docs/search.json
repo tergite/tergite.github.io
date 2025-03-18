@@ -205,11 +205,22 @@
     ]
   },
   {
+    "objectID": "release_notes/tergite-frontend.html",
+    "href": "release_notes/tergite-frontend.html",
+    "title": "Tergite Frontend",
+    "section": "",
+    "text": "release on: 18th of March 2025\n\n\n\nChanged the backend configurations for the full e2e to run with the new backend configuration files",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
     "objectID": "release_notes/tergite-frontend.html#section",
     "href": "release_notes/tergite-frontend.html#section",
     "title": "Tergite Frontend",
-    "section": "[2025.03.0]",
-    "text": "[2025.03.0]\nrelease on: 14th of March 2025\n\nAdded\n\nAdded Full end-to-end testing combining the backend, API and dashboard\nDashboard:\n\nAdded dark mode color change on dark mode toggle button click\nAdded a dark mode toggle button on the login page\nAdded a dark mode toggle button on the dashboard page\nChanged the coloring of the device map chart to use muted connection lines\nChanged the coloring of the device bar chart to use purple bar lines, and muted axes\n\n\n\n\nChanged\n\nMSS:\n\nRenamed quantum_jobs to jobs service\nRemoved the api routes, DTOs and service methods for the old WebGUI project.\n\nDashboard:\n\nDisabled the “live” switch when creating projects as admin\n\n\n\n\nFixed\n\nFix project list in nav bar to be only active projects",
+    "section": "",
+    "text": "release on: 18th of March 2025\n\n\n\nChanged the backend configurations for the full e2e to run with the new backend configuration files",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -219,8 +230,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-1",
     "href": "release_notes/tergite-frontend.html#section-1",
     "title": "Tergite Frontend",
-    "section": "[2024.12.2]",
-    "text": "[2024.12.2]\nreleased on: 22nd of January 2025\n\nChanged\n\nRaised logging level to WARN in tergite-frontend when app settings are not production\nRemoved NETWORK_MODE environment variable in tergite-mss\n\n\n\nFixed\n\nFixed auth openid errors in tergite-mss when auth is disabled",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nrelease on: 14th of March 2025\n\nAdded\n\nAdded Full end-to-end testing combining the backend, API and dashboard\nDashboard:\n\nAdded dark mode color change on dark mode toggle button click\nAdded a dark mode toggle button on the login page\nAdded a dark mode toggle button on the dashboard page\nChanged the coloring of the device map chart to use muted connection lines\nChanged the coloring of the device bar chart to use purple bar lines, and muted axes\n\n\n\n\nChanged\n\nMSS:\n\nRenamed quantum_jobs to jobs service\nRemoved the api routes, DTOs and service methods for the old WebGUI project.\n\nDashboard:\n\nDisabled the “live” switch when creating projects as admin\n\n\n\n\nFixed\n\nFix project list in nav bar to be only active projects",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -230,8 +241,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-2",
     "href": "release_notes/tergite-frontend.html#section-2",
     "title": "Tergite Frontend",
-    "section": "[2024.12.1]",
-    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nDashboard:\n\nAdded run-nginx.sh script to help initialize/update the variables like cookie names API urls and the like in docker prebuilt containers.\n\n\n\n\nChanged\n\nUpdated the Github actions to push the ‘:latest’ tag along side the version tag to docker registry\nUpdated prebuilt-docker-compose.yml to pick relevant values from the environment as well as from mss-config.toml for the dashboard docker compose service\n\n\n\nFixed\n\nFixed the ‘parent-folder’ image not found error in the Github actions for the dashboard",
+    "section": "[2024.12.2]",
+    "text": "[2024.12.2]\nreleased on: 22nd of January 2025\n\nChanged\n\nRaised logging level to WARN in tergite-frontend when app settings are not production\nRemoved NETWORK_MODE environment variable in tergite-mss\n\n\n\nFixed\n\nFixed auth openid errors in tergite-mss when auth is disabled",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -241,8 +252,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-3",
     "href": "release_notes/tergite-frontend.html#section-3",
     "title": "Tergite Frontend",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the admin pages for managing user access in the tergite-dashboard app.\n\nAdded the tokens list page for viewing, editing and deleting tokens of current user\nAdded the projects list page for viewing, requesting QPU time and deleting projects for current user\nAdded admin page for viewing, and approving user requests\nAdded admin page for viewing, editing, deleting and creating new projects\nAdded close button on the job detail drawer on the home page\n\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded GET /v2/me endpoint to get current user info\nAdded DELETE /v2/me/projects/{id} endpoint to delete project current user administers\nAdded GET /v2/admin/qpu-time-requests endpoint to get all user requests to increase QPU seconds on a project\nAdded POST /v2/admin/qpu-time-requests endpoint for project members to request for more QPU seconds\nAdded GET /v2/admin/user-requests endpoint for admins to retrieve a list of user requests\nAdded PUT /v2/admin/user-requests/{id} endpoint for admins to update (e.g. approve/reject) as user request\nAdded POST /v2/admin/projects/ endpoint for admins to create a new project\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded GET /v2/admin/projects/ endpoint for admins to retireve a list of projects\nAdded GET /v2/admin/projects/{id} endpoint for admins to view a project of given id\nAdded PUT /v2/admin/projects/{id} endpoint for admins to update a project of given id\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded DELETE /v2/admin/projects/{id} endpoint for admins to soft delete a project\nAdded the PUT /auth/me/app-tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded the PUT /v2/me/tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded the MSS_PORT environment variable to the .env.example to configure the port on which tergite-mss runs on in docker compose.\nAdded the NETWORK_MODE environment variable to the .env.example to configure the network_mode to use in docker compose file\n\n\n\nFixed\n\ntergite-mss\n\nFixed the not found error when deleting expired app tokens\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\n\nChanged\n\ntergite-dashboard\n\nChanged devices page to show ‘no devices found’ when no devices are available.\nChanged to show sidebar placeholder on admin user requests page when no user request is selected",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nDashboard:\n\nAdded run-nginx.sh script to help initialize/update the variables like cookie names API urls and the like in docker prebuilt containers.\n\n\n\n\nChanged\n\nUpdated the Github actions to push the ‘:latest’ tag along side the version tag to docker registry\nUpdated prebuilt-docker-compose.yml to pick relevant values from the environment as well as from mss-config.toml for the dashboard docker compose service\n\n\n\nFixed\n\nFixed the ‘parent-folder’ image not found error in the Github actions for the dashboard",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -252,8 +263,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-4",
     "href": "release_notes/tergite-frontend.html#section-4",
     "title": "Tergite Frontend",
-    "section": "[2024.09.1]",
-    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nAdded\n\nAdded example scopes in the mss_config.example.toml in tergite-mss\nAdded units ‘Hz’ and ‘s’ to calibration data schema\n\n\n\nFixed\n\nFixed CORS error when dashboard and MSS are on different domains or subdomains\nFixed ‘AttributeError: ’NoneType’ object has no attribute ‘resource_usage’’ on GET /v2/me/jobs\n\n\n\nChanged\n\nRemoved archives folder in tergite-mss\nRemoved dev folder in tergite-mss\nChanged all calibration v2 properties optional\nNormalized calibration data to have frequencies in GHz and durations in microseconds in the dashboard",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the admin pages for managing user access in the tergite-dashboard app.\n\nAdded the tokens list page for viewing, editing and deleting tokens of current user\nAdded the projects list page for viewing, requesting QPU time and deleting projects for current user\nAdded admin page for viewing, and approving user requests\nAdded admin page for viewing, editing, deleting and creating new projects\nAdded close button on the job detail drawer on the home page\n\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded GET /v2/me endpoint to get current user info\nAdded DELETE /v2/me/projects/{id} endpoint to delete project current user administers\nAdded GET /v2/admin/qpu-time-requests endpoint to get all user requests to increase QPU seconds on a project\nAdded POST /v2/admin/qpu-time-requests endpoint for project members to request for more QPU seconds\nAdded GET /v2/admin/user-requests endpoint for admins to retrieve a list of user requests\nAdded PUT /v2/admin/user-requests/{id} endpoint for admins to update (e.g. approve/reject) as user request\nAdded POST /v2/admin/projects/ endpoint for admins to create a new project\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded GET /v2/admin/projects/ endpoint for admins to retireve a list of projects\nAdded GET /v2/admin/projects/{id} endpoint for admins to view a project of given id\nAdded PUT /v2/admin/projects/{id} endpoint for admins to update a project of given id\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded DELETE /v2/admin/projects/{id} endpoint for admins to soft delete a project\nAdded the PUT /auth/me/app-tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded the PUT /v2/me/tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded the MSS_PORT environment variable to the .env.example to configure the port on which tergite-mss runs on in docker compose.\nAdded the NETWORK_MODE environment variable to the .env.example to configure the network_mode to use in docker compose file\n\n\n\nFixed\n\ntergite-mss\n\nFixed the not found error when deleting expired app tokens\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\n\nChanged\n\ntergite-dashboard\n\nChanged devices page to show ‘no devices found’ when no devices are available.\nChanged to show sidebar placeholder on admin user requests page when no user request is selected",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -263,8 +274,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-5",
     "href": "release_notes/tergite-frontend.html#section-5",
     "title": "Tergite Frontend",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 2nd of September 2024\n\nAdded\n\nAdded the tergite-dashboard app. It included:\n\nDevice summary list on the dashboard home\nJobs list on the dashboard home\nJobs detail drawer on the dashboard home\nDevice list page\nDevice detail page\nError page\n\nAdded v2 endpoints on Tergite MSS including\n\n/v2/me/projects/ to GET, POST current cookie user’s projects\n/v2/me/projects/{project_id} to GET, PUT current cookie user’s single project\n/v2/me/tokens/ to GET, POST current cookie user’s application tokens\n/v2/me/tokens/{token_id} to GET, PUT current cookie user’s application token\n/v2/me/jobs/ to GET current cookie user’s jobs (with option of specifying project id)\n/v2/auth/providers to GET the available Oauth2 provider corresponding to a given email domain\n/v2/auth/{provider}/authorize to POST Oauth2 initialization request for given provider\n/v2/auth/{provider}/callback to handle GET redirects from 3rd party Oauth2 providers after successful login\n/v2/auth/logout to handle POST requests to logout the current user via cookies\n/v2/calibrations/ to GET, POST calibration data for all devices. POST is available for only system users.\n/v2/calibration/{device_name} to GET calibration data for the device of the given device_name\n/v2/devices to GET, PUT (upsert) all devices. PUT is available for only system users.\n/v2/devices/{name} to GET, PUT the device of a given name. PUT is available for only system users.\n\n\n\n\nChanged\n\nRemoved the tergite-landing-page app\nRemoved the tergite-webgui app",
+    "section": "[2024.09.1]",
+    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nAdded\n\nAdded example scopes in the mss_config.example.toml in tergite-mss\nAdded units ‘Hz’ and ‘s’ to calibration data schema\n\n\n\nFixed\n\nFixed CORS error when dashboard and MSS are on different domains or subdomains\nFixed ‘AttributeError: ’NoneType’ object has no attribute ‘resource_usage’’ on GET /v2/me/jobs\n\n\n\nChanged\n\nRemoved archives folder in tergite-mss\nRemoved dev folder in tergite-mss\nChanged all calibration v2 properties optional\nNormalized calibration data to have frequencies in GHz and durations in microseconds in the dashboard",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -273,6 +284,17 @@
   {
     "objectID": "release_notes/tergite-frontend.html#section-6",
     "href": "release_notes/tergite-frontend.html#section-6",
+    "title": "Tergite Frontend",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 2nd of September 2024\n\nAdded\n\nAdded the tergite-dashboard app. It included:\n\nDevice summary list on the dashboard home\nJobs list on the dashboard home\nJobs detail drawer on the dashboard home\nDevice list page\nDevice detail page\nError page\n\nAdded v2 endpoints on Tergite MSS including\n\n/v2/me/projects/ to GET, POST current cookie user’s projects\n/v2/me/projects/{project_id} to GET, PUT current cookie user’s single project\n/v2/me/tokens/ to GET, POST current cookie user’s application tokens\n/v2/me/tokens/{token_id} to GET, PUT current cookie user’s application token\n/v2/me/jobs/ to GET current cookie user’s jobs (with option of specifying project id)\n/v2/auth/providers to GET the available Oauth2 provider corresponding to a given email domain\n/v2/auth/{provider}/authorize to POST Oauth2 initialization request for given provider\n/v2/auth/{provider}/callback to handle GET redirects from 3rd party Oauth2 providers after successful login\n/v2/auth/logout to handle POST requests to logout the current user via cookies\n/v2/calibrations/ to GET, POST calibration data for all devices. POST is available for only system users.\n/v2/calibration/{device_name} to GET calibration data for the device of the given device_name\n/v2/devices to GET, PUT (upsert) all devices. PUT is available for only system users.\n/v2/devices/{name} to GET, PUT the device of a given name. PUT is available for only system users.\n\n\n\n\nChanged\n\nRemoved the tergite-landing-page app\nRemoved the tergite-webgui app",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html#section-7",
+    "href": "release_notes/tergite-frontend.html#section-7",
     "title": "Tergite Frontend",
     "section": "[2024.04.1]",
     "text": "[2024.04.1]\nreleased on: 28th of May 2024\nInitial Public Release\n\nChanged\n\nUpdated the contribution guidelines and government model statements",

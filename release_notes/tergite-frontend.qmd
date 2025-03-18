@@ -2,6 +2,13 @@
 title: "Tergite Frontend"
 ---
 
+## [2025.03.1]
+_release on: 18th of March 2025_
+
+### Changed
+
+- Changed the backend configurations for the full e2e to run with the new backend configuration files
+
 ---
 
 ## [2025.03.0]
