@@ -161,19 +161,6 @@ DASHBOARD_VERSION=v0.0.1
 PROMTAIL_VERSION=2.8.3
 ```
 
-- Open the Mongo compass application and connect to the default local mongo database
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-new-connection.png)
-:::
-
-- Create a new mongo database called "testing" that contains a "backends" collection.
-
-::: {layout-ncol=1}
-![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
-:::
-
-
 - **For Linux**: open MongoDB configurations file
 
 ```zsh
@@ -229,6 +216,19 @@ processManagement:
 sudo service mongod restart
 sudo service mongod status
 ```
+
+- Open the Mongo compass application and connect to the default local mongo database
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-new-connection.png)
+:::
+
+- Create a new mongo database called "testing" that contains a "backends" collection.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
+:::
+
 
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
@@ -347,92 +347,74 @@ MSS_PORT=8002
 BCC_MACHINE_ROOT_URL=http://localhost:8000
 BCC_PORT=8000
 
-QUANTIFY_CONFIG_FILE=quantify-config.yml
 EXECUTOR_TYPE=quantify
 ```
 
-- Create an `quantify-config.yml` file with visual studio code (or any other text editor).
+- Create an `quantify-config.json` file with visual studio code (or any other text editor).
 
 ```zsh
-code quantify-config.yml
+code quantify-config.json
 ```
 
-- Update the `quantify-config.yml` with the following content
+- Update the `quantify-config.json` with the following content
 
+```json
+{
+    "config_type": "quantify_scheduler.backends.qblox_backend.QbloxHardwareCompilationConfig",
+    "hardware_description": {
+        "cluster0": {
+            "instrument_type": "Cluster",
+            "ref": "internal",
+            "modules": {
+                "2": {
+                    "instrument_type": "QCM_RF"
+                },
+                "16": {
+                    "instrument_type": "QRM_RF" 
+                }
+            }
+        }
+    },
+    "hardware_options": {
+        "modulation_frequencies": {
+            "q0:res-q0.ro": {"interm_freq": 100e6},
+	        "q0:mw-q0.01": {"interm_freq": 100e6} 
+        }
+    },
+    "connectivity": {
+        "graph": [
+            ["cluster0.module2.complex_output_0", "q0:mw"],
+	        ["cluster0.module16.complex_output_0", "q0:res"]
+        ]
+    }
+}
+```
+
+- Create an `quantify-metadata.yml` file with visual studio code (or any other text editor).
+
+```zsh
+code quantify-metadata.yml
+```
+
+- Update the `quantify-metadata.yml` with the following content
 ```yml
-# quantify-config.yml
-clusters:
-  - name: clusterA
-    instrument_type: Cluster
-    is_dummy: true
-    ref: internal
-    instrument_address: "192.0.2.141"
+cluster0:
+  # instrument type
+  # Cluster or SPI-Rack 
+  instrument_type: Cluster
 
-    modules:
-      - name: "clusterA_module7"
-        instrument_type: "QCM_RF"
+  # Ip address of the cluster
+  ip_address: 192.168.78.101
 
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 4458000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive0"
-              clock: "d0"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
+  # whether to attempt connecting to the real cluster or to return dummy result for test purposes
+  is_dummy: true
 
-      - name: "clusterA_module8"
-        instrument_type: "QCM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 5110000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive1"
-              clock: "d1"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-
-      - name: "clusterA_module9"
-        instrument_type: "QCM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 4445000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "drive2"
-              clock: "d2"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-
-
-      - name: "clusterA_module17"
-        instrument_type: "QRM_RF"
-
-        complex_outputs:
-          - name: "complex_output_0"
-            lo_freq: 6838000000
-            dc_mixer_offset_I: 0
-            dc_mixer_offset_Q: 0
-            portclock_configs:
-            - port: "readout0"
-              clock: "m0"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-            - port: "readout1"
-              clock: "m1"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
-            - port: "readout2"
-              clock: "m2"
-              mixer_amp_ratio: 1
-              mixer_phase_error_deg: 0
+  # this would only be used to set up dummy cluster modules
+  modules:
+    "2":
+      instrument_type: QCM_RF
+    "16":
+      instrument_type: QRM_RF
 ```
 
 - Create a `backend_config.toml` file with visual studio code (or any other text editor).
@@ -444,31 +426,30 @@ code backend_config.toml
 - Update the `backend_config.toml` with the following content.
 
 ```toml
+# backend_config.toml
 [general_config]
 name = "loke"
-description = "Backend for the simulator supporting qiskit-connector parsing for the release 2024.3"
+is_active = true
 characterized = true
 open_pulse = true
-version = "2024.04.0"
-num_qubits = 5
-num_couplers = 8
-num_resonators = 5
-simulator = true
-online_date = "2022-04-13T19:50:31"
+simulator = false
+version = "1.0.0"
+online_date = "2024-10-09T00:00:00"
+num_qubits = 1
+num_couplers = 0
+num_resonators = 1
 dt = 1e-9
-dtm = 1e-9 
+dtm = 1e-9
 
 [device_config]
-meas_map = [ [ 0, 1, 2, 3, 4 ] ]
-coordinates = [
-      [0, 0],
-      [2, 0],
-      [1, 1],
-      [0, 2],
-      [2, 2]
-]
 discriminators = [ "lda" ]
-qubit_ids = [ "q0", "q1", "q2", "q3", "q4" ]
+qubit_ids = [ "q0"]
+meas_map = [ [ 0 ], [ 1 ] ]
+coordinates = [
+  [0, 0],
+  [1, 0]
+]
+
 qubit_parameters = [
   "id",
   "x_position",
@@ -513,53 +494,47 @@ coupler_parameters = [
   "pulse_type"
 ]
 
-[device_config.coupling_dict]
-u0 = ["q0", "q1"]
-u1 = ["q0", "q3"]
-u2 = ["q0", "q2"]
-u3 = ["q1", "q2"]
-u4 = ["q1", "q4"]
-u5 = ["q2", "q3"]
-u6 = ["q2", "q4"]
-u7 = ["q3", "q4"]
-
 [device_config.discriminator_parameters]
 lda = [
   "coef_0",
   "coef_1",
-  "intercept",
-  "score"
+  "intercept"
 ]
 
-[gates.u]
-qubits = [ 0 ]
-qasm_def = "gate id q { U(0, 0, 0) q; }"
-parameters = [ ]
-
-[gates.h]
-qubits = [ 0 ]
-qasm_def = "gate id q { U(0, 0, 0) q; }"
-parameters = [ ]
+[device_config.coupling_dict]
 
 [gates.x]
-qubits = [ 0 ]
-qasm_def = "gate id q { U(0, 0, 0) q; }"
+coupling_map = [ [ 0, 1], [1, 0] ]
+qasm_def = "gate x q { U(pi, 0, pi) q; }"
 parameters = [ ]
+```
 
-[simulator_config.units.qubit]
-# configs for units
+- Create a `calibration.seed.toml` file with visual studio code (or any other text editor).
+
+```zsh
+code calibration.seed.toml
+```
+
+- Update the `calibration.seed.toml` file with the following content.
+```toml
+[calibration_config]
+
+[calibration_config.units.qubit]
 frequency = "Hz"
 t1_decoherence = "s"
 t2_decoherence = "s"
+anharmonicity = "Hz"
 
-[simulator_config.units.readout_resonator]
+[calibration_config.units.readout_resonator]
 acq_delay = "s"
 acq_integration_time = "s"
 frequency = "Hz"
 pulse_delay = "s"
 pulse_duration = "s"
+pulse_amplitude = ""
+pulse_type = ""
 
-[simulator_config.units.coupler]
+[calibration_config.units.coupler]
 frequency = "Hz"
 frequency_detuning = "Hz"
 anharmonicity = "Hz"
@@ -573,258 +548,34 @@ cz_pulse_duration_rise = "s"
 cz_pulse_duration_constant = "s"
 pulse_type = ""
 
-[simulator_config.units.discriminators]
+[[calibration_config.qubit]]
+id="q0"
+t1_decoherence      = 3.4e-5
+t2_decoherence      = 3.3e-5
+frequency           = 4511480043.556283
+pi_pulse_amplitude  = 0.17555712637424228
+pi_pulse_duration   = 5.6e-8
+pulse_type          = "Gaussian"
+pulse_sigma         = 7e-9
 
-[[simulator_config.qubit]]
-frequency = 4_511_480_043.556283
-pi_pulse_amplitude = 0.17555712637424228
-pi_pulse_duration = 5.6e-8
-pulse_sigma = 7e-9 
-pulse_type = "Gaussian"
-t1_decoherence = 0.000034
-t2_decoherence = 0.000033
-id = "q0"
+# -- Resonators --
 
-[[simulator_config.qubit]]
-frequency = 4_677_112_343.360253
-pi_pulse_amplitude = 0.17535338530538067
-pi_pulse_duration = 5.6e-8
-pulse_sigma = 7e-9 
-pulse_type = "Gaussian"
-t1_decoherence = 0.000034
-t2_decoherence = 0.000033
-id = "q1"
+[[calibration_config.readout_resonator]]
+id="q0"
+acq_delay            = 5e-8
+acq_integration_time = 1e-6
+frequency            = 7260080000.0
+pulse_amplitude      = 0.1266499392606423
+pulse_delay          = 0.0
+pulse_duration       = 9e-7
+pulse_type           = "Square"
 
-[[simulator_config.qubit]]
-frequency = 5_770_226_599.80365
-pi_pulse_amplitude = 0.17873594718151276
-pi_pulse_duration = 5.6e-8
-pulse_sigma = 7e-9 
-pulse_type = "Gaussian"
-t1_decoherence = 0.000034
-t2_decoherence = 0.000033
-id = "q2"
+# -- Discriminators --
 
-[[simulator_config.qubit]]
-frequency = 6_856_217_811.995201
-pi_pulse_amplitude = 0.17326197853513559
-pi_pulse_duration = 5.6e-8
-pulse_sigma = 7e-9 
-pulse_type = "Gaussian"
-t1_decoherence = 0.000034
-t2_decoherence = 0.000033
-id = "q3"
-
-[[simulator_config.qubit]]
-frequency = 6_701_096_836.557067
-pi_pulse_amplitude = 0.16948867103728774
-pi_pulse_duration = 5.6e-8
-pulse_sigma = 7e-9 
-pulse_type = "Gaussian"
-t1_decoherence = 0.000034
-t2_decoherence = 0.000033
-id = "q4"
-
-[[simulator_config.readout_resonator]]
-acq_delay = 5e-8 
-acq_integration_time = 0.000001
-frequency = 7_260_080_000
-pulse_delay = 0
-pulse_duration = 9e-7 
-pulse_type = "Square"
-pulse_amplitude = 0.1266499392606423
-id = "q0"
-
-[[simulator_config.readout_resonator]]
-acq_delay = 5e-8 
-acq_integration_time = 0.000001
-frequency = 7_380_000_000
-pulse_delay = 0
-pulse_duration = 9e-7 
-pulse_type = "Square"
-pulse_amplitude = 0.12660078572926436
-id = "q1"
-
-[[simulator_config.readout_resonator]]
-acq_delay = 5e-8 
-acq_integration_time = 0.000001
-frequency = 7_502_000_000
-pulse_delay = 0
-pulse_duration = 9e-7 
-pulse_type = "Square"
-pulse_amplitude = 0.08245560237524203
-id = "q2"
-
-[[simulator_config.readout_resonator]]
-acq_delay = 5e-8 
-acq_integration_time = 0.000001
-frequency = 7_712_000_000
-pulse_delay = 0
-pulse_duration = 9e-7 
-pulse_type = "Square"
-pulse_amplitude = 0.04188729430238
-id = "q3"
-
-[[simulator_config.readout_resonator]]
-acq_delay = 5e-8 
-acq_integration_time = 0.000001
-frequency = 7_871_000_000
-pulse_delay = 0
-pulse_duration = 9e-7 
-pulse_type = "Square"
-pulse_amplitude = 0.05844291534543274
-id = "q4"
-
-[[simulator_config.coupler]]
-id = "u0"
-frequency = 7.8e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u1"
-frequency = 7.4e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.12e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u2"
-frequency = 7.9e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u3"
-frequency = 7.6e9
-frequency_detuning = -0.014e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u4"
-frequency = 7.2e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u5"
-frequency = 7.3e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u6"
-frequency = 7.1e9
-frequency_detuning = -0.015e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[[simulator_config.coupler]]
-id = "u7"
-frequency = 7.4e9
-frequency_detuning = -0.014e9
-anharmonicity = -0.17e9
-coupling_strength_02 = 0.07e9
-coupling_strength_12 = 0.07e9
-cz_pulse_amplitude = 0.08
-cz_pulse_dc_bias = 0.275
-cz_pulse_phase_offset = 0
-cz_pulse_duration_before = 88e-9
-cz_pulse_duration_rise = 25e-9
-cz_pulse_duration_constant = 370e-9
-pulse_type = "wacqt_cz_gate_pulse"
-
-[simulator_config.discriminators.lda.q0]
-score = 0.985
+[calibration_config.discriminators.lda.q0]
 intercept = -38.4344477840827
-coef_0 = -98_953.87504155144
-coef_1 = -114_154.48696231026
-
-[simulator_config.discriminators.lda.q1]
-score = 0.987
-intercept = -42.05181160328822
-coef_0 = -107_941.00358803963
-coef_1 = -124_239.32054386326
-
-[simulator_config.discriminators.lda.q2]
-score = 0.9905
-intercept = -22.684588212281916
-coef_0 = -191_087.42493249022
-coef_1 = -20_803.06874845618
-
-[simulator_config.discriminators.lda.q3]
-score = 0.8735
-intercept = -1.933795064413808
-coef_0 = -29_474.17108465108
-coef_1 = 78_360.1067777809
-
-[simulator_config.discriminators.lda.q4]
-score = 0.96375
-intercept = -6.6282190356967075
-coef_0 = -106_998.96952984166
-coef_1 = 66_774.10489889105
-
+coef_0    = -98953.87504155144
+coef_1    = -114154.48696231026
 ```
 
 - Run start script
@@ -850,8 +601,8 @@ cd tergite-test
 - Create conda environment and activate it
 
 ```zsh
-conda create -n terg -y python=3.9
-conda activate terg
+conda create -n tergite -y python=3.9
+conda activate tergite
 ```
 
 - Install [qiskit](https://github.com/Qiskit/qiskit) and [Tergite SDK](https://github.com/tergite/tergite) by running the command below:

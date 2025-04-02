@@ -436,17 +436,26 @@ u0 = ["q0", "q1"]
 coupling_map = [ [ 0, 1], [1, 0] ]
 qasm_def = "gate x q { U(pi, 0, pi) q; }"
 parameters = [ ]
+```
 
-[simulator_config]
+- Create a `calibration.seed.toml` file with visual studio code (or any other text editor).
+
+```zsh
+code calibration.seed.toml
+```
+
+- Update the `calibration.seed.toml` file with the following content.
+```toml
+[calibration_config]
 coupling_strength = 0.02e9
 
-[simulator_config.units.qubit]
+[calibration_config.units.qubit]
 frequency = "Hz"
 t1_decoherence = "s"
 t2_decoherence = "s"
 anharmonicity = "Hz"
 
-[simulator_config.units.readout_resonator]
+[calibration_config.units.readout_resonator]
 acq_delay = "s"
 acq_integration_time = "s"
 frequency = "Hz"
@@ -455,7 +464,7 @@ pulse_duration = "s"
 pulse_amplitude = ""
 pulse_type = ""
 
-[simulator_config.units.coupler]
+[calibration_config.units.coupler]
 frequency = "Hz"
 frequency_detuning = "Hz"
 anharmonicity = "Hz"
@@ -469,7 +478,7 @@ cz_pulse_duration_rise = "s"
 cz_pulse_duration_constant = "s"
 pulse_type = ""
 
-[[simulator_config.qubit]]
+[[calibration_config.qubit]]
 id = "q0"
 frequency = 4.8e9
 anharmonicity = -0.17e9
@@ -480,7 +489,7 @@ pi_pulse_duration = 5.6e-8
 pulse_sigma = 7e-9
 pulse_type = "Gaussian"
 
-[[simulator_config.qubit]]
+[[calibration_config.qubit]]
 id = "q1"
 frequency = 4.225e9
 anharmonicity = -0.17e9
@@ -491,27 +500,27 @@ pi_pulse_duration = 5.6e-8
 pulse_sigma = 7e-9
 pulse_type = "Gaussian"
 
-[[simulator_config.readout_resonator]]
+[[calibration_config.readout_resonator]]
 id = "q0"
-acq_delay = 5e-8
-acq_integration_time = 1e-6
-frequency = 7_260_080_000
+acq_delay = 0
+acq_integration_time = 0
+frequency = 0
 pulse_delay = 0
-pulse_duration = 9e-7
-pulse_amplitude = 0.1266499392606423
-pulse_type = "Square"
+pulse_duration = 0
+pulse_amplitude = 0
+pulse_type = ""
 
-[[simulator_config.readout_resonator]]
+[[calibration_config.readout_resonator]]
 id = "q1"
-acq_delay = 5e-8
-acq_integration_time = 1e-6
-frequency = 7_380_000_000
+acq_delay = 0
+acq_integration_time = 0
+frequency = 0
 pulse_delay = 0
-pulse_duration = 9e-7
-pulse_amplitude = 0.12660078572926436
-pulse_type = "Square"
+pulse_duration = 0
+pulse_amplitude = 0
+pulse_type = ""
 
-[[simulator_config.coupler]]
+[[calibration_config.coupler]]
 id = "u0"
 frequency = 7.8e9
 frequency_detuning = -0.015e9
@@ -526,15 +535,16 @@ cz_pulse_duration_rise = 25e-9
 cz_pulse_duration_constant = 370e-9
 pulse_type = "wacqt_cz_gate_pulse"
 
-[simulator_config.discriminators.lda.q0]
-intercept = -38.4344477840827
-coef_0 = -98_953.87504155144
-coef_1 = -114_154.48696231026
 
-[simulator_config.discriminators.lda.q1]
-intercept = -42.05181160328822
-coef_0 = -107_941.00358803963
-coef_1 = -124_239.32054386326
+[calibration_config.discriminators.lda.q0]
+intercept = -37.36457774060694
+coef_0 = 22.99757458442274
+coef_1 = -0.38509625914248247
+
+[calibration_config.discriminators.lda.q1]
+intercept = -37.36457774060694
+coef_0 = 22.99757458442274
+coef_1 = -0.38509625914248247
 
 ```
 
