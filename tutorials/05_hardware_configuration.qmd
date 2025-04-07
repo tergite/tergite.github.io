@@ -16,47 +16,88 @@ cp dot-env-template.txt .env
 
 ## QBLOX Instruments Configuration
 
-We use the [`quantify-config.example.yml`](https://github.com/tergite/tergite-backend/blob/main/quantify-config.example.yml) as a template for how to configure this application
+We use the [`quantify-config.example.json`](https://github.com/tergite/tergite-backend/blob/main/quantify-config.example.json) as a template for how to configure this application
 to control the [QBLOX instruments](https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/index.html) that control the quantum computer. 
 
-It is well documented. Just copy it to `quantify-config.yml` in the tergite-backend folder and update its variables and you are good to go.
+This configuration file uses QBLOX Harware Compilation Configuration format, which can be found [here](https://quantify-os.org/docs/quantify-scheduler/v0.22.3/autoapi/quantify_scheduler/backends/types/common/index.html#quantify_scheduler.backends.types.common.HardwareCompilationConfig).
+
+Please check the documentation on how to properly create configuration for QBLOX instruments: [Quantify documentation](https://quantify-os.org/docs/quantify-scheduler/v0.22.3/reference/qblox/index.html#sec-backend-qblox)
+
+Copy this template for a minimal example configuration with one control module and one readout module connected to microwave and resonator ports appropriately. 
 
 ```zsh
-cp quantify-config.example.yml quantify-config.yml
+cp quantify-config.example.json quantify-config.json
+```
+
+### QBLOX Metadata configuration
+
+In addition to QBLOX Hardware Compilation Configuration, you need to provide a metadata for your instrument setup. This is a small template file with a simple structure that is used
+to describe clusters names, ip_addresses, whether this is a dummy cluster. In addition it is also used to provide a QBLOX module dictionary for a dummy clusters.
+
+However this configuration file has a redundancy with the QBLOX Hardware Compilation Confiugration and might be changed in the future releases.  
+
+We use [`quantify-metadata.yml`](https://github.com/tergite/tergite-backend/blob/main/quantify-metadata.example.yml) as a template for providing metadata.
+
+Copy this documented template and you can fill in your cluster's ip_address and desired configuration.
+
+```zsh
+cp quantify-metadata.example.yml quantify-config.yml
 ```
 
 ### Dummy QBLOX Instrumments
 
 You may wish to run some dummy QBLOX instruments if you don't have access to the physical QBLOX instruments
 
-We already have a preconfigured [`dummy-quantify-config.yml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-quantify-config.yml) for this in the 
+You may leave QBLOX Hardware Compilation Configuration the same as a real configuration, and change `is_dummy` field to `True` for your dummy cluster in the `quantify-metadata.yml`  
+Then you may also need to provide a module dictionary for your dummy cluster in order to successfully compile your dummy schedule. 
+
+We already have a preconfigured [`dummy-quantify-metadata.yml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-quantify-metadata.yml) for this in the 
+`app/tests/fixtures` folder.   
+As well as corresponding [`dummy-quantify-config.json`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/dummy-quantify-config.json) for this in the 
 `app/tests/fixtures` folder.   
 
 Copy it to the tergite-backend folder.
 
 ```zsh
-cp app/tests/fixtures/dummy-quantify-config.yml quantify-config.yml
+cp app/tests/fixtures/dummy-quantify-metadata.yml quantify-metadata.yml
 ```
+
+As well as `quantify-config.yml`
+
+
+```zsh
+cp app/tests/fixtures/dummy-quantify-config.json quantify-config.json
+```
+
 
 _NOTE: You can find out more about the configuration properties in the executor-config file by 
 visiting the [quantify_scheduler docs](https://quantify-os.org/docs/quantify-scheduler/dev/reference/qblox/Cluster.html)
 and the [QCoDeS drivers docs](https://microsoft.github.io/Qcodes/)._  
 
-_NOTE: You could choose to use a different name for your quantum executor config file e.g. `foobar.yml`.
-You however need to explicitly set this name in the `.env` file `QUANTIFY_CONFIG_FILE=foobar.yml`_  
+_NOTE: You could choose to use a different name for your quantum executor config file e.g. `foobar.json`.
+You however need to explicitly set this name in the `.env` file `QUANTIFY_CONFIG_FILE=foobar.json`_  
+
+_NOTE: The same works for quantify metadata file e.g. `foobar.yml`.
+You also need to explicitly set this name in the `.env` file `QUANTIFY_METADATA_FILE=foobar.yml`_  
+
 
 ### General Backend Configuration
 
 We configure all backends using the `backend_config.toml`.   
 We use the [`backend_config.example.toml`](https://github.com/tergite/tergite-backend/blob/main/backend_config.example.toml) as a template.  
 
-This configuration file can contain the calibration values in case we are running it as a simulator.
-The calibration values are under the key `simulator_config`. 
 
-**Note: the `simulator_config` is ignored if the `general_config.simulator` variable is not set to `true`.**    
+### Backend Configuration Calibrations
 
-_NOTE: You don't need to pass the `.env` file, the `backend_config.toml` file or the `quantify-config.yml` file to the 
+Whenever you need to pass calibration values to your backend for example for a pulse-level simulator or a dummy QBLOX backend.
+You need to also create a `calibration.seed.toml` file with the pre-configured values. 
+You don't have to provide this file for a real backend. 
+
+We use the [`calibration.seed.example.toml`](https://github.com/tergite/tergite-backend/blob/main/calibration.seed.example.toml) as a template.  
+
+_NOTE: You don't need to pass the `.env` file, the `backend_config.toml` file or the `quantify-config.json` file as well as `calibration.seed.toml` and `quantify-metadata.yml` to the 
 start script as these are automatically loaded for you._  
+
 
 #### Single-Qubit Qiskit Pulse Simulator
 
@@ -66,6 +107,8 @@ First update the `.env` file to contain `EXECUTOR_TYPE=qiskit_pulse_1q`.
 
 We already have a preconfigured [`backend_config.simq1.toml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/backend_config.simq1.toml) for this in the 
 `app/tests/fixtures` folder.   
+As well as a preconfigured calibrations [`qiskit_pulse_1q.seed.toml`](https://github.com/tergite/tergite-backend/blob/main/app/tests/fixtures/qiskit_pulse_1q.seed.toml) for this in the 
+`app/tests/fixtures` folder.   
 
 Copy it to your root folder.
 
@@ -73,6 +116,12 @@ Copy it to your root folder.
 # on the root of the project
 cp app/tests/fixtures/backend_config.simq1.toml backend_config.toml
 ```
+
+```zsh
+# on the root of the project
+cp app/tests/fixtures/qiskit_pulse_1q.seed.toml calibration.seed.toml
+```
+
 
 And run the application.
 
