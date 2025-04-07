@@ -1,6 +1,67 @@
 ---
 title: "Tergite Backend"
 ---
+---
+
+## [2025.03.2]
+
+_released on: 7th of April 2025_
+
+### Changed
+- Remove stale fixtures
+
+### Fixed
+
+- Fixed JSONDecodeError when application is run in systemd
+
+---
+## [2025.03.1]
+
+_released on: 18th of March 2025_
+
+### Changed
+- No change
+
+---
+
+## [2025.03.0]
+
+_released on: 18th of March 2025_
+
+### Changed
+
+- Removed the storage-file internal lib
+- Limited pyarrow to versions '18.0.0' and below for macOS
+- Decouple data from algorithms in storage file
+- Decouple native job run from executor instance
+- Remove debug prints of qobj when running jobs
+- Rename the run_experiment and run methods of the QuantumEexcutor class to _run_native, run
+
+- Clean up qobj-to-quantify compilation
+- Removed Program
+
+- Removed the dag property of the NativeExperiment class
+- Enchanced the Channel class to track all instructions attached to it
+- Added the 'to_operation' method on the BaseInstruction of quantify, removing the long if-conditional QauntifyExperiment.schedule_operation method that was originally generating Operator's
+- Replaced the looping of the DAG with the looping of the instructions on each channel
+- Created the ChannelRegistry dict-like class to track the state of all channels attached to an experiment
+- Deleted rot_left and ceil4 utility functions and other unused utility functions
+- Split FreqInstruction class to SetFreqInstruction and ShiftFreqInstruction
+
+- Split PhaseInstruction class to SetPhaseInstruction and ShiftPhaseInstruction
+
+- Added the QBLOX_TIMEGRID_INTERVAL constant
+- Moved the Instruction class in the quantum_executor/base folder to quantum_executor/quantify folder, renaming it to BaseInstruction
+
+- Removed the channels property from the NativeExperiment class
+- Added the channel_registry property on the QauntifyExperiment class
+- Moved the Channel definition from utils to the quantum_executor/quantify folder
+- Removed retworkx from the requirements.txt
+- Updated quantify-scheduler, quantify-core and qblox-instruments and pydantic versions
+- BREAKING CHANGE: Split cluster configurations into quantify-config.json and quantify-metadata.json
+
+- BREAKING CHANGE: Added a new configuration file calibration.seed.toml for seeding the database with calibration data
+- Enhanced the QuantifySchedule conversion to use parametric schedules and new portclock convention
 
 ---
 

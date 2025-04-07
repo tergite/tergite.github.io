@@ -931,8 +931,8 @@
     "objectID": "release_notes/tergite-backend.html#section",
     "href": "release_notes/tergite-backend.html#section",
     "title": "Tergite Backend",
-    "section": "[2024.12.1]",
-    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nAdded Dockerfile.\nAdded instructions how to run with docker.\nAdded instructions how to run the qiskit_pulse_2q simulator in the configuration docs.\n\n\n\nChanged\n\nChanged start_bcc.sh script to use redis connection obtained from the environment.\nChanged start_bcc.sh script to update the exported environment variables after reading from the ENV_FILE.\nUpdated Github action to deploy built multiplatform image to docker hub as something like tergite/tergite-backend\nRemoved some redundant libraries in the requirements.txt file.\nRemoved some outdated docs.",
+    "section": "[2025.03.2]",
+    "text": "[2025.03.2]\nreleased on: 7th of April 2025\n\nChanged\n\nRemove stale fixtures\n\n\n\nFixed\n\nFixed JSONDecodeError when application is run in systemd",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -942,8 +942,8 @@
     "objectID": "release_notes/tergite-backend.html#section-1",
     "href": "release_notes/tergite-backend.html#section-1",
     "title": "Tergite Backend",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded redis connection environment variables\nAdded GitLab CI configuration\nAdded storing of Qobj header data in the logfiles of the quantum jobs\nQiskit dynamics simulator backend with two-qubit CZ gate (“qiskit_pulse_2q”)\nAdded CouplerProps to Backend Configurations\nAdded the coupling_dict to the backend_config.toml\n\n\n\nFixed\n\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\nChanged\n\nRemoved the coupling_map from the backend_config.toml as it is generated on-the-fly from the coupling_dict.",
+    "section": "[2025.03.1]",
+    "text": "[2025.03.1]\nreleased on: 18th of March 2025\n\nChanged\n\nNo change",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -953,8 +953,8 @@
     "objectID": "release_notes/tergite-backend.html#section-2",
     "href": "release_notes/tergite-backend.html#section-2",
     "title": "Tergite Backend",
-    "section": "[2024.09.1]",
-    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nFixed\n\nFixed ‘KeyError’ when no units are not passed in the backend_config file\nFixed “…bin/conda/activate: Not a directory” error when starting as systemd service\nFixed silent error where calibrations are not sent to MSS on executor initialization\nFixed “TypeError: Object of type datetime is not JSON serializable” when sending calibration data to MSS\nFixed ‘SyntaxWarning: ’is not’ with a literal’ when initializing backend",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nreleased on: 18th of March 2025\n\nChanged\n\nRemoved the storage-file internal lib\nLimited pyarrow to versions ‘18.0.0’ and below for macOS\nDecouple data from algorithms in storage file\nDecouple native job run from executor instance\nRemove debug prints of qobj when running jobs\nRename the run_experiment and run methods of the QuantumEexcutor class to _run_native, run\nClean up qobj-to-quantify compilation\nRemoved Program\nRemoved the dag property of the NativeExperiment class\nEnchanced the Channel class to track all instructions attached to it\nAdded the ‘to_operation’ method on the BaseInstruction of quantify, removing the long if-conditional QauntifyExperiment.schedule_operation method that was originally generating Operator’s\nReplaced the looping of the DAG with the looping of the instructions on each channel\nCreated the ChannelRegistry dict-like class to track the state of all channels attached to an experiment\nDeleted rot_left and ceil4 utility functions and other unused utility functions\nSplit FreqInstruction class to SetFreqInstruction and ShiftFreqInstruction\nSplit PhaseInstruction class to SetPhaseInstruction and ShiftPhaseInstruction\nAdded the QBLOX_TIMEGRID_INTERVAL constant\nMoved the Instruction class in the quantum_executor/base folder to quantum_executor/quantify folder, renaming it to BaseInstruction\nRemoved the channels property from the NativeExperiment class\nAdded the channel_registry property on the QauntifyExperiment class\nMoved the Channel definition from utils to the quantum_executor/quantify folder\nRemoved retworkx from the requirements.txt\nUpdated quantify-scheduler, quantify-core and qblox-instruments and pydantic versions\nBREAKING CHANGE: Split cluster configurations into quantify-config.json and quantify-metadata.json\nBREAKING CHANGE: Added a new configuration file calibration.seed.toml for seeding the database with calibration data\nEnhanced the QuantifySchedule conversion to use parametric schedules and new portclock convention",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -964,8 +964,8 @@
     "objectID": "release_notes/tergite-backend.html#section-3",
     "href": "release_notes/tergite-backend.html#section-3",
     "title": "Tergite Backend",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nAdded\n\nThe QuantumExecutor as abstract class to implement a backend\nEXECUTOR_TYPE keyword in the .env variables to select the backend\nQiskit dynamics simulator backend with one qubit (“qiskit_pulse_1q”)\nAdded the initialization of the redis store with configuration picked from the backend_config.toml file when the execution worker starts\nAdded an initial request to update the backend information in MSS when the execution worker starts\n\n\n\nChanged\n\nBREAKING CHANGE: EXECUTOR_DATA_DIRNAME definition in the .env variables instead of general.data_dir in executor-config.yml\nBREAKING CHANGE: Removed the whole general section in the executor-config.yml\nBREAKING CHANGE: Renamed executor-config.yml to quantify-config.yml\nRemoved the old config files that were used for setting up automatic calibration\nRemoved the script that loaded automatic calibration configurations at the start\nMoved the backend_config.toml file from /configs folder\nMoved the properties service to the libs folder\nMoved the storage, date_time, representation and logging utils to the properties lib\nRemoved the scripts folder",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nAdded Dockerfile.\nAdded instructions how to run with docker.\nAdded instructions how to run the qiskit_pulse_2q simulator in the configuration docs.\n\n\n\nChanged\n\nChanged start_bcc.sh script to use redis connection obtained from the environment.\nChanged start_bcc.sh script to update the exported environment variables after reading from the ENV_FILE.\nUpdated Github action to deploy built multiplatform image to docker hub as something like tergite/tergite-backend\nRemoved some redundant libraries in the requirements.txt file.\nRemoved some outdated docs.",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -975,8 +975,8 @@
     "objectID": "release_notes/tergite-backend.html#section-4",
     "href": "release_notes/tergite-backend.html#section-4",
     "title": "Tergite Backend",
-    "section": "[2024.04.0]",
-    "text": "[2024.04.0]\nreleased on 28th of May 2024\nInitial Public Release\n\nAdded\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\nChanged\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\nFixed\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded redis connection environment variables\nAdded GitLab CI configuration\nAdded storing of Qobj header data in the logfiles of the quantum jobs\nQiskit dynamics simulator backend with two-qubit CZ gate (“qiskit_pulse_2q”)\nAdded CouplerProps to Backend Configurations\nAdded the coupling_dict to the backend_config.toml\n\n\n\nFixed\n\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\nChanged\n\nRemoved the coupling_map from the backend_config.toml as it is generated on-the-fly from the coupling_dict.",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1200,6 +1200,39 @@
     "crumbs": [
       "Tutorials",
       "Quick Start with a dummy cluster"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html#section-5",
+    "href": "release_notes/tergite-backend.html#section-5",
+    "title": "Tergite Backend",
+    "section": "[2024.09.1]",
+    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nFixed\n\nFixed ‘KeyError’ when no units are not passed in the backend_config file\nFixed “…bin/conda/activate: Not a directory” error when starting as systemd service\nFixed silent error where calibrations are not sent to MSS on executor initialization\nFixed “TypeError: Object of type datetime is not JSON serializable” when sending calibration data to MSS\nFixed ‘SyntaxWarning: ’is not’ with a literal’ when initializing backend",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html#section-6",
+    "href": "release_notes/tergite-backend.html#section-6",
+    "title": "Tergite Backend",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nAdded\n\nThe QuantumExecutor as abstract class to implement a backend\nEXECUTOR_TYPE keyword in the .env variables to select the backend\nQiskit dynamics simulator backend with one qubit (“qiskit_pulse_1q”)\nAdded the initialization of the redis store with configuration picked from the backend_config.toml file when the execution worker starts\nAdded an initial request to update the backend information in MSS when the execution worker starts\n\n\n\nChanged\n\nBREAKING CHANGE: EXECUTOR_DATA_DIRNAME definition in the .env variables instead of general.data_dir in executor-config.yml\nBREAKING CHANGE: Removed the whole general section in the executor-config.yml\nBREAKING CHANGE: Renamed executor-config.yml to quantify-config.yml\nRemoved the old config files that were used for setting up automatic calibration\nRemoved the script that loaded automatic calibration configurations at the start\nMoved the backend_config.toml file from /configs folder\nMoved the properties service to the libs folder\nMoved the storage, date_time, representation and logging utils to the properties lib\nRemoved the scripts folder",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html#section-7",
+    "href": "release_notes/tergite-backend.html#section-7",
+    "title": "Tergite Backend",
+    "section": "[2024.04.0]",
+    "text": "[2024.04.0]\nreleased on 28th of May 2024\nInitial Public Release\n\nAdded\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\nChanged\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.9\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\nFixed\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
     ]
   }
 ]
