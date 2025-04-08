@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/05_hardware_configuration.html</loc>
-    <lastmod>2024-09-13T20:40:22.118Z</lastmod>
+    <lastmod>2025-04-07T13:47:07.601Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/03_authentication.html</loc>
@@ -18,15 +18,15 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/01_quick_start.html</loc>
-    <lastmod>2025-01-28T13:48:45.549Z</lastmod>
+    <lastmod>2025-03-20T10:18:17.893Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-frontend.html</loc>
-    <lastmod>2025-03-18T12:08:57.810Z</lastmod>
+    <lastmod>2025-04-02T12:15:56.520Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-autocalibration.html</loc>
-    <lastmod>2025-03-14T12:12:03.551Z</lastmod>
+    <lastmod>2025-03-17T12:25:50.807Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/examples/03_equal_superposition.html</loc>
@@ -94,15 +94,15 @@
   </url>
   <url>
     <loc>https://tergite.github.io/index.html</loc>
-    <lastmod>2024-09-17T12:44:37.049Z</lastmod>
+    <lastmod>2025-01-28T10:30:54.897Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-backend.html</loc>
-    <lastmod>2024-12-20T09:51:16.680Z</lastmod>
+    <lastmod>2025-04-07T14:14:47.253Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/release_notes/tergite-sdk.html</loc>
-    <lastmod>2025-03-14T12:07:21.435Z</lastmod>
+    <lastmod>2025-03-17T12:25:50.808Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/02_adding_authentication.html</loc>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/04_authorization.html</loc>
-    <lastmod>2024-08-28T09:32:26.604Z</lastmod>
+    <lastmod>2025-01-28T10:30:54.897Z</lastmod>
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/06_resource_management.html</loc>
@@ -118,6 +118,6 @@
   </url>
   <url>
     <loc>https://tergite.github.io/tutorials/08_quick_start_dummy_cluster.html</loc>
-    <lastmod>2025-01-28T13:52:20.090Z</lastmod>
+    <lastmod>2025-04-07T12:38:14.284Z</lastmod>
   </url>
 </urlset>

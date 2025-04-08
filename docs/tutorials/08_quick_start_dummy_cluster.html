@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tergite - Quick Start with a dummy cluster</title>
+<title>Quick Start with a dummy cluster – Tergite</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -70,12 +70,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9a49aadbe34e5c7af8d5c7f781c0fb68.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-9a49aadbe34e5c7af8d5c7f781c0fb68.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-c6a26e7401377471484afc88783a13ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1e741aeff25e04a33ac0c059a918cde4.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -123,13 +123,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Guides</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-guides">    
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-examples" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-examples" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Examples</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-examples">    
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-release-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-release-notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Release notes</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-release-notes">    
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contribute" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contribute" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Contribute</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-contribute">    
@@ -228,9 +228,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/tergite/tergite.github.io">
@@ -245,11 +245,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/01_quick_start.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/08_quick_start_dummy_cluster.html">Quick Start with a dummy cluster</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -262,9 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -488,32 +488,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="va">DASHBOARD_VERSION</span><span class="op">=</span>v0.0.1</span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="va">PROMTAIL_VERSION</span><span class="op">=</span>2.8.3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Open the Mongo compass application and connect to the default local mongo database</li>
-</ul>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="1">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="../assets/img/tutorials/quick_start/mongo-compass-new-connection.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
-<ul>
-<li>Create a new mongo database called “testing” that contains a “backends” collection.</li>
-</ul>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="1">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
-<ul>
 <li><strong>For Linux</strong>: open MongoDB configurations file</li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> /etc/mongod.conf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -563,6 +537,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="sourceCode" id="cb13"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service mongod restart</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> service mongod status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Open the Mongo compass application and connect to the default local mongo database</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="../assets/img/tutorials/quick_start/mongo-compass-new-connection.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<ul>
+<li>Create a new mongo database called “testing” that contains a “backends” collection.</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
 <ul>
 <li>Delete the old docker images of “tergite/tergite-mss”, “tergite/tergite-dashboard” from docker if they exist.</li>
 </ul>
@@ -652,479 +652,225 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="va">BCC_MACHINE_ROOT_URL</span><span class="op">=</span>http://localhost:8000</span>
 <span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a><span class="va">BCC_PORT</span><span class="op">=</span>8000</span>
 <span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="va">QUANTIFY_CONFIG_FILE</span><span class="op">=</span>quantify-config.yml</span>
-<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a><span class="va">EXECUTOR_TYPE</span><span class="op">=</span>quantify</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="va">EXECUTOR_TYPE</span><span class="op">=</span>quantify</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Create an <code>quantify-config.yml</code> file with visual studio code (or any other text editor).</li>
+<li>Create an <code>quantify-config.json</code> file with visual studio code (or any other text editor).</li>
 </ul>
-<div class="sourceCode" id="cb28"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> quantify-config.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> quantify-config.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Update the <code>quantify-config.yml</code> with the following content</li>
+<li>Update the <code>quantify-config.json</code> with the following content</li>
 </ul>
-<div class="sourceCode" id="cb29"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># quantify-config.yml</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">clusters</span><span class="kw">:</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> clusterA</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> Cluster</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">is_dummy</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">ref</span><span class="kw">:</span><span class="at"> internal</span></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">instrument_address</span><span class="kw">:</span><span class="at"> </span><span class="st">"192.0.2.141"</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">modules</span><span class="kw">:</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"clusterA_module7"</span></span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"QCM_RF"</span></span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">complex_outputs</span><span class="kw">:</span></span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"complex_output_0"</span></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">lo_freq</span><span class="kw">:</span><span class="at"> </span><span class="dv">4458000000</span></span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_I</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_Q</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">portclock_configs</span><span class="kw">:</span></span>
-<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"drive0"</span></span>
-<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"d0"</span></span>
-<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"clusterA_module8"</span></span>
-<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"QCM_RF"</span></span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">complex_outputs</span><span class="kw">:</span></span>
-<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"complex_output_0"</span></span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">lo_freq</span><span class="kw">:</span><span class="at"> </span><span class="dv">5110000000</span></span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_I</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_Q</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">portclock_configs</span><span class="kw">:</span></span>
-<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"drive1"</span></span>
-<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"d1"</span></span>
-<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"clusterA_module9"</span></span>
-<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"QCM_RF"</span></span>
-<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">complex_outputs</span><span class="kw">:</span></span>
-<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"complex_output_0"</span></span>
-<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">lo_freq</span><span class="kw">:</span><span class="at"> </span><span class="dv">4445000000</span></span>
-<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_I</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_Q</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">portclock_configs</span><span class="kw">:</span></span>
-<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"drive2"</span></span>
-<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"d2"</span></span>
-<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"clusterA_module17"</span></span>
-<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"QRM_RF"</span></span>
-<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">complex_outputs</span><span class="kw">:</span></span>
-<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"complex_output_0"</span></span>
-<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">lo_freq</span><span class="kw">:</span><span class="at"> </span><span class="dv">6838000000</span></span>
-<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_I</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">dc_mixer_offset_Q</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">portclock_configs</span><span class="kw">:</span></span>
-<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"readout0"</span></span>
-<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"m0"</span></span>
-<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"readout1"</span></span>
-<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"m1"</span></span>
-<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span>
-<span id="cb29-70"><a href="#cb29-70" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="st">"readout2"</span></span>
-<span id="cb29-71"><a href="#cb29-71" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">clock</span><span class="kw">:</span><span class="at"> </span><span class="st">"m2"</span></span>
-<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_amp_ratio</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">mixer_phase_error_deg</span><span class="kw">:</span><span class="at"> </span><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"config_type"</span><span class="fu">:</span> <span class="st">"quantify_scheduler.backends.qblox_backend.QbloxHardwareCompilationConfig"</span><span class="fu">,</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"hardware_description"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"cluster0"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"instrument_type"</span><span class="fu">:</span> <span class="st">"Cluster"</span><span class="fu">,</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"ref"</span><span class="fu">:</span> <span class="st">"internal"</span><span class="fu">,</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"modules"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>                <span class="dt">"2"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">"instrument_type"</span><span class="fu">:</span> <span class="st">"QCM_RF"</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>                <span class="fu">},</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>                <span class="dt">"16"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">"instrument_type"</span><span class="fu">:</span> <span class="st">"QRM_RF"</span> </span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>                <span class="fu">}</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">}</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"hardware_options"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"modulation_frequencies"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"q0:res-q0.ro"</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">"interm_freq"</span><span class="fu">:</span> <span class="dv">100e6</span><span class="fu">},</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>              <span class="dt">"q0:mw-q0.01"</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">"interm_freq"</span><span class="fu">:</span> <span class="dv">100e6</span><span class="fu">}</span> </span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"connectivity"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"graph"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>            <span class="ot">[</span><span class="st">"cluster0.module2.complex_output_0"</span><span class="ot">,</span> <span class="st">"q0:mw"</span><span class="ot">],</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>              <span class="ot">[</span><span class="st">"cluster0.module16.complex_output_0"</span><span class="ot">,</span> <span class="st">"q0:res"</span><span class="ot">]</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Create an <code>quantify-metadata.yml</code> file with visual studio code (or any other text editor).</li>
+</ul>
+<div class="sourceCode" id="cb30"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> quantify-metadata.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Update the <code>quantify-metadata.yml</code> with the following content</li>
+</ul>
+<div class="sourceCode" id="cb31"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cluster0</span><span class="kw">:</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co">  # instrument type</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">  # Cluster or SPI-Rack </span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> Cluster</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">  # Ip address of the cluster</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ip_address</span><span class="kw">:</span><span class="at"> </span><span class="fl">192.168.78.101</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">  # whether to attempt connecting to the real cluster or to return dummy result for test purposes</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">is_dummy</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">  # this would only be used to set up dummy cluster modules</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">modules</span><span class="kw">:</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">"2"</span><span class="kw">:</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> QCM_RF</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">"16"</span><span class="kw">:</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">instrument_type</span><span class="kw">:</span><span class="at"> QRM_RF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Create a <code>backend_config.toml</code> file with visual studio code (or any other text editor).</li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> backend_config.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> backend_config.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Update the <code>backend_config.toml</code> with the following content.</li>
 </ul>
-<div class="sourceCode" id="cb31"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[general_config]</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"loke"</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Backend for the simulator supporting qiskit-connector parsing for the release 2024.3"</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="dt">characterized</span> <span class="op">=</span> <span class="cn">true</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="dt">open_pulse</span> <span class="op">=</span> <span class="cn">true</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"2024.04.0"</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="dt">num_qubits</span> <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="dt">num_couplers</span> <span class="op">=</span> <span class="dv">8</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="dt">num_resonators</span> <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="dt">simulator</span> <span class="op">=</span> <span class="cn">true</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="dt">online_date</span> <span class="op">=</span> <span class="st">"2022-04-13T19:50:31"</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="dt">dt</span> <span class="op">=</span> <span class="fl">1e-9</span></span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="dt">dtm</span> <span class="op">=</span> <span class="fl">1e-9</span> </span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config]</span></span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="dt">meas_map</span> <span class="op">=</span> <span class="op">[</span> <span class="op">[</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span> <span class="op">]</span> <span class="op">]</span></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="dt">coordinates</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>      <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">],</span></span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>      <span class="op">[</span><span class="dv">2</span><span class="op">,</span> <span class="dv">0</span><span class="op">],</span></span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>      <span class="op">[</span><span class="dv">1</span><span class="op">,</span> <span class="dv">1</span><span class="op">],</span></span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>      <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">2</span><span class="op">],</span></span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>      <span class="op">[</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span><span class="op">]</span></span>
-<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
-<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="dt">discriminators</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"lda"</span> <span class="op">]</span></span>
-<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="dt">qubit_ids</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"q0"</span><span class="op">,</span> <span class="st">"q1"</span><span class="op">,</span> <span class="st">"q2"</span><span class="op">,</span> <span class="st">"q3"</span><span class="op">,</span> <span class="st">"q4"</span> <span class="op">]</span></span>
-<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a><span class="dt">qubit_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">"x_position"</span><span class="op">,</span></span>
-<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>  <span class="st">"y_position"</span><span class="op">,</span></span>
-<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"xy_drive_line"</span><span class="op">,</span></span>
-<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">"z_drive_line"</span><span class="op">,</span></span>
-<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
-<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pi_pulse_amplitude"</span><span class="op">,</span></span>
-<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pi_pulse_duration"</span><span class="op">,</span></span>
-<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span><span class="op">,</span></span>
-<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_sigma"</span><span class="op">,</span></span>
-<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">"t1_decoherence"</span><span class="op">,</span></span>
-<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">"t2_decoherence"</span></span>
-<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
-<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a><span class="dt">resonator_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
-<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"x_position"</span><span class="op">,</span></span>
-<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"y_position"</span><span class="op">,</span></span>
-<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readout_line"</span><span class="op">,</span></span>
-<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"acq_delay"</span><span class="op">,</span></span>
-<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"acq_integration_time"</span><span class="op">,</span></span>
-<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
-<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_delay"</span><span class="op">,</span></span>
-<span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_duration"</span><span class="op">,</span></span>
-<span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span><span class="op">,</span></span>
-<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_amplitude"</span></span>
-<span id="cb31-52"><a href="#cb31-52" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
-<span id="cb31-53"><a href="#cb31-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-54"><a href="#cb31-54" aria-hidden="true" tabindex="-1"></a><span class="dt">coupler_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb31-55"><a href="#cb31-55" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
-<span id="cb31-56"><a href="#cb31-56" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
-<span id="cb31-57"><a href="#cb31-57" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency_detuning"</span><span class="op">,</span></span>
-<span id="cb31-58"><a href="#cb31-58" aria-hidden="true" tabindex="-1"></a>  <span class="st">"anharmonicity"</span><span class="op">,</span></span>
-<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coupling_strength_02"</span><span class="op">,</span></span>
-<span id="cb31-60"><a href="#cb31-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coupling_strength_12"</span><span class="op">,</span></span>
-<span id="cb31-61"><a href="#cb31-61" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_amplitude"</span><span class="op">,</span></span>
-<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_dc_bias"</span><span class="op">,</span></span>
-<span id="cb31-63"><a href="#cb31-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_phase_offset"</span><span class="op">,</span></span>
-<span id="cb31-64"><a href="#cb31-64" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_before"</span><span class="op">,</span></span>
-<span id="cb31-65"><a href="#cb31-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_rise"</span><span class="op">,</span></span>
-<span id="cb31-66"><a href="#cb31-66" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_constant"</span><span class="op">,</span></span>
-<span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span></span>
-<span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
-<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config.coupling_dict]</span></span>
-<span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a><span class="dt">u0</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q0"</span><span class="op">,</span> <span class="st">"q1"</span><span class="op">]</span></span>
-<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a><span class="dt">u1</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q0"</span><span class="op">,</span> <span class="st">"q3"</span><span class="op">]</span></span>
-<span id="cb31-73"><a href="#cb31-73" aria-hidden="true" tabindex="-1"></a><span class="dt">u2</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q0"</span><span class="op">,</span> <span class="st">"q2"</span><span class="op">]</span></span>
-<span id="cb31-74"><a href="#cb31-74" aria-hidden="true" tabindex="-1"></a><span class="dt">u3</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q1"</span><span class="op">,</span> <span class="st">"q2"</span><span class="op">]</span></span>
-<span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a><span class="dt">u4</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q1"</span><span class="op">,</span> <span class="st">"q4"</span><span class="op">]</span></span>
-<span id="cb31-76"><a href="#cb31-76" aria-hidden="true" tabindex="-1"></a><span class="dt">u5</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q2"</span><span class="op">,</span> <span class="st">"q3"</span><span class="op">]</span></span>
-<span id="cb31-77"><a href="#cb31-77" aria-hidden="true" tabindex="-1"></a><span class="dt">u6</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q2"</span><span class="op">,</span> <span class="st">"q4"</span><span class="op">]</span></span>
-<span id="cb31-78"><a href="#cb31-78" aria-hidden="true" tabindex="-1"></a><span class="dt">u7</span> <span class="op">=</span> <span class="op">[</span><span class="st">"q3"</span><span class="op">,</span> <span class="st">"q4"</span><span class="op">]</span></span>
-<span id="cb31-79"><a href="#cb31-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-80"><a href="#cb31-80" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config.discriminator_parameters]</span></span>
-<span id="cb31-81"><a href="#cb31-81" aria-hidden="true" tabindex="-1"></a><span class="dt">lda</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb31-82"><a href="#cb31-82" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coef_0"</span><span class="op">,</span></span>
-<span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coef_1"</span><span class="op">,</span></span>
-<span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a>  <span class="st">"intercept"</span><span class="op">,</span></span>
-<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a>  <span class="st">"score"</span></span>
-<span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
-<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a><span class="kw">[gates.u]</span></span>
-<span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a><span class="dt">qubits</span> <span class="op">=</span> <span class="op">[</span> <span class="dv">0</span> <span class="op">]</span></span>
-<span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a><span class="dt">qasm_def</span> <span class="op">=</span> <span class="st">"gate id q { U(0, 0, 0) q; }"</span></span>
-<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a><span class="dt">parameters</span> <span class="op">=</span> <span class="op">[</span> <span class="op">]</span></span>
-<span id="cb31-92"><a href="#cb31-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-93"><a href="#cb31-93" aria-hidden="true" tabindex="-1"></a><span class="kw">[gates.h]</span></span>
-<span id="cb31-94"><a href="#cb31-94" aria-hidden="true" tabindex="-1"></a><span class="dt">qubits</span> <span class="op">=</span> <span class="op">[</span> <span class="dv">0</span> <span class="op">]</span></span>
-<span id="cb31-95"><a href="#cb31-95" aria-hidden="true" tabindex="-1"></a><span class="dt">qasm_def</span> <span class="op">=</span> <span class="st">"gate id q { U(0, 0, 0) q; }"</span></span>
-<span id="cb31-96"><a href="#cb31-96" aria-hidden="true" tabindex="-1"></a><span class="dt">parameters</span> <span class="op">=</span> <span class="op">[</span> <span class="op">]</span></span>
-<span id="cb31-97"><a href="#cb31-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-98"><a href="#cb31-98" aria-hidden="true" tabindex="-1"></a><span class="kw">[gates.x]</span></span>
-<span id="cb31-99"><a href="#cb31-99" aria-hidden="true" tabindex="-1"></a><span class="dt">qubits</span> <span class="op">=</span> <span class="op">[</span> <span class="dv">0</span> <span class="op">]</span></span>
-<span id="cb31-100"><a href="#cb31-100" aria-hidden="true" tabindex="-1"></a><span class="dt">qasm_def</span> <span class="op">=</span> <span class="st">"gate id q { U(0, 0, 0) q; }"</span></span>
-<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a><span class="dt">parameters</span> <span class="op">=</span> <span class="op">[</span> <span class="op">]</span></span>
-<span id="cb31-102"><a href="#cb31-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-103"><a href="#cb31-103" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.units.qubit]</span></span>
-<span id="cb31-104"><a href="#cb31-104" aria-hidden="true" tabindex="-1"></a><span class="co"># configs for units</span></span>
-<span id="cb31-105"><a href="#cb31-105" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-106"><a href="#cb31-106" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-107"><a href="#cb31-107" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-108"><a href="#cb31-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-109"><a href="#cb31-109" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.units.readout_resonator]</span></span>
-<span id="cb31-110"><a href="#cb31-110" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-111"><a href="#cb31-111" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-112"><a href="#cb31-112" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-113"><a href="#cb31-113" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-114"><a href="#cb31-114" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-115"><a href="#cb31-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-116"><a href="#cb31-116" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.units.coupler]</span></span>
-<span id="cb31-117"><a href="#cb31-117" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-118"><a href="#cb31-118" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-119"><a href="#cb31-119" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-120"><a href="#cb31-120" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-121"><a href="#cb31-121" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
-<span id="cb31-122"><a href="#cb31-122" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb31-123"><a href="#cb31-123" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb31-124"><a href="#cb31-124" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="st">"rad"</span></span>
-<span id="cb31-125"><a href="#cb31-125" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-126"><a href="#cb31-126" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-127"><a href="#cb31-127" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb31-128"><a href="#cb31-128" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb31-129"><a href="#cb31-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-130"><a href="#cb31-130" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.units.discriminators]</span></span>
-<span id="cb31-131"><a href="#cb31-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-132"><a href="#cb31-132" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.qubit]]</span></span>
-<span id="cb31-133"><a href="#cb31-133" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4_511_480_043.556283</span></span>
-<span id="cb31-134"><a href="#cb31-134" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.17555712637424228</span></span>
-<span id="cb31-135"><a href="#cb31-135" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb31-136"><a href="#cb31-136" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span> </span>
-<span id="cb31-137"><a href="#cb31-137" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb31-138"><a href="#cb31-138" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">0.000034</span></span>
-<span id="cb31-139"><a href="#cb31-139" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">0.000033</span></span>
-<span id="cb31-140"><a href="#cb31-140" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
-<span id="cb31-141"><a href="#cb31-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-142"><a href="#cb31-142" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.qubit]]</span></span>
-<span id="cb31-143"><a href="#cb31-143" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4_677_112_343.360253</span></span>
-<span id="cb31-144"><a href="#cb31-144" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.17535338530538067</span></span>
-<span id="cb31-145"><a href="#cb31-145" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb31-146"><a href="#cb31-146" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span> </span>
-<span id="cb31-147"><a href="#cb31-147" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb31-148"><a href="#cb31-148" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">0.000034</span></span>
-<span id="cb31-149"><a href="#cb31-149" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">0.000033</span></span>
-<span id="cb31-150"><a href="#cb31-150" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
-<span id="cb31-151"><a href="#cb31-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-152"><a href="#cb31-152" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.qubit]]</span></span>
-<span id="cb31-153"><a href="#cb31-153" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">5_770_226_599.80365</span></span>
-<span id="cb31-154"><a href="#cb31-154" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.17873594718151276</span></span>
-<span id="cb31-155"><a href="#cb31-155" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb31-156"><a href="#cb31-156" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span> </span>
-<span id="cb31-157"><a href="#cb31-157" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb31-158"><a href="#cb31-158" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">0.000034</span></span>
-<span id="cb31-159"><a href="#cb31-159" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">0.000033</span></span>
-<span id="cb31-160"><a href="#cb31-160" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q2"</span></span>
-<span id="cb31-161"><a href="#cb31-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-162"><a href="#cb31-162" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.qubit]]</span></span>
-<span id="cb31-163"><a href="#cb31-163" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">6_856_217_811.995201</span></span>
-<span id="cb31-164"><a href="#cb31-164" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.17326197853513559</span></span>
-<span id="cb31-165"><a href="#cb31-165" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb31-166"><a href="#cb31-166" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span> </span>
-<span id="cb31-167"><a href="#cb31-167" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb31-168"><a href="#cb31-168" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">0.000034</span></span>
-<span id="cb31-169"><a href="#cb31-169" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">0.000033</span></span>
-<span id="cb31-170"><a href="#cb31-170" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q3"</span></span>
-<span id="cb31-171"><a href="#cb31-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-172"><a href="#cb31-172" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.qubit]]</span></span>
-<span id="cb31-173"><a href="#cb31-173" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">6_701_096_836.557067</span></span>
-<span id="cb31-174"><a href="#cb31-174" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.16948867103728774</span></span>
-<span id="cb31-175"><a href="#cb31-175" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb31-176"><a href="#cb31-176" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span> </span>
-<span id="cb31-177"><a href="#cb31-177" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb31-178"><a href="#cb31-178" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">0.000034</span></span>
-<span id="cb31-179"><a href="#cb31-179" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">0.000033</span></span>
-<span id="cb31-180"><a href="#cb31-180" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q4"</span></span>
-<span id="cb31-181"><a href="#cb31-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-182"><a href="#cb31-182" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.readout_resonator]]</span></span>
-<span id="cb31-183"><a href="#cb31-183" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="fl">5e-8</span> </span>
-<span id="cb31-184"><a href="#cb31-184" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">0.000001</span></span>
-<span id="cb31-185"><a href="#cb31-185" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">7_260_080_000</span></span>
-<span id="cb31-186"><a href="#cb31-186" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-187"><a href="#cb31-187" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="fl">9e-7</span> </span>
-<span id="cb31-188"><a href="#cb31-188" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Square"</span></span>
-<span id="cb31-189"><a href="#cb31-189" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.1266499392606423</span></span>
-<span id="cb31-190"><a href="#cb31-190" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
-<span id="cb31-191"><a href="#cb31-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-192"><a href="#cb31-192" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.readout_resonator]]</span></span>
-<span id="cb31-193"><a href="#cb31-193" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="fl">5e-8</span> </span>
-<span id="cb31-194"><a href="#cb31-194" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">0.000001</span></span>
-<span id="cb31-195"><a href="#cb31-195" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">7_380_000_000</span></span>
-<span id="cb31-196"><a href="#cb31-196" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-197"><a href="#cb31-197" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="fl">9e-7</span> </span>
-<span id="cb31-198"><a href="#cb31-198" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Square"</span></span>
-<span id="cb31-199"><a href="#cb31-199" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.12660078572926436</span></span>
-<span id="cb31-200"><a href="#cb31-200" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
-<span id="cb31-201"><a href="#cb31-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-202"><a href="#cb31-202" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.readout_resonator]]</span></span>
-<span id="cb31-203"><a href="#cb31-203" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="fl">5e-8</span> </span>
-<span id="cb31-204"><a href="#cb31-204" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">0.000001</span></span>
-<span id="cb31-205"><a href="#cb31-205" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">7_502_000_000</span></span>
-<span id="cb31-206"><a href="#cb31-206" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-207"><a href="#cb31-207" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="fl">9e-7</span> </span>
-<span id="cb31-208"><a href="#cb31-208" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Square"</span></span>
-<span id="cb31-209"><a href="#cb31-209" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08245560237524203</span></span>
-<span id="cb31-210"><a href="#cb31-210" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q2"</span></span>
-<span id="cb31-211"><a href="#cb31-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-212"><a href="#cb31-212" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.readout_resonator]]</span></span>
-<span id="cb31-213"><a href="#cb31-213" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="fl">5e-8</span> </span>
-<span id="cb31-214"><a href="#cb31-214" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">0.000001</span></span>
-<span id="cb31-215"><a href="#cb31-215" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">7_712_000_000</span></span>
-<span id="cb31-216"><a href="#cb31-216" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-217"><a href="#cb31-217" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="fl">9e-7</span> </span>
-<span id="cb31-218"><a href="#cb31-218" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Square"</span></span>
-<span id="cb31-219"><a href="#cb31-219" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.04188729430238</span></span>
-<span id="cb31-220"><a href="#cb31-220" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q3"</span></span>
-<span id="cb31-221"><a href="#cb31-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-222"><a href="#cb31-222" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.readout_resonator]]</span></span>
-<span id="cb31-223"><a href="#cb31-223" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="fl">5e-8</span> </span>
-<span id="cb31-224"><a href="#cb31-224" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">0.000001</span></span>
-<span id="cb31-225"><a href="#cb31-225" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">7_871_000_000</span></span>
-<span id="cb31-226"><a href="#cb31-226" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-227"><a href="#cb31-227" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="fl">9e-7</span> </span>
-<span id="cb31-228"><a href="#cb31-228" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Square"</span></span>
-<span id="cb31-229"><a href="#cb31-229" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.05844291534543274</span></span>
-<span id="cb31-230"><a href="#cb31-230" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q4"</span></span>
-<span id="cb31-231"><a href="#cb31-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-232"><a href="#cb31-232" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-233"><a href="#cb31-233" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u0"</span></span>
-<span id="cb31-234"><a href="#cb31-234" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.8e9</span></span>
-<span id="cb31-235"><a href="#cb31-235" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-236"><a href="#cb31-236" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-237"><a href="#cb31-237" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-238"><a href="#cb31-238" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-239"><a href="#cb31-239" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-240"><a href="#cb31-240" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-241"><a href="#cb31-241" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-242"><a href="#cb31-242" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-243"><a href="#cb31-243" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-244"><a href="#cb31-244" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-245"><a href="#cb31-245" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-246"><a href="#cb31-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-247"><a href="#cb31-247" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-248"><a href="#cb31-248" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u1"</span></span>
-<span id="cb31-249"><a href="#cb31-249" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.4e9</span></span>
-<span id="cb31-250"><a href="#cb31-250" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-251"><a href="#cb31-251" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.12e9</span></span>
-<span id="cb31-252"><a href="#cb31-252" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-253"><a href="#cb31-253" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-254"><a href="#cb31-254" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-255"><a href="#cb31-255" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-256"><a href="#cb31-256" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-257"><a href="#cb31-257" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-258"><a href="#cb31-258" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-259"><a href="#cb31-259" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-260"><a href="#cb31-260" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-261"><a href="#cb31-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-262"><a href="#cb31-262" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-263"><a href="#cb31-263" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u2"</span></span>
-<span id="cb31-264"><a href="#cb31-264" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.9e9</span></span>
-<span id="cb31-265"><a href="#cb31-265" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-266"><a href="#cb31-266" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-267"><a href="#cb31-267" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-268"><a href="#cb31-268" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-269"><a href="#cb31-269" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-270"><a href="#cb31-270" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-271"><a href="#cb31-271" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-272"><a href="#cb31-272" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-273"><a href="#cb31-273" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-274"><a href="#cb31-274" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-275"><a href="#cb31-275" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-276"><a href="#cb31-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-277"><a href="#cb31-277" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-278"><a href="#cb31-278" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u3"</span></span>
-<span id="cb31-279"><a href="#cb31-279" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.6e9</span></span>
-<span id="cb31-280"><a href="#cb31-280" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.014e9</span></span>
-<span id="cb31-281"><a href="#cb31-281" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-282"><a href="#cb31-282" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-283"><a href="#cb31-283" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-284"><a href="#cb31-284" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-285"><a href="#cb31-285" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-286"><a href="#cb31-286" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-287"><a href="#cb31-287" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-288"><a href="#cb31-288" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-289"><a href="#cb31-289" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-290"><a href="#cb31-290" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-291"><a href="#cb31-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-292"><a href="#cb31-292" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-293"><a href="#cb31-293" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u4"</span></span>
-<span id="cb31-294"><a href="#cb31-294" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.2e9</span></span>
-<span id="cb31-295"><a href="#cb31-295" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-296"><a href="#cb31-296" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-297"><a href="#cb31-297" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-298"><a href="#cb31-298" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-299"><a href="#cb31-299" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-300"><a href="#cb31-300" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-301"><a href="#cb31-301" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-302"><a href="#cb31-302" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-303"><a href="#cb31-303" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-304"><a href="#cb31-304" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-305"><a href="#cb31-305" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-306"><a href="#cb31-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-307"><a href="#cb31-307" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-308"><a href="#cb31-308" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u5"</span></span>
-<span id="cb31-309"><a href="#cb31-309" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.3e9</span></span>
-<span id="cb31-310"><a href="#cb31-310" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-311"><a href="#cb31-311" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-312"><a href="#cb31-312" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-313"><a href="#cb31-313" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-314"><a href="#cb31-314" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-315"><a href="#cb31-315" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-316"><a href="#cb31-316" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-317"><a href="#cb31-317" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-318"><a href="#cb31-318" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-319"><a href="#cb31-319" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-320"><a href="#cb31-320" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-321"><a href="#cb31-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-322"><a href="#cb31-322" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-323"><a href="#cb31-323" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u6"</span></span>
-<span id="cb31-324"><a href="#cb31-324" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.1e9</span></span>
-<span id="cb31-325"><a href="#cb31-325" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb31-326"><a href="#cb31-326" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-327"><a href="#cb31-327" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-328"><a href="#cb31-328" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-329"><a href="#cb31-329" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-330"><a href="#cb31-330" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-331"><a href="#cb31-331" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-332"><a href="#cb31-332" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-333"><a href="#cb31-333" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-334"><a href="#cb31-334" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-335"><a href="#cb31-335" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-336"><a href="#cb31-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-337"><a href="#cb31-337" aria-hidden="true" tabindex="-1"></a><span class="kw">[[simulator_config.coupler]]</span></span>
-<span id="cb31-338"><a href="#cb31-338" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u7"</span></span>
-<span id="cb31-339"><a href="#cb31-339" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.4e9</span></span>
-<span id="cb31-340"><a href="#cb31-340" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.014e9</span></span>
-<span id="cb31-341"><a href="#cb31-341" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb31-342"><a href="#cb31-342" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-343"><a href="#cb31-343" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb31-344"><a href="#cb31-344" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb31-345"><a href="#cb31-345" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb31-346"><a href="#cb31-346" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-347"><a href="#cb31-347" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb31-348"><a href="#cb31-348" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb31-349"><a href="#cb31-349" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb31-350"><a href="#cb31-350" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb31-351"><a href="#cb31-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-352"><a href="#cb31-352" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.discriminators.lda.q0]</span></span>
-<span id="cb31-353"><a href="#cb31-353" aria-hidden="true" tabindex="-1"></a><span class="dt">score</span> <span class="op">=</span> <span class="fl">0.985</span></span>
-<span id="cb31-354"><a href="#cb31-354" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-38.4344477840827</span></span>
-<span id="cb31-355"><a href="#cb31-355" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">-98_953.87504155144</span></span>
-<span id="cb31-356"><a href="#cb31-356" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-114_154.48696231026</span></span>
-<span id="cb31-357"><a href="#cb31-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-358"><a href="#cb31-358" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.discriminators.lda.q1]</span></span>
-<span id="cb31-359"><a href="#cb31-359" aria-hidden="true" tabindex="-1"></a><span class="dt">score</span> <span class="op">=</span> <span class="fl">0.987</span></span>
-<span id="cb31-360"><a href="#cb31-360" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-42.05181160328822</span></span>
-<span id="cb31-361"><a href="#cb31-361" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">-107_941.00358803963</span></span>
-<span id="cb31-362"><a href="#cb31-362" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-124_239.32054386326</span></span>
-<span id="cb31-363"><a href="#cb31-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-364"><a href="#cb31-364" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.discriminators.lda.q2]</span></span>
-<span id="cb31-365"><a href="#cb31-365" aria-hidden="true" tabindex="-1"></a><span class="dt">score</span> <span class="op">=</span> <span class="fl">0.9905</span></span>
-<span id="cb31-366"><a href="#cb31-366" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-22.684588212281916</span></span>
-<span id="cb31-367"><a href="#cb31-367" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">-191_087.42493249022</span></span>
-<span id="cb31-368"><a href="#cb31-368" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-20_803.06874845618</span></span>
-<span id="cb31-369"><a href="#cb31-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-370"><a href="#cb31-370" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.discriminators.lda.q3]</span></span>
-<span id="cb31-371"><a href="#cb31-371" aria-hidden="true" tabindex="-1"></a><span class="dt">score</span> <span class="op">=</span> <span class="fl">0.8735</span></span>
-<span id="cb31-372"><a href="#cb31-372" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-1.933795064413808</span></span>
-<span id="cb31-373"><a href="#cb31-373" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">-29_474.17108465108</span></span>
-<span id="cb31-374"><a href="#cb31-374" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">78_360.1067777809</span></span>
-<span id="cb31-375"><a href="#cb31-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-376"><a href="#cb31-376" aria-hidden="true" tabindex="-1"></a><span class="kw">[simulator_config.discriminators.lda.q4]</span></span>
-<span id="cb31-377"><a href="#cb31-377" aria-hidden="true" tabindex="-1"></a><span class="dt">score</span> <span class="op">=</span> <span class="fl">0.96375</span></span>
-<span id="cb31-378"><a href="#cb31-378" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-6.6282190356967075</span></span>
-<span id="cb31-379"><a href="#cb31-379" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">-106_998.96952984166</span></span>
-<span id="cb31-380"><a href="#cb31-380" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">66_774.10489889105</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># backend_config.toml</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="kw">[general_config]</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"loke"</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="dt">is_active</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="dt">characterized</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="dt">open_pulse</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="dt">simulator</span> <span class="op">=</span> <span class="cn">false</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"1.0.0"</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="dt">online_date</span> <span class="op">=</span> <span class="st">"2024-10-09T00:00:00"</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="dt">num_qubits</span> <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="dt">num_couplers</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="dt">num_resonators</span> <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="dt">dt</span> <span class="op">=</span> <span class="fl">1e-9</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="dt">dtm</span> <span class="op">=</span> <span class="fl">1e-9</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config]</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="dt">discriminators</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"lda"</span> <span class="op">]</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a><span class="dt">qubit_ids</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"q0"</span><span class="op">]</span></span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a><span class="dt">meas_map</span> <span class="op">=</span> <span class="op">[</span> <span class="op">[</span> <span class="dv">0</span> <span class="op">],</span> <span class="op">[</span> <span class="dv">1</span> <span class="op">]</span> <span class="op">]</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a><span class="dt">coordinates</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">],</span></span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">]</span></span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a><span class="dt">qubit_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>  <span class="st">"x_position"</span><span class="op">,</span></span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">"y_position"</span><span class="op">,</span></span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>  <span class="st">"xy_drive_line"</span><span class="op">,</span></span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"z_drive_line"</span><span class="op">,</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pi_pulse_amplitude"</span><span class="op">,</span></span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pi_pulse_duration"</span><span class="op">,</span></span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span><span class="op">,</span></span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_sigma"</span><span class="op">,</span></span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"t1_decoherence"</span><span class="op">,</span></span>
+<span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">"t2_decoherence"</span></span>
+<span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a><span class="dt">resonator_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
+<span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"x_position"</span><span class="op">,</span></span>
+<span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"y_position"</span><span class="op">,</span></span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readout_line"</span><span class="op">,</span></span>
+<span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"acq_delay"</span><span class="op">,</span></span>
+<span id="cb33-45"><a href="#cb33-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"acq_integration_time"</span><span class="op">,</span></span>
+<span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
+<span id="cb33-47"><a href="#cb33-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_delay"</span><span class="op">,</span></span>
+<span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_duration"</span><span class="op">,</span></span>
+<span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span><span class="op">,</span></span>
+<span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_amplitude"</span></span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a><span class="dt">coupler_parameters</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"id"</span><span class="op">,</span></span>
+<span id="cb33-55"><a href="#cb33-55" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency"</span><span class="op">,</span></span>
+<span id="cb33-56"><a href="#cb33-56" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frequency_detuning"</span><span class="op">,</span></span>
+<span id="cb33-57"><a href="#cb33-57" aria-hidden="true" tabindex="-1"></a>  <span class="st">"anharmonicity"</span><span class="op">,</span></span>
+<span id="cb33-58"><a href="#cb33-58" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coupling_strength_02"</span><span class="op">,</span></span>
+<span id="cb33-59"><a href="#cb33-59" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coupling_strength_12"</span><span class="op">,</span></span>
+<span id="cb33-60"><a href="#cb33-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_amplitude"</span><span class="op">,</span></span>
+<span id="cb33-61"><a href="#cb33-61" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_dc_bias"</span><span class="op">,</span></span>
+<span id="cb33-62"><a href="#cb33-62" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_phase_offset"</span><span class="op">,</span></span>
+<span id="cb33-63"><a href="#cb33-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_before"</span><span class="op">,</span></span>
+<span id="cb33-64"><a href="#cb33-64" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_rise"</span><span class="op">,</span></span>
+<span id="cb33-65"><a href="#cb33-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cz_pulse_duration_constant"</span><span class="op">,</span></span>
+<span id="cb33-66"><a href="#cb33-66" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pulse_type"</span></span>
+<span id="cb33-67"><a href="#cb33-67" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb33-68"><a href="#cb33-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-69"><a href="#cb33-69" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config.discriminator_parameters]</span></span>
+<span id="cb33-70"><a href="#cb33-70" aria-hidden="true" tabindex="-1"></a><span class="dt">lda</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb33-71"><a href="#cb33-71" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coef_0"</span><span class="op">,</span></span>
+<span id="cb33-72"><a href="#cb33-72" aria-hidden="true" tabindex="-1"></a>  <span class="st">"coef_1"</span><span class="op">,</span></span>
+<span id="cb33-73"><a href="#cb33-73" aria-hidden="true" tabindex="-1"></a>  <span class="st">"intercept"</span></span>
+<span id="cb33-74"><a href="#cb33-74" aria-hidden="true" tabindex="-1"></a><span class="op">]</span></span>
+<span id="cb33-75"><a href="#cb33-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-76"><a href="#cb33-76" aria-hidden="true" tabindex="-1"></a><span class="kw">[device_config.coupling_dict]</span></span>
+<span id="cb33-77"><a href="#cb33-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-78"><a href="#cb33-78" aria-hidden="true" tabindex="-1"></a><span class="kw">[gates.x]</span></span>
+<span id="cb33-79"><a href="#cb33-79" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_map</span> <span class="op">=</span> <span class="op">[</span> <span class="op">[</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">],</span> <span class="op">[</span><span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">]</span> <span class="op">]</span></span>
+<span id="cb33-80"><a href="#cb33-80" aria-hidden="true" tabindex="-1"></a><span class="dt">qasm_def</span> <span class="op">=</span> <span class="st">"gate x q { U(pi, 0, pi) q; }"</span></span>
+<span id="cb33-81"><a href="#cb33-81" aria-hidden="true" tabindex="-1"></a><span class="dt">parameters</span> <span class="op">=</span> <span class="op">[</span> <span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Create a <code>calibration.seed.toml</code> file with visual studio code (or any other text editor).</li>
+</ul>
+<div class="sourceCode" id="cb34"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> calibration.seed.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Update the <code>calibration.seed.toml</code> file with the following content.</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config]</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.units.qubit]</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.units.readout_resonator]</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.units.coupler]</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="st">"Hz"</span></span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="st">"rad"</span></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="st">"s"</span></span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.qubit]]</span></span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span><span class="op">=</span><span class="st">"q0"</span></span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span>      <span class="op">=</span> <span class="fl">3.4e-5</span></span>
+<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span>      <span class="op">=</span> <span class="fl">3.3e-5</span></span>
+<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span>           <span class="op">=</span> <span class="fl">4511480043.556283</span></span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span>  <span class="op">=</span> <span class="fl">0.17555712637424228</span></span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span>   <span class="op">=</span> <span class="fl">5.6e-8</span></span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span>          <span class="op">=</span> <span class="st">"Gaussian"</span></span>
+<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span>         <span class="op">=</span> <span class="fl">7e-9</span></span>
+<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a><span class="co"># -- Resonators --</span></span>
+<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.readout_resonator]]</span></span>
+<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span><span class="op">=</span><span class="st">"q0"</span></span>
+<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span>            <span class="op">=</span> <span class="fl">5e-8</span></span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="fl">1e-6</span></span>
+<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span>            <span class="op">=</span> <span class="fl">7260080000.0</span></span>
+<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span>      <span class="op">=</span> <span class="fl">0.1266499392606423</span></span>
+<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span>          <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span>       <span class="op">=</span> <span class="fl">9e-7</span></span>
+<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span>           <span class="op">=</span> <span class="st">"Square"</span></span>
+<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a><span class="co"># -- Discriminators --</span></span>
+<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.discriminators.lda.q0]</span></span>
+<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-38.4344477840827</span></span>
+<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span>    <span class="op">=</span> <span class="fl">-98953.87504155144</span></span>
+<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span>    <span class="op">=</span> <span class="fl">-114154.48696231026</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Run start script</li>
 </ul>
-<div class="sourceCode" id="cb32"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./start_bcc.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./start_bcc.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Open your browser at <a href="http://localhost:8000/docs" class="external" target="_blank">http://localhost:8000/docs</a> to see the interactive API docs</li>
 </ul>
@@ -1135,94 +881,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Open another terminal</p></li>
 <li><p>Create a new folder “tergite-test” and enter it</p></li>
 </ul>
-<div class="sourceCode" id="cb33"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> tergite-test</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tergite-test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> tergite-test</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tergite-test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Create conda environment and activate it</li>
 </ul>
-<div class="sourceCode" id="cb34"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> terg <span class="at">-y</span> python=3.9</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate terg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> tergite <span class="at">-y</span> python=3.9</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Install <a href="https://github.com/Qiskit/qiskit">qiskit</a> and <a href="https://github.com/tergite/tergite">Tergite SDK</a> by running the command below:</li>
 </ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install qiskit</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install qiskit</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Create a file <code>main.py</code> with visual studio code (or any other text editor).</li>
 </ul>
-<div class="sourceCode" id="cb36"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">code</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Update the <code>main.py</code> file with the following content:</li>
 </ul>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.py</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""A sample script doing a very simple quantum operation"""</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.circuit <span class="im">as</span> circuit</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.compiler <span class="im">as</span> compiler</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers <span class="im">import</span> Job, Tergite</span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers.provider_account <span class="im">import</span> ProviderAccount</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the Tergite API URL</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    API_URL <span class="op">=</span> <span class="st">"http://localhost:8002"</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The name of the Quantum Computer to use from the available quantum computers</span></span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    BACKEND_NAME <span class="op">=</span> <span class="st">"loke"</span></span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the name of this service. For your own bookkeeping.</span></span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    SERVICE_NAME <span class="op">=</span> <span class="st">"local"</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the timeout in seconds for how long to keep checking for results</span></span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>    POLL_TIMEOUT <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create the Qiskit circuit</span></span>
-<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>    qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">1</span>)</span>
-<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>    qc.x(<span class="dv">0</span>)</span>
-<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
-<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>    qc.measure_all()</span>
-<span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create a provider</span></span>
-<span id="cb37-28"><a href="#cb37-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider account creation can be skipped in case you already saved</span></span>
-<span id="cb37-29"><a href="#cb37-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># your provider account to the `~/.qiskit/tergiterc` file.</span></span>
-<span id="cb37-30"><a href="#cb37-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># See below how that is done.</span></span>
-<span id="cb37-31"><a href="#cb37-31" aria-hidden="true" tabindex="-1"></a>    account <span class="op">=</span> ProviderAccount(service_name<span class="op">=</span>SERVICE_NAME, url<span class="op">=</span>API_URL)</span>
-<span id="cb37-32"><a href="#cb37-32" aria-hidden="true" tabindex="-1"></a>    provider <span class="op">=</span> Tergite.use_provider_account(account)</span>
-<span id="cb37-33"><a href="#cb37-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`</span></span>
-<span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.use_provider_account(account, save=True)</span></span>
-<span id="cb37-35"><a href="#cb37-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-36"><a href="#cb37-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the Tergite backend in case you skipped provider account creation</span></span>
-<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.get_provider(service_name=SERVICE_NAME)</span></span>
-<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a>    backend <span class="op">=</span> provider.get_backend(BACKEND_NAME)</span>
-<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a>    backend.set_options(shots<span class="op">=</span><span class="dv">1024</span>)</span>
-<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compile the circuit</span></span>
-<span id="cb37-42"><a href="#cb37-42" aria-hidden="true" tabindex="-1"></a>    tc <span class="op">=</span> compiler.transpile(qc, backend<span class="op">=</span>backend)</span>
-<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># run the circuit</span></span>
-<span id="cb37-45"><a href="#cb37-45" aria-hidden="true" tabindex="-1"></a>    job: Job <span class="op">=</span> backend.run(tc, meas_level<span class="op">=</span><span class="dv">2</span>, meas_return<span class="op">=</span><span class="st">"single"</span>)</span>
-<span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-47"><a href="#cb37-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># view the results</span></span>
-<span id="cb37-48"><a href="#cb37-48" aria-hidden="true" tabindex="-1"></a>    elapsed_time <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb37-49"><a href="#cb37-49" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb37-50"><a href="#cb37-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> result <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb37-51"><a href="#cb37-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> elapsed_time <span class="op">&gt;</span> POLL_TIMEOUT:</span>
-<span id="cb37-52"><a href="#cb37-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">TimeoutError</span>(</span>
-<span id="cb37-53"><a href="#cb37-53" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"result polling timeout </span><span class="sc">{</span>POLL_TIMEOUT<span class="sc">}</span><span class="ss"> seconds exceeded"</span></span>
-<span id="cb37-54"><a href="#cb37-54" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb37-55"><a href="#cb37-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-56"><a href="#cb37-56" aria-hidden="true" tabindex="-1"></a>        time.sleep(<span class="dv">1</span>)</span>
-<span id="cb37-57"><a href="#cb37-57" aria-hidden="true" tabindex="-1"></a>        elapsed_time <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb37-58"><a href="#cb37-58" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> job.result()</span>
-<span id="cb37-59"><a href="#cb37-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-60"><a href="#cb37-60" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(result.get_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.py</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co">"""A sample script doing a very simple quantum operation"""</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.circuit <span class="im">as</span> circuit</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.compiler <span class="im">as</span> compiler</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers <span class="im">import</span> Job, Tergite</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite.qiskit.providers.provider_account <span class="im">import</span> ProviderAccount</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the Tergite API URL</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>    API_URL <span class="op">=</span> <span class="st">"http://localhost:8002"</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The name of the Quantum Computer to use from the available quantum computers</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    BACKEND_NAME <span class="op">=</span> <span class="st">"loke"</span></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the name of this service. For your own bookkeeping.</span></span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>    SERVICE_NAME <span class="op">=</span> <span class="st">"local"</span></span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the timeout in seconds for how long to keep checking for results</span></span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>    POLL_TIMEOUT <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create the Qiskit circuit</span></span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>    qc <span class="op">=</span> circuit.QuantumCircuit(<span class="dv">1</span>)</span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a>    qc.x(<span class="dv">0</span>)</span>
+<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
+<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a>    qc.measure_all()</span>
+<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-27"><a href="#cb41-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create a provider</span></span>
+<span id="cb41-28"><a href="#cb41-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider account creation can be skipped in case you already saved</span></span>
+<span id="cb41-29"><a href="#cb41-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># your provider account to the `~/.qiskit/tergiterc` file.</span></span>
+<span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># See below how that is done.</span></span>
+<span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a>    account <span class="op">=</span> ProviderAccount(service_name<span class="op">=</span>SERVICE_NAME, url<span class="op">=</span>API_URL)</span>
+<span id="cb41-32"><a href="#cb41-32" aria-hidden="true" tabindex="-1"></a>    provider <span class="op">=</span> Tergite.use_provider_account(account)</span>
+<span id="cb41-33"><a href="#cb41-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`</span></span>
+<span id="cb41-34"><a href="#cb41-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.use_provider_account(account, save=True)</span></span>
+<span id="cb41-35"><a href="#cb41-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-36"><a href="#cb41-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the Tergite backend in case you skipped provider account creation</span></span>
+<span id="cb41-37"><a href="#cb41-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># provider = Tergite.get_provider(service_name=SERVICE_NAME)</span></span>
+<span id="cb41-38"><a href="#cb41-38" aria-hidden="true" tabindex="-1"></a>    backend <span class="op">=</span> provider.get_backend(BACKEND_NAME)</span>
+<span id="cb41-39"><a href="#cb41-39" aria-hidden="true" tabindex="-1"></a>    backend.set_options(shots<span class="op">=</span><span class="dv">1024</span>)</span>
+<span id="cb41-40"><a href="#cb41-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-41"><a href="#cb41-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compile the circuit</span></span>
+<span id="cb41-42"><a href="#cb41-42" aria-hidden="true" tabindex="-1"></a>    tc <span class="op">=</span> compiler.transpile(qc, backend<span class="op">=</span>backend)</span>
+<span id="cb41-43"><a href="#cb41-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-44"><a href="#cb41-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># run the circuit</span></span>
+<span id="cb41-45"><a href="#cb41-45" aria-hidden="true" tabindex="-1"></a>    job: Job <span class="op">=</span> backend.run(tc, meas_level<span class="op">=</span><span class="dv">2</span>, meas_return<span class="op">=</span><span class="st">"single"</span>)</span>
+<span id="cb41-46"><a href="#cb41-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-47"><a href="#cb41-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># view the results</span></span>
+<span id="cb41-48"><a href="#cb41-48" aria-hidden="true" tabindex="-1"></a>    elapsed_time <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb41-49"><a href="#cb41-49" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb41-50"><a href="#cb41-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> result <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb41-51"><a href="#cb41-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> elapsed_time <span class="op">&gt;</span> POLL_TIMEOUT:</span>
+<span id="cb41-52"><a href="#cb41-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">TimeoutError</span>(</span>
+<span id="cb41-53"><a href="#cb41-53" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"result polling timeout </span><span class="sc">{</span>POLL_TIMEOUT<span class="sc">}</span><span class="ss"> seconds exceeded"</span></span>
+<span id="cb41-54"><a href="#cb41-54" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb41-55"><a href="#cb41-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-56"><a href="#cb41-56" aria-hidden="true" tabindex="-1"></a>        time.sleep(<span class="dv">1</span>)</span>
+<span id="cb41-57"><a href="#cb41-57" aria-hidden="true" tabindex="-1"></a>        elapsed_time <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb41-58"><a href="#cb41-58" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> job.result()</span>
+<span id="cb41-59"><a href="#cb41-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-60"><a href="#cb41-60" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(result.get_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Execute the above script by running the command below.</li>
 </ul>
-<div class="sourceCode" id="cb38"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>It should return something like:</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Results</span> OK</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="st">'0'</span><span class="ex">:</span> 1024<span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Results</span> OK</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="st">'0'</span><span class="ex">:</span> 1024<span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>Note: We get only 0’s because we are using the <a href="https://qblox-qblox-instruments.readthedocs-hosted.com/en/main/api_reference/cluster.html#qblox_instruments.Cluster">dummy cluster</a> from quantify scheduler</em></p>
 
 
@@ -1408,18 +1154,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1451,7 +1186,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/tergite\.github\.io");
@@ -1459,7 +1216,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
