@@ -126,7 +126,7 @@ cookie_name = "tergiteauth"
 name = "github"
 client_id = "the-client-id-copied-from-github"
 client_secret = "the-client-secret-copied-from-github"
-redirect_url = "http://127.0.0.1:8002/auth/app/github/callback"
+redirect_url = "http://127.0.0.1:8002/auth/github/callback"
 client_type = "github"
 email_regex = "^(john\\.doe|jane|your-gmail-username)@gmail\\.com$"
 email_domain = "gmail.com"
@@ -289,8 +289,7 @@ import time
 import qiskit.circuit as circuit
 import qiskit.compiler as compiler
 
-from tergite.qiskit.providers import Job, Tergite
-from tergite.qiskit.providers.provider_account import ProviderAccount
+from tergite import Job, Tergite
 
 if __name__ == "__main__":
     # the Tergite API URL
@@ -314,10 +313,9 @@ if __name__ == "__main__":
     # provider account creation can be skipped in case you already saved
     # your provider account to the `~/.qiskit/tergiterc` file.
     # See below how that is done.
-    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)
-    provider = Tergite.use_provider_account(account)
+    provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
-    # provider = Tergite.use_provider_account(account, save=True)
+    # provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN, save=True)
 
     # Get the Tergite backend in case you skipped provider account creation
     # provider = Tergite.get_provider(service_name=SERVICE_NAME)
@@ -329,20 +327,10 @@ if __name__ == "__main__":
 
     # run the circuit
     job: Job = backend.run(tc, meas_level=2, meas_return="single")
+    job.wait_for_final_state(timeout=POLL_TIMEOUT)
 
     # view the results
-    elapsed_time = 0
-    result = None
-    while result is None:
-        if elapsed_time > POLL_TIMEOUT:
-            raise TimeoutError(
-                f"result polling timeout {POLL_TIMEOUT} seconds exceeded"
-            )
-
-        time.sleep(1)
-        elapsed_time += 1
-        result = job.result()
-
+    result = job.result()
     print(result.get_counts())
 ```
 

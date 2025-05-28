@@ -160,7 +160,7 @@ Initial Public Release
 
 - Changed the way discriminators are loaded to load from the database
 - BREAKING_CHANGE: Removed hard-coded discriminators
-- BREAKING_CHANGE: Removed official support for Python 3.8; Official support is now >=3.9
+- BREAKING_CHANGE: Removed official support for Python 3.8; Official support is now >=3.12
 - BREAKING_CHANGE: Removed Labber support
 - Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib
 - Moved unused files to `archive` folder

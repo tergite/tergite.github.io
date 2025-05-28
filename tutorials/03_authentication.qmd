@@ -28,13 +28,13 @@ authenticates its users.
 
 ```toml
 [[auth.clients]]
-# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/app/company-b/...
+# this name will appear in the URLs e.g. http://127.0.0.1:8002/auth/company-b/...
 name = "company-b"
 client_id = "some-openid-client-id"
 client_secret = "some-openid-client-secret"
 # the URL to redirect to after user authenticates with the system.
 # It is of the format {MSS_BASE_URL}/auth/app/{provider_name}/callback
-redirect_url = "http://127.0.0.1:8002/auth/app/company-b/callback"
+redirect_url = "http://127.0.0.1:8002/auth/company-b/callback"
 client_type = "openid"
 email_regex = ".*"
 # the domain of the emails of the users that should be directed to this auth client
