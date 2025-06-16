@@ -271,25 +271,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2025.03.0]</a>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">[2025.06.0]</a>
   <ul class="collapse">
-  <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
   <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
+  <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2024.12.1]</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">[2025.03.0]</a>
   <ul class="collapse">
   <li><a href="#changed-1" id="toc-changed-1" class="nav-link" data-scroll-target="#changed-1">Changed</a></li>
+  <li><a href="#added-1" id="toc-added-1" class="nav-link" data-scroll-target="#added-1">Added</a></li>
+  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2024.12.1]</a>
+  <ul class="collapse">
+  <li><a href="#changed-2" id="toc-changed-2" class="nav-link" data-scroll-target="#changed-2">Changed</a></li>
   <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
   </ul></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2024.12.0]</a>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[2024.12.0]</a>
   <ul class="collapse">
-  <li><a href="#added-1" id="toc-added-1" class="nav-link" data-scroll-target="#added-1">Added</a></li>
-  <li><a href="#changed-2" id="toc-changed-2" class="nav-link" data-scroll-target="#changed-2">Changed</a></li>
-  </ul></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[2024.09.0]</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">[2024.04.1]</a>
-  <ul class="collapse">
+  <li><a href="#added-2" id="toc-added-2" class="nav-link" data-scroll-target="#added-2">Added</a></li>
   <li><a href="#changed-3" id="toc-changed-3" class="nav-link" data-scroll-target="#changed-3">Changed</a></li>
+  </ul></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">[2024.09.0]</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">[2024.04.1]</a>
+  <ul class="collapse">
+  <li><a href="#changed-4" id="toc-changed-4" class="nav-link" data-scroll-target="#changed-4">Changed</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -318,10 +323,37 @@ ul.task-list li input[type="checkbox"] {
 
 <hr>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">[2025.03.0]</h2>
-<p><em>released on: 14th of March 2025</em></p>
+<h2 class="anchored" data-anchor-id="section">[2025.06.0]</h2>
+<p><em>released on: 16th of June 2025</em></p>
+<section id="added" class="level3">
+<h3 class="anchored" data-anchor-id="added">Added</h3>
+<ul>
+<li>Implemented job cancellation</li>
+</ul>
+</section>
 <section id="changed" class="level3">
 <h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<ul>
+<li>BREAKING: Changed the MSS endpoints <code>/v2/devices</code> to <code>/devices</code></li>
+<li>BREAKING: Changed the MSS endpoints <code>/v2/calibrations</code> to <code>/calibrations</code></li>
+<li>BREAKING: Changed the expected Device info schema to include ‘number_of_resonators’ and ‘number_of_couplers’</li>
+<li>Added pydantic as an explicit dependency</li>
+<li>Moved completely from dataclasses to pydantic models</li>
+<li>Set the minimum permitted python to 3.12</li>
+<li>Removed the <code>tergite.qiskit</code> package and moved everything to the <code>tergite</code> package</li>
+<li>Removed the <code>tergite.qiskit.providers</code> package and moved everything to the parent package</li>
+<li>Raise <code>QiskitBackendNotFoundError</code> when malformed backend is returned in data instead of <code>TypeError</code></li>
+<li>BREAKING: Remove <code>extras</code> from <code>AccountInfo</code></li>
+<li>BREAKING: Change signature of <code>Tergite.use_provider_account(account, save)</code> to <code>Tergite.use_provider_account(service_name, url, token, save)</code></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">[2025.03.0]</h2>
+<p><em>released on: 14th of March 2025</em></p>
+<section id="changed-1" class="level3">
+<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
 <ul>
 <li>Refactor: Changed a few error messages to include the original error</li>
 <li>Refactor: Changed the Job metadata to always be generated on the backend.<br>
@@ -329,8 +361,8 @@ It was originally setting them both on the backend and the SDK.</li>
 <li>Upgraded to Poetry &gt; 2.1</li>
 </ul>
 </section>
-<section id="added" class="level3">
-<h3 class="anchored" data-anchor-id="added">Added</h3>
+<section id="added-1" class="level3">
+<h3 class="anchored" data-anchor-id="added-1">Added</h3>
 <ul>
 <li>Added caching of calibration requests to reduce number of calls to remote API</li>
 <li>Added caching on Job’s <code>status()</code>, <code>result()</code>, <code>download_url</code> to reduce number of calls to remote API</li>
@@ -342,11 +374,11 @@ It was originally setting them both on the backend and the SDK.</li>
 <hr>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">[2024.12.1]</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">[2024.12.1]</h2>
 <p><em>released on: 18th of December 2024</em></p>
-<section id="changed-1" class="level3">
-<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
+<section id="changed-2" class="level3">
+<h3 class="anchored" data-anchor-id="changed-2">Changed</h3>
 <ul>
 <li>Updated tests to run tests against multiple backends</li>
 <li>Updated <code>Provider.job()</code> to return a <code>Job</code> instance without an upload_url</li>
@@ -360,19 +392,19 @@ It was originally setting them both on the backend and the SDK.</li>
 <hr>
 </section>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">[2024.12.0]</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">[2024.12.0]</h2>
 <p><em>released on: 11th of December 2024</em></p>
-<section id="added-1" class="level3">
-<h3 class="anchored" data-anchor-id="added-1">Added</h3>
+<section id="added-2" class="level3">
+<h3 class="anchored" data-anchor-id="added-2">Added</h3>
 <ul>
 <li>Added the <code>job()</code> method to provider to retrieve job by job ID</li>
 <li>Added functionality to get control channel index given qubit tuple</li>
 <li>Added two qubit CZ gate functionality</li>
 </ul>
 </section>
-<section id="changed-2" class="level3">
-<h3 class="anchored" data-anchor-id="changed-2">Changed</h3>
+<section id="changed-3" class="level3">
+<h3 class="anchored" data-anchor-id="changed-3">Changed</h3>
 <ul>
 <li>Upgraded Qiskit version to 1.0+, &lt;1.3</li>
 <li>Use MSS v2 endpoints for backend and calibration data</li>
@@ -380,20 +412,20 @@ It was originally setting them both on the backend and the SDK.</li>
 <hr>
 </section>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">[2024.09.0]</h2>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4">[2024.09.0]</h2>
 <p><em>released on: 16th of September 2024</em></p>
 <ul>
 <li>No change</li>
 </ul>
 <hr>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">[2024.04.1]</h2>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5">[2024.04.1]</h2>
 <p><em>released on: 29th of May 2024</em></p>
 <p>Initial Public Release</p>
-<section id="changed-3" class="level3">
-<h3 class="anchored" data-anchor-id="changed-3">Changed</h3>
+<section id="changed-4" class="level3">
+<h3 class="anchored" data-anchor-id="changed-4">Changed</h3>
 <ul>
 <li>Changed README.rst to README.md</li>
 <li>Changed CONTRIBUTING.rst to CONTRIBUTING.md</li>
