@@ -4,6 +4,30 @@ title: "Tergite SDK"
 
 ---
 
+## [2025.06.0]
+_released on: 16th of June 2025_
+
+### Added
+
+- Implemented job cancellation
+
+### Changed
+
+- BREAKING: Changed the MSS endpoints `/v2/devices` to `/devices`
+- BREAKING: Changed the MSS endpoints `/v2/calibrations` to `/calibrations`
+- BREAKING: Changed the expected Device info schema to include 'number_of_resonators' and 'number_of_couplers'
+- Added pydantic as an explicit dependency
+- Moved completely from dataclasses to pydantic models
+- Set the minimum permitted python to 3.12
+- Removed the `tergite.qiskit` package and moved everything to the `tergite` package
+- Removed the `tergite.qiskit.providers` package and moved everything to the parent package
+- Raise `QiskitBackendNotFoundError` when malformed backend is returned in data instead of `TypeError`
+- BREAKING: Remove `extras` from `AccountInfo`
+- BREAKING: Change signature of `Tergite.use_provider_account(account, save)` to `Tergite.use_provider_account(service_name, url, token, save)`
+
+
+---
+
 ## [2025.03.0]
 _released on: 14th of March 2025_
 

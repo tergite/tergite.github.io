@@ -4,8 +4,17 @@ title: "Tergite Autocalibration"
 
 ---
 
+## [2025.06.0]
+_released on 16th of June 2025_
+
+### Changed
+
+- Upgraded Python to version 3.12
+
+---
+
 ## [2025.03.0]
-_released on 16th of March 2024_
+_released on 16th of March 2025_
 
 ### Added
 - Advanced logging

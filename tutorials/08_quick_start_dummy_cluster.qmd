@@ -107,7 +107,7 @@ cookie_name = "tergiteauth"
 name = "github"
 client_id = "some-github-obtained-client-id"
 client_secret = "some-github-obtained-client-secret"
-redirect_url = "http://127.0.0.1:8002/auth/app/github/callback"
+redirect_url = "http://127.0.0.1:8002/auth/github/callback"
 client_type = "github"
 email_regex = "^(john\\.doe|jane|aggrey)@example\\.com$"
 email_domain = "example.com"
@@ -117,7 +117,7 @@ roles = ["admin", "user"]
 name = "puhuri"
 client_id = "some-puhuri-obtained-client-id"
 client_secret = "some-puhuri-obtained-client-secret"
-redirect_url = "http://127.0.0.1:8002/auth/app/puhuri/callback"
+redirect_url = "http://127.0.0.1:8002/auth/puhuri/callback"
 client_type = "openid"
 email_regex = "^(john\\.doe|jane)@example\\.com$"
 email_domain = "example.com"
@@ -146,7 +146,7 @@ MSS_PORT=8002
 
 # required
 ENVIRONMENT="development"
-MSS_V2_API_URL="http://127.0.0.1:8002/v2"
+MSS_URL="http://127.0.0.1:8002"
 GRAFANA_LOKI_URL=http://127.0.0.1:3100/loki/api/v1/push
 LOKI_LOGGER_ID=some-generic-id
 
@@ -290,7 +290,7 @@ docker compose -f fresh-docker-compose.yml up -d
 ## Setup the Backend
 
 - Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed.
- (_You could simply have python +3.9 installed instead._)
+ (_You could simply have python +3.12 installed instead._)
 - Ensure you have the [Redis](https://redis.io/) server running.
 
 ```zsh
@@ -307,7 +307,7 @@ git clone https://github.com/tergite/tergite-backend.git
 - Create conda environment
 
 ```zsh
-conda create -n bcc -y python=3.9
+conda create -n bcc -y python=3.12
 conda activate bcc
 ```
 
@@ -601,7 +601,7 @@ cd tergite-test
 - Create conda environment and activate it
 
 ```zsh
-conda create -n tergite -y python=3.9
+conda create -n tergite -y python=3.12
 conda activate tergite
 ```
 
@@ -629,8 +629,7 @@ import time
 import qiskit.circuit as circuit
 import qiskit.compiler as compiler
 
-from tergite.qiskit.providers import Job, Tergite
-from tergite.qiskit.providers.provider_account import ProviderAccount
+from tergite import Job, Tergite
 
 if __name__ == "__main__":
     # the Tergite API URL
@@ -652,10 +651,9 @@ if __name__ == "__main__":
     # provider account creation can be skipped in case you already saved
     # your provider account to the `~/.qiskit/tergiterc` file.
     # See below how that is done.
-    account = ProviderAccount(service_name=SERVICE_NAME, url=API_URL)
-    provider = Tergite.use_provider_account(account)
+    provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL)
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
-    # provider = Tergite.use_provider_account(account, save=True)
+    # provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, save=True)
 
     # Get the Tergite backend in case you skipped provider account creation
     # provider = Tergite.get_provider(service_name=SERVICE_NAME)
@@ -667,20 +665,10 @@ if __name__ == "__main__":
 
     # run the circuit
     job: Job = backend.run(tc, meas_level=2, meas_return="single")
+    job.wait_for_final_state(timeout=POLL_TIMEOUT)
 
     # view the results
-    elapsed_time = 0
-    result = None
-    while result is None:
-        if elapsed_time > POLL_TIMEOUT:
-            raise TimeoutError(
-                f"result polling timeout {POLL_TIMEOUT} seconds exceeded"
-            )
-
-        time.sleep(1)
-        elapsed_time += 1
-        result = job.result()
-
+    result = job.result()
     print(result.get_counts())
 ```
 

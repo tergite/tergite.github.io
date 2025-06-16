@@ -1,6 +1,32 @@
 ---
 title: "Tergite Backend"
 ---
+
+---
+
+## [2025.06.0]
+_released on: 16th of June 2025_
+
+### Added
+
+- Add a simpler JSON document based store in redis
+
+### Changed
+
+- Changed source of lda parameters to backend's redis store. Originally they were retrieved from MSS.
+- Added proper HTTP status codes for failed REST API requests
+  - InvalidJobIdInUploadedFileError results in a 400 HTTP response (originally was 200)
+  - ItemNotFoundError results in a 404 HTTP response (originally was 200)
+  - JobAlreadyCancelled results in a 406 HTTP response (originally was 500)
+- BREAKING: Change endpoint `/v2/static-properties` to `/static-properties`
+- BREAKING: Change endpoint `/v2/dynamic-properties` to `/dynamic-properties`
+- Rename the `properties` library to `device_parameters`
+- Upgraded to python 3.12
+- Removed the deprecated `qiskit-ibmq-providers` dependency, moving its code into our lib folder
+- Moved from requirements.txt to pyproject.toml setup
+- Bumped up the version of fastapi to the latest (>=0.115.12)
+- Added validation of job files when uploading jobs to `/jobs`
+
 ---
 
 ## [2025.03.2]
@@ -15,6 +41,7 @@ _released on: 7th of April 2025_
 - Fixed JSONDecodeError when application is run in systemd
 
 ---
+
 ## [2025.03.1]
 
 _released on: 18th of March 2025_
@@ -160,7 +187,7 @@ Initial Public Release
 
 - Changed the way discriminators are loaded to load from the database
 - BREAKING_CHANGE: Removed hard-coded discriminators
-- BREAKING_CHANGE: Removed official support for Python 3.8; Official support is now >=3.9
+- BREAKING_CHANGE: Removed official support for Python 3.8; Official support is now >=3.12
 - BREAKING_CHANGE: Removed Labber support
 - Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib
 - Moved unused files to `archive` folder
