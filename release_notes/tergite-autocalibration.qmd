@@ -7,9 +7,19 @@ title: "Tergite Autocalibration"
 ## [2025.06.0]
 _released on 16th of June 2025_
 
+### Added
+
+- Better labelling for the analysis output plots
+
 ### Changed
 
-- Upgraded Python to version 3.12
+- Upgrade Python to version 3.12
+- Migration from poetry to setuptools
+- Make external samplespace multidimensional
+
+### Fixed
+
+- Reduced the packaged library size to below pypi's limit by using a `MANIFEST.in` file
 
 ---
 

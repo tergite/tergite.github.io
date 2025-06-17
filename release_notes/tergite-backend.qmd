@@ -4,6 +4,20 @@ title: "Tergite Backend"
 
 ---
 
+## [2025.06.2]
+_released on: 17th of June 2025_
+
+- No changes
+
+---
+
+## [2025.06.1]
+_released on: 17th of June 2025_
+
+- No changes
+
+---
+
 ## [2025.06.0]
 _released on: 16th of June 2025_
 

@@ -4,6 +4,19 @@ title: "Tergite SDK"
 
 ---
 
+## [2025.06.1]
+_released on: 17th of June 2025_
+
+### Changed
+
+- Removed unwanted artefacts from the packaged library
+
+### Fixed
+
+- Made cleanup in e2e fault tolerant
+
+---
+
 ## [2025.06.0]
 _released on: 16th of June 2025_
 
