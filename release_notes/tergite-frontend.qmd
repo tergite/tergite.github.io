@@ -4,6 +4,27 @@ title: "Tergite Frontend"
 
 ---
 
+## [2025.09.0]
+_released on: 2nd of October 2025_
+
+### Added
+
+- Add external loki logger support for promtail for linux
+
+- MSS
+    - Added `access_token` field to the job schema. 
+    It is encrypted when in database but plain when requested for by anyone who has access to the job
+    (including other members of the project).
+
+### Changed
+
+- MSS
+    - BREAKING: Changed the response to job creation `/jobs` POST endpoint, to return a JWT access token also
+    - BREAKING: Changed the authentication with BCC to use private key signed signatures in headers
+    - BREAKING: Removed the option to disable authentication as it is a requirement for BCC
+
+---
+
 ## [2025.06.2]
 _released on: 17th of June 2025_
 

@@ -208,8 +208,8 @@
     "objectID": "release_notes/tergite-frontend.html#section",
     "href": "release_notes/tergite-frontend.html#section",
     "title": "Tergite Frontend",
-    "section": "[2025.06.2]",
-    "text": "[2025.06.2]\nreleased on: 17th of June 2025\n\nFixed\n\nFix silent errors in e2e tests on Github during cleanup",
+    "section": "[2025.09.0]",
+    "text": "[2025.09.0]\nreleased on: 2nd of October 2025\n\nAdded\n\nAdd external loki logger support for promtail for linux\nMSS\n\nAdded access_token field to the job schema. It is encrypted when in database but plain when requested for by anyone who has access to the job (including other members of the project).\n\n\n\n\nChanged\n\nMSS\n\nBREAKING: Changed the response to job creation /jobs POST endpoint, to return a JWT access token also\nBREAKING: Changed the authentication with BCC to use private key signed signatures in headers\nBREAKING: Removed the option to disable authentication as it is a requirement for BCC",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -219,8 +219,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-1",
     "href": "release_notes/tergite-frontend.html#section-1",
     "title": "Tergite Frontend",
-    "section": "[2025.06.1]",
-    "text": "[2025.06.1]\nreleased on: 16th of June 2025\n\nFixed\n\nFix failing e2e tests on Github during cleanup",
+    "section": "[2025.06.2]",
+    "text": "[2025.06.2]\nreleased on: 17th of June 2025\n\nFixed\n\nFix silent errors in e2e tests on Github during cleanup",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -230,8 +230,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-2",
     "href": "release_notes/tergite-frontend.html#section-2",
     "title": "Tergite Frontend",
-    "section": "[2025.06.0]",
-    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nChanged\n\nBREAKING: Removed v2 from MSS URL in env and docker configs\nMSS\n\nBREAKING: Replaced requirements.txt with pyproject.toml\nBREAKING: Upgraded lowest version of python supported to python 3.12\nBREAKING: Upgraded Fastapi to 0.115.12\nBREAKING: Upgraded pydantic to the latest v2\nBREAKING: Removed the v1/auth, v1/backends and v1/jobs endpoints\nBREAKING: Changed creation of jobs to require a body with required fields ‘device’ and ‘calibration_date’\nBREAKING: Disabled Mongo-style payloads when updating jobs to ensure more security by reducing capabilities exposed to HTTP\nBREAKING: Changed job update payloads to only accept the fields that are in the Job schema\nBREAKING: Changed the POST /v2/calibrations endpoint to receive only a single calibration result at a time\nBREAKING: Changed the GET /v2/calibrations/ endpoint to return a paginated response of calibrations\nBREAKING: Made ‘calibration_date’ a required property on the job object\nBREAKING: Changed the GET /v2/me/jobs endpoint to /me/jobs/\nBREAKING: Changed the GET /me/jobs endpoint to return a paginated response of jobs\nBREAKING: Changed /v2/ endpoints to / endpoints\nBREAKING: Remove version property from project schema\nBREAKING: Return paginated response on the GET /devices/ endpoint\nBREAKING: Return paginated response on the GET /auth/providers/ endpoint\nBREAKING: Change the query param ‘domain’ on the GET /auth/providers/ endpoint to ‘email_domain’\n\nDashboard\n\nUpdated API client code to work with new endpoint structure in MSS\nUpdated cypress tests to work with new endpoint structure in MSS\nUpdated schema for devices in the fixtures\n\n\n\n\nAdded\n\nMSS\n\nAdded more extensive search capability on the GET /jobs/ endpoints so that one can search by more fields in the job\nAdded more extensive search capability on the GET /devices/ endpoints so that one can search by more fields in the devices\nAdded more extensive search capability on the GET /calibrations/ endpoints so that one can search by more fields in the calibrations\nAdded more extensive search capability on the GET /auth/providers/ endpoints so that one can search by more fields in the auth providers",
+    "section": "[2025.06.1]",
+    "text": "[2025.06.1]\nreleased on: 16th of June 2025\n\nFixed\n\nFix failing e2e tests on Github during cleanup",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -241,8 +241,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-3",
     "href": "release_notes/tergite-frontend.html#section-3",
     "title": "Tergite Frontend",
-    "section": "[2025.03.1]",
-    "text": "[2025.03.1]\nrelease on: 18th of March 2025\n\nChanged\n\nChanged the backend configurations for the full e2e to run with the new backend configuration files",
+    "section": "[2025.06.0]",
+    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nChanged\n\nBREAKING: Removed v2 from MSS URL in env and docker configs\nMSS\n\nBREAKING: Replaced requirements.txt with pyproject.toml\nBREAKING: Upgraded lowest version of python supported to python 3.12\nBREAKING: Upgraded Fastapi to 0.115.12\nBREAKING: Upgraded pydantic to the latest v2\nBREAKING: Removed the v1/auth, v1/backends and v1/jobs endpoints\nBREAKING: Changed creation of jobs to require a body with required fields ‘device’ and ‘calibration_date’\nBREAKING: Disabled Mongo-style payloads when updating jobs to ensure more security by reducing capabilities exposed to HTTP\nBREAKING: Changed job update payloads to only accept the fields that are in the Job schema\nBREAKING: Changed the POST /v2/calibrations endpoint to receive only a single calibration result at a time\nBREAKING: Changed the GET /v2/calibrations/ endpoint to return a paginated response of calibrations\nBREAKING: Made ‘calibration_date’ a required property on the job object\nBREAKING: Changed the GET /v2/me/jobs endpoint to /me/jobs/\nBREAKING: Changed the GET /me/jobs endpoint to return a paginated response of jobs\nBREAKING: Changed /v2/ endpoints to / endpoints\nBREAKING: Remove version property from project schema\nBREAKING: Return paginated response on the GET /devices/ endpoint\nBREAKING: Return paginated response on the GET /auth/providers/ endpoint\nBREAKING: Change the query param ‘domain’ on the GET /auth/providers/ endpoint to ‘email_domain’\n\nDashboard\n\nUpdated API client code to work with new endpoint structure in MSS\nUpdated cypress tests to work with new endpoint structure in MSS\nUpdated schema for devices in the fixtures\n\n\n\n\nAdded\n\nMSS\n\nAdded more extensive search capability on the GET /jobs/ endpoints so that one can search by more fields in the job\nAdded more extensive search capability on the GET /devices/ endpoints so that one can search by more fields in the devices\nAdded more extensive search capability on the GET /calibrations/ endpoints so that one can search by more fields in the calibrations\nAdded more extensive search capability on the GET /auth/providers/ endpoints so that one can search by more fields in the auth providers",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -252,8 +252,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-4",
     "href": "release_notes/tergite-frontend.html#section-4",
     "title": "Tergite Frontend",
-    "section": "[2025.03.0]",
-    "text": "[2025.03.0]\nrelease on: 14th of March 2025\n\nAdded\n\nAdded Full end-to-end testing combining the backend, API and dashboard\nDashboard:\n\nAdded dark mode color change on dark mode toggle button click\nAdded a dark mode toggle button on the login page\nAdded a dark mode toggle button on the dashboard page\nChanged the coloring of the device map chart to use muted connection lines\nChanged the coloring of the device bar chart to use purple bar lines, and muted axes\n\n\n\n\nChanged\n\nMSS:\n\nRenamed quantum_jobs to jobs service\nRemoved the api routes, DTOs and service methods for the old WebGUI project.\n\nDashboard:\n\nDisabled the “live” switch when creating projects as admin\n\n\n\n\nFixed\n\nFix project list in nav bar to be only active projects",
+    "section": "[2025.03.1]",
+    "text": "[2025.03.1]\nrelease on: 18th of March 2025\n\nChanged\n\nChanged the backend configurations for the full e2e to run with the new backend configuration files",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -263,8 +263,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-5",
     "href": "release_notes/tergite-frontend.html#section-5",
     "title": "Tergite Frontend",
-    "section": "[2024.12.2]",
-    "text": "[2024.12.2]\nreleased on: 22nd of January 2025\n\nChanged\n\nRaised logging level to WARN in tergite-frontend when app settings are not production\nRemoved NETWORK_MODE environment variable in tergite-mss\n\n\n\nFixed\n\nFixed auth openid errors in tergite-mss when auth is disabled",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nrelease on: 14th of March 2025\n\nAdded\n\nAdded Full end-to-end testing combining the backend, API and dashboard\nDashboard:\n\nAdded dark mode color change on dark mode toggle button click\nAdded a dark mode toggle button on the login page\nAdded a dark mode toggle button on the dashboard page\nChanged the coloring of the device map chart to use muted connection lines\nChanged the coloring of the device bar chart to use purple bar lines, and muted axes\n\n\n\n\nChanged\n\nMSS:\n\nRenamed quantum_jobs to jobs service\nRemoved the api routes, DTOs and service methods for the old WebGUI project.\n\nDashboard:\n\nDisabled the “live” switch when creating projects as admin\n\n\n\n\nFixed\n\nFix project list in nav bar to be only active projects",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -274,8 +274,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-6",
     "href": "release_notes/tergite-frontend.html#section-6",
     "title": "Tergite Frontend",
-    "section": "[2024.12.1]",
-    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nDashboard:\n\nAdded run-nginx.sh script to help initialize/update the variables like cookie names API urls and the like in docker prebuilt containers.\n\n\n\n\nChanged\n\nUpdated the Github actions to push the ‘:latest’ tag along side the version tag to docker registry\nUpdated prebuilt-docker-compose.yml to pick relevant values from the environment as well as from mss-config.toml for the dashboard docker compose service\n\n\n\nFixed\n\nFixed the ‘parent-folder’ image not found error in the Github actions for the dashboard",
+    "section": "[2024.12.2]",
+    "text": "[2024.12.2]\nreleased on: 22nd of January 2025\n\nChanged\n\nRaised logging level to WARN in tergite-frontend when app settings are not production\nRemoved NETWORK_MODE environment variable in tergite-mss\n\n\n\nFixed\n\nFixed auth openid errors in tergite-mss when auth is disabled",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -285,8 +285,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-7",
     "href": "release_notes/tergite-frontend.html#section-7",
     "title": "Tergite Frontend",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the admin pages for managing user access in the tergite-dashboard app.\n\nAdded the tokens list page for viewing, editing and deleting tokens of current user\nAdded the projects list page for viewing, requesting QPU time and deleting projects for current user\nAdded admin page for viewing, and approving user requests\nAdded admin page for viewing, editing, deleting and creating new projects\nAdded close button on the job detail drawer on the home page\n\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded GET /v2/me endpoint to get current user info\nAdded DELETE /v2/me/projects/{id} endpoint to delete project current user administers\nAdded GET /v2/admin/qpu-time-requests endpoint to get all user requests to increase QPU seconds on a project\nAdded POST /v2/admin/qpu-time-requests endpoint for project members to request for more QPU seconds\nAdded GET /v2/admin/user-requests endpoint for admins to retrieve a list of user requests\nAdded PUT /v2/admin/user-requests/{id} endpoint for admins to update (e.g. approve/reject) as user request\nAdded POST /v2/admin/projects/ endpoint for admins to create a new project\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded GET /v2/admin/projects/ endpoint for admins to retireve a list of projects\nAdded GET /v2/admin/projects/{id} endpoint for admins to view a project of given id\nAdded PUT /v2/admin/projects/{id} endpoint for admins to update a project of given id\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded DELETE /v2/admin/projects/{id} endpoint for admins to soft delete a project\nAdded the PUT /auth/me/app-tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded the PUT /v2/me/tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded the MSS_PORT environment variable to the .env.example to configure the port on which tergite-mss runs on in docker compose.\nAdded the NETWORK_MODE environment variable to the .env.example to configure the network_mode to use in docker compose file\n\n\n\nFixed\n\ntergite-mss\n\nFixed the not found error when deleting expired app tokens\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\n\nChanged\n\ntergite-dashboard\n\nChanged devices page to show ‘no devices found’ when no devices are available.\nChanged to show sidebar placeholder on admin user requests page when no user request is selected",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nDashboard:\n\nAdded run-nginx.sh script to help initialize/update the variables like cookie names API urls and the like in docker prebuilt containers.\n\n\n\n\nChanged\n\nUpdated the Github actions to push the ‘:latest’ tag along side the version tag to docker registry\nUpdated prebuilt-docker-compose.yml to pick relevant values from the environment as well as from mss-config.toml for the dashboard docker compose service\n\n\n\nFixed\n\nFixed the ‘parent-folder’ image not found error in the Github actions for the dashboard",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -296,8 +296,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-8",
     "href": "release_notes/tergite-frontend.html#section-8",
     "title": "Tergite Frontend",
-    "section": "[2024.09.1]",
-    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nAdded\n\nAdded example scopes in the mss_config.example.toml in tergite-mss\nAdded units ‘Hz’ and ‘s’ to calibration data schema\n\n\n\nFixed\n\nFixed CORS error when dashboard and MSS are on different domains or subdomains\nFixed ‘AttributeError: ’NoneType’ object has no attribute ‘resource_usage’’ on GET /v2/me/jobs\n\n\n\nChanged\n\nRemoved archives folder in tergite-mss\nRemoved dev folder in tergite-mss\nChanged all calibration v2 properties optional\nNormalized calibration data to have frequencies in GHz and durations in microseconds in the dashboard",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the admin pages for managing user access in the tergite-dashboard app.\n\nAdded the tokens list page for viewing, editing and deleting tokens of current user\nAdded the projects list page for viewing, requesting QPU time and deleting projects for current user\nAdded admin page for viewing, and approving user requests\nAdded admin page for viewing, editing, deleting and creating new projects\nAdded close button on the job detail drawer on the home page\n\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded GET /v2/me endpoint to get current user info\nAdded DELETE /v2/me/projects/{id} endpoint to delete project current user administers\nAdded GET /v2/admin/qpu-time-requests endpoint to get all user requests to increase QPU seconds on a project\nAdded POST /v2/admin/qpu-time-requests endpoint for project members to request for more QPU seconds\nAdded GET /v2/admin/user-requests endpoint for admins to retrieve a list of user requests\nAdded PUT /v2/admin/user-requests/{id} endpoint for admins to update (e.g. approve/reject) as user request\nAdded POST /v2/admin/projects/ endpoint for admins to create a new project\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded GET /v2/admin/projects/ endpoint for admins to retireve a list of projects\nAdded GET /v2/admin/projects/{id} endpoint for admins to view a project of given id\nAdded PUT /v2/admin/projects/{id} endpoint for admins to update a project of given id\n\nCreates new empty user if non-existent emails are passed as user_emails or admin_email\n\nAdded DELETE /v2/admin/projects/{id} endpoint for admins to soft delete a project\nAdded the PUT /auth/me/app-tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded the PUT /v2/me/tokens/{token_id} endpoint for extending app token’s lifetimes\nAdded user access endpoints to the v2 API version of the tergite-mss app.\n\nAdded the MSS_PORT environment variable to the .env.example to configure the port on which tergite-mss runs on in docker compose.\nAdded the NETWORK_MODE environment variable to the .env.example to configure the network_mode to use in docker compose file\n\n\n\nFixed\n\ntergite-mss\n\nFixed the not found error when deleting expired app tokens\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\n\nChanged\n\ntergite-dashboard\n\nChanged devices page to show ‘no devices found’ when no devices are available.\nChanged to show sidebar placeholder on admin user requests page when no user request is selected",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -307,8 +307,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-9",
     "href": "release_notes/tergite-frontend.html#section-9",
     "title": "Tergite Frontend",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 2nd of September 2024\n\nAdded\n\nAdded the tergite-dashboard app. It included:\n\nDevice summary list on the dashboard home\nJobs list on the dashboard home\nJobs detail drawer on the dashboard home\nDevice list page\nDevice detail page\nError page\n\nAdded v2 endpoints on Tergite MSS including\n\n/v2/me/projects/ to GET, POST current cookie user’s projects\n/v2/me/projects/{project_id} to GET, PUT current cookie user’s single project\n/v2/me/tokens/ to GET, POST current cookie user’s application tokens\n/v2/me/tokens/{token_id} to GET, PUT current cookie user’s application token\n/v2/me/jobs/ to GET current cookie user’s jobs (with option of specifying project id)\n/v2/auth/providers to GET the available Oauth2 provider corresponding to a given email domain\n/v2/auth/{provider}/authorize to POST Oauth2 initialization request for given provider\n/v2/auth/{provider}/callback to handle GET redirects from 3rd party Oauth2 providers after successful login\n/v2/auth/logout to handle POST requests to logout the current user via cookies\n/v2/calibrations/ to GET, POST calibration data for all devices. POST is available for only system users.\n/v2/calibration/{device_name} to GET calibration data for the device of the given device_name\n/v2/devices to GET, PUT (upsert) all devices. PUT is available for only system users.\n/v2/devices/{name} to GET, PUT the device of a given name. PUT is available for only system users.\n\n\n\n\nChanged\n\nRemoved the tergite-landing-page app\nRemoved the tergite-webgui app",
+    "section": "[2024.09.1]",
+    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nAdded\n\nAdded example scopes in the mss_config.example.toml in tergite-mss\nAdded units ‘Hz’ and ‘s’ to calibration data schema\n\n\n\nFixed\n\nFixed CORS error when dashboard and MSS are on different domains or subdomains\nFixed ‘AttributeError: ’NoneType’ object has no attribute ‘resource_usage’’ on GET /v2/me/jobs\n\n\n\nChanged\n\nRemoved archives folder in tergite-mss\nRemoved dev folder in tergite-mss\nChanged all calibration v2 properties optional\nNormalized calibration data to have frequencies in GHz and durations in microseconds in the dashboard",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -318,8 +318,8 @@
     "objectID": "release_notes/tergite-frontend.html#section-10",
     "href": "release_notes/tergite-frontend.html#section-10",
     "title": "Tergite Frontend",
-    "section": "[2024.04.1]",
-    "text": "[2024.04.1]\nreleased on: 28th of May 2024\nInitial Public Release\n\nChanged\n\nUpdated the contribution guidelines and government model statements",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 2nd of September 2024\n\nAdded\n\nAdded the tergite-dashboard app. It included:\n\nDevice summary list on the dashboard home\nJobs list on the dashboard home\nJobs detail drawer on the dashboard home\nDevice list page\nDevice detail page\nError page\n\nAdded v2 endpoints on Tergite MSS including\n\n/v2/me/projects/ to GET, POST current cookie user’s projects\n/v2/me/projects/{project_id} to GET, PUT current cookie user’s single project\n/v2/me/tokens/ to GET, POST current cookie user’s application tokens\n/v2/me/tokens/{token_id} to GET, PUT current cookie user’s application token\n/v2/me/jobs/ to GET current cookie user’s jobs (with option of specifying project id)\n/v2/auth/providers to GET the available Oauth2 provider corresponding to a given email domain\n/v2/auth/{provider}/authorize to POST Oauth2 initialization request for given provider\n/v2/auth/{provider}/callback to handle GET redirects from 3rd party Oauth2 providers after successful login\n/v2/auth/logout to handle POST requests to logout the current user via cookies\n/v2/calibrations/ to GET, POST calibration data for all devices. POST is available for only system users.\n/v2/calibration/{device_name} to GET calibration data for the device of the given device_name\n/v2/devices to GET, PUT (upsert) all devices. PUT is available for only system users.\n/v2/devices/{name} to GET, PUT the device of a given name. PUT is available for only system users.\n\n\n\n\nChanged\n\nRemoved the tergite-landing-page app\nRemoved the tergite-webgui app",
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
@@ -964,8 +964,8 @@
     "objectID": "release_notes/tergite-backend.html#section",
     "href": "release_notes/tergite-backend.html#section",
     "title": "Tergite Backend",
-    "section": "[2025.06.2]",
-    "text": "[2025.06.2]\nreleased on: 17th of June 2025\n\nNo changes",
+    "section": "[2025.09.0]",
+    "text": "[2025.09.0]\nreleased on: 2nd of October 2025\n\nAdded\n\nInstall a pre-commit hook to run black\nAdded a support for measurement level 1 for simulator for both single and avg modes\nAdded a support for measurement level 1 for real backend for both single and avg modes\nAdded authentication via JWT, with temporary JWT token generated by the backend instance and passed through MSS to the SDK\nAdded support for booked time slots, on top of the first-in-first-out (FIFO) queue\nAdded the following endpoints for the sake of handling bookings:\n\n/token (POST)\n/users (POST, GET)\n/users/{user_id} (POST, GET, DELETE)\n/me (DELETE, GET)\n/bookings (POST, GET)\n/bookings/{booking_id}/cancel (POST)\n\nBREAKING: Added authentication of requests from MSS by verifying that x-mss-signature is signed using MSS’s private key\nAdded canceling of jobs via MSS\nAdded and adapted SpiDAC class from autocalibration package for coupler biasing\nModify Quantify quantum executor by calling SpiDAC to bring up currents before running a schedule\nAdd a placeholder Wacqt-two-qubit-gate function for Qobj to QuantifySchedule mapper with a flux port reference\nAdd filtering bookings by minimum/maximum start timestamps\n\n\n\nChanged\n\nBREAKING: Changed authentication during job submission to use JWT token only\nBREAKING: Removed authentication of requests by referer’s IP address\nBREAKING: Removed authentication of job-submission requests that would check that the API key submitted was associated with the job submitted\n\nBREAKING: Removed the /auth endpoint\n\nBREAKING: Changed the return type of the /jobs POST endpoint to be the job in JSON as opposed to {\"message\": string}\nBREAKING: Added pagination to the /jobs GET endpoint, changing the return type to {\"data\": []object, limit: number, skip: number} as opposed to []object\nBREAKING: Changed the /jobs endpoint to return only jobs that belong to the user whose id is in the x-mss-user-is header.\nBREAKING: Changed the return type of the /jobs GET endpoint to be the job in JSON as opposed to {\"message\": object}\nBREAKING: Removed the /jobs/{job_id}/status endpoint.\nBREAKING: Removed the /jobs/{job_id}/result endpoint.\nBREAKING: Changed the return type of the /jobs DELETE endpoint to {\"status\": \"success\", \"detail\": string} as opposed to {\"message\": string}\nBREAKING: Changed the return type of the /jobs/{job_id}/cancel POST endpoint to {\"status\": \"success\", \"detail\": string} as opposed to nothing\nBREAKING: Changed the return type of the /logfiles/{logfile_id} GET endpoint when an error occurs to return an error status code with {\"detail\": string} JSON response.\nBREAKING: Changed the names of the workers/queues used to {PREFIX}_general, {PREFIX}_preprocessing, {PREFIX}_normal_execution, {PREFIX}_booked_execution, {PREFIX}_postprocessing\n\n\n\nFixed\n\nFix bcrypt 5.0.0 ValueError ‘password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])’",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -975,8 +975,8 @@
     "objectID": "release_notes/tergite-backend.html#section-1",
     "href": "release_notes/tergite-backend.html#section-1",
     "title": "Tergite Backend",
-    "section": "[2025.06.1]",
-    "text": "[2025.06.1]\nreleased on: 17th of June 2025\n\nNo changes",
+    "section": "[2025.06.2]",
+    "text": "[2025.06.2]\nreleased on: 17th of June 2025\n\nNo changes",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -986,8 +986,8 @@
     "objectID": "release_notes/tergite-backend.html#section-2",
     "href": "release_notes/tergite-backend.html#section-2",
     "title": "Tergite Backend",
-    "section": "[2025.06.0]",
-    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nAdded\n\nAdd a simpler JSON document based store in redis\n\n\n\nChanged\n\nChanged source of lda parameters to backend’s redis store. Originally they were retrieved from MSS.\nAdded proper HTTP status codes for failed REST API requests\n\nInvalidJobIdInUploadedFileError results in a 400 HTTP response (originally was 200)\nItemNotFoundError results in a 404 HTTP response (originally was 200)\nJobAlreadyCancelled results in a 406 HTTP response (originally was 500)\n\nBREAKING: Change endpoint /v2/static-properties to /static-properties\nBREAKING: Change endpoint /v2/dynamic-properties to /dynamic-properties\nRename the properties library to device_parameters\nUpgraded to python 3.12\nRemoved the deprecated qiskit-ibmq-providers dependency, moving its code into our lib folder\nMoved from requirements.txt to pyproject.toml setup\nBumped up the version of fastapi to the latest (&gt;=0.115.12)\nAdded validation of job files when uploading jobs to /jobs",
+    "section": "[2025.06.1]",
+    "text": "[2025.06.1]\nreleased on: 17th of June 2025\n\nNo changes",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -997,8 +997,8 @@
     "objectID": "release_notes/tergite-backend.html#section-3",
     "href": "release_notes/tergite-backend.html#section-3",
     "title": "Tergite Backend",
-    "section": "[2025.03.2]",
-    "text": "[2025.03.2]\nreleased on: 7th of April 2025\n\nChanged\n\nRemove stale fixtures\n\n\n\nFixed\n\nFixed JSONDecodeError when application is run in systemd",
+    "section": "[2025.06.0]",
+    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nAdded\n\nAdd a simpler JSON document based store in redis\n\n\n\nChanged\n\nChanged source of lda parameters to backend’s redis store. Originally they were retrieved from MSS.\nAdded proper HTTP status codes for failed REST API requests\n\nInvalidJobIdInUploadedFileError results in a 400 HTTP response (originally was 200)\nItemNotFoundError results in a 404 HTTP response (originally was 200)\nJobAlreadyCancelled results in a 406 HTTP response (originally was 500)\n\nBREAKING: Change endpoint /v2/static-properties to /static-properties\nBREAKING: Change endpoint /v2/dynamic-properties to /dynamic-properties\nRename the properties library to device_parameters\nUpgraded to python 3.12\nRemoved the deprecated qiskit-ibmq-providers dependency, moving its code into our lib folder\nMoved from requirements.txt to pyproject.toml setup\nBumped up the version of fastapi to the latest (&gt;=0.115.12)\nAdded validation of job files when uploading jobs to /jobs",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1008,8 +1008,8 @@
     "objectID": "release_notes/tergite-backend.html#section-4",
     "href": "release_notes/tergite-backend.html#section-4",
     "title": "Tergite Backend",
-    "section": "[2025.03.1]",
-    "text": "[2025.03.1]\nreleased on: 18th of March 2025\n\nChanged\n\nNo change",
+    "section": "[2025.03.2]",
+    "text": "[2025.03.2]\nreleased on: 7th of April 2025\n\nChanged\n\nRemove stale fixtures\n\n\n\nFixed\n\nFixed JSONDecodeError when application is run in systemd",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1019,8 +1019,8 @@
     "objectID": "release_notes/tergite-backend.html#section-5",
     "href": "release_notes/tergite-backend.html#section-5",
     "title": "Tergite Backend",
-    "section": "[2025.03.0]",
-    "text": "[2025.03.0]\nreleased on: 18th of March 2025\n\nChanged\n\nRemoved the storage-file internal lib\nLimited pyarrow to versions ‘18.0.0’ and below for macOS\nDecouple data from algorithms in storage file\nDecouple native job run from executor instance\nRemove debug prints of qobj when running jobs\nRename the run_experiment and run methods of the QuantumEexcutor class to _run_native, run\nClean up qobj-to-quantify compilation\nRemoved Program\nRemoved the dag property of the NativeExperiment class\nEnchanced the Channel class to track all instructions attached to it\nAdded the ‘to_operation’ method on the BaseInstruction of quantify, removing the long if-conditional QauntifyExperiment.schedule_operation method that was originally generating Operator’s\nReplaced the looping of the DAG with the looping of the instructions on each channel\nCreated the ChannelRegistry dict-like class to track the state of all channels attached to an experiment\nDeleted rot_left and ceil4 utility functions and other unused utility functions\nSplit FreqInstruction class to SetFreqInstruction and ShiftFreqInstruction\nSplit PhaseInstruction class to SetPhaseInstruction and ShiftPhaseInstruction\nAdded the QBLOX_TIMEGRID_INTERVAL constant\nMoved the Instruction class in the quantum_executor/base folder to quantum_executor/quantify folder, renaming it to BaseInstruction\nRemoved the channels property from the NativeExperiment class\nAdded the channel_registry property on the QauntifyExperiment class\nMoved the Channel definition from utils to the quantum_executor/quantify folder\nRemoved retworkx from the requirements.txt\nUpdated quantify-scheduler, quantify-core and qblox-instruments and pydantic versions\nBREAKING CHANGE: Split cluster configurations into quantify-config.json and quantify-metadata.json\nBREAKING CHANGE: Added a new configuration file calibration.seed.toml for seeding the database with calibration data\nEnhanced the QuantifySchedule conversion to use parametric schedules and new portclock convention",
+    "section": "[2025.03.1]",
+    "text": "[2025.03.1]\nreleased on: 18th of March 2025\n\nChanged\n\nNo change",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1030,8 +1030,8 @@
     "objectID": "release_notes/tergite-backend.html#section-6",
     "href": "release_notes/tergite-backend.html#section-6",
     "title": "Tergite Backend",
-    "section": "[2024.12.1]",
-    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nAdded Dockerfile.\nAdded instructions how to run with docker.\nAdded instructions how to run the qiskit_pulse_2q simulator in the configuration docs.\n\n\n\nChanged\n\nChanged start_bcc.sh script to use redis connection obtained from the environment.\nChanged start_bcc.sh script to update the exported environment variables after reading from the ENV_FILE.\nUpdated Github action to deploy built multiplatform image to docker hub as something like tergite/tergite-backend\nRemoved some redundant libraries in the requirements.txt file.\nRemoved some outdated docs.",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nreleased on: 18th of March 2025\n\nChanged\n\nRemoved the storage-file internal lib\nLimited pyarrow to versions ‘18.0.0’ and below for macOS\nDecouple data from algorithms in storage file\nDecouple native job run from executor instance\nRemove debug prints of qobj when running jobs\nRename the run_experiment and run methods of the QuantumEexcutor class to _run_native, run\nClean up qobj-to-quantify compilation\nRemoved Program\nRemoved the dag property of the NativeExperiment class\nEnchanced the Channel class to track all instructions attached to it\nAdded the ‘to_operation’ method on the BaseInstruction of quantify, removing the long if-conditional QauntifyExperiment.schedule_operation method that was originally generating Operator’s\nReplaced the looping of the DAG with the looping of the instructions on each channel\nCreated the ChannelRegistry dict-like class to track the state of all channels attached to an experiment\nDeleted rot_left and ceil4 utility functions and other unused utility functions\nSplit FreqInstruction class to SetFreqInstruction and ShiftFreqInstruction\nSplit PhaseInstruction class to SetPhaseInstruction and ShiftPhaseInstruction\nAdded the QBLOX_TIMEGRID_INTERVAL constant\nMoved the Instruction class in the quantum_executor/base folder to quantum_executor/quantify folder, renaming it to BaseInstruction\nRemoved the channels property from the NativeExperiment class\nAdded the channel_registry property on the QauntifyExperiment class\nMoved the Channel definition from utils to the quantum_executor/quantify folder\nRemoved retworkx from the requirements.txt\nUpdated quantify-scheduler, quantify-core and qblox-instruments and pydantic versions\nBREAKING CHANGE: Split cluster configurations into quantify-config.json and quantify-metadata.json\nBREAKING CHANGE: Added a new configuration file calibration.seed.toml for seeding the database with calibration data\nEnhanced the QuantifySchedule conversion to use parametric schedules and new portclock convention",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1041,8 +1041,8 @@
     "objectID": "release_notes/tergite-backend.html#section-7",
     "href": "release_notes/tergite-backend.html#section-7",
     "title": "Tergite Backend",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded redis connection environment variables\nAdded GitLab CI configuration\nAdded storing of Qobj header data in the logfiles of the quantum jobs\nQiskit dynamics simulator backend with two-qubit CZ gate (“qiskit_pulse_2q”)\nAdded CouplerProps to Backend Configurations\nAdded the coupling_dict to the backend_config.toml\n\n\n\nFixed\n\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\nChanged\n\nRemoved the coupling_map from the backend_config.toml as it is generated on-the-fly from the coupling_dict.",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 20th of December 2024\n\nAdded\n\nAdded Dockerfile.\nAdded instructions how to run with docker.\nAdded instructions how to run the qiskit_pulse_2q simulator in the configuration docs.\n\n\n\nChanged\n\nChanged start_bcc.sh script to use redis connection obtained from the environment.\nChanged start_bcc.sh script to update the exported environment variables after reading from the ENV_FILE.\nUpdated Github action to deploy built multiplatform image to docker hub as something like tergite/tergite-backend\nRemoved some redundant libraries in the requirements.txt file.\nRemoved some outdated docs.",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1052,8 +1052,8 @@
     "objectID": "release_notes/tergite-backend.html#section-8",
     "href": "release_notes/tergite-backend.html#section-8",
     "title": "Tergite Backend",
-    "section": "[2024.09.1]",
-    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nFixed\n\nFixed ‘KeyError’ when no units are not passed in the backend_config file\nFixed “…bin/conda/activate: Not a directory” error when starting as systemd service\nFixed silent error where calibrations are not sent to MSS on executor initialization\nFixed “TypeError: Object of type datetime is not JSON serializable” when sending calibration data to MSS\nFixed ‘SyntaxWarning: ’is not’ with a literal’ when initializing backend",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded redis connection environment variables\nAdded GitLab CI configuration\nAdded storing of Qobj header data in the logfiles of the quantum jobs\nQiskit dynamics simulator backend with two-qubit CZ gate (“qiskit_pulse_2q”)\nAdded CouplerProps to Backend Configurations\nAdded the coupling_dict to the backend_config.toml\n\n\n\nFixed\n\nFixed httpx version to 0.27.2 as 0.28.0 removes many deprecations that we were still dependent on in FastAPI testClient\n\n\n\nChanged\n\nRemoved the coupling_map from the backend_config.toml as it is generated on-the-fly from the coupling_dict.",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1063,8 +1063,8 @@
     "objectID": "release_notes/tergite-backend.html#section-9",
     "href": "release_notes/tergite-backend.html#section-9",
     "title": "Tergite Backend",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nAdded\n\nThe QuantumExecutor as abstract class to implement a backend\nEXECUTOR_TYPE keyword in the .env variables to select the backend\nQiskit dynamics simulator backend with one qubit (“qiskit_pulse_1q”)\nAdded the initialization of the redis store with configuration picked from the backend_config.toml file when the execution worker starts\nAdded an initial request to update the backend information in MSS when the execution worker starts\n\n\n\nChanged\n\nBREAKING CHANGE: EXECUTOR_DATA_DIRNAME definition in the .env variables instead of general.data_dir in executor-config.yml\nBREAKING CHANGE: Removed the whole general section in the executor-config.yml\nBREAKING CHANGE: Renamed executor-config.yml to quantify-config.yml\nRemoved the old config files that were used for setting up automatic calibration\nRemoved the script that loaded automatic calibration configurations at the start\nMoved the backend_config.toml file from /configs folder\nMoved the properties service to the libs folder\nMoved the storage, date_time, representation and logging utils to the properties lib\nRemoved the scripts folder",
+    "section": "[2024.09.1]",
+    "text": "[2024.09.1]\nreleased on: 24th of September 2024\n\nFixed\n\nFixed ‘KeyError’ when no units are not passed in the backend_config file\nFixed “…bin/conda/activate: Not a directory” error when starting as systemd service\nFixed silent error where calibrations are not sent to MSS on executor initialization\nFixed “TypeError: Object of type datetime is not JSON serializable” when sending calibration data to MSS\nFixed ‘SyntaxWarning: ’is not’ with a literal’ when initializing backend",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1074,8 +1074,8 @@
     "objectID": "release_notes/tergite-backend.html#section-10",
     "href": "release_notes/tergite-backend.html#section-10",
     "title": "Tergite Backend",
-    "section": "[2024.04.0]",
-    "text": "[2024.04.0]\nreleased on 28th of May 2024\nInitial Public Release\n\nAdded\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\nChanged\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.12\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\nFixed\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nAdded\n\nThe QuantumExecutor as abstract class to implement a backend\nEXECUTOR_TYPE keyword in the .env variables to select the backend\nQiskit dynamics simulator backend with one qubit (“qiskit_pulse_1q”)\nAdded the initialization of the redis store with configuration picked from the backend_config.toml file when the execution worker starts\nAdded an initial request to update the backend information in MSS when the execution worker starts\n\n\n\nChanged\n\nBREAKING CHANGE: EXECUTOR_DATA_DIRNAME definition in the .env variables instead of general.data_dir in executor-config.yml\nBREAKING CHANGE: Removed the whole general section in the executor-config.yml\nBREAKING CHANGE: Renamed executor-config.yml to quantify-config.yml\nRemoved the old config files that were used for setting up automatic calibration\nRemoved the script that loaded automatic calibration configurations at the start\nMoved the backend_config.toml file from /configs folder\nMoved the properties service to the libs folder\nMoved the storage, date_time, representation and logging utils to the properties lib\nRemoved the scripts folder",
     "crumbs": [
       "Release Notes",
       "Tergite Backend"
@@ -1085,8 +1085,8 @@
     "objectID": "release_notes/tergite-sdk.html#section",
     "href": "release_notes/tergite-sdk.html#section",
     "title": "Tergite SDK",
-    "section": "[2025.06.1]",
-    "text": "[2025.06.1]\nreleased on: 17th of June 2025\n\nChanged\n\nRemoved unwanted artefacts from the packaged library\n\n\n\nFixed\n\nMade cleanup in e2e fault tolerant",
+    "section": "[2025.09.0]",
+    "text": "[2025.09.0]\nreleased on: 2nd of October 2025\n\nAdded\n\nAdd e2e tests for meas_level 1 with clustering algorithm populaton and distance\n\n\n\nChanged\n\nExtend data type of the job results to allow IQpoints together with HexMap for meas_level 1\nClean up classical register of quantum circuits before scheduling them to remove idle classical registers\nChanged to use the access_token got on job submission to MSS, to submit/cancel jobs to BCC as well as download logfiles.",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1096,8 +1096,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-1",
     "href": "release_notes/tergite-sdk.html#section-1",
     "title": "Tergite SDK",
-    "section": "[2025.06.0]",
-    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nAdded\n\nImplemented job cancellation\n\n\n\nChanged\n\nBREAKING: Changed the MSS endpoints /v2/devices to /devices\nBREAKING: Changed the MSS endpoints /v2/calibrations to /calibrations\nBREAKING: Changed the expected Device info schema to include ‘number_of_resonators’ and ‘number_of_couplers’\nAdded pydantic as an explicit dependency\nMoved completely from dataclasses to pydantic models\nSet the minimum permitted python to 3.12\nRemoved the tergite.qiskit package and moved everything to the tergite package\nRemoved the tergite.qiskit.providers package and moved everything to the parent package\nRaise QiskitBackendNotFoundError when malformed backend is returned in data instead of TypeError\nBREAKING: Remove extras from AccountInfo\nBREAKING: Change signature of Tergite.use_provider_account(account, save) to Tergite.use_provider_account(service_name, url, token, save)",
+    "section": "[2025.06.1]",
+    "text": "[2025.06.1]\nreleased on: 17th of June 2025\n\nChanged\n\nRemoved unwanted artefacts from the packaged library\n\n\n\nFixed\n\nMade cleanup in e2e fault tolerant",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1107,8 +1107,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-2",
     "href": "release_notes/tergite-sdk.html#section-2",
     "title": "Tergite SDK",
-    "section": "[2025.03.0]",
-    "text": "[2025.03.0]\nreleased on: 14th of March 2025\n\nChanged\n\nRefactor: Changed a few error messages to include the original error\nRefactor: Changed the Job metadata to always be generated on the backend.\nIt was originally setting them both on the backend and the SDK.\nUpgraded to Poetry &gt; 2.1\n\n\n\nAdded\n\nAdded caching of calibration requests to reduce number of calls to remote API\nAdded caching on Job’s status(), result(), download_url to reduce number of calls to remote API\nAdded sending of calibration_date (str) query parameter during job registration.\nAdded end-to-end tests for qiskit_pulse_1q simulator backend\nAdded end-to-end tests for qiskit_pulse_2q simulator backend\nAdded Gitlab and Github CI configurations for end-to-end tests",
+    "section": "[2025.06.0]",
+    "text": "[2025.06.0]\nreleased on: 16th of June 2025\n\nAdded\n\nImplemented job cancellation\n\n\n\nChanged\n\nBREAKING: Changed the MSS endpoints /v2/devices to /devices\nBREAKING: Changed the MSS endpoints /v2/calibrations to /calibrations\nBREAKING: Changed the expected Device info schema to include ‘number_of_resonators’ and ‘number_of_couplers’\nAdded pydantic as an explicit dependency\nMoved completely from dataclasses to pydantic models\nSet the minimum permitted python to 3.12\nRemoved the tergite.qiskit package and moved everything to the tergite package\nRemoved the tergite.qiskit.providers package and moved everything to the parent package\nRaise QiskitBackendNotFoundError when malformed backend is returned in data instead of TypeError\nBREAKING: Remove extras from AccountInfo\nBREAKING: Change signature of Tergite.use_provider_account(account, save) to Tergite.use_provider_account(service_name, url, token, save)",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1118,8 +1118,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-3",
     "href": "release_notes/tergite-sdk.html#section-3",
     "title": "Tergite SDK",
-    "section": "[2024.12.1]",
-    "text": "[2024.12.1]\nreleased on: 18th of December 2024\n\nChanged\n\nUpdated tests to run tests against multiple backends\nUpdated Provider.job() to return a Job instance without an upload_url\n\n\n\nFixed\n\nFixed the error ‘Coupling (0, 0) not a coupling map’ for backends without couplers",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nreleased on: 14th of March 2025\n\nChanged\n\nRefactor: Changed a few error messages to include the original error\nRefactor: Changed the Job metadata to always be generated on the backend.\nIt was originally setting them both on the backend and the SDK.\nUpgraded to Poetry &gt; 2.1\n\n\n\nAdded\n\nAdded caching of calibration requests to reduce number of calls to remote API\nAdded caching on Job’s status(), result(), download_url to reduce number of calls to remote API\nAdded sending of calibration_date (str) query parameter during job registration.\nAdded end-to-end tests for qiskit_pulse_1q simulator backend\nAdded end-to-end tests for qiskit_pulse_2q simulator backend\nAdded Gitlab and Github CI configurations for end-to-end tests",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1129,8 +1129,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-4",
     "href": "release_notes/tergite-sdk.html#section-4",
     "title": "Tergite SDK",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the job() method to provider to retrieve job by job ID\nAdded functionality to get control channel index given qubit tuple\nAdded two qubit CZ gate functionality\n\n\n\nChanged\n\nUpgraded Qiskit version to 1.0+, &lt;1.3\nUse MSS v2 endpoints for backend and calibration data",
+    "section": "[2024.12.1]",
+    "text": "[2024.12.1]\nreleased on: 18th of December 2024\n\nChanged\n\nUpdated tests to run tests against multiple backends\nUpdated Provider.job() to return a Job instance without an upload_url\n\n\n\nFixed\n\nFixed the error ‘Coupling (0, 0) not a coupling map’ for backends without couplers",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1140,8 +1140,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-5",
     "href": "release_notes/tergite-sdk.html#section-5",
     "title": "Tergite SDK",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nNo change",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on: 11th of December 2024\n\nAdded\n\nAdded the job() method to provider to retrieve job by job ID\nAdded functionality to get control channel index given qubit tuple\nAdded two qubit CZ gate functionality\n\n\n\nChanged\n\nUpgraded Qiskit version to 1.0+, &lt;1.3\nUse MSS v2 endpoints for backend and calibration data",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1151,8 +1151,8 @@
     "objectID": "release_notes/tergite-sdk.html#section-6",
     "href": "release_notes/tergite-sdk.html#section-6",
     "title": "Tergite SDK",
-    "section": "[2024.04.1]",
-    "text": "[2024.04.1]\nreleased on: 29th of May 2024\nInitial Public Release\n\nChanged\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on: 16th of September 2024\n\nNo change",
     "crumbs": [
       "Release Notes",
       "Tergite SDK"
@@ -1321,6 +1321,39 @@
     "crumbs": [
       "Tutorials",
       "Quick Start with a dummy cluster"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-sdk.html#section-7",
+    "href": "release_notes/tergite-sdk.html#section-7",
+    "title": "Tergite SDK",
+    "section": "[2024.04.1]",
+    "text": "[2024.04.1]\nreleased on: 29th of May 2024\nInitial Public Release\n\nChanged\n\nChanged README.rst to README.md\nChanged CONTRIBUTING.rst to CONTRIBUTING.md\nChanged CREDITS.rst to CREDITS.md\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite SDK"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-backend.html#section-11",
+    "href": "release_notes/tergite-backend.html#section-11",
+    "title": "Tergite Backend",
+    "section": "[2024.04.0]",
+    "text": "[2024.04.0]\nreleased on 28th of May 2024\nInitial Public Release\n\nAdded\n\nAdded storage_file lib (formerly tergite-quantify-connector-storagefile)\nAdded quantum_executor service (formerly tergite-quantify-connector)\nAdded the executor-config.yml and its python-based validators\n\n\n\nChanged\n\nChanged the way discriminators are loaded to load from the database\nBREAKING_CHANGE: Removed hard-coded discriminators\nBREAKING_CHANGE: Removed official support for Python 3.8; Official support is now &gt;=3.12\nBREAKING_CHANGE: Removed Labber support\nReplaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nMoved unused files to archive folder\nBREAKING_CHANGE: Removed calibration and two state discrimination source code\nBREAKING_CHANGE: Replaced tergite-quantify-connector-storagefile package with an internal storage_file lib\nBREAKING_CHANGE: Merged tergite-quantify-connector into tergite-backend and renamed its service to quantum_executor\nBREAKING_CHANGE: Changed configuration of hardware to use executor-config.yml file with proper validations on loading\nBREAKING_CHANGE: Removed support for Pulsar, or any other instrument drivers other than Cluster\nThe old implementation wrongfully assumed that all these drivers have the same signature i.e. driver(name: str, identifier: str | None)\nyet SpiRack(name: str, address: str, baud_rate: int = 9600, timeout: float = 1, is_dummy: bool = False,),\nPulsar(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None,)\nCluster(name: str, identifier: Optional[str] = None, port: Optional[int] = None, debug: Optional[int] = None, dummy_type: Optional[PulsarType] = None) are all different.\n\nBREAKING_CHANGE: We got rid of quantify connector’s redundant reset() method.\nBREAKING_CHANGE: Changed backend name used when querying MSS for backend properties to be equal to settings.DEFAULT_PREFIX\n\n\n\nFixed\n\nFixed duplicate job uploads to respond with HTTP 409",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Backend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-frontend.html#section-11",
+    "href": "release_notes/tergite-frontend.html#section-11",
+    "title": "Tergite Frontend",
+    "section": "[2024.04.1]",
+    "text": "[2024.04.1]\nreleased on: 28th of May 2024\nInitial Public Release\n\nChanged\n\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Frontend"
     ]
   }
 ]
