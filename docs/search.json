@@ -329,8 +329,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section",
     "href": "release_notes/tergite-autocalibration.html#section",
     "title": "Tergite Autocalibration",
-    "section": "[2025.06.0]",
-    "text": "[2025.06.0]\nreleased on 16th of June 2025\n\nAdded\n\nBetter labelling for the analysis output plots\n\n\n\nChanged\n\nUpgrade Python to version 3.12\nMigration from poetry to setuptools\nMake external samplespace multidimensional\n\n\n\nFixed\n\nReduced the packaged library size to below pypi’s limit by using a MANIFEST.in file",
+    "section": "[2025.09.0] - 2025-09-16",
+    "text": "[2025.09.0] - 2025-09-16\nreleased on 16th of September 2025\n\nAdded\n\nDatasets from IQT Nordics\n\n\n\nChanged\n\nData browser uses plotly instead of PyQT and integrates better with CLI\nRun single calibration node in re-analysis\nMigrated documentation from Quarto to MkDocs Material.\n\n\n\nFixed\n\nSimplify GitLab pipeline",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
@@ -340,8 +340,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section-1",
     "href": "release_notes/tergite-autocalibration.html#section-1",
     "title": "Tergite Autocalibration",
-    "section": "[2025.03.0]",
-    "text": "[2025.03.0]\nreleased on 16th of March 2025\n\nAdded\n\nAdvanced logging\nDebugging endpoint\nQuickstart endpoint to generate templates semi-automatically\n\n\n\nChanged\n\nRename all node class names to camel case\nRe-analysis is more user-friendly\nMake pipeline more modular\nImproved node documentation",
+    "section": "[2025.06.0]",
+    "text": "[2025.06.0]\nreleased on 16th of June 2025\n\nAdded\n\nBetter labelling for the analysis output plots\n\n\n\nChanged\n\nUpgrade Python to version 3.12\nMigration from poetry to setuptools\nMake external samplespace multidimensional\n\n\n\nFixed\n\nReduced the packaged library size to below pypi’s limit by using a MANIFEST.in file",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
@@ -351,8 +351,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section-2",
     "href": "release_notes/tergite-autocalibration.html#section-2",
     "title": "Tergite Autocalibration",
-    "section": "[2024.12.0]",
-    "text": "[2024.12.0]\nreleased on 12th of December 2024\n\nAdded\n\nDataset browser\nScheduleNode and ExternalParameterSweepNode as subclasses of BaseNode\nDeviceManager class\n\n\n\nChanged\n\nMigrated cli from click to typer\nSwitch to quantify-scheduler version 0.21.2\nSwitch to qblox-instruments version 0.14.1 (qblox-firmware should be 9.0.1)\nUpgrade to Python version 3.10",
+    "section": "[2025.03.0]",
+    "text": "[2025.03.0]\nreleased on 16th of March 2025\n\nAdded\n\nAdvanced logging\nDebugging endpoint\nQuickstart endpoint to generate templates semi-automatically\n\n\n\nChanged\n\nRename all node class names to camel case\nRe-analysis is more user-friendly\nMake pipeline more modular\nImproved node documentation",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
@@ -362,8 +362,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section-3",
     "href": "release_notes/tergite-autocalibration.html#section-3",
     "title": "Tergite Autocalibration",
-    "section": "[2024.09.0]",
-    "text": "[2024.09.0]\nreleased on 16th of September 2024\n\nAdded\n\nRedis storage manager\n\n\n\nChanged\n\nSwitch to quantify-scheduler version 0.20.0",
+    "section": "[2024.12.0]",
+    "text": "[2024.12.0]\nreleased on 12th of December 2024\n\nAdded\n\nDataset browser\nScheduleNode and ExternalParameterSweepNode as subclasses of BaseNode\nDeviceManager class\n\n\n\nChanged\n\nMigrated cli from click to typer\nSwitch to quantify-scheduler version 0.21.2\nSwitch to qblox-instruments version 0.14.1 (qblox-firmware should be 9.0.1)\nUpgrade to Python version 3.10",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
@@ -373,8 +373,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section-4",
     "href": "release_notes/tergite-autocalibration.html#section-4",
     "title": "Tergite Autocalibration",
-    "section": "[2024.04.0]",
-    "text": "[2024.04.0]\nreleased on 29th of May 2024\nInitial Public Release\n\nAdded\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\nChanged\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "section": "[2024.09.0]",
+    "text": "[2024.09.0]\nreleased on 16th of September 2024\n\nAdded\n\nRedis storage manager\n\n\n\nChanged\n\nSwitch to quantify-scheduler version 0.20.0",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
@@ -1354,6 +1354,17 @@
     "crumbs": [
       "Release Notes",
       "Tergite Frontend"
+    ]
+  },
+  {
+    "objectID": "release_notes/tergite-autocalibration.html#section-5",
+    "href": "release_notes/tergite-autocalibration.html#section-5",
+    "title": "Tergite Autocalibration",
+    "section": "[2024.04.0]",
+    "text": "[2024.04.0]\nreleased on 29th of May 2024\nInitial Public Release\n\nAdded\n\nAll research-related features regarding the calibration of a CZ gate\nUpdater to push calibration values as a backend to MSS/database\n\n\n\nChanged\n\nImproved command line interface\nRenamed from tergite-acl to tergite-autocalibration\nUpdated the contribution guidelines and government model statements",
+    "crumbs": [
+      "Release Notes",
+      "Tergite Autocalibration"
     ]
   }
 ]
