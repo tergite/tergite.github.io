@@ -4,6 +4,25 @@ title: "Tergite Autocalibration"
 
 ---
 
+## [2025.09.0] - 2025-09-16
+_released on 16th of September 2025_
+
+### Added
+
+- Datasets from IQT Nordics
+
+### Changed
+
+- Data browser uses plotly instead of PyQT and integrates better with CLI
+- Run single calibration node in re-analysis
+- Migrated documentation from Quarto to MkDocs Material.
+
+### Fixed
+
+- Simplify GitLab pipeline
+
+---
+
 ## [2025.06.0]
 _released on 16th of June 2025_
 

@@ -310,7 +310,7 @@ conda activate bcc
 
 ```zsh
 cd tergite-backend
-pip install -r requirements.txt
+pip install .
 ```
 
 - Create an `.env` file with visual studio code (or any other text editor).
@@ -342,6 +342,10 @@ BCC_MACHINE_ROOT_URL=http://localhost:8000
 BCC_PORT=8000
 
 EXECUTOR_TYPE=qiskit_pulse_2q
+
+LOG_LEVEL=INFO
+DEBUG=false
+UVICORN_LOG_LEVEL=info
 ```
 
 - Create a `backend_config.toml` file with visual studio code (or any other text editor).
@@ -534,7 +538,6 @@ cz_pulse_duration_before = 88e-9
 cz_pulse_duration_rise = 25e-9
 cz_pulse_duration_constant = 370e-9
 pulse_type = "wacqt_cz_gate_pulse"
-
 
 [calibration_config.discriminators.lda.q0]
 intercept = -37.36457774060694
