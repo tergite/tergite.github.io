@@ -4,6 +4,35 @@ title: "Tergite Backend"
 
 ---
 
+# [2025.12.0]
+_released on: 16th March 2026_
+
+### Added
+
+- Added decryption of `.env` file in the `bcc_start.sh` script
+- [BREAKING] Added the `PRIVATE_KEY_FILE`, `PRIVATE_KEY_PASSWORD` environment variables
+- Added `PYTEST_ARGS` CI environment variable for use in CI
+- Added SpiDAC controller for controlling the flux tunable couplers
+- Added `REQUEST_LOG_TTL` and `REQUEST_LOG_CLEAN_INTERVAL` to control the rate at which request logs are cleared
+- Added `JOBS_STORE_TTL` and `JOBS_STORE_CLEAN_INTERVAL` to control the rate at which old jobs data is cleared from redis store
+- Added TTL on `RedisStore`
+
+### Changed
+
+- Removed the automatic clearing of the redis database on every startup
+- Removed the JOB_EXECUTION_POOL_DIRNAME env variable
+- [BREAKING] Removed the `MSS_APP_TOKEN` environment variable
+- Changed connection to MSS to use RSA-secured websockets instead of RESTful HTTP requests
+- Fixed issue with executor being re-initialized on every job submission
+- Refactored SpiDAC code to be less dependent on global variables but to be fully dependent on the parent executor
+
+### Fixed
+
+- Fixed 'Error 111 connecting to localhost:6379' when only RQ_REDIS_URL is provided
+- Fixed KeyError 'edges' due to new version of networkx
+
+---
+
 # [2025.09.1]
 _released on: 6th November 2025_
 

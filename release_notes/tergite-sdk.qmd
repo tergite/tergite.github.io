@@ -4,6 +4,17 @@ title: "Tergite SDK"
 
 ---
 
+## [2025.12.0]
+_released on: 16th of March 2026_
+
+### Changed
+
+- Adapted qiskit_ibm_runtime models class for compatibility due to deprecation
+- Changed rxy pulse to DRAG pulse and add motzoi param from calibration
+- Fixed CZ gate target and control qubit assignment in accordance with parity of qubit id number in calibration 
+
+---
+
 ## [2025.09.0]
 _released on: 2nd of October 2025_
 
