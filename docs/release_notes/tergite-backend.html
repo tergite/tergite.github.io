@@ -370,6 +370,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Added <code>REQUEST_LOG_TTL</code> and <code>REQUEST_LOG_CLEAN_INTERVAL</code> to control the rate at which request logs are cleared</li>
 <li>Added <code>JOBS_STORE_TTL</code> and <code>JOBS_STORE_CLEAN_INTERVAL</code> to control the rate at which old jobs data is cleared from redis store</li>
 <li>Added TTL on <code>RedisStore</code></li>
+<li>Added motzoi parameter to the calibration config seed</li>
+<li>Added clock phase resets for all drive channels before running each job</li>
 </ul>
 </section>
 <section id="changed" class="level3">
@@ -381,6 +383,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Changed connection to MSS to use RSA-secured websockets instead of RESTful HTTP requests</li>
 <li>Fixed issue with executor being re-initialized on every job submission</li>
 <li>Refactored SpiDAC code to be less dependent on global variables but to be fully dependent on the parent executor</li>
+<li>Replaced Gaussian pulse with DRAG pulse for quantify executor</li>
+<li>Changed <code>discriminate_results</code> in <code>quantum_job</code> to explicitly map quantify qubits ids to qobj qubit ids</li>
+<li>Changed <code>ShiftPhase</code> Instruction in Quantify to convert radians to degrees</li>
+<li>Changed quantify executor initialization to allow skipping cluster reset for stability</li>
 </ul>
 </section>
 <section id="fixed" class="level3">
@@ -388,6 +394,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Fixed ‘Error 111 connecting to localhost:6379’ when only RQ_REDIS_URL is provided</li>
 <li>Fixed KeyError ‘edges’ due to new version of networkx</li>
+<li>Fixed qobj to quantify scheduling mapping issue by adding barrier, dispatch and sync compensations in quantify executor</li>
+<li>Fixed SPI_Dac logic allowing to restore currents to values recorded before running a job</li>
+<li>Fixed <code>WacqtCZPulse</code> Instruction for quantify backend to use SoftSquare pulse instead of numerical waveform</li>
+<li>Fixed <code>discriminate_results</code> in <code>quantum_job</code> scripts to properly process circuit_level acquisition requirements</li>
 </ul>
 <hr>
 </section>
