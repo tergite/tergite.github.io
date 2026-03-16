@@ -108,10 +108,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Quick Start</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/02_adding_authentication.html">
- <span class="dropdown-text">Adding authentication</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../tutorials/03_authentication.html">
  <span class="dropdown-text">Authentication</span></a>
   </li>  
@@ -246,12 +242,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/02_adding_authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adding authentication</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../tutorials/03_authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
   </div>
@@ -346,7 +336,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../assets/img/tutorials/authorization/auth.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Interaction diagram of auth showcasing MyAccessID"><img src="../assets/img/tutorials/authorization/auth.png" class="img-fluid figure-img" alt="Interaction diagram of auth showcasing MyAccessID"></a></p>
+<p><a href="../assets/img/tutorials/authorization/auth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Interaction diagram of auth showcasing MyAccessID"><img src="../assets/img/tutorials/authorization/auth.png" class="img-fluid figure-img" alt="Interaction diagram of auth showcasing MyAccessID"></a></p>
 <figcaption>Interaction diagram of auth showcasing MyAccessID</figcaption>
 </figure>
 </div>
@@ -981,7 +971,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

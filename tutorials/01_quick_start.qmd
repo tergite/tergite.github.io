@@ -56,13 +56,17 @@ git clone https://github.com/tergite/tergite-frontend.git
 cd tergite-frontend
 ```
 
+- Create a new GitHub Oauth2 application via the [official instructions](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), with
+**Homepage URL**: "http://127.0.0.1:8002" and **Authorization callback URL**: "http://127.0.0.1:8002/".  
+  Copy its `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`.
+
 - Create an `mss-config.toml` file with visual studio code (or any other text editor).
 
 ```zsh
 code mss-config.toml
 ```
 
-- Update the `mss-config.toml` with the following content
+- Update the `mss-config.toml` with the following content.  
 
 ```toml
 # mss-config.toml
@@ -71,8 +75,6 @@ code mss-config.toml
 [general]
 # the port on which MSS is running
 mss_port = 8002
-# the port on which the websocket is running
-ws_port = 6532
 # environment reflect which environment the app is to run in.
 environment = "development"
 # the host the uvicorn runs on.
@@ -86,6 +88,8 @@ name = "testing"
 # host.docker.internal resolves to the host's 127.0.0.1
 # see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732
 url = "mongodb://host.docker.internal:27017"
+# redis URI; default=redis://tergite-redis:6379/0
+redis_url = "redis://tergite-redis:6379/0"
 
 [[backends]]
 name = "qiskit_pulse_2q"
@@ -93,33 +97,27 @@ name = "qiskit_pulse_2q"
 # host.docker.internal resolves to the host's 127.0.0.1
 # see https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container#answer-43541732
 url = "http://host.docker.internal:8000"
+public_key_path = "/code/bcc_certs/q2-pub-key.pem"
+# the public url for the backend; defaults to the 'url' if not set but can be set to say a reverse proxy
+public_url = "http://localhost:8000"
 
 [auth]
-# turn auth OFF or ON, default=true
-is_enabled = false
+is_enabled = true
+jwt_secret = "f236ffd1332dc9e38effd8fff582a69e56d72d7dae9a377f1fda5e0ebedeaa42"
+jwt_ttl = 3600
 cookie_domain = "127.0.0.1"
 cookie_name = "tergiteauth"
 
 [[auth.clients]]
 name = "github"
-client_id = "some-github-obtained-client-id"
-client_secret = "some-github-obtained-client-secret"
+client_id = "GITHUB_CLIENT_ID"
+client_secret = "GITHUB_CLIENT_SECRET"
 redirect_url = "http://127.0.0.1:8002/auth/github/callback"
 client_type = "github"
-email_regex = "^(john\\.doe|jane|aggrey)@example\\.com$"
-email_domain = "example.com"
+email_regex = ".*"
+# change this if your email is not a gmail.com
+email_domain = "gmail.com"
 roles = ["admin", "user"]
-
-[[auth.clients]]
-name = "puhuri"
-client_id = "some-puhuri-obtained-client-id"
-client_secret = "some-puhuri-obtained-client-secret"
-redirect_url = "http://127.0.0.1:8002/auth/puhuri/callback"
-client_type = "openid"
-email_regex = "^(john\\.doe|jane)@example\\.com$"
-email_domain = "example.com"
-roles = ["user"]
-openid_configuration_endpoint = "https://proxy.acc.puhuri.eduteams.org/.well-known/openid-configuration"
 
 # Puhuri synchronization
 # Puhuri is a resource management platform for HPC systems, that is also to be used for Quantum Computer's
@@ -127,6 +125,8 @@ openid_configuration_endpoint = "https://proxy.acc.puhuri.eduteams.org/.well-kno
 # turn puhuri synchronization OFF or ON, default=true
 is_enabled = false
 ```
+
+- **Note: Replace GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET with the values you got earlier.**
 
 - Create a `.env` file with visual studio code (or any other text editor).
 
@@ -155,7 +155,7 @@ LOGGING_DRIVER=json-file
 # before running "docker compose up"
 MSS_VERSION=v0.0.1
 DASHBOARD_VERSION=v0.0.1
-PROMTAIL_VERSION=2.8.3
+GRAFANA_ALLOY_VERSION=v1.13.2
 ```
 
 - **For Linux**: open MongoDB configurations file
@@ -226,6 +226,25 @@ sudo service mongod status
 ![](../assets/img/tutorials/quick_start/mongo-compass-new-database-collection.png)
 :::
 
+- Create the RSA key files for MSS 
+
+```zsh
+openssl genpkey -algorithm RSA -out private-mss-key.pem -pkeyopt rsa_keygen_bits:4096
+openssl rsa -pubout -in private-mss-key.pem -out public-mss-key.pem
+MSS_PUBLIC_KEY_PATH="$(pwd)/public-mss-key.pem"
+echo "MSS_PUBLIC_KEY_PATH=$MSS_PUBLIC_KEY_PATH"
+```
+
+- Create the RSA key files for BCC 
+
+```zsh
+mkdir -p bcc_certs
+openssl genpkey -algorithm RSA -out q2-priv-key.pem -pkeyopt rsa_keygen_bits:4096
+openssl rsa -pubout -in q2-priv-key.pem -out bcc_certs/q2-pub-key.pem
+BCC_PRIVATE_KEY_PATH="$(pwd)/q2-priv-key.pem"
+echo "BCC_PRIVATE_KEY_PATH=$BCC_PRIVATE_KEY_PATH"
+```
+
 - Delete the old docker images of "tergite/tergite-mss", "tergite/tergite-dashboard" from docker if they exist.
 
 ```zsh
@@ -282,6 +301,120 @@ _see more at https://docs.docker.com/reference/cli/docker/compose/logs/_
 docker compose -f fresh-docker-compose.yml up -d
 ```
 
+- Open your browser at [http://127.0.0.1:3000](http://127.0.0.1:3000){.external target="_blank"} to see the dashboard and attempt to login with github.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/dashboard-login.png)
+:::
+
+- After successful login, open the Mongo compass application and connect to the default local mongo database
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/quick_start/mongo-compass-new-connection.png)
+:::
+
+- Open the "auth_users" collection in the "testing" database in your mongo compass
+
+- Note down the "_id" of the document that contains your details. Let us call it `YOUR_USER_ID` for now.
+
+- Double-click the "roles" field on the document containing your user details in the "auth_users" collection. 
+
+- Click the `+` button on the left side of the "roles" field and then click "Add item to roles" in the popup that appears.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/mongo-compass-edit-user-document.png)
+:::
+
+- Type in "system" in the new empty value that appears under roles
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/mongo-compass-update-system-user-role.png)
+:::
+
+- Click on "ADD DATA" then "Insert document" in your "auth_app_tokens" collection in the "testing" database in your mongo compass
+
+- Copy and paste the following document into the window that opens, replacing everything that was already there.
+
+```JSON
+{
+  "_id": {
+    "$oid": "66bb23aaf19421387021040b"
+  },
+  "title": "test1-1723540394175",
+  "project_ext_id": "test1",
+  "lifespan_seconds": 720000000,
+  "token": "QPsDjT6LcDeSfW1HbYnE6xkhDRiN-2v4PSuUAo55tL0",
+  "user_id": {
+    "$oid": "YOUR_USER_ID"
+  },
+  "created_at": {
+    "$date": "CURRENT_TIMESTAMP"
+  }
+}
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+""
+```
+
+**Make sure to replace the `YOUR_USER_ID` place holder with the actual string value from your database.**  
+
+
+**Make sure to replace the `CURRENT_TIMESTAMP` place holder with ' `{ojs} new Date().toISOString()` '**
+
+- Click "Insert" to insert the document into the "auth_app_tokens" collection.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/mongo-compass-add-system-token.png)
+:::
+
+
+- Click on "ADD DATA" then "Insert document" in your "auth_projects" collection in the "testing" database in your mongo compass
+
+- Copy and paste the following document into the window that opens, replacing everything that was already there.
+
+```JSON
+{
+  "_id": {
+    "$oid": "66ba1b56f073eac3b195814c"
+  },
+    "version": 2,
+    "name": "Test 1",
+    "ext_id": "test1",
+    "admin_id": "YOUR_USER_ID",
+    "user_ids": [ "YOUR_USER_ID"],
+    "qpu_seconds": 54000,
+    "is_active": true,
+    "description": "This is a test project by the International Group of Other Testers",
+    "created_at": "2024-06-20T09:12:00.733Z",
+    "updated_at": "2024-06-20T09:12:00.733Z"
+}
+```
+
+**Make sure to replace the `YOUR_USER_ID` place holder with the actual string value from your database.**
+
+- Click "Insert" to insert the document into the "auth_projects" collection.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/mongo-compass-add-new-auth-project.png)
+:::
+ 
+- Open the dashboard at [http://127.0.0.1:3000](http://127.0.0.1:3000){.external target="_blank"}
+
+- Select project "Test 1" in the top bar.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/select-project-test-1.png)
+:::
+
+- Generate a new api token and copy it to the clipboard. Let's call it `THE_API_TOKEN_YOU_CREATED` for the sake of this tutorial.
+
+::: {layout-ncol=1}
+![](../assets/img/tutorials/adding_authentication/generate-api-token.png)
+:::
+
 ## Setup the Backend
 
 - Ensure you have [conda](https://docs.anaconda.com/free/miniconda/index.html) installed. 
@@ -323,7 +456,6 @@ code .env
 
 ```zsh
 APP_SETTINGS=development
-IS_AUTH_ENABLED=False
 
 DEFAULT_PREFIX=qiskit_pulse_2q
 STORAGE_ROOT=/tmp
@@ -346,7 +478,13 @@ EXECUTOR_TYPE=qiskit_pulse_2q
 LOG_LEVEL=INFO
 DEBUG=false
 UVICORN_LOG_LEVEL=info
+
+# Make sure you replace the values below
+MSS_PUBLIC_KEY_PATH=MSS_PUBLIC_KEY_PATH
+PRIVATE_KEY_FILE=BCC_PRIVATE_KEY_PATH
 ```
+
+- **Note: Replace BCC_PRIVATE_KEY_PATH and MSS_PUBLIC_KEY_PATH in .env with the values you got earlier**
 
 - Create a `backend_config.toml` file with visual studio code (or any other text editor).
 
@@ -609,6 +747,8 @@ if __name__ == "__main__":
     API_URL = "http://localhost:8002"
     # The name of the Quantum Computer to use from the available quantum computers
     BACKEND_NAME = "qiskit_pulse_2q"
+    # the application token for logging in
+    API_TOKEN = "THE_API_TOKEN_YOU_CREATED"
     # the name of this service. For your own bookkeeping.
     SERVICE_NAME = "local"
     # the timeout in seconds for how long to keep checking for results
@@ -625,9 +765,9 @@ if __name__ == "__main__":
     # provider account creation can be skipped in case you already saved
     # your provider account to the `~/.qiskit/tergiterc` file.
     # See below how that is done.
-    provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL)
+    provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)
     # to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`
-    # provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, save=True)
+    # provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN, save=True)
 
     # Get the Tergite backend in case you skipped provider account creation
     # provider = Tergite.get_provider(service_name=SERVICE_NAME)
@@ -645,6 +785,8 @@ if __name__ == "__main__":
     result = job.result()
     print(result.get_counts())
 ```
+
+- **Make sure you replace the THE_API_TOKEN_YOU_CREATED placeholder with the right API token.**
 
 - Execute the above script by running the command below.
 
