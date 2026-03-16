@@ -964,8 +964,8 @@
     "objectID": "release_notes/tergite-autocalibration.html#section",
     "href": "release_notes/tergite-autocalibration.html#section",
     "title": "Tergite Autocalibration",
-    "section": "[2026.03.0] - 2026-03-16",
-    "text": "[2026.03.0] - 2026-03-16\nreleased on 16th of March 2026\n\nAdded\n\nBackup functions for redis storage\nMotzoi parameter for DRAG pulse in tergite SDK\nCLI endpoint for automatic mixer calibration\n\n\n\nChanged\n\nRemoved development folder (can still be accessed in the git history)\nReplaced MSS update script with BCC calibration seed script\nRefactored CZ Parametrization node\nAdded CZ Chevron node\nAdded CZ local phases node\nRemoved quickstart endpoint\nMoved scripts that handle SPI operations to the CLI\nCleanup of the BaseNode\nInterface for measurement types\nWizard for the hardware configuration\n\n\n\nFixed\n\nFixes in the n_rabi_12_oscillations\nImprovements in how coupler data is loaded from redis\nCleanup unused scripts and modules",
+    "section": "[2025.12.0] - 2026-03-16",
+    "text": "[2025.12.0] - 2026-03-16\nreleased on 16th of March 2026\n\nAdded\n\nBackup functions for redis storage\nMotzoi parameter for DRAG pulse in tergite SDK\nCLI endpoint for automatic mixer calibration\n\n\n\nChanged\n\nRemoved development folder (can still be accessed in the git history)\nReplaced MSS update script with BCC calibration seed script\nRefactored CZ Parametrization node\nAdded CZ Chevron node\nAdded CZ local phases node\nRemoved quickstart endpoint\nMoved scripts that handle SPI operations to the CLI\nCleanup of the BaseNode\nInterface for measurement types\nWizard for the hardware configuration\n\n\n\nFixed\n\nFixes in the n_rabi_12_oscillations\nImprovements in how coupler data is loaded from redis\nCleanup unused scripts and modules",
     "crumbs": [
       "Release Notes",
       "Tergite Autocalibration"
