@@ -4,7 +4,16 @@ title: "Tergite Frontend"
 
 ---
 
-## [2026.03.0] - 2026-03-16
+## [2026.03.1]
+_released on 20th of March 2026_
+
+### Fixed
+
+- Fixed the "unhealthy" status of the grafana alloy service
+
+---
+
+## [2026.03.0]
 _released on 16th of March 2026_
 
 - No Change
