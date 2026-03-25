@@ -4,6 +4,33 @@ title: "Tergite Frontend"
 
 ---
 
+## [2026.03.3]
+_released on: 25th of March 2026_
+
+### Added
+
+- Added healthcheck to dashboard service in compose files
+
+- MSS:
+    - Added `is_strict_ip` property to backend config in mss-config.toml
+
+### Fixed
+
+- MSS:
+    -  Fixed connection rejected error when no revers proxy is used
+    
+---
+
+## [2026.03.2]
+_released on: 23rd of March 2026_
+
+### Fixed
+
+- Fixed CI error 'pull access denied for tergite/tergite-backend-with-db-e2e, repository does not exist or may require 'docker login'
+- Fixed CI error 'test_insert_default_ttl[payload0] - Failed: DID NOT RAISE &lt;class 'utils.exc.NotFoundError'&gt;'
+
+---
+
 ## [2026.03.1]
 _released on 20th of March 2026_
 
