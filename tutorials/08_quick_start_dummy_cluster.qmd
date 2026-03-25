@@ -105,6 +105,7 @@ url = "http://host.docker.internal:8000"
 public_key_path = "/code/bcc_certs/loke-pub-key.pem"
 # the public url for the backend; defaults to the 'url' if not set but can be set to say a reverse proxy
 public_url = "http://localhost:8000"
+is_strict_ip = false
 
 [auth]
 is_enabled = true
@@ -479,6 +480,7 @@ MSS_PORT=8002
 # Backend Control computer
 BCC_MACHINE_ROOT_URL=http://localhost:8000
 BCC_PORT=8000
+JWT_SECRET=a2d19ac3cdaea2718b5803fb397c4afb238ae3c581cc5161b62279daef87a694
 
 EXECUTOR_TYPE=quantify
 
