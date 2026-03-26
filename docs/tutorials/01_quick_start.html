@@ -949,74 +949,79 @@ Copy its <code>GITHUB_CLIENT_ID</code> and <code>GITHUB_CLIENT_SECRET</code>.</p
 <span id="cb36-28"><a href="#cb36-28" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="st">"s"</span></span>
 <span id="cb36-29"><a href="#cb36-29" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="st">"s"</span></span>
 <span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="st">"s"</span></span>
-<span id="cb36-31"><a href="#cb36-31" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-33"><a href="#cb36-33" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.qubit]]</span></span>
-<span id="cb36-34"><a href="#cb36-34" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
-<span id="cb36-35"><a href="#cb36-35" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4.8e9</span></span>
-<span id="cb36-36"><a href="#cb36-36" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb36-37"><a href="#cb36-37" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">3.4e-5</span></span>
-<span id="cb36-38"><a href="#cb36-38" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">3.3e-5</span></span>
-<span id="cb36-39"><a href="#cb36-39" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.029</span></span>
-<span id="cb36-40"><a href="#cb36-40" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb36-41"><a href="#cb36-41" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span></span>
-<span id="cb36-42"><a href="#cb36-42" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb36-43"><a href="#cb36-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.qubit]]</span></span>
-<span id="cb36-45"><a href="#cb36-45" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
-<span id="cb36-46"><a href="#cb36-46" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4.225e9</span></span>
-<span id="cb36-47"><a href="#cb36-47" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb36-48"><a href="#cb36-48" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">3.4e-5</span></span>
-<span id="cb36-49"><a href="#cb36-49" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">3.3e-5</span></span>
-<span id="cb36-50"><a href="#cb36-50" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.029</span></span>
-<span id="cb36-51"><a href="#cb36-51" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
-<span id="cb36-52"><a href="#cb36-52" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span></span>
-<span id="cb36-53"><a href="#cb36-53" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
-<span id="cb36-54"><a href="#cb36-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-55"><a href="#cb36-55" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.readout_resonator]]</span></span>
-<span id="cb36-56"><a href="#cb36-56" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
-<span id="cb36-57"><a href="#cb36-57" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-58"><a href="#cb36-58" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-59"><a href="#cb36-59" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-60"><a href="#cb36-60" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-61"><a href="#cb36-61" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-62"><a href="#cb36-62" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-63"><a href="#cb36-63" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb36-64"><a href="#cb36-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-65"><a href="#cb36-65" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.readout_resonator]]</span></span>
-<span id="cb36-66"><a href="#cb36-66" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
-<span id="cb36-67"><a href="#cb36-67" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-68"><a href="#cb36-68" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-69"><a href="#cb36-69" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-70"><a href="#cb36-70" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-71"><a href="#cb36-71" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-72"><a href="#cb36-72" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-73"><a href="#cb36-73" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb36-74"><a href="#cb36-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-75"><a href="#cb36-75" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.coupler]]</span></span>
-<span id="cb36-76"><a href="#cb36-76" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u0"</span></span>
-<span id="cb36-77"><a href="#cb36-77" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.8e9</span></span>
-<span id="cb36-78"><a href="#cb36-78" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
-<span id="cb36-79"><a href="#cb36-79" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
-<span id="cb36-80"><a href="#cb36-80" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb36-81"><a href="#cb36-81" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
-<span id="cb36-82"><a href="#cb36-82" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb36-83"><a href="#cb36-83" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
-<span id="cb36-84"><a href="#cb36-84" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb36-85"><a href="#cb36-85" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
-<span id="cb36-86"><a href="#cb36-86" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
-<span id="cb36-87"><a href="#cb36-87" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
-<span id="cb36-88"><a href="#cb36-88" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
-<span id="cb36-89"><a href="#cb36-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-90"><a href="#cb36-90" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.discriminators.lda.q0]</span></span>
-<span id="cb36-91"><a href="#cb36-91" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-37.36457774060694</span></span>
-<span id="cb36-92"><a href="#cb36-92" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">22.99757458442274</span></span>
-<span id="cb36-93"><a href="#cb36-93" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-0.38509625914248247</span></span>
+<span id="cb36-31"><a href="#cb36-31" aria-hidden="true" tabindex="-1"></a><span class="dt">control_rz_lambda</span> <span class="op">=</span> <span class="st">"rad"</span></span>
+<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a><span class="dt">target_rz_lambda</span> <span class="op">=</span> <span class="st">"rad"</span></span>
+<span id="cb36-33"><a href="#cb36-33" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb36-34"><a href="#cb36-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-35"><a href="#cb36-35" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.qubit]]</span></span>
+<span id="cb36-36"><a href="#cb36-36" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
+<span id="cb36-37"><a href="#cb36-37" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4.8e9</span></span>
+<span id="cb36-38"><a href="#cb36-38" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
+<span id="cb36-39"><a href="#cb36-39" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">3.4e-5</span></span>
+<span id="cb36-40"><a href="#cb36-40" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">3.3e-5</span></span>
+<span id="cb36-41"><a href="#cb36-41" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.029</span></span>
+<span id="cb36-42"><a href="#cb36-42" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
+<span id="cb36-43"><a href="#cb36-43" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span></span>
+<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
+<span id="cb36-45"><a href="#cb36-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-46"><a href="#cb36-46" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.qubit]]</span></span>
+<span id="cb36-47"><a href="#cb36-47" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
+<span id="cb36-48"><a href="#cb36-48" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">4.225e9</span></span>
+<span id="cb36-49"><a href="#cb36-49" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
+<span id="cb36-50"><a href="#cb36-50" aria-hidden="true" tabindex="-1"></a><span class="dt">t1_decoherence</span> <span class="op">=</span> <span class="fl">3.4e-5</span></span>
+<span id="cb36-51"><a href="#cb36-51" aria-hidden="true" tabindex="-1"></a><span class="dt">t2_decoherence</span> <span class="op">=</span> <span class="fl">3.3e-5</span></span>
+<span id="cb36-52"><a href="#cb36-52" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.029</span></span>
+<span id="cb36-53"><a href="#cb36-53" aria-hidden="true" tabindex="-1"></a><span class="dt">pi_pulse_duration</span> <span class="op">=</span> <span class="fl">5.6e-8</span></span>
+<span id="cb36-54"><a href="#cb36-54" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_sigma</span> <span class="op">=</span> <span class="fl">7e-9</span></span>
+<span id="cb36-55"><a href="#cb36-55" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"Gaussian"</span></span>
+<span id="cb36-56"><a href="#cb36-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-57"><a href="#cb36-57" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.readout_resonator]]</span></span>
+<span id="cb36-58"><a href="#cb36-58" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q0"</span></span>
+<span id="cb36-59"><a href="#cb36-59" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-60"><a href="#cb36-60" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-61"><a href="#cb36-61" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-62"><a href="#cb36-62" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-63"><a href="#cb36-63" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-64"><a href="#cb36-64" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-65"><a href="#cb36-65" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb36-66"><a href="#cb36-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-67"><a href="#cb36-67" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.readout_resonator]]</span></span>
+<span id="cb36-68"><a href="#cb36-68" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"q1"</span></span>
+<span id="cb36-69"><a href="#cb36-69" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-70"><a href="#cb36-70" aria-hidden="true" tabindex="-1"></a><span class="dt">acq_integration_time</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-71"><a href="#cb36-71" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-72"><a href="#cb36-72" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_delay</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-73"><a href="#cb36-73" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_duration</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-74"><a href="#cb36-74" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_amplitude</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-75"><a href="#cb36-75" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb36-76"><a href="#cb36-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-77"><a href="#cb36-77" aria-hidden="true" tabindex="-1"></a><span class="kw">[[calibration_config.coupler]]</span></span>
+<span id="cb36-78"><a href="#cb36-78" aria-hidden="true" tabindex="-1"></a><span class="dt">id</span> <span class="op">=</span> <span class="st">"u0"</span></span>
+<span id="cb36-79"><a href="#cb36-79" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency</span> <span class="op">=</span> <span class="fl">7.8e9</span></span>
+<span id="cb36-80"><a href="#cb36-80" aria-hidden="true" tabindex="-1"></a><span class="dt">frequency_detuning</span> <span class="op">=</span> <span class="fl">-0.015e9</span></span>
+<span id="cb36-81"><a href="#cb36-81" aria-hidden="true" tabindex="-1"></a><span class="dt">anharmonicity</span> <span class="op">=</span> <span class="fl">-0.17e9</span></span>
+<span id="cb36-82"><a href="#cb36-82" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_02</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
+<span id="cb36-83"><a href="#cb36-83" aria-hidden="true" tabindex="-1"></a><span class="dt">coupling_strength_12</span> <span class="op">=</span> <span class="fl">0.07e9</span></span>
+<span id="cb36-84"><a href="#cb36-84" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_amplitude</span> <span class="op">=</span> <span class="fl">0.08</span></span>
+<span id="cb36-85"><a href="#cb36-85" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_dc_bias</span> <span class="op">=</span> <span class="fl">0.275</span></span>
+<span id="cb36-86"><a href="#cb36-86" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_phase_offset</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb36-87"><a href="#cb36-87" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_before</span> <span class="op">=</span> <span class="fl">88e-9</span></span>
+<span id="cb36-88"><a href="#cb36-88" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_rise</span> <span class="op">=</span> <span class="fl">25e-9</span></span>
+<span id="cb36-89"><a href="#cb36-89" aria-hidden="true" tabindex="-1"></a><span class="dt">cz_pulse_duration_constant</span> <span class="op">=</span> <span class="fl">370e-9</span></span>
+<span id="cb36-90"><a href="#cb36-90" aria-hidden="true" tabindex="-1"></a><span class="dt">control_rz_lambda</span> <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb36-91"><a href="#cb36-91" aria-hidden="true" tabindex="-1"></a><span class="dt">target_rz_lambda</span> <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb36-92"><a href="#cb36-92" aria-hidden="true" tabindex="-1"></a><span class="dt">pulse_type</span> <span class="op">=</span> <span class="st">"wacqt_cz_gate_pulse"</span></span>
+<span id="cb36-93"><a href="#cb36-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-94"><a href="#cb36-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-95"><a href="#cb36-95" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.discriminators.lda.q1]</span></span>
+<span id="cb36-95"><a href="#cb36-95" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.discriminators.lda.q0]</span></span>
 <span id="cb36-96"><a href="#cb36-96" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-37.36457774060694</span></span>
 <span id="cb36-97"><a href="#cb36-97" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">22.99757458442274</span></span>
-<span id="cb36-98"><a href="#cb36-98" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-0.38509625914248247</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb36-98"><a href="#cb36-98" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-0.38509625914248247</span></span>
+<span id="cb36-99"><a href="#cb36-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-100"><a href="#cb36-100" aria-hidden="true" tabindex="-1"></a><span class="kw">[calibration_config.discriminators.lda.q1]</span></span>
+<span id="cb36-101"><a href="#cb36-101" aria-hidden="true" tabindex="-1"></a><span class="dt">intercept</span> <span class="op">=</span> <span class="fl">-37.36457774060694</span></span>
+<span id="cb36-102"><a href="#cb36-102" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_0</span> <span class="op">=</span> <span class="fl">22.99757458442274</span></span>
+<span id="cb36-103"><a href="#cb36-103" aria-hidden="true" tabindex="-1"></a><span class="dt">coef_1</span> <span class="op">=</span> <span class="fl">-0.38509625914248247</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Run start script</li>
 </ul>
