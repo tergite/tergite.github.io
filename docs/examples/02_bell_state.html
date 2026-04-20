@@ -380,9 +380,7 @@ window.Quarto = {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> qiskit.compiler <span class="im">as</span> compiler</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qiskit.visualization <span class="im">import</span> plot_histogram</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite <span class="im">import</span> Job, Tergite</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tergite <span class="im">import</span> Job, Tergite</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="configure-session" class="level2">
@@ -430,15 +428,13 @@ window.Quarto = {
 </div>
 <p>We can visualize and verify our circuit with Qiskit’s built in <code>draw()</code> method. The output format of <code>qc.draw()</code> can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers <code>meas_0</code> and <code>meas_1</code>.</p>
 <div id="1de741f8-c645-420e-aea8-30769abf11af" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To measure the prepared Bell state we add explicit measurements to all qubits using <code>qc.measure_all()</code>. This will perform a meaurement in the so-called computational basis, <span class="math inline">\(\langle q_n|Z|q_n\rangle\)</span>, mapping the eigenvalues <span class="math inline">\(\{-1,1\}\)</span> to the classical binary values <span class="math inline">\(\{0,1\}\)</span>. Drawing the final circuit shows the additional measurement operations and the classical bit register <code>meas_0</code> and <code>meas_1</code>.</p>
 <div id="9a5fb284-fec6-4ef3-9719-92a3493217a5" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>qc.measure(<span class="dv">0</span>, <span class="dv">0</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>qc.measure(<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>qc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>qc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="compile-circuit" class="level2">
@@ -446,8 +442,7 @@ window.Quarto = {
 <p>In order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.</p>
 <div id="0c70eb23" class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tc <span class="op">=</span> compiler.transpile(qc, backend<span class="op">=</span>backend, optimization_level<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>tc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>tc.draw(output<span class="op">=</span><span class="st">"mpl"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="run-the-circuit" class="level2">
@@ -471,7 +466,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="plot-histogram">Plot histogram</h2>
 <div id="fu5jm46ngsd" class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>hist1 <span class="op">=</span> plot_histogram(counts)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>hist1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="acknowledgement" class="level2">
