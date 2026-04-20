@@ -472,7 +472,7 @@
     "href": "examples/02_bell_state.html#import-the-basic-dependencies",
     "title": "Bell State",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -505,7 +505,7 @@
     "href": "examples/02_bell_state.html#create-the-qiskit-circuit",
     "title": "Bell State",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw(output=\"mpl\")\nplt.show()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw(output=\"mpl\")\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -516,7 +516,7 @@
     "href": "examples/02_bell_state.html#compile-circuit",
     "title": "Bell State",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -811,7 +811,7 @@
     "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
     "title": "Hello Tergite",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -833,7 +833,7 @@
     "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
     "title": "Hello Tergite",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(5, 5)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.cx(2, 3)\nqc.cx(3, 4)\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.measure(2, 2)\nqc.measure(3, 3)\nqc.measure(4, 4)\nqc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(5, 5)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.cx(2, 3)\nqc.cx(3, 4)\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.measure(2, 2)\nqc.measure(3, 3)\nqc.measure(4, 4)\nqc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -855,7 +855,7 @@
     "href": "examples/01_hello_tergite.html#compile-circuit",
     "title": "Hello Tergite",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -921,7 +921,7 @@
     "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
     "title": "Equal Superposition",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -954,7 +954,7 @@
     "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
     "title": "Equal Superposition",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1, 1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw(output=\"mpl\")\nplt.show()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure(0, 0)\nqc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1, 1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw(output=\"mpl\")\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure(0, 0)\nqc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -965,7 +965,7 @@
     "href": "examples/03_equal_superposition.html#compile-circuit",
     "title": "Equal Superposition",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
+    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -1449,7 +1449,7 @@
     "href": "examples/03_equal_superposition.html#plot-histogram",
     "title": "Equal Superposition",
     "section": "Plot histogram",
-    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nhist1",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -1460,7 +1460,7 @@
     "href": "examples/01_hello_tergite.html#compile-circuit-1",
     "title": "Hello Tergite",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\n\nschedules = compiler.schedule(tc, backend=backend)\nschedules.draw()\nplt.show()",
+    "text": "Compile Circuit\n\nschedules = compiler.schedule(tc, backend=backend)\nschedules.draw()",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -1471,7 +1471,7 @@
     "href": "examples/01_hello_tergite.html#plot-histogram",
     "title": "Hello Tergite",
     "section": "Plot histogram",
-    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nhist1",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -1482,7 +1482,7 @@
     "href": "examples/02_bell_state.html#plot-histogram",
     "title": "Bell State",
     "section": "Plot histogram",
-    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nhist1",
     "crumbs": [
       "Examples",
       "Bell State"
