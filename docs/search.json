@@ -472,7 +472,7 @@
     "href": "examples/02_bell_state.html#import-the-basic-dependencies",
     "title": "Bell State",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -483,7 +483,7 @@
     "href": "examples/02_bell_state.html#configure-session",
     "title": "Bell State",
     "section": "Configure Session",
-    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
+    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://qpu.wacqt.se/\"\nAPI_URL = \"https://api.qpu.wacqt.se/\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"wacqt-25\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -494,7 +494,7 @@
     "href": "examples/02_bell_state.html#get-the-tergite-backend",
     "title": "Bell State",
     "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
+    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# create a provider\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\nprovider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN, save=True)\n\n# Get the Tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -505,7 +505,7 @@
     "href": "examples/02_bell_state.html#create-the-qiskit-circuit",
     "title": "Bell State",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure_all()\nqc.draw()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the Bell state \\(|\\Psi\\rangle = |00\\rangle + |11\\rangle.\\)\n\nqc = circuit.QuantumCircuit(2, 2)\nqc.h(0)\nqc.cx(0,1)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the two added measurements and corresponding classical bit registers meas_0 and meas_1.\n\nqc.draw(output=\"mpl\")\nplt.show()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q_n|Z|q_n\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas_0 and meas_1.\n\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -516,7 +516,7 @@
     "href": "examples/02_bell_state.html#compile-circuit",
     "title": "Bell State",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -527,7 +527,7 @@
     "href": "examples/02_bell_state.html#run-the-circuit",
     "title": "Bell State",
     "section": "Run the Circuit",
-    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
+    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\njob.wait_for_final_state(timeout=POLL_TIMEOUT)",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -538,7 +538,7 @@
     "href": "examples/02_bell_state.html#see-the-results",
     "title": "Bell State",
     "section": "See the Results",
-    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nresult = job.result()\ncounts = result.get_counts()\ncounts",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -549,7 +549,7 @@
     "href": "examples/02_bell_state.html#acknowledgement",
     "title": "Bell State",
     "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura\nAdilet Tuleuov",
     "crumbs": [
       "Examples",
       "Bell State"
@@ -811,7 +811,7 @@
     "href": "examples/01_hello_tergite.html#import-the-basic-dependencies",
     "title": "Hello Tergite",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -822,7 +822,7 @@
     "href": "examples/01_hello_tergite.html#update-some-variables",
     "title": "Hello Tergite",
     "section": "Update Some Variables",
-    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 100",
+    "text": "Update Some Variables\n\n# the Tergite API URL e.g. \"https://qpu.wacqt.se/\"\nAPI_URL = \"https://api.qpu.wacqt.se/\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"wacqt-25\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 600",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -833,7 +833,7 @@
     "href": "examples/01_hello_tergite.html#create-the-qiskit-circuit",
     "title": "Hello Tergite",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(1)\nqc.x(0)\nqc.h(0)\nqc.measure_all()\nqc.draw()",
+    "text": "Create the Qiskit Circuit\n\nqc = circuit.QuantumCircuit(5, 5)\nqc.h(0)\nqc.cx(0, 1)\nqc.cx(1, 2)\nqc.cx(2, 3)\nqc.cx(3, 4)\nqc.measure(0, 0)\nqc.measure(1, 1)\nqc.measure(2, 2)\nqc.measure(3, 3)\nqc.measure(4, 4)\nqc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -844,7 +844,7 @@
     "href": "examples/01_hello_tergite.html#get-the-tergite-backend",
     "title": "Hello Tergite",
     "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
+    "text": "Get the Tergite Backend\n\n# create a provider\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\nprovider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN, save=True)\n\n# Get the Tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -855,7 +855,7 @@
     "href": "examples/01_hello_tergite.html#compile-circuit",
     "title": "Hello Tergite",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "text": "Compile Circuit\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -866,7 +866,7 @@
     "href": "examples/01_hello_tergite.html#run-the-circuit",
     "title": "Hello Tergite",
     "section": "Run the Circuit",
-    "text": "Run the Circuit\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")\n\nTergite: Job has been successfully submitted",
+    "text": "Run the Circuit\n\njob: Job = backend.run([schedules], meas_level=2, meas_return=\"single\")\njob.wait_for_final_state(timeout=POLL_TIMEOUT)\n\nTergite: Job has been successfully submitted",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -877,7 +877,7 @@
     "href": "examples/01_hello_tergite.html#see-the-results",
     "title": "Hello Tergite",
     "section": "See the Results",
-    "text": "See the Results\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "text": "See the Results\n\nresult = job.result()\ncounts = result.get_counts()\ncounts",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -888,7 +888,7 @@
     "href": "examples/01_hello_tergite.html#acknowledgement",
     "title": "Hello Tergite",
     "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nStefan Hill\nMartin Ahindura\nAdilet Tuleuov",
     "crumbs": [
       "Examples",
       "Hello Tergite"
@@ -921,7 +921,7 @@
     "href": "examples/03_equal_superposition.html#import-the-basic-dependencies",
     "title": "Equal Superposition",
     "section": "Import the basic dependencies",
-    "text": "Import the basic dependencies\n\nimport time\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom tergite.qiskit.providers import Tergite\nfrom tergite.qiskit.providers.provider_account import ProviderAccount",
+    "text": "Import the basic dependencies\n\nimport qiskit.circuit as circuit\nimport qiskit.compiler as compiler\nfrom qiskit.visualization import plot_histogram\n\nfrom tergite import Job, Tergite\n\nimport matplotlib.pyplot as plt",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -932,7 +932,7 @@
     "href": "examples/03_equal_superposition.html#configure-session",
     "title": "Equal Superposition",
     "section": "Configure Session",
-    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://api.tergite.example\"\nAPI_URL = \"https://api.qal9000.se\"\n# API token for connecting to tergite\nAPI_TOKEN = \"API-TOKEN\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"SimulatorC\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
+    "text": "Configure Session\nBefore we get any further, we will take the time to define some of the parameters we will use for our tergite job.\n\n# the Tergite API URL e.g. \"https://qpu.wacqt.se/\"\nAPI_URL = \"https://api.qpu.wacqt.se/\"\n# API token for connecting to tergite\nAPI_TOKEN = \"&lt;your Tergite API key &gt;\"\n# The name of the Quantum Computer to use from the available quantum computers\nBACKEND_NAME = \"wacqt-25\"\n# the name of this service. For your own bookkeeping.\nSERVICE_NAME = \"local\"\n# the timeout in seconds for how long to keep checking for results\nPOLL_TIMEOUT = 300",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -943,7 +943,7 @@
     "href": "examples/03_equal_superposition.html#get-the-tergite-backend",
     "title": "Equal Superposition",
     "section": "Get the Tergite Backend",
-    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\naccount = ProviderAccount(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n\nprovider = Tergite.use_provider_account(account)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(account, save=True)\n\n# Get the tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nprint(backend)",
+    "text": "Get the Tergite Backend\nThe backend object can now be obtained. A detailed list of the backend properties — such as the available gate set, coupling map and number of qubits — is availablde by printing the backend object.\n\n# create a provider\n# provider account creation can be skipped in case you already saved\n# your provider account to the `~/.qiskit/tergiterc` file.\n# See below how that is done.\nprovider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN)\n# to save this account to the `~/.qiskit/tergiterc` file, add the `save=True`\n# provider = Tergite.use_provider_account(service_name=SERVICE_NAME, url=API_URL, token=API_TOKEN, save=True)\n\n# Get the Tergite backend in case you skipped provider account creation\n# provider = Tergite.get_provider(service_name=SERVICE_NAME)\nbackend = provider.get_backend(BACKEND_NAME)\nbackend.set_options(shots=1024)\nbackend",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -954,7 +954,7 @@
     "href": "examples/03_equal_superposition.html#create-the-qiskit-circuit",
     "title": "Equal Superposition",
     "section": "Create the Qiskit Circuit",
-    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure_all()\nqc.draw()",
+    "text": "Create the Qiskit Circuit\nTo test our connection, we will implement a short test circuit. The circuit we will run produces the equal superposition state \\(|\\Psi\\rangle = |0\\rangle + |1\\rangle\\).\n\nqc = circuit.QuantumCircuit(1, 1)\nqc.h(0)\n\nWe can visualize and verify our circuit with Qiskit’s built in draw() method. The output format of qc.draw() can be changed, see https://docs.quantum.ibm.com/build/circuit-visualization. Note the added measurement and corresponding classical bit register meas_0.\n\nqc.draw(output=\"mpl\")\nplt.show()\n\nTo measure the prepared Bell state we add explicit measurements to all qubits using qc.measure_all(). This will perform a meaurement in the so-called computational basis, \\(\\langle q|Z|q\\rangle\\), mapping the eigenvalues \\(\\{-1,1\\}\\) to the classical binary values \\(\\{0,1\\}\\). Drawing the final circuit shows the additional measurement operations and the classical bit register meas.\n\nqc.measure(0, 0)\nqc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -965,7 +965,7 @@
     "href": "examples/03_equal_superposition.html#compile-circuit",
     "title": "Equal Superposition",
     "section": "Compile Circuit",
-    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend)\ntc.draw()",
+    "text": "Compile Circuit\nIn order to execute the circuit on physical hardware, the circuit needs to be compiled (or transpiled) to the target architecture. At the least, transpilation accounts for the QPU’s native gate set and the qubit connectivity on the QPU. Many transpilers also offer some level of optimization, reducing the circuit size.\n\ntc = compiler.transpile(qc, backend=backend, optimization_level=0)\ntc.draw(output=\"mpl\")\nplt.show()",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -976,7 +976,7 @@
     "href": "examples/03_equal_superposition.html#run-the-circuit",
     "title": "Equal Superposition",
     "section": "Run the Circuit",
-    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob = backend.run(tc, meas_level=2, meas_return=\"single\")",
+    "text": "Run the Circuit\nOnce the cicruit has been compiled to the native gate set and connectivity, we use it to submit a job to the backend.\n\njob: Job = backend.run(tc, meas_level=2, meas_return=\"single\")\njob.wait_for_final_state(timeout=POLL_TIMEOUT)",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -987,7 +987,7 @@
     "href": "examples/03_equal_superposition.html#see-the-results",
     "title": "Equal Superposition",
     "section": "See the Results",
-    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nelapsed_time = 0\nresult = None\nwhile result is None:\n    if elapsed_time &gt; POLL_TIMEOUT:\n        raise TimeoutError(f\"result polling timeout {POLL_TIMEOUT} seconds exceeded\")\n\n    time.sleep(1)\n    elapsed_time += 1\n    result = job.result()\n\nresult.get_counts()",
+    "text": "See the Results\nWhen the job has been submitted, we will need to wait potential queue time and time required to execute the job.\n\nresult = job.result()\ncounts = result.get_counts()\ncounts",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -998,7 +998,7 @@
     "href": "examples/03_equal_superposition.html#acknowledgement",
     "title": "Equal Superposition",
     "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura",
+    "text": "Acknowledgement\nThis notebook was prepared by:\n\nMårten Skogh\nMartin Ahindura\nAdilet Tuleuov",
     "crumbs": [
       "Examples",
       "Equal Superposition"
@@ -1442,6 +1442,50 @@
     "crumbs": [
       "Tutorials",
       "Quick Start with a dummy cluster"
+    ]
+  },
+  {
+    "objectID": "examples/03_equal_superposition.html#plot-histogram",
+    "href": "examples/03_equal_superposition.html#plot-histogram",
+    "title": "Equal Superposition",
+    "section": "Plot histogram",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "crumbs": [
+      "Examples",
+      "Equal Superposition"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#compile-circuit-1",
+    "href": "examples/01_hello_tergite.html#compile-circuit-1",
+    "title": "Hello Tergite",
+    "section": "Compile Circuit",
+    "text": "Compile Circuit\n\nschedules = compiler.schedule(tc, backend=backend)\nschedules.draw()\nplt.show()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/01_hello_tergite.html#plot-histogram",
+    "href": "examples/01_hello_tergite.html#plot-histogram",
+    "title": "Hello Tergite",
+    "section": "Plot histogram",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "crumbs": [
+      "Examples",
+      "Hello Tergite"
+    ]
+  },
+  {
+    "objectID": "examples/02_bell_state.html#plot-histogram",
+    "href": "examples/02_bell_state.html#plot-histogram",
+    "title": "Bell State",
+    "section": "Plot histogram",
+    "text": "Plot histogram\n\nhist1 = plot_histogram(counts)\nplt.show()",
+    "crumbs": [
+      "Examples",
+      "Bell State"
     ]
   }
 ]
